@@ -1,0 +1,47 @@
+{% load static %}
+{% load i18n %}
+
+<div class="col">
+    <div class="card h-100 shadow-sm">
+
+        <a href="{{ n.url }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ n.urlToImage }}"
+                 class="card-img-top"
+                 alt="No news image">
+        </a>
+
+        <div class="card-body d-flex flex-column">
+
+            <h5 class="card-title">
+                {{ n.title|default:"No_title" }}
+            </h5>
+
+            <p class="card-text text-muted">
+                {{ n.description|default:"" }}
+            </p>
+
+            <div class="mt-auto">
+                <p class="mb-1">
+                    {% if n.source %}
+                    <span class="badge bg-primary">{{ n.source }}</span>
+                    {% endif %}
+                    {% if n.author %}
+                    <small class="text-muted"> · {{ n.author }}</small>
+                    {% endif %}
+                </p>
+
+                {% if n.publishedAt %}
+                <p class="text-muted small">{{ n.publishedAt }}</p>
+                {% endif %}
+
+                <a href="{{ n.url }}"
+                   class="btn btn-outline-primary btn-sm"
+                   target="_blank" rel="noopener noreferrer">
+                    {% trans "Read" %}
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+

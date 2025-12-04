@@ -2,6 +2,7 @@ image: python:3.12
 
 stages:
   - lint
+  - test
 
 black:
   stage: lint
@@ -15,3 +16,10 @@ flake8:
   script:
     - pip install -r requirements/test.txt
     - flake8 --verbose
+
+django:
+  stage: test
+  script:
+    - pip install parameterized==0.9.0 -r requirements/prod.txt
+    - cd lyceum
+    - python3 manage.py test

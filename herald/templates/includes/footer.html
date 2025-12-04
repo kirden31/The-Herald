@@ -1,0 +1,7 @@
+{% load static %}
+{% load i18n %}
+<footer class="py-3 my-4" data-server-time="{% now 'Y-m-d' %}T{% now 'H:i:s' %}Z">
+    <p class="text-center text-body-secondary">© <span id="year">{% now "Y" %}</span> Herald Incorporation</p>
+
+    <script src="{% static 'js/footer.js' %}"></script>
+</footer>

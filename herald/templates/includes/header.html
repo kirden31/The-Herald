@@ -1,0 +1,32 @@
+{% load static %}
+{% load i18n %}
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <img src="{% static 'img/logo.png' %}" alt="BananaShop" width="64" height="64" class="rounded-3 me-2">
+        <span class="fs-4">Herald</span>
+    </a>
+
+    <div class="dropdown mx-auto">
+        <button class="btn btn-primary btn-sm dropdown-toggle" type="button"
+                id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            {% trans "Language" %}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for lang in languages %}
+            <li>
+                <form action="{% url 'set_language' %}" method="post" class="px-3 py-2">
+                    {% csrf_token %}
+                    <input type="hidden" name="language" value="{{ lang.code }}">
+                    <button type="submit"
+                            class="dropdown-item btn btn-link">
+                        {{ lang.name_local }}
+                    </button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</header>

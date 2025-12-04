@@ -46,7 +46,6 @@ django-admin makemessages -l >lang code<
 ```bash
 django-admin compilemessages
 ```
-
 ### 7.
 -  #### (*Опционально*) Установка фикстур
 ```bash

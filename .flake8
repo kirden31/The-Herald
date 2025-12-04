@@ -1,5 +1,5 @@
 [flake8]
-application-import-names=
+application-import-names=herald,news
 exclude=
     .git,
     __pycache__,
