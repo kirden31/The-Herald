@@ -18,7 +18,10 @@ class NewsTest(django.test.TestCase):
             'news:guardian_news',
         ],
     )
-    @unittest.mock.patch('requests.get', side_effect=news.test_tools.mocked_requests_get)
+    @unittest.mock.patch(
+        'requests_cache.CachedSession.get',
+        side_effect=news.test_tools.mocked_requests_get,
+    )
     def test_news_context(self, url, mock_get):
         response = django.test.Client().get(django.urls.reverse(url))
 
@@ -41,7 +44,10 @@ class NewsTest(django.test.TestCase):
             set(news_keys),
         )
 
-    @unittest.mock.patch('requests.get', side_effect=news.test_tools.mocked_requests_get)
+    @unittest.mock.patch(
+        'requests_cache.CachedSession.get',
+        side_effect=news.test_tools.mocked_requests_get,
+    )
     def test_top_headlines_sources_context(self, mock_get):
         response = django.test.Client().get(django.urls.reverse('news:top_headlines_sources'))
 

@@ -11,7 +11,7 @@ class TopHeadlinesNews(django.views.View):
     template_name = 'news/top_headlines_news.html'
 
     def get(self, request, *args, **kwargs):
-        params = {'category': 'technology'}
+        params = {'category': 'health'}
         endpoint = 'top-headlines'
         response = api.newsApi.NewsApi().get_news_list(endpoint, params)
 
@@ -45,7 +45,7 @@ class GuardianNews(django.views.View):
     template_name = 'news/everything_news.html'
 
     def get(self, request, *args, **kwargs):
-        params = {'lang': 'ru'}
+        params = {}
         endpoint = 'search'
         response = api.guardianApi.GuardianApi().get_news_list(endpoint, params)
 
@@ -55,7 +55,7 @@ class GuardianNews(django.views.View):
 
 
 class TopHeadlinesSource(django.views.View):
-    template_name = 'sources/sources_list.html'
+    template_name = 'news/sources_list.html'
 
     def get(self, request, *args, **kwargs):
         params = {}

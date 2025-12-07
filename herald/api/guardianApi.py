@@ -9,40 +9,67 @@ class GuardianApi(api.core.BaseApiClass):
     base_url = 'https://content.guardianapis.com/'
 
     def __init__(self):
+        super().__init__()
+
         self.api_key = django.conf.settings.GUARDIAN_API_KEY
-        self.show_fields = (
+        self.show_fields_news = (
             'byline',
             'headline',
             'thumbnail',
             'trailText',
         )
 
-    def get_list(self, endpoint, params=None):
-        if isinstance(params, dict):
-            params['api-key'] = self.api_key
-            params['show-fields'] = ','.join(self.show_fields)
+    def get_data(self, endpoint, params=None, additional_params=None):
+        if params is None:
+            params = {}
 
-        return super().get_list(endpoint, params)
+        params['api-key'] = self.api_key
 
-    def get_news_list(self, endpoint, params=None):
-        response = self.get_list(endpoint, params)
+        if additional_params:
+            for key, value in additional_params.items():
+                params[key] = value
+
+        response = self.get_json(endpoint, params)
 
         data = response.get('response', {})
         results = data.get('results', [])
         total = data.get('total', 0)
+        current_page = data.get('currentPage', None)
+
+        return results, total, current_page
+
+    def get_news_list(self, endpoint='search', params=None):
+        additional_params = {'show-fields': ','.join(self.show_fields_news)}
+
+        results, total, current_page = self.get_data(endpoint, params, additional_params)
 
         news = [
             {
                 'source': 'Guardian',
-                'author': n['fields']['byline'],
-                'title': n['webTitle'],
-                'description': n['fields']['headline'],
-                'url': n['webUrl'],
-                'urlToImage': n['fields']['thumbnail'],
-                'publishedAt': django.utils.dateparse.parse_datetime(n['webPublicationDate']),
-                'content': n['fields']['trailText'],
+                'author': n.get('fields').get('byline'),
+                'title': n.get('webTitle'),
+                'description': n.get('fields').get('headline'),
+                'url': n.get('webUrl'),
+                'urlToImage': n.get('fields').get('thumbnail'),
+                'publishedAt': django.utils.dateparse.parse_datetime(n.get('webPublicationDate')),
+                'content': n.get('fields').get('trailText'),
             }
             for n in results
         ]
 
-        return {'news': news, 'total': total}
+        return {'news': news, 'total': total, 'current_page': current_page}
+
+    def get_sections_list(self, endpoint='sections', params=None):
+        results, total, current_page = self.get_data(endpoint, params)
+
+        sections = [
+            {
+                'id': s.get('id'),
+                'webTitle': s.get('webTitle'),
+                'webUrl': s.get('webUrl'),
+                'apiUrl': s.get('apiUrl'),
+            }
+            for s in results
+        ]
+
+        return {'sections': sections, 'total': total, 'current_page': current_page}
