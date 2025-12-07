@@ -53,25 +53,34 @@ class FavoritesView(LoginRequiredMixin, ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         user = self.request.user
-        context['this_week_count'] = FavoriteArticle.objects.filter(
+        week_ago = datetime.datetime.now() - datetime.timedelta(days=7)
+        week_qs = FavoriteArticle.objects.filter(
             user=user,
-            created_at__gte=datetime.datetime.now() - datetime.timedelta(days=7),
-        ).count()
-        categories_count = (
-            FavoriteArticle.objects.filter(user=user)
-            .exclude(category__isnull=True)
-            .values('category')
+            created_at__gte=week_ago,
+        )
+        context['this_week_count'] = week_qs.count()
+        categories_qs = FavoriteArticle.objects.filter(user=user)
+        categories_qs = categories_qs.exclude(category__isnull=True)
+        context['categories_count'] = (
+            categories_qs.values(
+                'category',
+            )
             .distinct()
             .count()
         )
-        context['categories_count'] = categories_count
-        sources_count = FavoriteArticle.objects.filter(user=user).values('source_name').distinct().count()
-        context['sources_count'] = sources_count
-        context['all_categories'] = (
-            FavoriteArticle.objects.filter(user=user)
-            .exclude(category__isnull=True)
-            .values_list('category', flat=True)
+        sources_qs = FavoriteArticle.objects.filter(user=user)
+        context['sources_count'] = (
+            sources_qs.values(
+                'source_name',
+            )
             .distinct()
+            .count()
         )
+        all_cats_qs = FavoriteArticle.objects.filter(user=user)
+        all_cats_qs = all_cats_qs.exclude(category__isnull=True)
+        context['all_categories'] = all_cats_qs.values_list(
+            'category',
+            flat=True,
+        ).distinct()
 
         return context
