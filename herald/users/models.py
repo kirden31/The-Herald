@@ -19,12 +19,6 @@ class UserManager(BaseUserManager):
     def active(self):
         return self.get_queryset().filter(is_active=True)
 
-    def by_mail(self, email):
-        if not email:
-            return None
-
-        return self.get_queryset().filter(email=email).first()
-
 
 class User(User):
     objects = UserManager()
@@ -39,7 +33,7 @@ class User(User):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.username
+        return self.username[:10]
 
 
 class Profile(models.Model):
@@ -90,7 +84,7 @@ class Profile(models.Model):
         verbose_name_plural = _('профили')
 
     def __str__(self):
-        return self.user.username
+        return self.user.username[:10]
 
 
 class FavoriteArticle(models.Model):
@@ -129,7 +123,10 @@ class FavoriteArticle(models.Model):
         blank=True,
         null=True,
     )
-    source_name = models.CharField('Название источника', max_length=200)
+    source_name = models.CharField(
+        'Название источника',
+        max_length=200,
+    )
     source_id = models.CharField(
         'ID источника',
         max_length=100,
@@ -158,7 +155,7 @@ class FavoriteArticle(models.Model):
         ]
 
     def __str__(self):
-        return f'{self.user.username} - {self.title[:50]}'
+        return f'{self.user.username[:10]} - {self.title[:50]}'
 
     def to_dict(self):
         return {

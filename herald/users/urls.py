@@ -1,8 +1,8 @@
 from django.contrib.auth import views
 from django.urls import path
-from users import forms
-from users.views import FavoritesView, ProfileView, SignUpView
 
+import users.forms
+from users.views import FavoritesView, ProfileView, SignUpView
 
 app_name = 'users'
 urlpatterns = [
@@ -12,7 +12,7 @@ urlpatterns = [
     path(
         'login/',
         views.LoginView.as_view(
-            form_class=forms.LoginForm,
+            form_class=users.forms.LoginForm,
             template_name='users/login.html',
         ),
         name='login',

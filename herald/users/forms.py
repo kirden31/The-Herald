@@ -12,6 +12,7 @@ from django.contrib.auth.forms import (
 from django.core.exceptions import ValidationError
 from django.forms import ModelForm
 from django.utils.translation import gettext_lazy as _
+
 from users.models import Profile
 
 User = get_user_model()
