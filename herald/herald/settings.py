@@ -6,6 +6,7 @@ import pathlib
 from django.utils.translation import gettext_lazy as _
 import dotenv
 
+from django.urls import reverse_lazy
 import herald.tools
 
 dotenv.load_dotenv()
@@ -25,6 +26,8 @@ NEWS_API_KEY = os.getenv('NEWS_API_KEY')
 GUARDIAN_API_KEY = os.getenv('GUARDIAN_API_KEY')
 
 
+MAX_AUTH_ATTEMPTS = os.getenv('DJANGO_MAX_AUTH_ATTEMPTS', default=3)
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -32,6 +35,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sorl.thumbnail',
+    # My apps
+    'users.apps.UsersConfig',
     'news.apps.NewsConfig',
 ]
 
@@ -56,6 +62,16 @@ if DEBUG:
 INTERNAL_IPS = [
     '127.0.0.1',
 ]
+
+AUTHENTICATION_BACKENDS = [
+    'users.backends.ConfigAuthBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = BASE_DIR / 'send_mail'
+DEFAULT_FROM_EMAIL = os.getenv('DJANGO_MAIL', default='support@newshub.com')
+
 
 ROOT_URLCONF = 'herald.urls'
 
@@ -105,6 +121,10 @@ LANGUAGES = [
     ('en-US', _('English')),
     ('ru-RU', _('Russian')),
 ]
+AUTH_USER_MODEL = 'auth.User'
+LOGIN_URL = reverse_lazy('users:login')
+LOGIN_REDIRECT_URL = reverse_lazy('users:profile')
+LOGOUT_REDIRECT_URL = reverse_lazy('users:login')
 
 TIME_ZONE = 'UTC'
 

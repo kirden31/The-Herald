@@ -8,6 +8,8 @@ app_name = 'herald'
 urlpatterns = [
     django.urls.path('', django.urls.include('news.urls')),
     django.urls.path('admin/', admin.site.urls),
+                  django.urls.path('users/', django.urls.include('users.urls')),
+                  django.urls.path('users/', django.urls.include('django.contrib.auth.urls')),
 ] + i18n_patterns(django.urls.path('i18n/', django.urls.include('django.conf.urls.i18n')))
 
 if django.conf.settings.DEBUG:
