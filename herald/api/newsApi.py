@@ -1,8 +1,9 @@
 __all__ = ('NewsApi',)
 
-import api.core
 import django.conf
 import django.utils.dateparse
+
+import api.core
 
 
 class NewsApi(api.core.BaseApiClass):
@@ -14,8 +15,10 @@ class NewsApi(api.core.BaseApiClass):
         self.api_key = django.conf.settings.NEWS_API_KEY
 
     def get_json(self, endpoint, params=None):
-        if not params:
-            params = {'apiKey': self.api_key}
+        if params is None:
+            params = {}
+
+        params['apiKey'] = self.api_key
 
         return super().get_json(endpoint, params)
 

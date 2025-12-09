@@ -6,7 +6,6 @@ from django.contrib import messages
 from django.contrib.auth import login
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
-from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, TemplateView
 
 from users.forms import SignupForm
@@ -16,7 +15,7 @@ from users.models import FavoriteArticle
 class SignUpView(CreateView):
     form_class = SignupForm
     template_name = 'users/signup.html'
-    success_url = reverse_lazy('home')
+    success_url = '/'
 
     def form_valid(self, form):
         response = super().form_valid(form)
@@ -31,7 +30,7 @@ class SignUpView(CreateView):
 
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
-            return redirect('home')
+            return redirect('/')
 
         return super().get(request, *args, **kwargs)
 
@@ -42,7 +41,9 @@ class ProfileView(LoginRequiredMixin, TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['user'] = self.request.user
-        context['profile'] = self.request.user.profile if hasattr(self.request.user, 'profile') else None
+        context['profile'] = (
+            self.request.user.profile if hasattr(self.request.user, 'profile') else None
+        )
         return context
 
 

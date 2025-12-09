@@ -37,7 +37,12 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Profile',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                (
+                    'id',
+                    models.BigAutoField(
+                        auto_created=True, primary_key=True, serialize=False, verbose_name='ID'
+                    ),
+                ),
                 (
                     'image',
                     models.ImageField(
@@ -50,14 +55,24 @@ class Migration(migrations.Migration):
                 (
                     'birthday',
                     models.DateField(
-                        blank=True, help_text='Дата рождения пользователя.', null=True, verbose_name='дата рождения'
+                        blank=True,
+                        help_text='Дата рождения пользователя.',
+                        null=True,
+                        verbose_name='дата рождения',
                     ),
                 ),
-                ('location', models.CharField(blank=True, help_text='Город (или страна) проживания пользователя.')),
+                (
+                    'location',
+                    models.CharField(
+                        blank=True, help_text='Город (или страна) проживания пользователя.'
+                    ),
+                ),
                 (
                     'attempts_count',
                     models.PositiveBigIntegerField(
-                        default=0, help_text='Количество попыток входа в систему', verbose_name='попытки'
+                        default=0,
+                        help_text='Количество попыток входа в систему',
+                        verbose_name='попытки',
                     ),
                 ),
                 (
@@ -78,23 +93,57 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='FavoriteArticle',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('article_id', models.CharField(db_index=True, max_length=500, verbose_name='ID новости')),
+                (
+                    'id',
+                    models.BigAutoField(
+                        auto_created=True, primary_key=True, serialize=False, verbose_name='ID'
+                    ),
+                ),
+                (
+                    'article_id',
+                    models.CharField(db_index=True, max_length=500, verbose_name='ID новости'),
+                ),
                 ('title', models.CharField(max_length=500, verbose_name='заголовок')),
                 ('description', models.TextField(blank=True, null=True, verbose_name='Описание')),
                 ('content', models.TextField(blank=True, null=True, verbose_name='Содержание')),
                 ('url', models.URLField(max_length=500, verbose_name='Ссылка на новость')),
                 (
                     'image_url',
-                    models.URLField(blank=True, max_length=500, null=True, verbose_name='Ссылка на изображение'),
+                    models.URLField(
+                        blank=True, max_length=500, null=True, verbose_name='Ссылка на изображение'
+                    ),
                 ),
-                ('source_name', models.CharField(max_length=200, verbose_name='Название источника')),
-                ('source_id', models.CharField(blank=True, max_length=100, null=True, verbose_name='ID источника')),
-                ('creator', models.CharField(blank=True, max_length=200, null=True, verbose_name='Автор')),
+                (
+                    'source_name',
+                    models.CharField(max_length=200, verbose_name='Название источника'),
+                ),
+                (
+                    'source_id',
+                    models.CharField(
+                        blank=True, max_length=100, null=True, verbose_name='ID источника'
+                    ),
+                ),
+                (
+                    'creator',
+                    models.CharField(blank=True, max_length=200, null=True, verbose_name='Автор'),
+                ),
                 ('published_at', models.DateTimeField(verbose_name='Дата публикации')),
-                ('category', models.CharField(blank=True, max_length=100, null=True, verbose_name='Категория')),
-                ('created_at', models.DateTimeField(auto_now_add=True, verbose_name='Дата добавления')),
-                ('tags', models.JSONField(default=list, help_text='Теги для поиска и фильтрации', verbose_name='Теги')),
+                (
+                    'category',
+                    models.CharField(
+                        blank=True, max_length=100, null=True, verbose_name='Категория'
+                    ),
+                ),
+                (
+                    'created_at',
+                    models.DateTimeField(auto_now_add=True, verbose_name='Дата добавления'),
+                ),
+                (
+                    'tags',
+                    models.JSONField(
+                        default=list, help_text='Теги для поиска и фильтрации', verbose_name='Теги'
+                    ),
+                ),
                 (
                     'user',
                     models.ForeignKey(
@@ -110,8 +159,12 @@ class Migration(migrations.Migration):
                 'verbose_name_plural': 'Избранные новости',
                 'ordering': ['-created_at'],
                 'indexes': [
-                    models.Index(fields=['user', 'created_at'], name='users_favor_user_id_fdd181_idx'),
-                    models.Index(fields=['user', 'category'], name='users_favor_user_id_30912a_idx'),
+                    models.Index(
+                        fields=['user', 'created_at'], name='users_favor_user_id_fdd181_idx'
+                    ),
+                    models.Index(
+                        fields=['user', 'category'], name='users_favor_user_id_30912a_idx'
+                    ),
                 ],
                 'unique_together': {('user', 'article_id')},
             },

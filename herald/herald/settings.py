@@ -3,10 +3,10 @@ __all__ = ()
 import os
 import pathlib
 
+import django.urls
 from django.utils.translation import gettext_lazy as _
 import dotenv
 
-from django.urls import reverse_lazy
 import herald.tools
 
 dotenv.load_dotenv()
@@ -122,9 +122,9 @@ LANGUAGES = [
     ('ru-RU', _('Russian')),
 ]
 AUTH_USER_MODEL = 'auth.User'
-LOGIN_URL = reverse_lazy('users:login')
-LOGIN_REDIRECT_URL = reverse_lazy('users:profile')
-LOGOUT_REDIRECT_URL = reverse_lazy('users:login')
+LOGIN_URL = django.urls.reverse_lazy('users:login')
+LOGIN_REDIRECT_URL = django.urls.reverse_lazy('users:profile')
+LOGOUT_REDIRECT_URL = django.urls.reverse_lazy('users:login')
 
 TIME_ZONE = 'UTC'
 

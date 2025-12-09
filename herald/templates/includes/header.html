@@ -1,76 +1,93 @@
-{% load static %}
-{% load i18n %}
-<div class="container-fluid bg-white shadow-sm">
-<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <img src="{% static 'img/logo.png' %}" alt="BananaShop" width="64" height="64" class="rounded-3 me-2">
-        <span class="fs-4">Herald</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'home' %}">Главная</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'search' %}">Поиск</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav">
-        {% if user.is_authenticated %}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
-              <i class="bi bi-person-circle"></i> {{ user.username }}
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="{% url 'users:profile' %}"><i class="bi bi-person me-1"></i>Профиль</a></li>
-              <li><hr class="dropdown-divider"></li>
-              {% if user.is_authenticated %}
-              <form method="post" action="{% url 'users:logout' %}" class="d-inline">
-                  {% csrf_token %}
-                  <button type="submit" class="btn btn-link nav-link">
-                      <i class="bi bi-box-arrow-right me-1"></i> Выйти
-                  </button>
-              </form>
-              {% endif %}
-            </ul>
-          </li>
-        {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'users:login' %}">Войти</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-outline-primary btn-sm" href="{% url 'users:signup' %}">Регистрация</a>
-          </li>
-        {% endif %}
-      </ul>
+{% load static i18n %}
 
-    <div class="dropdown mx-auto">
-        <button class="btn btn-primary btn-sm dropdown-toggle" type="button"
-                id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-            {% trans "Language" %}
+<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm mb-4">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <img src="{% static 'img/logo.png' %}" width="48" height="48" class="rounded-3 me-2">
+            <span class="fs-5">{% trans "Herald" %}</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="{% trans 'Select_language' %}">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-            {% get_current_language as LANGUAGE_CODE %}
-            {% get_available_languages as LANGUAGES %}
-            {% get_language_info_list for LANGUAGES as languages %}
-            {% for lang in languages %}
-            <li>
-                <form action="{% url 'set_language' %}" method="post" class="px-3 py-2">
-                    {% csrf_token %}
-                    <input type="hidden" name="language" value="{{ lang.code }}">
-                    <button type="submit"
-                            class="dropdown-item btn btn-link">
-                        {{ lang.name_local }}
-                    </button>
-                </form>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
 
-  </div>
-</header>
-</div>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'news:top_headlines_news' %}">{% trans "Top_headlines" %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'news:top_headlines_sources' %}">{% trans "Sources" %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'news:everything_news' %}">{% trans "Everything" %}</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto align-items-center">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                <li class="nav-item dropdown me-2">
+                    <button class="btn btn-outline-secondary btn-sm dropdown-toggle" id="languageDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false" type="button">
+                        {% trans "Language" %}
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                        {% for lang in languages %}
+                        <li>
+                            <form action="{% url 'set_language' %}" method="post" class="m-0">
+                                {% csrf_token %}
+                                <input type="hidden" name="language" value="{{ lang.code }}">
+                                <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                                <button type="submit" class="dropdown-item text-start w-100">
+                                    {{ lang.name_local }}
+                                    {% if LANGUAGE_CODE == lang.code %} <span class="text-muted">✓</span>{% endif %}
+                                </button>
+                            </form>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+
+                {% if user.is_authenticated %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown"
+                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-circle me-1" aria-hidden="true"></i>
+                        <span>{{ user.username }}</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                        <li>
+                            <a class="dropdown-item" href="{% url 'users:profile' %}">
+                                <i class="bi bi-person me-1"></i>{% trans "Profile" %}
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <form method="post" action="{% url 'users:logout' %}" class="m-0">
+                                {% csrf_token %}
+                                <button type="submit" class="dropdown-item">
+                                    <i class="bi bi-box-arrow-right me-1"></i>{% trans "Log_out" %}
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'users:login' %}">{% trans "Log_in" %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-primary btn-sm ms-2" href="{% url 'users:signup' %}">
+                        {% trans "Sing_up" %}
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

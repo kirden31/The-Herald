@@ -4,6 +4,10 @@
 {% block content %}
 <h2 class="mb-4">{% trans "Top_headlines" %}</h2>
 <div class="container py-4">
+    <form action="{% url 'news:top_headlines_news' %}" method="get" class="d-flex mb-3" role="search">
+        {{ form.query }}
+        <button class="btn btn-primary ms-2" type="submit">{% trans "Поиск" %}</button>
+    </form>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
         {% for n in news %}
         {% include "includes/news_card.html" %}

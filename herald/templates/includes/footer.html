@@ -1,55 +1,80 @@
 {% load static %}
 {% load i18n %}
-<footer class="bg-light mt-5 py-4 border-top fixed-bottom" data-server-time="{% now 'Y-m-d' %}T{% now 'H:i:s' %}Z">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <h5 class="mb-3">
-                        <i class="bi bi-newspaper text-primary"></i> NewsHub
-                    </h5>
-                    <p class="text-muted small">
-                        Агрегатор новостей из разных источников. Быстро, удобно, безопасно.
-                    </p>
-                </div>
-
-                <div class="col-md-2 col-6 mb-3">
-                    <h6 class="mb-3">Навигация</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="{% url 'home' %}" class="text-decoration-none text-muted">Главная</a></li>
-                        <li class="mb-2"><a href="{% url 'search' %}" class="text-decoration-none text-muted">Поиск</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Источники</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-3 col-6 mb-3">
-                    <h6 class="mb-3">Пользователю</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="{% url 'users:profile' %}" class="text-decoration-none text-muted">Профиль</a></li>
-                        <li class="mb-2"><a href="{% url 'users:favorites' %}" class="text-decoration-none text-muted">Избранное</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Настройки</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-3 mb-3">
-                    <h6 class="mb-3">Контакты</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2">
-                            <i class="bi bi-envelope me-2"></i>
-                            <span class="text-muted">support@newshub.com</span>
-                        </li>
-                        <li class="mb-2">
-                            <i class="bi bi-telephone me-2"></i>
-                            <span class="text-muted">+7 (999) 123-45-67</span>
-                        </li>
-                    </ul>
-                </div>
+<footer class="py-3 mb-4 border-top" data-server-time="{% now 'Y-m-d' %}T{% now 'H:i:s' %}Z">
+    <div class="container" style="height:200px">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5 class="mb-3">
+                    <i class="bi bi-newspaper text-primary"></i> {% trans "Herald" %}
+                </h5>
+                <p class="text-muted small">
+                    {% trans "footer_site_descriptions" %}
+                    <!--                        Агрегатор новостей из разных источников. Быстро, удобно, безопасно.-->
+                </p>
             </div>
 
-            <hr class="my-3">
+            <div class="col-md-2 col-6 mb-3">
+                <h6 class="mb-3">{% trans "Navigation" %}</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="/" class="text-decoration-none text-muted">
+                            {% trans "Home" %}
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="{% url 'news:top_headlines_news' %}" class="text-decoration-none text-muted">
+                            {% trans "Search" %}
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="{% url 'news:top_headlines_sources' %}" class="text-decoration-none text-muted">
+                            {% trans "Sources" %}
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-            <div class="text-center text-muted">
-                    <p class="text-center text-body-secondary">© <span id="year">{% now "Y" %}</span> Herald Inc.</p>
+            <div class="col-md-3 col-6 mb-3">
+                <h6 class="mb-3">{% trans "User" %}</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="{% url 'users:profile' %}" class="text-decoration-none text-muted">
+                            {% trans "Profile" %}
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="{% url 'users:favorites' %}" class="text-decoration-none text-muted">
+                            {% trans "Favorite" %}
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#" class="text-decoration-none text-muted">
+                            {% trans "Settings" %}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <h6 class="mb-3">{% trans "Contacts" %}</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="bi bi-envelope me-2"></i>
+                        <span class="text-muted">supports+idiots@herald.com</span>
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-telephone me-2"></i>
+                        <span class="text-muted">+7 800 555-35-35</span>
+                    </li>
+                </ul>
             </div>
         </div>
+
+        <hr class="my-3">
+
+        <div class="text-center text-muted">
+            <p class="text-center text-body-secondary">© <span id="year">{% now "Y" %}</span> Herald Inc.</p>
+        </div>
+    </div>
     <script src="{% static 'js/footer.js' %}"></script>
 </footer>

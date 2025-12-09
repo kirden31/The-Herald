@@ -1,10 +1,12 @@
 __all__ = ('EverythingNews', 'GuardianNews', 'TopHeadlinesNews', 'TopHeadlinesSource')
 
-import api.guardianApi
-import api.newsApi
 import django.http
 import django.shortcuts
 import django.views
+
+import api.guardianApi
+import api.newsApi
+import news.forms
 
 
 class TopHeadlinesNews(django.views.View):
@@ -15,7 +17,10 @@ class TopHeadlinesNews(django.views.View):
         endpoint = 'top-headlines'
         response = api.newsApi.NewsApi().get_news_list(endpoint, params)
 
-        context = {'news': response.get('news', [])}
+        context = {
+            'news': response.get('news', []),
+            'form': news.forms.SearchForm(request.GET or None),
+        }
 
         return django.shortcuts.render(
             request,
