@@ -4,7 +4,7 @@
 {% block content %}
 <h2 class="mb-4">{% trans "Everything" %}</h2>
 <div class="container py-4">
-    <form action="{% url 'news:everything_news' %}" method="get" class="d-flex mb-3" role="search">
+    <form action="{% url 'news:guardian_news' %}" method="get" class="d-flex mb-3" role="search">
         {{ form.query }}
         <button class="btn btn-primary ms-2" type="submit">{% trans "Поиск" %}</button>
     </form>
