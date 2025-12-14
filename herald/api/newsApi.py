@@ -8,11 +8,11 @@ import api.core
 
 class NewsApi(api.core.BaseApiClass):
     base_url = 'https://newsapi.org/v2/'
+    key_id = 0
 
     def __init__(self):
         super().__init__()
-
-        self.api_key = django.conf.settings.NEWS_API_KEY
+        self.api_key = django.conf.settings.NEWS_API_KEYS[self.key_id]
 
     def get_json(self, endpoint, params=None):
         if params is None:
@@ -24,6 +24,10 @@ class NewsApi(api.core.BaseApiClass):
 
     def get_news_list(self, endpoint, params=None):
         response = self.get_json(endpoint, params)
+        if response.get('code') == 'rateLimited':
+            self.key_id = (self.key_id + 1) % len(django.conf.settings.NEWS_API_KEYS)
+            self.api_key = django.conf.settings.NEWS_API_KEYS[self.key_id]
+            self.get_news_list(endpoint, params)
 
         total = response.get('totalResults', 0)
 
