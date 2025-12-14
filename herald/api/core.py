@@ -27,6 +27,7 @@ class BaseApiClass:
             backend='sqlite',
             urls_expire_after=self.urls_expire_after,
             stale_if_error=True,
+            ignored_parameters=['apiKey', 'api-key'],
         )
 
     def _request(self, endpoint='', params=None, url=None, expire_after=None):

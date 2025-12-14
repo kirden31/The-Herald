@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    # Installed apps
     'django.contrib.staticfiles',
     'sorl.thumbnail',
     # My apps
