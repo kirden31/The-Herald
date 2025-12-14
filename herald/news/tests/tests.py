@@ -7,7 +7,7 @@ import django.test
 import django.urls
 import parameterized
 
-import news.test_tools
+import news.tests.test_tools
 
 
 class NewsTest(django.test.TestCase):
@@ -20,7 +20,7 @@ class NewsTest(django.test.TestCase):
     )
     @unittest.mock.patch(
         'requests_cache.CachedSession.get',
-        side_effect=news.test_tools.mocked_requests_get,
+        side_effect=news.tests.test_tools.mocked_requests_get,
     )
     def test_news_context(self, url, mock_get):
         response = django.test.Client().get(django.urls.reverse(url))
@@ -46,7 +46,7 @@ class NewsTest(django.test.TestCase):
 
     @unittest.mock.patch(
         'requests_cache.CachedSession.get',
-        side_effect=news.test_tools.mocked_requests_get,
+        side_effect=news.tests.test_tools.mocked_requests_get,
     )
     def test_top_headlines_sources_context(self, mock_get):
         response = django.test.Client().get(django.urls.reverse('news:top_headlines_sources'))
