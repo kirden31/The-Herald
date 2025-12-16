@@ -1,6 +1,5 @@
 __all__ = ('HomeView',)
 
-from django.http import HttpResponse
 import django.shortcuts
 
 

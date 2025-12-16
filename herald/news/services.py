@@ -33,12 +33,11 @@ def enrich_with_favorites(news_list, user):
     if not article_ids:
         return news_list
 
-    favorite_ids = set(
-        users.models.FavoriteArticle.objects.filter(
-            user=user,
-            article_id__in=article_ids,
-        ).values_list('article_id', flat=True),
+    queryset = users.models.FavoriteArticle.objects.filter(
+        user=user,
+        article_id__in=article_ids,
     )
+    favorite_ids = set(queryset.values_list('article_id', flat=True))
 
     for article in news_list:
         article['is_favorite'] = article['id'] in favorite_ids
