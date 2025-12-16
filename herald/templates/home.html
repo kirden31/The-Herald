@@ -1,54 +1,61 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
 
-{% block title %}Главная - Новостной агрегатор{% endblock %}
+{% block title %}Herald - {% trans "Все новости в одном месте" %}{% endblock %}
 
 {% block content %}
-<div class="row mb-4">
-    <div class="col-12">
-        <div class="card shadow-sm">
-            <div class="card-body">
-                <h4 class="card-title mb-4">
-                    <i class="bi bi-search text-primary me-2"></i>Поиск новостей
-                </h4>
-                <form>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Введите тему новостей...">
-                        <select class="form-select" style="max-width: 150px;">
-                            <option selected>Все категории</option>
-                            <option>Политика</option>
-                            <option>Технологии</option>
-                            <option>Спорт</option>
-                            <option>Бизнес</option>
-                            <option>Развлечения</option>
-                        </select>
-                        <button class="btn btn-primary" type="button">
-                            <i class="bi bi-search"></i> Найти
-                        </button>
-                    </div>
-                </form>
+<div class="min-vh-100 d-flex flex-column justify-content-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 text-center">
+    
+                <div class="mb-5">
+                    <h1 class="display-1 fw-bold text-primary mb-3">
+                        <i class="bi bi-compass"></i>
+                    </h1>
+                    <h1 class="display-4 fw-bold mb-3">
+                        Herald<span class="text-primary">Новостной</span>
+                    </h1>
+                    <p class="lead text-muted mb-0">
+                        {% trans "Находите. Читайте. Оставайтесь в курсе." %}
+                    </p>
+                </div>
+                
+                <div class="search-box mb-4">
+                    <form action="{% url 'news:everything_news' %}" method="get">
+                        <div class="position-relative">
+                            <input 
+                                type="text" 
+                                name="query" 
+                                class="form-control form-control-lg border-3 py-3 px-4 rounded-pill shadow-sm" 
+                                placeholder="🔍 Ищите новости по теме..." 
+                                style="font-size: 1.1rem;"
+                                autocomplete="off"
+                                autofocus
+                            >
+                            <button 
+                                type="submit" 
+                                class="btn btn-primary position-absolute top-50 end-0 translate-middle-y me-2 rounded-pill px-4"
+                            >
+                                {% trans "Поиск" %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="mt-4">
+                    <p class="text-secondary">
+                        <small>
+                            <i class="bi bi-info-circle me-1"></i>
+                            {% trans "Начните с поиска или перейдите к" %} 
+                            <a href="{% url 'news:top_headlines_news' %}" class="text-decoration-none">{% trans "главным новостям" %}</a>
+                        </small>
+                    </p>
+                </div>
+                
             </div>
         </div>
     </div>
 </div>
-
-<div class="row mb-4">
-    <div class="col-12">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <h3><i class="bi bi-lightning text-warning me-2"></i>Главные новости</h3>
-            <div class="dropdown">
-                <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                    <i class="bi bi-filter me-1"></i>Фильтры
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">По дате</a></li>
-                    <li><a class="dropdown-item" href="#">По популярности</a></li>
-                    <li><a class="dropdown-item" href="#">По источнику</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<h2>Тут карточки новостей будут))) или что-то другое хахахахах</h2>
-
 {% endblock %}

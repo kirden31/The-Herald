@@ -1,4 +1,4 @@
-__all__ = ()
+__all__ = ('ConfigAuthBackend',)
 
 from django.conf import settings
 from django.contrib import messages

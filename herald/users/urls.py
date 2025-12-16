@@ -2,13 +2,14 @@ from django.contrib.auth import views
 from django.urls import path
 
 import users.forms
-from users.views import FavoritesView, ProfileView, SignUpView
+import users.views
 
 app_name = 'users'
 urlpatterns = [
-    path('signup/', SignUpView.as_view(), name='signup'),
-    path('profile/', ProfileView.as_view(), name='profile'),
-    path('favorites/', FavoritesView.as_view(), name='favorites'),
+    path('signup/', users.views.SignUpView.as_view(), name='signup'),
+    path('profile/', users.views.ProfileView.as_view(), name='profile'),
+    path('favorites/', users.views.FavoritesView.as_view(), name='favorites'),
+    path('save-favorite/', users.views.SaveFavoriteView.as_view(), name='save_favorite'),
     path(
         'login/',
         views.LoginView.as_view(

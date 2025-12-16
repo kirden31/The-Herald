@@ -8,7 +8,7 @@ import herald.views
 app_name = 'herald'
 
 urlpatterns = [
-    django.urls.path('', herald.views.home),
+    django.urls.path('', herald.views.HomeView.as_view()),
     django.urls.path('news/', django.urls.include('news.urls')),
     django.urls.path('admin/', admin.site.urls),
     django.urls.path('users/', django.urls.include('users.urls')),

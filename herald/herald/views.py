@@ -1,13 +1,11 @@
-__all__ = ()
+__all__ = ('HomeView',)
 
 from django.http import HttpResponse
-from django.shortcuts import render
+import django.shortcuts
 
 
-def home(request):
-    template = 'home.html'
-    return render(request, template)
+class HomeView(django.views.View):
+    template_name = 'home.html'
 
-
-def search(request):
-    return HttpResponse('Какя новость?')
+    def get(self, request, *args, **kwargs):
+        return django.shortcuts.render(request, self.template_name)
