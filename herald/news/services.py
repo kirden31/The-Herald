@@ -26,7 +26,7 @@ def add_article_id_and_source(news_list, source_type='newsapi'):
 
 
 def enrich_with_favorites(news_list, user):
-    if not user.is_authenticated:
+    if not user:
         return news_list
 
     article_ids = [a['id'] for a in news_list if a.get('id')]

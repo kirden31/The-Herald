@@ -2,11 +2,11 @@ __all__ = ('ProfileView', 'SignUpView', 'FavoritesView', 'SaveFavoriteView')
 
 from http import HTTPStatus
 
-import django.core.exceptions
 import django.contrib
 import django.contrib.auth
-import django.contrib.messages
 import django.contrib.auth.mixins
+import django.contrib.messages
+import django.core.exceptions
 import django.db
 import django.http
 import django.shortcuts
@@ -39,7 +39,7 @@ class SignUpView(django.views.generic.CreateView):
         return response
 
     def get(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
+        if request.user:
             return django.shortcuts.redirect('/')
 
         return super().get(request, *args, **kwargs)
@@ -66,20 +66,23 @@ class FavoritesView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        context['news'] = [{
-                    'title': fav.title,
-                    'description': fav.description,
-                    'content': fav.content,
-                    'url': fav.url,
-                    'image_url': fav.image_url,
-                    'creator': fav.creator,
-                    'author': fav.creator,
-                    'source': fav.source_name,
-                    'publishedAt': fav.published_at,
-                    'id': fav.article_id,
-                    'is_favorite': True,
-                    'favorited_at': fav.created_at,
-                } for fav in context.get('favorites',[])]
+        context['news'] = [
+            {
+                'title': fav.title,
+                'description': fav.description,
+                'content': fav.content,
+                'url': fav.url,
+                'image_url': fav.image_url,
+                'creator': fav.creator,
+                'author': fav.creator,
+                'source': fav.source_name,
+                'publishedAt': fav.published_at,
+                'id': fav.article_id,
+                'is_favorite': True,
+                'favorited_at': fav.created_at,
+            }
+            for fav in context.get('favorites', [])
+        ]
 
         return context
 
@@ -103,21 +106,24 @@ class SaveFavoriteView(django.contrib.auth.mixins.LoginRequiredMixin, django.vie
             else:
                 dt = django.utils.timezone.now()
 
-
             obj, created = users.models.FavoriteArticle.objects.get_or_create(
                 user=request.user,
                 article_id=article_id,
-                title=data['title'][:499],
-                description=data.get('description', ''),
-                content=data.get('content', ''),
-                url=data['url'],
-                image_url=data.get('image_url', ''),
-                source_name=data.get('source_name', ''),
-                source_id=data.get('source_id', ''),
-                creator=data.get('creator', ''),
-                published_at=dt,
-                category=data.get('category', ''),
-                tags=[],
+                defaults={
+                    'user': request.user,
+                    'article_id': article_id,
+                    'title': data['title'][:499],
+                    'description': data.get('description', ''),
+                    'content': data.get('content', ''),
+                    'url': data['url'],
+                    'image_url': data.get('image_url', ''),
+                    'source_name': data.get('source_name', ''),
+                    'source_id': data.get('source_id', ''),
+                    'creator': data.get('creator', ''),
+                    'published_at': dt,
+                    'category': data.get('category', ''),
+                    'tags': [],
+                },
             )
 
             if not created:
