@@ -1,4 +1,4 @@
-__all__ = ()
+__all__ = ('User', 'Profile', 'FavoriteArticle')
 
 import sys
 
@@ -94,59 +94,27 @@ class FavoriteArticle(models.Model):
         related_name='favorite_articles',
         verbose_name=_('пользователь'),
     )
-    article_id = models.CharField(
-        'ID новости',
-        max_length=500,
-        db_index=True,
+    article_id = models.CharField(verbose_name=_('id новости'), db_index=True)
+    title = models.CharField(verbose_name=_('заголовок'))
+    description = models.TextField(verbose_name=_('описание'), blank=True, null=True)
+    content = models.TextField(verbose_name=_('содержание'), blank=True, null=True)
+    url = models.URLField(verbose_name=_('ссылка на новость'))
+    image_url = models.URLField(verbose_name=_('ссылка на изображение'), blank=True, null=True)
+    source_name = models.CharField(verbose_name=_('название источника'))
+    source_id = models.CharField(verbose_name=_('id источника'), blank=True, null=True)
+    creator = models.CharField(verbose_name=_('автор'), blank=True, null=True)
+    published_at = models.DateTimeField(verbose_name=_('дата публикации'))
+    category = models.CharField(verbose_name=_('категория'), blank=True, null=True)
+    created_at = models.DateTimeField(verbose_name=_('дата добавления'), auto_now_add=True)
+    tags = models.JSONField(
+        verbose_name=_('теги'),
+        default=list,
+        help_text=_('Теги для поиска и фильтрации'),
     )
-    title = models.CharField(
-        verbose_name=_('заголовок'),
-        max_length=500,
-    )
-    description = models.TextField(
-        'Описание',
-        blank=True,
-        null=True,
-    )
-    content = models.TextField(
-        'Содержание',
-        blank=True,
-        null=True,
-    )
-    url = models.URLField(
-        'Ссылка на новость',
-        max_length=500,
-    )
-    image_url = models.URLField(
-        'Ссылка на изображение',
-        max_length=500,
-        blank=True,
-        null=True,
-    )
-    source_name = models.CharField(
-        'Название источника',
-        max_length=200,
-    )
-    source_id = models.CharField(
-        'ID источника',
-        max_length=100,
-        blank=True,
-        null=True,
-    )
-    creator = models.CharField(
-        'Автор',
-        max_length=200,
-        blank=True,
-        null=True,
-    )
-    published_at = models.DateTimeField('Дата публикации')
-    category = models.CharField('Категория', max_length=100, blank=True, null=True)
-    created_at = models.DateTimeField('Дата добавления', auto_now_add=True)
-    tags = models.JSONField('Теги', default=list, help_text='Теги для поиска и фильтрации')
 
     class Meta:
-        verbose_name = 'Избранная новость'
-        verbose_name_plural = 'Избранные новости'
+        verbose_name = _('избранная новость')
+        verbose_name_plural = _('избранные новости')
         unique_together = ['user', 'article_id']
         ordering = ['-created_at']
         indexes = [

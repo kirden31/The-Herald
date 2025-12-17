@@ -40,6 +40,13 @@ class NewsTest(django.test.TestCase):
                 'urlToImage',
                 'publishedAt',
                 'content',
+                # Поля, добавляемые services.py
+                'id',
+                'source_name',
+                'source_id',
+                'image_url',
+                'creator',
+                'is_favorite',
             },
             set(news_keys),
         )

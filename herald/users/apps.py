@@ -1,19 +1,21 @@
-__all__ = ()
+__all__ = ('UsersConfig',)
 
-from django.apps import AppConfig
+import django.apps
 from django.utils.translation import gettext_lazy as _
 
 
-class UsersConfig(AppConfig):
+class UsersConfig(django.apps.AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'users'
     verbose_name = _('Пользователи')
 
     def ready(self):
-        from django.contrib.auth.models import User
-        from django.db.models.signals import post_save
+        import django.contrib.auth.models
+        import django.db.models.signals
 
-        from users.signals import create_profile, save_profile
+        import users.signals
 
-        post_save.connect(create_profile, sender=User)
-        post_save.connect(save_profile, sender=User)
+        django.db.models.signals.post_save.connect(
+            users.signals.create_save_user_profile,
+            sender=django.contrib.auth.models.User,
+        )

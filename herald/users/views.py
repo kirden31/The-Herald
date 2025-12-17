@@ -1,19 +1,23 @@
-__all__ = ()
+__all__ = ('ProfileView', 'SignUpView', 'FavoritesView', 'SaveFavoriteView')
 
-import datetime
+from http import HTTPStatus
+import json
 
-from django.contrib import messages
-from django.contrib.auth import login
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import redirect
-from django.views.generic import CreateView, ListView, TemplateView
+import django.contrib
+import django.contrib.auth
+import django.contrib.auth.mixins
+import django.db
+import django.http
+import django.shortcuts
+import django.utils
+import django.views.generic
 
-from users.forms import SignupForm
-from users.models import FavoriteArticle
+import users.forms
+import users.models
 
 
-class SignUpView(CreateView):
-    form_class = SignupForm
+class SignUpView(django.views.generic.CreateView):
+    form_class = users.forms.SignupForm
     template_name = 'users/signup.html'
     success_url = '/'
 
@@ -22,67 +26,119 @@ class SignUpView(CreateView):
         user = form.save()
         user.backend = 'django.contrib.auth.backends.ModelBackend'
 
-        login(self.request, user)
+        django.contrib.auth.login(self.request, user)
 
-        messages.success(self.request, 'Регистрация прошла успешно! Добро пожаловать!')
+        django.contrib.messages.success(
+            self.request,
+            'Регистрация прошла успешно! Добро пожаловать!',
+        )
 
         return response
 
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
-            return redirect('/')
+            return django.shortcuts.redirect('/')
 
         return super().get(request, *args, **kwargs)
 
 
-class ProfileView(LoginRequiredMixin, TemplateView):
+class ProfileView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.generic.TemplateView):
     template_name = 'users/profile.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['user'] = self.request.user
-        context['profile'] = (
-            self.request.user.profile if hasattr(self.request.user, 'profile') else None
-        )
+        context['favorite_count'] = self.request.user.favorite_articles.count()
         return context
 
 
-class FavoritesView(LoginRequiredMixin, ListView):
-    model = FavoriteArticle
+class FavoritesView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.generic.ListView):
+    model = users.models.FavoriteArticle
     template_name = 'users/favorites.html'
     context_object_name = 'favorites'
 
+    def get_queryset(self):
+        return self.model.objects.filter(user=self.request.user).order_by('-created_at')
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        user = self.request.user
-        week_ago = datetime.datetime.now() - datetime.timedelta(days=7)
-        week_qs = FavoriteArticle.objects.filter(
-            user=user,
-            created_at__gte=week_ago,
-        )
-        context['this_week_count'] = week_qs.count()
-        categories_qs = FavoriteArticle.objects.filter(user=user)
-        categories_qs = categories_qs.exclude(category__isnull=True)
-        context['categories_count'] = (
-            categories_qs.values(
-                'category',
+        news_list = []
+        for fav in context['favorites']:
+            news_list.append(
+                {
+                    'title': fav.title,
+                    'description': fav.description,
+                    'content': fav.content,
+                    'url': fav.url,
+                    'image_url': fav.image_url,
+                    'creator': fav.creator,
+                    'author': fav.creator,
+                    'source': fav.source_name,
+                    'publishedAt': fav.published_at,
+                    'id': fav.article_id,
+                    'is_favorite': True,
+                    'favorited_at': fav.created_at,
+                },
             )
-            .distinct()
-            .count()
-        )
-        sources_qs = FavoriteArticle.objects.filter(user=user)
-        context['sources_count'] = (
-            sources_qs.values(
-                'source_name',
-            )
-            .distinct()
-            .count()
-        )
-        all_cats_qs = FavoriteArticle.objects.filter(user=user)
-        all_cats_qs = all_cats_qs.exclude(category__isnull=True)
-        context['all_categories'] = all_cats_qs.values_list(
-            'category',
-            flat=True,
-        ).distinct()
+
+        context['news'] = news_list
 
         return context
+
+
+class SaveFavoriteView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.View):
+    def post(self, request, *args, **kwargs):
+        data = request.POST
+        article_id = data.get('article_id')
+        if not article_id:
+            return django.http.JsonResponse(
+                {'error': 'article_id is required'},
+                status=HTTPStatus.BAD_REQUEST,
+            )
+
+        deleted, _ = users.models.FavoriteArticle.objects.filter(
+            user=request.user,
+            article_id=article_id,
+        ).delete()
+
+        if deleted:
+            return django.http.JsonResponse({'status': 'removed'})
+
+        try:
+            published_at_str = data.get('published_at', '').strip()
+            if published_at_str:
+                dt = django.utils.dateparse.parse_datetime(published_at_str)
+                if dt and not django.utils.timezone.is_aware(dt):
+                    dt = django.utils.timezone.make_aware(dt, django.utils.timezone.utc)
+            else:
+                dt = django.utils.timezone.now()
+
+            tags_raw = data.get('tags', '[]')
+            if isinstance(tags_raw, str):
+                try:
+                    tags = json.loads(tags_raw)
+                except (ValueError, TypeError):
+                    tags = []
+            else:
+                tags = tags_raw or []
+
+            users.models.FavoriteArticle.objects.create(
+                user=request.user,
+                article_id=article_id,
+                title=data['title'][:499],
+                description=data.get('description', ''),
+                content=data.get('content', ''),
+                url=data['url'],
+                image_url=data.get('image_url', ''),
+                source_name=data.get('source_name', ''),
+                source_id=data.get('source_id', ''),
+                creator=data.get('creator', ''),
+                published_at=dt,
+                category=data.get('category', ''),
+                tags=tags,
+            )
+            return django.http.JsonResponse({'status': 'added'})
+
+        except django.db.IntegrityError:
+            return django.http.JsonResponse({'status': 'removed'})
+        except Exception as e:
+            return django.http.JsonResponse({'error': str(e)}, status=HTTPStatus.BAD_REQUEST)

@@ -1,4 +1,10 @@
-__all__ = ()
+__all__ = (
+    'ChangeForm',
+    'LoginForm',
+    'ProfileForm',
+    'SignupForm',
+    'UserForm',
+)
 
 import datetime
 
