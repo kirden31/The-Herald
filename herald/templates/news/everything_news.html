@@ -2,41 +2,13 @@
 {% load static %}
 {% load i18n %}
 {% block content %}
-<link href="{% static 'css/select2.min.css' %}" rel="stylesheet">
-
 <h2 class="mb-4">{% trans "Everything" %}</h2>
 <div class="container py-4">
+
     <form action="{% url 'news:everything_news' %}" method="get" class="d-flex mb-3" role="search">
-        {{ search_form.query }}
-        <button class="btn btn-primary ms-2" type="submit">{% trans "Search" %}</button>
-
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            {% trans "Filters" %}
-        </button>
-
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">{% trans "Filters" %}</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <div class="modal-body">
-                        {{ filters_form.as_p }}
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Close" %
-                        </button>
-                        <button type="submit" class="btn btn-primary">{% trans "Save" %</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        {% include "includes/search_area.html" %}
     </form>
+
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
         {% for n in news %}
         {% include "includes/news_card.html" %}
@@ -44,22 +16,10 @@
         <div class="col-12">
             <div class="alert alert-info">{% trans "No_news_found" %}</div>
         </div>
-
         {% endfor %}
     </div>
+
+    {% include "includes/page_select.html" %}
+
 </div>
-
-<script src="{% static 'js/jQuery.js' %}"></script>
-<script src="{% static 'js/select2.js' %}"></script>
-<script>
-    $(document).ready(function() {
-        $('#exampleModal').on('shown.bs.modal', function () {
-            $('.js-example-basic-multiple').select2({
-                dropdownParent: $('#exampleModal')
-            });
-        });
-    });
-</script>
-
-
 {% endblock %}

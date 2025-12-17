@@ -8,6 +8,8 @@ import requests_cache
 class BaseApiClass:
     base_url: str
     headers: dict
+    key_id: int
+    api_keys: list
 
     urls_expire_after = {
         # fav
@@ -38,11 +40,21 @@ class BaseApiClass:
             response = self.session.get(url, params=params, expire_after=expire_after)
             return response
         except Exception as e:
-            return str(e)
+            return e
 
     def get_json(self, endpoint, params=None):
         response = self._request(endpoint, params)
-        return response.json()
+        response_json = response.json()
+        response_json['status_code'] = response.status_code
+        return response_json
+
+    @classmethod
+    def check_api_key_limit(cls, status):
+        if status == 429:
+            cls.key_id = (cls.key_id + 1) % len(cls.api_keys)
+            return True
+
+        return False
 
     def get_fav_google(self, domain, size=128):
         url = 'https://t3.gstatic.com/faviconV2'

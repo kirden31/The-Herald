@@ -8,11 +8,13 @@ import api.core
 
 class GuardianApi(api.core.BaseApiClass):
     base_url = 'https://content.guardianapis.com/'
+    key_id = 0
+    api_keys = django.conf.settings.GUARDIAN_API_KEYS
 
     def __init__(self):
         super().__init__()
 
-        self.api_key = django.conf.settings.GUARDIAN_API_KEY
+        self.api_key = self.api_keys[self.key_id]
         self.show_fields_news = (
             'byline',
             'headline',
@@ -20,30 +22,23 @@ class GuardianApi(api.core.BaseApiClass):
             'trailText',
         )
 
-    def get_data(self, endpoint, params=None, additional_params=None):
+    def get_json(self, endpoint, params=None):
         if params is None:
             params = {}
 
         params['api-key'] = self.api_key
+        params['show-fields'] = ','.join(self.show_fields_news)
 
-        if additional_params:
-            for key, value in additional_params.items():
-                params[key] = value
+        response = super().get_json(endpoint, params)
 
-        response = self.get_json(endpoint, params)
+        if self.check_api_key_limit(response.get('status_code')):
+            self.api_key = self.api_keys[self.key_id]
+            self.get_news_list(endpoint, params)
 
-        data = response.get('response', {})
-        results = data.get('results', [])
-        total = data.get('total', 0)
-        current_page = data.get('currentPage', None)
-
-        return results, total, current_page
+        return response
 
     def get_news_list(self, endpoint='search', params=None):
-        additional_params = {'show-fields': ','.join(self.show_fields_news)}
-
-        results, total, current_page = self.get_data(endpoint, params, additional_params)
-
+        response = self.get_json(endpoint, params)
         news = [
             {
                 'source': 'Guardian',
@@ -55,13 +50,13 @@ class GuardianApi(api.core.BaseApiClass):
                 'publishedAt': django.utils.dateparse.parse_datetime(n.get('webPublicationDate')),
                 'content': n.get('fields').get('trailText'),
             }
-            for n in results
+            for n in response.get('response', {}).get('results', [])
         ]
 
-        return {'news': news, 'total': total, 'current_page': current_page}
+        return {'news': news, 'pages': response.get('response', {}).get('pages', 0)}
 
     def get_sections_list(self, endpoint='sections', params=None):
-        results, total, current_page = self.get_data(endpoint, params)
+        response = self.get_json(endpoint, params)
 
         sections = [
             {
@@ -70,7 +65,7 @@ class GuardianApi(api.core.BaseApiClass):
                 'webUrl': s.get('webUrl'),
                 'apiUrl': s.get('apiUrl'),
             }
-            for s in results
+            for s in response.get('response', {}).get('results', [])
         ]
 
-        return {'sections': sections, 'total': total, 'current_page': current_page}
+        return {'sections': sections}

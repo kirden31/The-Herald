@@ -22,8 +22,8 @@ DEBUG = herald.tools.to_bool('DJANGO_DEBUG', False)
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', default='*').split()
 
 # Your API keys
-NEWS_API_KEYS = os.getenv('NEWS_API_KEYS', '').split()
-GUARDIAN_API_KEY = os.getenv('GUARDIAN_API_KEY')
+NEWS_API_KEYS = os.getenv('NEWS_API_KEYS', 'no_api_key').split()
+GUARDIAN_API_KEYS = os.getenv('GUARDIAN_API_KEYS', 'no_api_key').split()
 
 
 MAX_AUTH_ATTEMPTS = os.getenv('DJANGO_MAX_AUTH_ATTEMPTS', default=3)

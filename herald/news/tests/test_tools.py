@@ -19,6 +19,13 @@ news_api_data_news = {
             'publishedAt': '2025-11-17T10:00:00Z',
             'content': 'content',
         },
+        {
+            'source': {'id': 'id', 'name': 'name'},
+            'url': 'url',
+            'urlToImage': 'urlToImage',
+            'publishedAt': '2025-11-17T10:00:00Z',
+            'content': 'content',
+        },
     ],
 }
 

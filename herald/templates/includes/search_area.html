@@ -1,0 +1,52 @@
+{% load static %}
+{% load i18n %}
+<link href="{% static 'css/select2.min.css' %}" rel="stylesheet">
+{{ search_form.query }}
+
+<button class="btn btn-primary ms-2" type="submit">
+    {% trans "Search" %}
+</button>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    {% trans "Filters" %}
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    {% trans "Filters" %}
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                {{ filters_form.as_p }}
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    {% trans "Close" %}
+                </button>
+                <button type="submit" class="btn btn-primary">
+                    {% trans "Save" %}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="{% static 'js/jQuery.js' %}"></script>
+<script src="{% static 'js/select2.js' %}"></script>
+<script>
+    $(document).ready(function() {
+        $('#exampleModal').on('shown.bs.modal', function () {
+            $('.js-example-basic-multiple').select2({
+                dropdownParent: $('#exampleModal')
+            });
+        });
+    });
+</script>
