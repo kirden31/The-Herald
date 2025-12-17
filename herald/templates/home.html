@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-8 text-center">
-    
+
                 <div class="mb-5">
                     <h1 class="display-1 fw-bold text-primary mb-3">
                         <i class="bi bi-compass"></i>
@@ -21,39 +21,40 @@
                         {% trans "Находите. Читайте. Оставайтесь в курсе." %}
                     </p>
                 </div>
-                
+
                 <div class="search-box mb-4">
                     <form action="{% url 'news:everything_news' %}" method="get">
                         <div class="position-relative">
-                            <input 
-                                type="text" 
-                                name="query" 
-                                class="form-control form-control-lg border-3 py-3 px-4 rounded-pill shadow-sm" 
-                                placeholder="🔍 Ищите новости по теме..." 
-                                style="font-size: 1.1rem;"
-                                autocomplete="off"
-                                autofocus
+                            <input
+                                    type="text"
+                                    name="query"
+                                    class="form-control form-control-lg border-3 py-3 px-4 rounded-pill shadow-sm"
+                                    placeholder="🔍 Ищите новости по теме..."
+                                    style="font-size: 1.1rem;"
+                                    autocomplete="off"
+                                    autofocus
                             >
-                            <button 
-                                type="submit" 
-                                class="btn btn-primary position-absolute top-50 end-0 translate-middle-y me-2 rounded-pill px-4"
+                            <button
+                                    type="submit"
+                                    class="btn btn-primary position-absolute top-50 end-0 translate-middle-y me-2 rounded-pill px-4"
                             >
                                 {% trans "Поиск" %}
                             </button>
                         </div>
                     </form>
                 </div>
-                
+
                 <div class="mt-4">
                     <p class="text-secondary">
                         <small>
                             <i class="bi bi-info-circle me-1"></i>
-                            {% trans "Начните с поиска или перейдите к" %} 
-                            <a href="{% url 'news:top_headlines_news' %}" class="text-decoration-none">{% trans "главным новостям" %}</a>
+                            {% trans "Начните с поиска или перейдите к" %}
+                            <a href="{% url 'news:top_headlines_news' %}" class="text-decoration-none">{% trans "главным
+                                новостям" %}</a>
                         </small>
                     </p>
                 </div>
-                
+
             </div>
         </div>
     </div>

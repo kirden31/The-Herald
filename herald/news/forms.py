@@ -175,6 +175,7 @@ class SourcesFilterForm(django.forms.Form):
 class GuardianFiltersForm(django.forms.Form):
     section = django.forms.MultipleChoiceField(
         label=_('Sections'),
+        help_text=_('Doesnt_work_with_search_query'),
         choices=news.forms_data.SECTIONS_CHOICES,
         widget=django.forms.SelectMultiple(
             attrs={
