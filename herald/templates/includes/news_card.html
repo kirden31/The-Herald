@@ -41,7 +41,7 @@
             {% trans "Читать" %}
           </a>
 
-          {% if request.user.is_authenticated %}
+          {% if user %}
             <form class="favorite-form ms-2" method="post" action="{% url 'users:save_favorite' %}" style="display: inline;">
               {% csrf_token %}
               <input type="hidden" name="article_id" value="{{ n.id }}">

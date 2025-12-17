@@ -1,16 +1,19 @@
 __all__ = ('ProfileView', 'SignUpView', 'FavoritesView', 'SaveFavoriteView')
 
 from http import HTTPStatus
-import json
 
 import django.contrib
 import django.contrib.auth
 import django.contrib.auth.mixins
+import django.contrib.messages
+import django.core.exceptions
 import django.db
 import django.http
 import django.shortcuts
 import django.urls
 import django.utils
+import django.utils.dateparse
+import django.utils.timezone
 import django.views.generic
 
 import users.forms
@@ -37,7 +40,7 @@ class SignUpView(django.views.generic.CreateView):
         return response
 
     def get(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
+        if request.user:
             return django.shortcuts.redirect('/')
 
         return super().get(request, *args, **kwargs)
@@ -48,7 +51,8 @@ class ProfileView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.ge
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['favorite_count'] = self.request.user.favorite_articles.count()
+        user = self.request.user
+        context['favorite_count'] = user.favorite_articles.count()
         return context
 
 
@@ -84,30 +88,28 @@ class FavoritesView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.
     context_object_name = 'favorites'
 
     def get_queryset(self):
-        return self.model.objects.filter(user=self.request.user).order_by('-created_at')
+        return self.model.objects.filter(user=self.request.user)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        news_list = []
-        for fav in context['favorites']:
-            news_list.append(
-                {
-                    'title': fav.title,
-                    'description': fav.description,
-                    'content': fav.content,
-                    'url': fav.url,
-                    'image_url': fav.image_url,
-                    'creator': fav.creator,
-                    'author': fav.creator,
-                    'source': fav.source_name,
-                    'publishedAt': fav.published_at,
-                    'id': fav.article_id,
-                    'is_favorite': True,
-                    'favorited_at': fav.created_at,
-                },
-            )
 
-        context['news'] = news_list
+        context['news'] = [
+            {
+                'title': fav.title,
+                'description': fav.description,
+                'content': fav.content,
+                'url': fav.url,
+                'image_url': fav.image_url,
+                'creator': fav.creator,
+                'author': fav.creator,
+                'source': fav.source_name,
+                'publishedAt': fav.published_at,
+                'id': fav.article_id,
+                'is_favorite': True,
+                'favorited_at': fav.created_at,
+            }
+            for fav in context.get('favorites', [])
+        ]
 
         return context
 
@@ -122,14 +124,6 @@ class SaveFavoriteView(django.contrib.auth.mixins.LoginRequiredMixin, django.vie
                 status=HTTPStatus.BAD_REQUEST,
             )
 
-        deleted, _ = users.models.FavoriteArticle.objects.filter(
-            user=request.user,
-            article_id=article_id,
-        ).delete()
-
-        if deleted:
-            return django.http.JsonResponse({'status': 'removed'})
-
         try:
             published_at_str = data.get('published_at', '').strip()
             if published_at_str:
@@ -139,30 +133,30 @@ class SaveFavoriteView(django.contrib.auth.mixins.LoginRequiredMixin, django.vie
             else:
                 dt = django.utils.timezone.now()
 
-            tags_raw = data.get('tags', '[]')
-            if isinstance(tags_raw, str):
-                try:
-                    tags = json.loads(tags_raw)
-                except (ValueError, TypeError):
-                    tags = []
-            else:
-                tags = tags_raw or []
-
-            users.models.FavoriteArticle.objects.create(
+            obj, created = users.models.FavoriteArticle.objects.get_or_create(
                 user=request.user,
                 article_id=article_id,
-                title=data['title'][:499],
-                description=data.get('description', ''),
-                content=data.get('content', ''),
-                url=data['url'],
-                image_url=data.get('image_url', ''),
-                source_name=data.get('source_name', ''),
-                source_id=data.get('source_id', ''),
-                creator=data.get('creator', ''),
-                published_at=dt,
-                category=data.get('category', ''),
-                tags=tags,
+                defaults={
+                    'user': request.user,
+                    'article_id': article_id,
+                    'title': data['title'][:499],
+                    'description': data.get('description', ''),
+                    'content': data.get('content', ''),
+                    'url': data['url'],
+                    'image_url': data.get('image_url', ''),
+                    'source_name': data.get('source_name', ''),
+                    'source_id': data.get('source_id', ''),
+                    'creator': data.get('creator', ''),
+                    'published_at': dt,
+                    'category': data.get('category', ''),
+                    'tags': [],
+                },
             )
+
+            if not created:
+                obj.delete()
+                return django.http.JsonResponse({'status': 'removed'})
+
             return django.http.JsonResponse({'status': 'added'})
 
         except django.db.IntegrityError:
