@@ -2,17 +2,17 @@ __all__ = ('User', 'Profile', 'FavoriteArticle')
 
 import sys
 
-from django.conf import settings
-from django.contrib.auth.models import BaseUserManager, User
-from django.db import models
+import django.conf
+import django.contrib.auth.models
+import django.db
 from django.utils.translation import gettext_lazy as _
-from sorl.thumbnail import get_thumbnail
+import sorl.thumbnail
 
 if not any(cmd in sys.argv for cmd in ['makemigrations', 'migrate']):
-    User._meta.get_field('email')._unique = True
+    django.contrib.auth.models.User._meta.get_field('email')._unique = True
 
 
-class UserManager(BaseUserManager):
+class UserManager(django.contrib.auth.models.BaseUserManager):
     def get_queryset(self):
         return super().get_queryset().select_related('profile')
 
@@ -20,13 +20,13 @@ class UserManager(BaseUserManager):
         return self.get_queryset().filter(is_active=True)
 
 
-class User(User):
+class User(django.contrib.auth.models.User):
     objects = UserManager()
 
     class Meta:
         proxy = True
-        verbose_name = User._meta.verbose_name
-        verbose_name_plural = User._meta.verbose_name_plural
+        verbose_name = django.contrib.auth.models.User._meta.verbose_name
+        verbose_name_plural = django.contrib.auth.models.User._meta.verbose_name_plural
 
     def save(self, *args, **kwargs):
         self.clean()
@@ -36,33 +36,33 @@ class User(User):
         return self.username[:10]
 
 
-class Profile(models.Model):
+class Profile(django.db.models.Model):
     def image_path(self, filename):
         return f'users/avatars/{self.user.id}/{filename}'
 
-    user = models.OneToOneField(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
+    user = django.db.models.OneToOneField(
+        django.conf.settings.AUTH_USER_MODEL,
+        on_delete=django.db.models.CASCADE,
         related_name='profile',
         verbose_name=_('пользователь'),
     )
-    image = models.ImageField(
+    image = django.db.models.ImageField(
         upload_to=image_path,
         blank=True,
         verbose_name=_('аватарка'),
         help_text=_('Аватарка пользователя.'),
     )
-    birthday = models.DateField(
+    birthday = django.db.models.DateField(
         blank=True,
         null=True,
         verbose_name=_('дата рождения'),
         help_text=_('Дата рождения пользователя.'),
     )
-    location = models.CharField(
+    location = django.db.models.CharField(
         blank=True,
         help_text=_('Город (или страна) проживания пользователя.'),
     )
-    attempts_count = models.PositiveBigIntegerField(
+    attempts_count = django.db.models.PositiveBigIntegerField(
         default=0,
         verbose_name=_('попытки'),
         help_text=_('Количество попыток входа в систему'),
@@ -70,7 +70,7 @@ class Profile(models.Model):
 
     def get_image_300x300(self):
         if self.image:
-            return get_thumbnail(
+            return sorl.thumbnail.get_thumbnail(
                 self.image,
                 '300x300',
                 crop='center',
@@ -87,26 +87,33 @@ class Profile(models.Model):
         return self.user.username[:10]
 
 
-class FavoriteArticle(models.Model):
-    user = models.ForeignKey(
+class FavoriteArticle(django.db.models.Model):
+    user = django.db.models.ForeignKey(
         User,
-        on_delete=models.CASCADE,
+        on_delete=django.db.models.CASCADE,
         related_name='favorite_articles',
         verbose_name=_('пользователь'),
     )
-    article_id = models.CharField(verbose_name=_('id новости'), db_index=True)
-    title = models.CharField(verbose_name=_('заголовок'))
-    description = models.TextField(verbose_name=_('описание'), blank=True, null=True)
-    content = models.TextField(verbose_name=_('содержание'), blank=True, null=True)
-    url = models.URLField(verbose_name=_('ссылка на новость'))
-    image_url = models.URLField(verbose_name=_('ссылка на изображение'), blank=True, null=True)
-    source_name = models.CharField(verbose_name=_('название источника'))
-    source_id = models.CharField(verbose_name=_('id источника'), blank=True, null=True)
-    creator = models.CharField(verbose_name=_('автор'), blank=True, null=True)
-    published_at = models.DateTimeField(verbose_name=_('дата публикации'))
-    category = models.CharField(verbose_name=_('категория'), blank=True, null=True)
-    created_at = models.DateTimeField(verbose_name=_('дата добавления'), auto_now_add=True)
-    tags = models.JSONField(
+    article_id = django.db.models.CharField(verbose_name=_('id новости'), db_index=True)
+    title = django.db.models.CharField(verbose_name=_('заголовок'))
+    description = django.db.models.TextField(verbose_name=_('описание'), blank=True, null=True)
+    content = django.db.models.TextField(verbose_name=_('содержание'), blank=True, null=True)
+    url = django.db.models.URLField(verbose_name=_('ссылка на новость'))
+    image_url = django.db.models.URLField(
+        verbose_name=_('ссылка на изображение'),
+        blank=True,
+        null=True,
+    )
+    source_name = django.db.models.CharField(verbose_name=_('название источника'))
+    source_id = django.db.models.CharField(verbose_name=_('id источника'), blank=True, null=True)
+    creator = django.db.models.CharField(verbose_name=_('автор'), blank=True, null=True)
+    published_at = django.db.models.DateTimeField(verbose_name=_('дата публикации'))
+    category = django.db.models.CharField(verbose_name=_('категория'), blank=True, null=True)
+    created_at = django.db.models.DateTimeField(
+        verbose_name=_('дата добавления'),
+        auto_now_add=True,
+    )
+    tags = django.db.models.JSONField(
         verbose_name=_('теги'),
         default=list,
         help_text=_('Теги для поиска и фильтрации'),
@@ -118,8 +125,8 @@ class FavoriteArticle(models.Model):
         unique_together = ['user', 'article_id']
         ordering = ['-created_at']
         indexes = [
-            models.Index(fields=['user', 'created_at']),
-            models.Index(fields=['user', 'category']),
+            django.db.models.Index(fields=['user', 'created_at']),
+            django.db.models.Index(fields=['user', 'category']),
         ]
 
     def __str__(self):

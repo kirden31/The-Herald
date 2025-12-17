@@ -1,27 +1,27 @@
 __all__ = ('ConfigAuthBackend',)
 
-from django.conf import settings
-from django.contrib import messages
-from django.contrib.auth.backends import ModelBackend
-from django.core.exceptions import ValidationError
-from django.core.mail import send_mail
-from django.core.validators import validate_email
-from django.urls import reverse
-from django.utils import timezone
-from django.utils.translation import gettext_lazy
+import django.conf
+import django.contrib
+import django.contrib.auth.backends
+import django.core.exceptions
+import django.core.mail
+import django.core.validators
+import django.urls
+import django.utils
+import django.utils.translation
 
-from users.models import User
+import users.models
 
 
-class ConfigAuthBackend(ModelBackend):
+class ConfigAuthBackend(django.contrib.auth.backends.ModelBackend):
     def authenticate(self, request, username=None, password=None, **kwargs):
         try:
             try:
-                validate_email(username)
-                user = User.objects.get(email=username)
-            except ValidationError:
-                user = User.objects.get(username=username)
-        except User.DoesNotExist:
+                django.core.validators.validate_email(username)
+                user = users.models.User.objects.get(email=username)
+            except django.core.exceptions.ValidationError:
+                user = users.models.User.objects.get(username=username)
+        except users.models.User.DoesNotExist:
             return None
 
         if user.check_password(password) and self.user_can_authenticate(
@@ -33,47 +33,35 @@ class ConfigAuthBackend(ModelBackend):
 
         user.profile.attempts_count += 1
 
-        if user.profile.attempts_count > settings.MAX_AUTH_ATTEMPTS:
-            user.is_active = False
-            user.profile.block_date = timezone.now()
+        max_auth_attempts = int(django.conf.settings.MAX_AUTH_ATTEMPTS)
 
-            self._add_message_safe(
-                request,
-                gettext_lazy(
-                    'Достигнуто максимальное количество попыток.',
-                ),
-            )
+        if user.profile.attempts_count > max_auth_attempts:
+            user.is_active = False
+            user.profile.block_date = django.utils.timezone.now()
 
             if request:
                 activation_url = request.build_absolute_uri(
-                    reverse('users:reactivate', kwargs={'pk': user.id}),
+                    django.urls.reverse('users:reactivate', kwargs={'pk': user.id}),
                 )
 
-                msg = gettext_lazy(
+                msg = django.utils.translation.gettext_lazy(
                     'Мы заметили подозрительную активность, '
                     'поэтому заблокировали ваш аккаунт.'
                     'Перейдите по ссылке для активации (действует 7 дней):',
                 )
-                send_mail(
-                    subject=gettext_lazy('Активация аккаунта.'),
+                django.core.mail.send_mail(
+                    subject=django.utils.translation.gettext_lazy('Активация аккаунта.'),
                     message=f'{msg} {activation_url}',
-                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    from_email=django.conf.settings.DEFAULT_FROM_EMAIL,
                     recipient_list=[user.email],
                     fail_silently=False,
                 )
 
-        attempts_left = settings.MAX_AUTH_ATTEMPTS - user.profile.attempts_count
-        self._add_message_safe(
-            request,
-            f"{gettext_lazy('У вас осталось попыток:')} {attempts_left}",
-        )
-
         user.save()
         return None
 
-    def _add_message_safe(self, request, message):
+    def get_user(self, user_id):
         try:
-            if request and hasattr(request, '_messages'):
-                messages.error(request, message)
-        except Exception:
-            pass
+            return users.models.User.objects.get(pk=user_id)
+        except users.models.User.DoesNotExist:
+            return None

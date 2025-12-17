@@ -9,6 +9,7 @@ import django.contrib.auth.mixins
 import django.db
 import django.http
 import django.shortcuts
+import django.urls
 import django.utils
 import django.views.generic
 
@@ -19,7 +20,7 @@ import users.models
 class SignUpView(django.views.generic.CreateView):
     form_class = users.forms.SignupForm
     template_name = 'users/signup.html'
-    success_url = '/'
+    success_url = django.urls.reverse_lazy('users:login')
 
     def form_valid(self, form):
         response = super().form_valid(form)
@@ -49,6 +50,32 @@ class ProfileView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.ge
         context = super().get_context_data(**kwargs)
         context['favorite_count'] = self.request.user.favorite_articles.count()
         return context
+
+
+class ProfileUpdateView(
+    django.contrib.auth.mixins.LoginRequiredMixin,
+    django.views.generic.UpdateView,
+):
+    template_name = 'users/profile_update.html'
+    form_class = users.forms.ProfileForm
+    success_url = django.urls.reverse_lazy('users:profile')
+
+    def get_object(self, queryset=None):
+        profile, created = users.models.Profile.objects.get_or_create(user=self.request.user)
+        return profile
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['user'] = self.request.user
+        return kwargs
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        django.contrib.messages.success(
+            self.request,
+            'Профиль успешно обновлен!',
+        )
+        return response
 
 
 class FavoritesView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.generic.ListView):

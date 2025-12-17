@@ -8,43 +8,51 @@ __all__ = (
 
 import datetime
 
-from django import forms
-from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import (
-    AuthenticationForm,
-    UserChangeForm,
-    UserCreationForm,
-)
-from django.core.exceptions import ValidationError
-from django.forms import ModelForm
+import django
+import django.contrib.auth
+import django.contrib.auth.forms
+import django.core.exceptions
 from django.utils.translation import gettext_lazy as _
 
-from users.models import Profile
+import users.models
 
-User = get_user_model()
+User = django.contrib.auth.get_user_model()
 
 
 class BootstrapFormMixin:
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        for field in self.visible_fields():
-            field.field.widget.attrs['class'] = 'form-control'
+        for field in self.fields.items():
+            if isinstance(field.widget, django.forms.CheckboxInput):
+                field.widget.attrs['class'] = 'form-check-input'
+            else:
+                field.widget.attrs['class'] = 'form-control'
 
 
-class SignupForm(BootstrapFormMixin, UserCreationForm):
-    email = forms.EmailField(
+class SignupForm(BootstrapFormMixin, django.contrib.auth.forms.UserCreationForm):
+    email = django.forms.EmailField(
         required=True,
-        widget=forms.EmailInput(attrs={'class': 'form-control'}),
+        widget=django.forms.EmailInput(attrs={'class': 'form-control'}),
         label=_('Почта'),
     )
+    accept_terms = django.forms.BooleanField(
+        required=True,
+        label=_('Я согласен с условиями использования'),
+        widget=django.forms.CheckboxInput(attrs={'class': 'form-check-input'}),
+        error_messages={'required': _('Вы должны принять условия использования')},
+    )
 
-    class Meta(UserCreationForm.Meta):
+    class Meta(django.contrib.auth.forms.UserCreationForm.Meta):
         model = User
         exclude = (User.first_name.field.name,)
-        fields = UserCreationForm.Meta.fields + (User.email.field.name,)
+        fields = django.contrib.auth.forms.UserCreationForm.Meta.fields + (
+            User.email.field.name,
+            'accept_terms',
+        )
         labels = {
             User.username.field.name: _('Логин'),
             User.email.field.name: _('Почта'),
+            'accept_terms': _('Я согласен с условиями использования'),
         }
         help_text = {
             User.username.field.name: _('Введите логин'),
@@ -53,12 +61,22 @@ class SignupForm(BootstrapFormMixin, UserCreationForm):
     def clean_email(self):
         email = self.cleaned_data.get('email')
         if User.objects.filter(email__iexact=email).exists():
-            raise ValidationError(
+            raise django.core.exceptions.ValidationError(
                 _('Пользователь с таким email уже существует.'),
                 code='duplicate_code',
             )
 
         return email
+
+    def clean_accept_terms(self):
+        accepted = self.cleaned_data.get('accept_terms')
+        if not accepted:
+            raise django.core.exceptions.ValidationError(
+                _('Вы должны принять условия использования'),
+                code='required',
+            )
+
+        return accepted
 
     def save(self, commit=True):
         user = super().save(commit=False)
@@ -69,13 +87,13 @@ class SignupForm(BootstrapFormMixin, UserCreationForm):
         return user
 
 
-class ChangeForm(BootstrapFormMixin, UserChangeForm):
-    class Meta(UserChangeForm.Meta):
+class ChangeForm(BootstrapFormMixin, django.contrib.auth.forms.UserChangeForm):
+    class Meta(django.contrib.auth.forms.UserChangeForm.Meta):
         model = User
-        fields = UserChangeForm.Meta.fields
+        fields = django.contrib.auth.forms.UserChangeForm.Meta.fields
 
 
-class UserForm(BootstrapFormMixin, ModelForm):
+class UserForm(BootstrapFormMixin, django.forms.ModelForm):
     class Meta:
         model = User
         fields = (
@@ -85,7 +103,11 @@ class UserForm(BootstrapFormMixin, ModelForm):
         )
 
 
-class ProfileForm(forms.ModelForm):
+class ProfileForm(django.forms.ModelForm):
+    first_name = django.forms.CharField(max_length=150, required=False, label=_('Имя'))
+    last_name = django.forms.CharField(max_length=150, required=False, label=_('Фамилия'))
+    email = django.forms.EmailField(label=_('Email'))
+
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user', None)
         super().__init__(*args, **kwargs)
@@ -104,7 +126,7 @@ class ProfileForm(forms.ModelForm):
 
         today = datetime.date.today()
         if birth_date >= today:
-            raise ValidationError(
+            raise django.core.exceptions.ValidationError(
                 _(
                     'Дата рождения не может быть в будущем. Введите корректную дату.',
                 ),
@@ -112,7 +134,7 @@ class ProfileForm(forms.ModelForm):
 
         max_age = today.replace(year=today.year - 120)
         if birth_date < max_age:
-            raise ValidationError(
+            raise django.core.exceptions.ValidationError(
                 _(
                     'Вы, оказывается, долгожитель ;) Мы не верим. Введите корректную дату.',
                 ),
@@ -121,19 +143,20 @@ class ProfileForm(forms.ModelForm):
         return birth_date
 
     class Meta:
-        model = Profile
+        model = users.models.Profile
         fields = [
-            Profile.birthday.field.name,
-            Profile.image.field.name,
+            users.models.Profile.birthday.field.name,
+            users.models.Profile.location.field.name,
+            users.models.Profile.image.field.name,
         ]
         widgets = {
-            Profile.birthday.field.name: forms.DateInput(
+            users.models.Profile.birthday.field.name: django.forms.DateInput(
                 attrs={'type': 'date'},
                 format='%Y-%m-%d',
             ),
         }
         help_texts = {
-            Profile.image.field.name: _(
+            users.models.Profile.image.field.name: _(
                 'загрузите изображение вашего профиля',
             ),
         }
@@ -146,7 +169,7 @@ class ProfileForm(forms.ModelForm):
                 self.user.first_name = self.cleaned_data.get('first_name')
                 self.user.last_name = self.cleaned_data.get('last_name')
                 self.user.save()
-        except ValidationError:
+        except django.core.exceptions.ValidationError:
             return None
 
         if commit:
@@ -155,23 +178,23 @@ class ProfileForm(forms.ModelForm):
         return profile
 
 
-class LoginForm(BootstrapFormMixin, AuthenticationForm):
+class LoginForm(BootstrapFormMixin, django.contrib.auth.forms.AuthenticationForm):
     error_messages = {
         'invalid_login': 'Пожалуйста, введите правильные имя пользователя'
         ' и пароль. Оба поля могут быть чувствительны к регистру.',
         'inactive': 'Этот аккаунт неактивен.',
     }
-    username = forms.CharField(label=_('Логин или почта'))
-    password = forms.CharField(
+    username = django.forms.CharField(label=_('Логин или почта'))
+    password = django.forms.CharField(
         label=_('Пароль'),
-        widget=forms.PasswordInput,
+        widget=django.forms.PasswordInput,
         required=True,
     )
 
     def clean_email(self):
         email = self.cleaned_data.get('email')
         if User.objects.filter(email__iexact=email).exists():
-            raise ValidationError(
+            raise django.core.exceptions.ValidationError(
                 _('Пользователь с таким email уже существует.'),
                 code='duplicate_code',
             )
@@ -183,7 +206,7 @@ class LoginForm(BootstrapFormMixin, AuthenticationForm):
         password = self.cleaned_data.get('password')
 
         if not username or not password:
-            raise ValidationError(
+            raise django.core.exceptions.ValidationError(
                 self.error_messages['invalid_login'],
                 code='invalid_login',
             )
