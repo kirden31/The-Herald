@@ -10,6 +10,7 @@ import django.views
 import api.guardianApi
 import api.newsApi
 import news.forms
+import news.services
 
 
 class NewsApiBaseView(django.views.View):
@@ -66,6 +67,8 @@ class TopHeadlinesNews(NewsApiBaseView):
         response = api.newsApi.NewsApi().get_news_list(endpoint, params)
 
         news_list = response.get('news', [])
+        news_list = news.services.add_article_id_and_source(news_list, 'newsapi')
+        news_list = news.services.enrich_with_favorites(news_list, request.user)
 
         max_page = math.ceil(response.get('total', 0) / self.page_size)
         pages_view_list = self.get_view_pages_numbers(cur_page, max_page)
@@ -120,6 +123,8 @@ class EverythingNews(NewsApiBaseView):
         response = api.newsApi.NewsApi().get_news_list(endpoint, params)
 
         news_list = response.get('news', [])
+        news_list = news.services.add_article_id_and_source(news_list, 'newsapi')
+        news_list = news.services.enrich_with_favorites(news_list, request.user)
 
         max_page = math.ceil(response.get('total', 0) / self.page_size)
         pages_view_list = self.get_view_pages_numbers(cur_page, max_page)
@@ -174,6 +179,8 @@ class GuardianNews(NewsApiBaseView):
         response = api.guardianApi.GuardianApi().get_news_list(endpoint, params)
 
         news_list = response.get('news', [])
+        news_list = news.services.add_article_id_and_source(news_list, 'guardian')
+        news_list = news.services.enrich_with_favorites(news_list, request.user)
 
         max_page = response.get('pages', 0)
         pages_view_list = self.get_view_pages_numbers(cur_page, max_page)
