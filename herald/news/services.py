@@ -9,7 +9,7 @@ def add_article_id_and_source(news_list, source_type='newsapi'):
         if source_type == 'newsapi':
             article['source_name'] = article.get('source', 'NewsAPI')
             article['source_id'] = ''
-            article['image_url'] = article.get('urlToImage', '').strip()
+            article['image_url'] = article.get('urlToImage', '')
         elif source_type == 'guardian':
             article['source_name'] = 'The Guardian'
             article['source_id'] = 'guardian'

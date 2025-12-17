@@ -23,7 +23,7 @@ ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', default='*').split()
 
 # Your API keys
 NEWS_API_KEYS = os.getenv('NEWS_API_KEYS', '').split()
-GUARDIAN_API_KEY = os.getenv('GUARDIAN_API_KEY')
+GUARDIAN_API_KEY = os.getenv('GUARDIAN_API_KEYS').strip()[1]
 
 
 MAX_AUTH_ATTEMPTS = os.getenv('DJANGO_MAX_AUTH_ATTEMPTS', default=3)

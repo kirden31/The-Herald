@@ -24,10 +24,6 @@ class NewsApi(api.core.BaseApiClass):
 
     def get_news_list(self, endpoint, params=None):
         response = self.get_json(endpoint, params)
-        if response.get('code') == 'rateLimited':
-            self.key_id = (self.key_id + 1) % len(django.conf.settings.NEWS_API_KEYS)
-            self.api_key = django.conf.settings.NEWS_API_KEYS[self.key_id]
-            self.get_news_list(endpoint, params)
 
         total = response.get('totalResults', 0)
 

@@ -16,10 +16,6 @@ class UsersConfig(django.apps.AppConfig):
         import users.signals
 
         django.db.models.signals.post_save.connect(
-            users.signals.create_profile,
-            sender=django.contrib.auth.models.User,
-        )
-        django.db.models.signals.post_save.connect(
-            users.signals.save_profile,
+            users.signals.create_save_user_profile,
             sender=django.contrib.auth.models.User,
         )
