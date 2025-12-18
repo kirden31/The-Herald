@@ -15,14 +15,12 @@ import users.models
 class SignUpView(django.views.generic.CreateView):
     form_class = users.forms.SignupForm
     template_name = 'users/signup.html'
-    success_url = django.urls.reverse_lazy('users:login')
+    success_url = django.urls.reverse_lazy('users:profile')
 
     def form_valid(self, form):
         response = super().form_valid(form)
-        user = form.save()
-        user.backend = 'django.contrib.auth.backends.ModelBackend'
 
-        django.contrib.auth.login(self.request, user)
+        django.contrib.auth.login(self.request, self.object)
 
         django.contrib.messages.success(
             self.request,
@@ -53,11 +51,12 @@ class ProfileUpdateView(
     django.views.generic.UpdateView,
 ):
     template_name = 'users/profile_update.html'
+    model = users.models.User
     form_class = users.forms.ProfileForm
     success_url = django.urls.reverse_lazy('users:profile')
 
     def get_object(self, queryset=None):
-        profile, created = users.models.Profile.objects.get_or_create(user=self.request.user)
+        profile, _ = users.models.Profile.objects.get_or_create(user=self.request.user)
         return profile
 
     def get_form_kwargs(self):

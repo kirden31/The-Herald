@@ -25,7 +25,6 @@ ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', default='*').split()
 NEWS_API_KEYS = os.getenv('NEWS_API_KEYS', 'no_api_key').split()
 GUARDIAN_API_KEYS = os.getenv('GUARDIAN_API_KEYS', 'no_api_key').split()
 
-
 MAX_AUTH_ATTEMPTS = os.getenv('DJANGO_MAX_AUTH_ATTEMPTS', default=3)
 
 INSTALLED_APPS = [
@@ -67,7 +66,6 @@ INTERNAL_IPS = [
 
 AUTHENTICATION_BACKENDS = [
     'users.backends.ConfigAuthBackend',
-    'django.contrib.auth.backends.ModelBackend',
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
@@ -123,7 +121,7 @@ LANGUAGES = [
     ('en-US', _('English')),
     ('ru-RU', _('Russian')),
 ]
-AUTH_USER_MODEL = 'auth.User'
+
 LOGIN_URL = django.urls.reverse_lazy('users:login')
 LOGIN_REDIRECT_URL = django.urls.reverse_lazy('users:profile')
 LOGOUT_REDIRECT_URL = django.urls.reverse_lazy('users:login')

@@ -268,10 +268,10 @@ class FavoritesView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.
                 'description': fav.description,
                 'content': fav.content,
                 'url': fav.url,
-                'urlToImage': fav.urlToImage,
+                'urlToImage': fav.url_to_image,
                 'author': fav.author,
                 'source': fav.source,
-                'publishedAt': fav.publishedAt,
+                'publishedAt': fav.published_at,
                 'is_favorite': True,
             }
             for fav in context.get('favorites', [])
@@ -281,7 +281,7 @@ class FavoritesView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.
 
 
 class SaveFavoriteView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.View):
-    def post(self, request, *args, **kwargs):
+    def post(self, request, *_args, **_kwargs):
         url = request.POST.get('url')
         if not url:
             return django.http.JsonResponse(
@@ -300,10 +300,10 @@ class SaveFavoriteView(django.contrib.auth.mixins.LoginRequiredMixin, django.vie
             description=data.get('description'),
             content=data.get('content'),
             url=url,
-            urlToImage=data.get('urlToImage'),
+            url_to_image=data.get('url_to_image'),
             source=data.get('source'),
             author=data.get('author'),
-            publishedAt=data.get('publishedAt'),
+            published_at=data.get('published_at'),
             category=data.get('category'),
         )
         return django.http.JsonResponse({'status': 'added'}, status=HTTPStatus.CREATED)
