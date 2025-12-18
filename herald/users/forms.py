@@ -31,7 +31,7 @@ class BootstrapFormMixin:
 class SignupForm(BootstrapFormMixin, django.contrib.auth.forms.UserCreationForm):
     email = django.forms.EmailField(
         error_messages={'required': gettext_lazy('Пользователь с такой почтой уже существует')},
-        label=gettext_lazy('Почта'),
+        label=gettext_lazy('Mail'),
     )
     accept_terms = django.forms.BooleanField(
         required=True,
@@ -79,7 +79,7 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
     last_name = django.forms.CharField(
         max_length=150,
         required=False,
-        label=gettext_lazy('Фамилия'),
+        label=gettext_lazy('Д'),
     )
     email = django.forms.EmailField(
         label=gettext_lazy('Email'),
@@ -111,7 +111,7 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
 
         help_texts = {
             users.models.Profile.image.field.name: gettext_lazy(
-                'загрузите изображение вашего профиля',
+                'Upload your profile picture',
             ),
         }
 
@@ -135,9 +135,9 @@ class LoginForm(BootstrapFormMixin, django.contrib.auth.forms.AuthenticationForm
         ' и пароль. Оба поля могут быть чувствительны к регистру.',
         'inactive': 'Этот аккаунт неактивен.',
     }
-    username = django.forms.CharField(label=gettext_lazy('Логин или почта'))
+    username = django.forms.CharField(label=gettext_lazy('Login or email'))
     password = django.forms.CharField(
-        label=gettext_lazy('Пароль'),
+        label=gettext_lazy('Password'),
         widget=django.forms.PasswordInput,
         required=True,
     )

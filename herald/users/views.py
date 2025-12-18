@@ -24,7 +24,7 @@ class SignUpView(django.views.generic.CreateView):
 
         django.contrib.messages.success(
             self.request,
-            'Регистрация прошла успешно! Добро пожаловать!',
+            _('Registration successful! Welcome!'),
         )
 
         return response

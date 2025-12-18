@@ -67,31 +67,31 @@ class Profile(django.db.models.Model):
         django.conf.settings.AUTH_USER_MODEL,
         on_delete=django.db.models.CASCADE,
         related_name='profile',
-        verbose_name=_('пользователь'),
+        verbose_name=_('user'),
     )
     image = django.db.models.ImageField(
         upload_to=image_path,
         blank=True,
         null=True,
-        verbose_name=_('аватарка'),
-        help_text=_('Аватарка пользователя.'),
+        verbose_name=_('avatar'),
+        help_text=_('User avatar.'),
     )
     birthday = django.db.models.DateField(
         blank=True,
         null=True,
         validators=[users.validators.ValidateBirthdayDate()],
-        verbose_name=_('дата рождения'),
-        help_text=_('Дата рождения пользователя.'),
+        verbose_name=_('date of birth'),
+        help_text=_('User date of birth.'),
     )
     location = django.db.models.CharField(
         blank=True,
         null=True,
-        help_text=_('Город (или страна) проживания пользователя.'),
+        help_text=_('The user city (or country) of residence.'),
     )
     attempts_count = django.db.models.PositiveBigIntegerField(
         default=0,
-        verbose_name=_('попытки'),
-        help_text=_('Количество попыток входа в систему'),
+        verbose_name=_('attempts'),
+        help_text=_('Number of login attempts'),
     )
 
     def get_image_300x300(self):
@@ -106,8 +106,8 @@ class Profile(django.db.models.Model):
         return None
 
     class Meta:
-        verbose_name = _('профиль')
-        verbose_name_plural = _('профили')
+        verbose_name = _('profile')
+        verbose_name_plural = _('profiles')
 
     def __str__(self):
         return self.user.username[:15]
