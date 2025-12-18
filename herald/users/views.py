@@ -6,6 +6,7 @@ import django.contrib.auth.mixins
 import django.contrib.messages
 import django.shortcuts
 import django.urls
+from django.utils.translation import gettext_lazy as _
 import django.views.generic
 
 import users.forms
