@@ -5,6 +5,12 @@ import news.views
 app_name = 'news'
 
 urlpatterns = (
+    path(
+        'save_favorite/',
+        news.views.SaveFavoriteView.as_view(),
+        name='save_favorite',
+    ),
+    path('favorite/', news.views.FavoritesView.as_view(), name='favorite'),
     path('everything-news', news.views.EverythingNews.as_view(), name='everything_news'),
     path(
         'top-headlines-news',

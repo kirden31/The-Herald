@@ -1,4 +1,4 @@
-__all__ = ('User', 'Profile', 'FavoriteArticle')
+__all__ = ('User', 'Profile')
 
 import sys
 
@@ -85,64 +85,3 @@ class Profile(django.db.models.Model):
 
     def __str__(self):
         return self.user.username[:10]
-
-
-class FavoriteArticle(django.db.models.Model):
-    user = django.db.models.ForeignKey(
-        User,
-        on_delete=django.db.models.CASCADE,
-        related_name='favorite_articles',
-        verbose_name=_('пользователь'),
-    )
-    article_id = django.db.models.CharField(verbose_name=_('id новости'), db_index=True)
-    title = django.db.models.CharField(verbose_name=_('заголовок'))
-    description = django.db.models.TextField(verbose_name=_('описание'), blank=True, null=True)
-    content = django.db.models.TextField(verbose_name=_('содержание'), blank=True, null=True)
-    url = django.db.models.URLField(verbose_name=_('ссылка на новость'))
-    image_url = django.db.models.URLField(
-        verbose_name=_('ссылка на изображение'),
-        blank=True,
-        null=True,
-    )
-    source_name = django.db.models.CharField(verbose_name=_('название источника'))
-    source_id = django.db.models.CharField(verbose_name=_('id источника'), blank=True, null=True)
-    creator = django.db.models.CharField(verbose_name=_('автор'), blank=True, null=True)
-    published_at = django.db.models.DateTimeField(verbose_name=_('дата публикации'))
-    category = django.db.models.CharField(verbose_name=_('категория'), blank=True, null=True)
-    created_at = django.db.models.DateTimeField(
-        verbose_name=_('дата добавления'),
-        auto_now_add=True,
-    )
-    tags = django.db.models.JSONField(
-        verbose_name=_('теги'),
-        default=list,
-        help_text=_('Теги для поиска и фильтрации'),
-    )
-
-    class Meta:
-        verbose_name = _('избранная новость')
-        verbose_name_plural = _('избранные новости')
-        unique_together = ['user', 'article_id']
-        ordering = ['-created_at']
-        indexes = [
-            django.db.models.Index(fields=['user', 'created_at']),
-            django.db.models.Index(fields=['user', 'category']),
-        ]
-
-    def __str__(self):
-        return f'{self.user.username[:10]} - {self.title[:50]}'
-
-    def to_dict(self):
-        return {
-            'id': self.article_id,
-            'title': self.title,
-            'description': self.description,
-            'url': self.url,
-            'image_url': self.image_url,
-            'source': self.source_name,
-            'creator': self.creator,
-            'published_at': self.published_at.isoformat(),
-            'category': self.category,
-            'is_favorite': True,
-            'favorited_at': self.created_at.isoformat(),
-        }

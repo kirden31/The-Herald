@@ -1,8 +1,9 @@
 __all__ = ('EverythingNews', 'GuardianNews', 'TopHeadlinesNews', 'TopHeadlinesSource')
 
+from http import HTTPStatus
 import math
 
-import django.core.paginator
+import django.contrib.auth.mixins
 import django.http
 import django.shortcuts
 import django.views
@@ -10,6 +11,7 @@ import django.views
 import api.guardianApi
 import api.newsApi
 import news.forms
+import news.models
 import news.services
 
 
@@ -67,7 +69,6 @@ class TopHeadlinesNews(NewsApiBaseView):
         response = api.newsApi.NewsApi().get_news_list(endpoint, params)
 
         news_list = response.get('news', [])
-        news_list = news.services.add_article_id_and_source(news_list, 'newsapi')
         news_list = news.services.enrich_with_favorites(news_list, request.user)
 
         max_page = math.ceil(response.get('total', 0) / self.page_size)
@@ -123,7 +124,6 @@ class EverythingNews(NewsApiBaseView):
         response = api.newsApi.NewsApi().get_news_list(endpoint, params)
 
         news_list = response.get('news', [])
-        news_list = news.services.add_article_id_and_source(news_list, 'newsapi')
         news_list = news.services.enrich_with_favorites(news_list, request.user)
 
         max_page = math.ceil(response.get('total', 0) / self.page_size)
@@ -179,7 +179,6 @@ class GuardianNews(NewsApiBaseView):
         response = api.guardianApi.GuardianApi().get_news_list(endpoint, params)
 
         news_list = response.get('news', [])
-        news_list = news.services.add_article_id_and_source(news_list, 'guardian')
         news_list = news.services.enrich_with_favorites(news_list, request.user)
 
         max_page = response.get('pages', 0)
@@ -250,3 +249,61 @@ class TopHeadlinesSource(NewsApiBaseView):
             self.template_name,
             context,
         )
+
+
+class FavoritesView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.generic.ListView):
+    model = news.models.FavoriteArticle
+    template_name = 'users/favorites.html'
+    context_object_name = 'favorites'
+
+    def get_queryset(self):
+        return self.model.objects.filter(user=self.request.user)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        context['news'] = [
+            {
+                'title': fav.title,
+                'description': fav.description,
+                'content': fav.content,
+                'url': fav.url,
+                'urlToImage': fav.urlToImage,
+                'author': fav.author,
+                'source': fav.source,
+                'publishedAt': fav.publishedAt,
+                'is_favorite': True,
+            }
+            for fav in context.get('favorites', [])
+        ]
+
+        return context
+
+
+class SaveFavoriteView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.View):
+    def post(self, request, *args, **kwargs):
+        url = request.POST.get('url')
+        if not url:
+            return django.http.JsonResponse(
+                {'error': 'URL is required'},
+                status=HTTPStatus.BAD_REQUEST,
+            )
+
+        deleted, _ = news.models.FavoriteArticle.objects.filter(user=request.user, url=url).delete()
+        if deleted:
+            return django.http.JsonResponse({'status': 'removed'}, status=HTTPStatus.OK)
+
+        data = request.POST
+        news.models.FavoriteArticle.objects.create(
+            user=request.user,
+            title=data.get('title'),
+            description=data.get('description'),
+            content=data.get('content'),
+            url=url,
+            urlToImage=data.get('urlToImage'),
+            source=data.get('source'),
+            author=data.get('author'),
+            publishedAt=data.get('publishedAt'),
+            category=data.get('category'),
+        )
+        return django.http.JsonResponse({'status': 'added'}, status=HTTPStatus.CREATED)

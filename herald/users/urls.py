@@ -9,12 +9,6 @@ urlpatterns = [
     django.urls.path('signup/', users.views.SignUpView.as_view(), name='signup'),
     django.urls.path('profile/', users.views.ProfileView.as_view(), name='profile'),
     django.urls.path('profile/edit/', users.views.ProfileUpdateView.as_view(), name='profile_edit'),
-    django.urls.path('favorites/', users.views.FavoritesView.as_view(), name='favorites'),
-    django.urls.path(
-        'save-favorite/',
-        users.views.SaveFavoriteView.as_view(),
-        name='save_favorite',
-    ),
     django.urls.path(
         'login/',
         django.contrib.auth.views.LoginView.as_view(

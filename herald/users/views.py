@@ -1,19 +1,11 @@
-__all__ = ('ProfileView', 'SignUpView', 'FavoritesView', 'SaveFavoriteView')
-
-from http import HTTPStatus
+__all__ = ('ProfileView', 'ProfileUpdateView', 'SignUpView')
 
 import django.contrib
 import django.contrib.auth
 import django.contrib.auth.mixins
 import django.contrib.messages
-import django.core.exceptions
-import django.db
-import django.http
 import django.shortcuts
 import django.urls
-import django.utils
-import django.utils.dateparse
-import django.utils.timezone
 import django.views.generic
 
 import users.forms
@@ -80,86 +72,3 @@ class ProfileUpdateView(
             'Профиль успешно обновлен!',
         )
         return response
-
-
-class FavoritesView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.generic.ListView):
-    model = users.models.FavoriteArticle
-    template_name = 'users/favorites.html'
-    context_object_name = 'favorites'
-
-    def get_queryset(self):
-        return self.model.objects.filter(user=self.request.user)
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-
-        context['news'] = [
-            {
-                'title': fav.title,
-                'description': fav.description,
-                'content': fav.content,
-                'url': fav.url,
-                'image_url': fav.image_url,
-                'creator': fav.creator,
-                'author': fav.creator,
-                'source': fav.source_name,
-                'publishedAt': fav.published_at,
-                'id': fav.article_id,
-                'is_favorite': True,
-                'favorited_at': fav.created_at,
-            }
-            for fav in context.get('favorites', [])
-        ]
-
-        return context
-
-
-class SaveFavoriteView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.View):
-    def post(self, request, *args, **kwargs):
-        data = request.POST
-        article_id = data.get('article_id')
-        if not article_id:
-            return django.http.JsonResponse(
-                {'error': 'article_id is required'},
-                status=HTTPStatus.BAD_REQUEST,
-            )
-
-        try:
-            published_at_str = data.get('published_at', '').strip()
-            if published_at_str:
-                dt = django.utils.dateparse.parse_datetime(published_at_str)
-                if dt and not django.utils.timezone.is_aware(dt):
-                    dt = django.utils.timezone.make_aware(dt, django.utils.timezone.utc)
-            else:
-                dt = django.utils.timezone.now()
-
-            obj, created = users.models.FavoriteArticle.objects.get_or_create(
-                user=request.user,
-                article_id=article_id,
-                defaults={
-                    'user': request.user,
-                    'article_id': article_id,
-                    'title': data['title'][:499],
-                    'description': data.get('description', ''),
-                    'content': data.get('content', ''),
-                    'url': data['url'],
-                    'image_url': data.get('image_url', ''),
-                    'source_name': data.get('source_name', ''),
-                    'source_id': data.get('source_id', ''),
-                    'creator': data.get('creator', ''),
-                    'published_at': dt,
-                    'category': data.get('category', ''),
-                    'tags': [],
-                },
-            )
-
-            if not created:
-                obj.delete()
-                return django.http.JsonResponse({'status': 'removed'})
-
-            return django.http.JsonResponse({'status': 'added'})
-
-        except django.db.IntegrityError:
-            return django.http.JsonResponse({'status': 'removed'})
-        except Exception as e:
-            return django.http.JsonResponse({'error': str(e)}, status=HTTPStatus.BAD_REQUEST)
