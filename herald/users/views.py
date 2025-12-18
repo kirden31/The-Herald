@@ -10,6 +10,7 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, TemplateView
 from users.forms import SignupForm
 from users.models import FavoriteArticle
+from django.utils.translation import gettext_lazy as _
 
 
 class SignUpView(CreateView):
@@ -24,7 +25,7 @@ class SignUpView(CreateView):
 
         login(self.request, user)
 
-        messages.success(self.request, 'Регистрация прошла успешно! Добро пожаловать!')
+        messages.success(self.request, _('Registration successful! Welcome!'))
 
         return response
 

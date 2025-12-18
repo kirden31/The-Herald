@@ -28,7 +28,7 @@ class SignupForm(BootstrapFormMixin, UserCreationForm):
     email = forms.EmailField(
         required=True,
         widget=forms.EmailInput(attrs={'class': 'form-control'}),
-        label=_('Почта'),
+        label=_('Mail'),
     )
 
     class Meta(UserCreationForm.Meta):
@@ -36,18 +36,18 @@ class SignupForm(BootstrapFormMixin, UserCreationForm):
         exclude = (User.first_name.field.name,)
         fields = UserCreationForm.Meta.fields + (User.email.field.name,)
         labels = {
-            User.username.field.name: _('Логин'),
-            User.email.field.name: _('Почта'),
+            User.username.field.name: _('Login'),
+            User.email.field.name: _('Mail'),
         }
         help_text = {
-            User.username.field.name: _('Введите логин'),
+            User.username.field.name: _('Enter your login'),
         }
 
     def clean_email(self):
         email = self.cleaned_data.get('email')
         if User.objects.filter(email__iexact=email).exists():
             raise ValidationError(
-                _('Пользователь с таким email уже существует.'),
+                _('A user with this email already exists.'),
                 code='duplicate_code',
             )
 
@@ -99,7 +99,7 @@ class ProfileForm(forms.ModelForm):
         if birth_date >= today:
             raise ValidationError(
                 _(
-                    'Дата рождения не может быть в будущем. Введите корректную дату.',
+                    'The date of birth cannot be in the future. Please enter a valid date.',
                 ),
             )
 
@@ -107,7 +107,7 @@ class ProfileForm(forms.ModelForm):
         if birth_date < max_age:
             raise ValidationError(
                 _(
-                    'Вы, оказывается, долгожитель ;) Мы не верим. Введите корректную дату.',
+                    'It turns out you re a long-liver ;) We don t believe you. Please enter a valid date.',
                 ),
             )
 
@@ -127,7 +127,7 @@ class ProfileForm(forms.ModelForm):
         }
         help_texts = {
             Profile.image.field.name: _(
-                'загрузите изображение вашего профиля',
+                'Upload your profile picture',
             ),
         }
 
@@ -154,9 +154,9 @@ class LoginForm(BootstrapFormMixin, AuthenticationForm):
         ' и пароль. Оба поля могут быть чувствительны к регистру.',
         'inactive': 'Этот аккаунт неактивен.',
     }
-    username = forms.CharField(label=_('Логин или почта'))
+    username = forms.CharField(label=_('Login or email'))
     password = forms.CharField(
-        label=_('Пароль'),
+        label=_('Password'),
         widget=forms.PasswordInput,
         required=True,
     )
@@ -165,7 +165,7 @@ class LoginForm(BootstrapFormMixin, AuthenticationForm):
         email = self.cleaned_data.get('email')
         if User.objects.filter(email__iexact=email).exists():
             raise ValidationError(
-                _('Пользователь с таким email уже существует.'),
+                _('A user with this email already exists.'),
                 code='duplicate_code',
             )
 

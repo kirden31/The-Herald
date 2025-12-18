@@ -4,6 +4,7 @@ import os
 import pathlib
 
 from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
 import herald.tools
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
@@ -45,6 +46,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 AUTHENTICATION_BACKENDS = [
@@ -104,6 +106,11 @@ LOGIN_REDIRECT_URL = reverse_lazy('users:profile')
 LOGOUT_REDIRECT_URL = reverse_lazy('users:login')
 
 LANGUAGE_CODE = 'en-us'
+
+LANGUAGES = [
+    ('ru', _('Russian')),
+]
+
 
 TIME_ZONE = 'UTC'
 

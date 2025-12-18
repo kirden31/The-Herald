@@ -1,0 +1,676 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-18 13:26+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: herald/settings.py:111
+msgid "Russian"
+msgstr "Русский"
+
+#: templates/base.html:8
+msgid "News aggregator"
+msgstr "Агрегатор новостей"
+
+#: templates/base.html:27
+msgid "The content was not delivered :("
+msgstr "Контент не был доставлен :("
+
+#: templates/home.html:3
+msgid "Home - News aggregator"
+msgstr "Главная - Агрегатор новостей"
+
+#: templates/home.html:11 templates/users/favorites.html:99
+msgid "Search news"
+msgstr "Поиск новостей"
+
+#: templates/home.html:18 templates/users/favorites.html:43
+msgid "Policy"
+msgstr "Политика"
+
+#: templates/home.html:19 templates/users/favorites.html:42
+msgid "Technologies"
+msgstr "Технологии"
+
+#: templates/home.html:20
+msgid "Sport"
+msgstr "Спорт"
+
+#: templates/home.html:21 templates/users/favorites.html:45
+msgid "Business"
+msgstr "Бизнес"
+
+#: templates/home.html:22 templates/users/favorites.html:46
+msgid "Entertainment"
+msgstr "Развлечение"
+
+#: templates/home.html:37
+msgid "Breaking News"
+msgstr "Breaking News"
+
+#: templates/home.html:40
+msgid "Filters"
+msgstr "Фильтры"
+
+#: templates/home.html:43
+msgid "By date"
+msgstr "По дате"
+
+#: templates/home.html:44
+msgid "By popularity"
+msgstr "По популярности"
+
+#: templates/home.html:45 templates/users/favorites.html:30
+msgid "By source"
+msgstr "По источнику"
+
+#: templates/home.html:52
+msgid "There will be news cards here))) or something else hahahaha"
+msgstr "Здесь будут информационные карточки))) или что-нибудь ещё, хахахаха"
+
+#: templates/includes/footer.html:7
+msgid "NewsHub"
+msgstr "NewsHub"
+
+#: templates/includes/footer.html:10
+msgid "A news aggregator from various sources. Fast, convenient, and secure."
+msgstr "Агрегатор новостей из различных источников. Быстрый, удобный и безопасный."
+
+#: templates/includes/footer.html:15
+msgid "Navigation"
+msgstr "Навигация"
+
+#: templates/includes/footer.html:17 templates/includes/header.html:15
+#: templates/users/favorites.html:96 templates/users/logout.html:22
+#: templates/users/password_change_done.html:26
+#: templates/users/password_reset_complete.html:25
+#: templates/users/password_reset_done.html:38
+msgid "Home"
+msgstr "Дом"
+
+#: templates/includes/footer.html:18 templates/includes/header.html:18
+msgid "Search"
+msgstr "Поиск"
+
+#: templates/includes/footer.html:19
+msgid "Sources"
+msgstr "Источники"
+
+#: templates/includes/footer.html:24
+msgid "To the user"
+msgstr "Пользователю"
+
+#: templates/includes/footer.html:26 templates/includes/header.html:28
+msgid "Profile"
+msgstr "Профиль"
+
+#: templates/includes/footer.html:27
+msgid "Favorites"
+msgstr "Избранное"
+
+#: templates/includes/footer.html:28 templates/users/profile.html:43
+msgid "Settings"
+msgstr "Настройки"
+
+#: templates/includes/footer.html:33
+msgid "Contacts"
+msgstr "Контакты"
+
+#: templates/includes/footer.html:50
+msgid "2025 NewsHub. All rights reserved."
+msgstr "2025 NewsHub. Все права защищены."
+
+#: templates/includes/header.html:34
+msgid "Log out"
+msgstr "Выйти"
+
+#: templates/includes/header.html:42 templates/users/login.html:12
+#: templates/users/login.html:67 templates/users/signup.html:121
+#: users/forms.py:39
+msgid "Login"
+msgstr "Авторизоваться"
+
+#: templates/includes/header.html:45 templates/users/signup.html:4
+#: templates/users/signup.html:12
+msgid "Registration"
+msgstr "Регистрация"
+
+#: templates/users/favorites.html:4 templates/users/favorites.html:12
+#: users/models.py:152
+msgid "Featured News"
+msgstr "Рекомендуемые новости"
+
+#: templates/users/favorites.html:15
+msgid "All your saved articles"
+msgstr "Все ваши сохраненные статьи"
+
+#: templates/users/favorites.html:24
+msgid "Sorting"
+msgstr "Сортировка"
+
+#: templates/users/favorites.html:27
+msgid "New ones first"
+msgstr "Сначала новые"
+
+#: templates/users/favorites.html:28
+msgid "Old ones first"
+msgstr "Сначала старые"
+
+#: templates/users/favorites.html:29
+msgid "By name"
+msgstr "По имени"
+
+#: templates/users/favorites.html:39 users/models.py:146
+msgid "Category"
+msgstr "Категория"
+
+#: templates/users/favorites.html:41
+msgid "All categories"
+msgstr "Все категории"
+
+#: templates/users/favorites.html:47
+msgid "Science"
+msgstr "Наука"
+
+#: templates/users/favorites.html:48
+msgid "Health"
+msgstr "Здоровье"
+
+#: templates/users/favorites.html:53
+msgid "Source"
+msgstr "Источник"
+
+#: templates/users/favorites.html:55
+msgid "All sources"
+msgstr "Все источники"
+
+#: templates/users/favorites.html:56
+msgid "NewsAPI"
+msgstr "NewsAPI"
+
+#: templates/users/favorites.html:57
+msgid "Guardian"
+msgstr "Хранитель"
+
+#: templates/users/favorites.html:58
+msgid "Reddit"
+msgstr "Reddit"
+
+#: templates/users/favorites.html:63
+msgid "Period"
+msgstr "Период"
+
+#: templates/users/favorites.html:65
+msgid "All the time"
+msgstr "Все время"
+
+#: templates/users/favorites.html:66
+msgid "Today"
+msgstr "Сегодня"
+
+#: templates/users/favorites.html:67
+msgid "In a week"
+msgstr "Через неделю"
+
+#: templates/users/favorites.html:68
+msgid "For a month"
+msgstr "На месяц"
+
+#: templates/users/favorites.html:75
+msgid "Apply filters"
+msgstr "Применить фильтры"
+
+#: templates/users/favorites.html:78
+msgid "Reset"
+msgstr "Перезагрузить"
+
+#: templates/users/favorites.html:89
+msgid "It's empty here yet"
+msgstr "Здесь пока пусто."
+
+#: templates/users/favorites.html:91
+msgid "Save your favorite news to return to it later."
+msgstr "Сохраните ваши любимые новости, чтобы вернуться к ним позже."
+
+#: templates/users/favorites.html:92
+msgid "Click on the bookmark icon "
+msgstr "Нажмите на значок закладки."
+
+#: templates/users/login.html:4
+msgid "Entrance"
+msgstr "Вход"
+
+#: templates/users/login.html:13
+msgid "Enter your credentials"
+msgstr "Введите свои учетные данные"
+
+#: templates/users/login.html:60
+msgid "Remember me"
+msgstr "Запомнить меня"
+
+#: templates/users/login.html:74
+msgid "Forgot your password?"
+msgstr "Забыли пароль?"
+
+#: templates/users/login.html:78
+msgid "Don't have an account?"
+msgstr "У вас нет аккаунта?"
+
+#: templates/users/login.html:80 templates/users/signup.html:113
+msgid "Register"
+msgstr "Зарегистрироваться"
+
+#: templates/users/logout.html:3
+msgid "Logout"
+msgstr "Выход из системы"
+
+#: templates/users/logout.html:11
+msgid "You are logged out"
+msgstr "Вы вышли из системы."
+
+#: templates/users/logout.html:14
+msgid "Thank you for visiting our website. We hope to see you again!"
+msgstr "Спасибо за посещение нашего сайта. Надеемся увидеть вас снова!"
+
+#: templates/users/logout.html:19
+msgid "Login again"
+msgstr "Войти снова"
+
+#: templates/users/logout.html:30
+msgid "Your session has ended. For security reasons, we recommend closing your browser."
+msgstr "Ваша сессия завершена. В целях безопасности мы рекомендуем закрыть ваш браузер."
+
+#: templates/users/password_change.html:3
+#: templates/users/password_change.html:12
+#: templates/users/password_change.html:85
+#: templates/users/password_reset_confirm.html:75
+#: templates/users/profile.html:49
+msgid "Change password"
+msgstr "Изменить пароль"
+
+#: templates/users/password_change.html:13
+msgid "Enter your current password and new password"
+msgstr "Введите ваш текущий пароль и новый пароль."
+
+#: templates/users/password_change.html:29
+msgid "Current Password"
+msgstr "Текущий пароль"
+
+#: templates/users/password_change.html:46
+#: templates/users/password_reset_confirm.html:36
+msgid "New Password"
+msgstr "Новый пароль"
+
+#: templates/users/password_change.html:68
+msgid "Confirming a new password"
+msgstr "Подтверждение нового пароля"
+
+#: templates/users/password_change.html:88
+msgid "Cancel"
+msgstr "Отмена"
+
+#: templates/users/password_change_done.html:4
+msgid "Password changed"
+msgstr "Пароль изменен"
+
+#: templates/users/password_change_done.html:15
+msgid "Password changed successfully!"
+msgstr "Пароль успешно изменен!"
+
+#: templates/users/password_change_done.html:18
+msgid "Your password has been successfully changed. You can now use the new password to log in."
+msgstr "Ваш пароль успешно изменен. Теперь вы можете использовать новый пароль для входа в систему."
+
+#: templates/users/password_change_done.html:23
+msgid "Return to profile"
+msgstr "Вернуться в профиль"
+
+#: templates/users/password_change_done.html:36
+msgid "It is recommended to use different passwords for different services and change them regularly."
+msgstr "Рекомендуется использовать разные пароли для разных сервисов и регулярно их менять."
+
+#: templates/users/password_reset.html:3 templates/users/password_reset.html:12
+msgid "Password reset"
+msgstr "Сброс пароля"
+
+#: templates/users/password_reset.html:14
+msgid "Forgot your password? Enter your email and we'll send you recovery instructions."
+msgstr "Забыли пароль? Введите свой адрес электронной почты, и мы вышлем вам инструкции по восстановлению."
+
+#: templates/users/password_reset.html:31
+msgid "Email address"
+msgstr "Адрес электронной почты"
+
+#: templates/users/password_reset.html:48
+msgid "Send instructions"
+msgstr "Отправить инструкции"
+
+#: templates/users/password_reset.html:51
+msgid "Back to the entrance"
+msgstr "Вернуться к входу"
+
+#: templates/users/password_reset_complete.html:3
+msgid "Password restored"
+msgstr "Пароль восстановлен"
+
+#: templates/users/password_reset_complete.html:14
+msgid "Password restored!"
+msgstr "Пароль восстановлен!"
+
+#: templates/users/password_reset_complete.html:17
+msgid "Your password has been successfully changed. You can now log in with your new password."
+msgstr "Ваш пароль успешно изменен. Теперь вы можете войти в систему, используя новый пароль."
+
+#: templates/users/password_reset_complete.html:22
+msgid "Sign in"
+msgstr "Войти"
+
+#: templates/users/password_reset_complete.html:36
+msgid "Your account is now protected with a new password."
+msgstr "Ваш аккаунт теперь защищен новым паролем."
+
+#: templates/users/password_reset_complete.html:37
+msgid "It is recommended to use unique passwords for different services."
+msgstr "Рекомендуется использовать уникальные пароли для разных сервисов."
+
+#: templates/users/password_reset_confirm.html:3
+#: templates/users/password_reset_confirm.html:14
+msgid "Enter new password"
+msgstr "Введите новый пароль"
+
+#: templates/users/password_reset_confirm.html:15
+msgid "Please enter the new password twice."
+msgstr "Пожалуйста, введите новый пароль дважды."
+
+#: templates/users/password_reset_confirm.html:17
+msgid "Restore Error"
+msgstr "Ошибка восстановления"
+
+#: templates/users/password_reset_confirm.html:18
+msgid "The password reset link is invalid."
+msgstr "Ссылка для сброса пароля недействительна."
+
+#: templates/users/password_reset_confirm.html:58
+#: templates/users/signup.html:82
+msgid "Password confirmation"
+msgstr "Подтверждение пароля"
+
+#: templates/users/password_reset_confirm.html:84
+msgid "The password reset link is invalid, possibly because it has already been used."
+msgstr "Ссылка для сброса пароля недействительна, возможно, потому что она уже была использована."
+
+#: templates/users/password_reset_confirm.html:85
+msgid "Please request a new password reset."
+msgstr "Пожалуйста, запросите сброс пароля."
+
+#: templates/users/password_reset_confirm.html:92
+msgid "Request a new password reset"
+msgstr "Запросить сброс пароля"
+
+#: templates/users/password_reset_confirm.html:95
+#: templates/users/password_reset_done.html:35
+msgid "Return to the entrance"
+msgstr "Вернитесь ко входу"
+
+#: templates/users/password_reset_done.html:3
+msgid "Instructions have been sent."
+msgstr "Инструкции отправлены."
+
+#: templates/users/password_reset_done.html:14
+msgid "Check your mail"
+msgstr "Проверьте свою почту"
+
+#: templates/users/password_reset_done.html:17
+msgid "We have sent password recovery instructions to the email address you provided."
+msgstr "Мы отправили инструкции по восстановлению пароля на указанный вами адрес электронной почты."
+
+#: templates/users/password_reset_done.html:18
+msgid "You should receive them soon."
+msgstr "Вы должны получить их в ближайшее время."
+
+#: templates/users/password_reset_done.html:26
+msgid "If you don't see the email, check your spam folder."
+msgstr "Если вы не видите письмо, проверьте папку «Спам»."
+
+#: templates/users/password_reset_done.html:27
+msgid "Sometimes password recovery emails can end up there."
+msgstr "Иногда письма с запросом на восстановление пароля могут попасть туда."
+
+#: templates/users/profile.html:3
+msgid "User profile"
+msgstr "Профиль пользователя"
+
+#: templates/users/profile.html:18
+msgid "Edit profile"
+msgstr "Редактировать профиль"
+
+#: templates/users/profile.html:22
+msgid "My bookmarks"
+msgstr "Мои закладки"
+
+#: templates/users/profile.html:30
+msgid "Bookmarks"
+msgstr "Закладки"
+
+#: templates/users/profile.html:34
+msgid "Searches"
+msgstr "Поиски"
+
+#: templates/users/profile.html:63
+msgid "Personal information"
+msgstr "Персональная информация"
+
+#: templates/users/profile.html:68
+msgid "Name"
+msgstr "Имя"
+
+#: templates/users/profile.html:72
+msgid "Surname"
+msgstr "Фамилия"
+
+#: templates/users/profile.html:79
+msgid "Date of birth"
+msgstr "Дата рождения"
+
+#: templates/users/profile.html:84
+msgid "Not specified"
+msgstr "Не указан"
+
+#: templates/users/profile.html:89
+msgid "Location"
+msgstr "Локация"
+
+#: templates/users/profile.html:96
+msgid "Registration date"
+msgstr "Дата регистрации"
+
+#: templates/users/profile.html:100
+msgid "Last entry"
+msgstr "Последняя запись"
+
+#: templates/users/profile.html:110
+msgid "Favorite categories"
+msgstr "Любимые категории"
+
+#: templates/users/profile.html:119
+msgid "You haven't selected your favorite categories yet."
+msgstr "Вы еще не выбрали свои любимые категории."
+
+#: templates/users/profile.html:124
+msgid "Add categories"
+msgstr "Добавить категории"
+
+#: templates/users/signup.html:13
+msgid "Create a new account"
+msgstr "Создать новую учетную запись"
+
+#: templates/users/signup.html:58 users/forms.py:159
+msgid "Password"
+msgstr "Пароль"
+
+#: templates/users/signup.html:107
+msgid "I agree to the terms of use"
+msgstr "Я согласен с условиями использования."
+
+#: templates/users/signup.html:119
+msgid "Already have an account?"
+msgstr "У вас уже есть аккаунт?"
+
+#: users/apps.py:10
+msgid "Users"
+msgstr "Пользователи"
+
+#: users/backends.py:66
+msgid "The maximum number of attempts has been reached."
+msgstr "Достигнуто максимальное количество попыток."
+
+#: users/backends.py:76
+msgid "We have noticed suspicious activity,That s why your account was blocked. Follow the activation link (valid for 7 days):"
+msgstr "Мы заметили подозрительную активность, поэтому ваш аккаунт был заблокирован. Перейдите по ссылке для активации (действительна в течение 7 дней):"
+
+#: users/backends.py:81
+msgid "Account activation."
+msgstr "Активация аккаунта."
+
+#: users/forms.py:31 users/forms.py:40
+msgid "Mail"
+msgstr "Почта"
+
+#: users/forms.py:43
+msgid "Enter your login"
+msgstr "Введите свой логин"
+
+#: users/forms.py:50 users/forms.py:168
+msgid "A user with this email already exists."
+msgstr "Пользователь с таким адресом электронной почты уже существует."
+
+#: users/forms.py:102
+msgid "The date of birth cannot be in the future. Please enter a valid date."
+msgstr "Дата рождения не может быть в будущем. Пожалуйста, введите действительную дату."
+
+#: users/forms.py:110
+msgid "It turns out you re a long-liver ;) We don t believe you. Please enter a valid date."
+msgstr "Оказывается, вы долгожитель ;) Мы вам не верим. Пожалуйста, введите действительную дату."
+
+#: users/forms.py:130
+msgid "Upload your profile picture"
+msgstr "Загрузите свою фотографию профиля."
+
+#: users/forms.py:157
+msgid "Login or email"
+msgstr "Логин или электронная почта"
+
+#: users/models.py:53 users/models.py:101
+msgid "user"
+msgstr "пользователь"
+
+#: users/models.py:58
+msgid "avatar"
+msgstr "Аватар"
+
+#: users/models.py:59
+msgid "User avatar."
+msgstr "Аватар пользователя."
+
+#: users/models.py:64
+msgid "date of birth"
+msgstr "Дата рождения"
+
+#: users/models.py:65
+msgid "User date of birth."
+msgstr "Дата рождения пользователя."
+
+#: users/models.py:69
+msgid "The user city (or country) of residence."
+msgstr "Город (или страна) проживания пользователя."
+
+#: users/models.py:73
+msgid "attempts"
+msgstr "попытки"
+
+#: users/models.py:74
+msgid "Number of login attempts"
+msgstr "Количество попыток входа"
+
+#: users/models.py:89
+msgid "profile"
+msgstr "профиль"
+
+#: users/models.py:90
+msgid "profiles"
+msgstr "профили"
+
+#: users/models.py:104
+msgid "ID_News"
+msgstr "ID_новости"
+
+#: users/models.py:109
+msgid "title"
+msgstr "заголовок"
+
+#: users/models.py:113
+msgid "Description"
+msgstr "Описание"
+
+#: users/models.py:118
+msgid "Content"
+msgstr "Содержание"
+
+#: users/models.py:123
+msgid "Link to news"
+msgstr "Ссылка на новость"
+
+#: users/models.py:127
+msgid "Image link"
+msgstr "Ссылка на изображение"
+
+#: users/models.py:132
+msgid "Source name"
+msgstr "Название источника"
+
+#: users/models.py:134
+msgid "ID_Source"
+msgstr "ID_источник"
+
+#: users/models.py:140
+msgid "Author"
+msgstr "Автор"
+
+#: users/models.py:145
+msgid "Publication date"
+msgstr "Дата публикации"
+
+#: users/models.py:147
+msgid "Date added"
+msgstr "Дата добавления"
+
+#: users/models.py:148
+msgid "Tags"
+msgstr "Теги"
+
+#: users/models.py:148
+msgid "Tags for searching and filtering"
+msgstr "Теги для поиска и фильтрации"
+
+#: users/models.py:151
+msgid "Featured news"
+msgstr "Рекомендуемые новости"
+
+#: users/views.py:28
+msgid "Registration successful! Welcome!"
+msgstr "Регистрация прошла успешно! Добро пожаловать!"

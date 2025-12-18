@@ -4,33 +4,33 @@
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <h5 class="mb-3">
-                        <i class="bi bi-newspaper text-primary"></i> NewsHub
+                        <i class="bi bi-newspaper text-primary"></i> {% trans "NewsHub" %}
                     </h5>
                     <p class="text-muted small">
-                        Агрегатор новостей из разных источников. Быстро, удобно, безопасно.
+                        {% trans "A news aggregator from various sources. Fast, convenient, and secure." %}"
                     </p>
                 </div>
                 
                 <div class="col-md-2 col-6 mb-3">
-                    <h6 class="mb-3">Навигация</h6>
+                    <h6 class="mb-3">{% trans "Navigation" %}</h6>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="{% url 'home' %}" class="text-decoration-none text-muted">Главная</a></li>
-                        <li class="mb-2"><a href="{% url 'search' %}" class="text-decoration-none text-muted">Поиск</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Источники</a></li>
+                        <li class="mb-2"><a href="{% url 'home' %}" class="text-decoration-none text-muted">{% trans "Home" %}</a></li>
+                        <li class="mb-2"><a href="{% url 'search' %}" class="text-decoration-none text-muted">{% trans "Search" %}</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">{% trans "Sources" %}</a></li>
                     </ul>
                 </div>
                 
                 <div class="col-md-3 col-6 mb-3">
-                    <h6 class="mb-3">Пользователю</h6>
+                    <h6 class="mb-3">{% trans "To the user" %}</h6>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="{% url 'users:profile' %}" class="text-decoration-none text-muted">Профиль</a></li>
-                        <li class="mb-2"><a href="{% url 'users:favorites' %}" class="text-decoration-none text-muted">Избранное</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Настройки</a></li>
+                        <li class="mb-2"><a href="{% url 'users:profile' %}" class="text-decoration-none text-muted">{% trans "Profile" %}</a></li>
+                        <li class="mb-2"><a href="{% url 'users:favorites' %}" class="text-decoration-none text-muted">{% trans "Favorites" %}</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">{% trans "Settings" %}</a></li>
                     </ul>
                 </div>
                 
                 <div class="col-md-3 mb-3">
-                    <h6 class="mb-3">Контакты</h6>
+                    <h6 class="mb-3">{% trans "Contacts" %}</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2">
                             <i class="bi bi-envelope me-2"></i>
@@ -47,7 +47,7 @@
             <hr class="my-3">
             
             <div class="text-center text-muted">
-                <p class="mb-0 small">&copy; 2025 NewsHub. Все права защищены.</p>
+                <p class="mb-0 small">&copy; {% trans "2025 NewsHub. All rights reserved." %}</p>
             </div>
         </div>
 </footer>

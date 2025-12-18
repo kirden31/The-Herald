@@ -63,7 +63,7 @@ class ConfigAuthBackend(ModelBackend):
             self._add_message_safe(
                 request,
                 gettext_lazy(
-                    'Достигнуто максимальное количество попыток.',
+                    'The maximum number of attempts has been reached.',
                 ),
             )
 
@@ -73,12 +73,12 @@ class ConfigAuthBackend(ModelBackend):
                 )
 
                 msg = gettext_lazy(
-                    'Мы заметили подозрительную активность, '
-                    'поэтому заблокировали ваш аккаунт.'
-                    'Перейдите по ссылке для активации (действует 7 дней):',
+                    'We have noticed suspicious activity,'
+                    'That s why your account was blocked.'
+                    'Follow the activation link (valid for 7 days):',
                 )
                 send_mail(
-                    subject=gettext_lazy('Активация аккаунта.'),
+                    subject=gettext_lazy('Account activation.'),
                     message=f'{msg} {activation_url}',
                     from_email=settings.DEFAULT_FROM_EMAIL,
                     recipient_list=[user.email],
@@ -88,7 +88,7 @@ class ConfigAuthBackend(ModelBackend):
         attempts_left = settings.MAX_AUTH_ATTEMPTS - user.profile.attempts_count
         self._add_message_safe(
             request,
-            f"{gettext_lazy('У вас осталось попыток:')} {attempts_left}",
+            f"{gettext_lazy('You have attempts remaining:')} {attempts_left}",
         )
 
         user.profile.save()

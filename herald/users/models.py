@@ -50,28 +50,28 @@ class Profile(models.Model):
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
         related_name='profile',
-        verbose_name=_('пользователь'),
+        verbose_name=_('user'),
     )
     image = models.ImageField(
         upload_to=image_path,
         blank=True,
-        verbose_name=_('аватарка'),
-        help_text=_('Аватарка пользователя.'),
+        verbose_name=_('avatar'),
+        help_text=_('User avatar.'),
     )
     birthday = models.DateField(
         blank=True,
         null=True,
-        verbose_name=_('дата рождения'),
-        help_text=_('Дата рождения пользователя.'),
+        verbose_name=_('date of birth'),
+        help_text=_('User date of birth.'),
     )
     location = models.CharField(
         blank=True,
-        help_text=_('Город (или страна) проживания пользователя.'),
+        help_text=_('The user city (or country) of residence.'),
     )
     attempts_count = models.PositiveBigIntegerField(
         default=0,
-        verbose_name=_('попытки'),
-        help_text=_('Количество попыток входа в систему'),
+        verbose_name=_('attempts'),
+        help_text=_('Number of login attempts'),
     )
 
     def get_image_300x300(self):
@@ -86,8 +86,8 @@ class Profile(models.Model):
         return None
 
     class Meta:
-        verbose_name = _('профиль')
-        verbose_name_plural = _('профили')
+        verbose_name = _('profile')
+        verbose_name_plural = _('profiles')
 
     def __str__(self):
         return self.user.username
@@ -98,58 +98,58 @@ class FavoriteArticle(models.Model):
         User,
         on_delete=models.CASCADE,
         related_name='favorite_articles',
-        verbose_name=_('пользователь'),
+        verbose_name=_('user'),
     )
     article_id = models.CharField(
-        'ID новости',
+        _('ID_News'),
         max_length=500,
         db_index=True,
     )
     title = models.CharField(
-        verbose_name=_('заголовок'),
+        verbose_name=_('title'),
         max_length=500,
     )
     description = models.TextField(
-        'Описание',
+        _('Description'),
         blank=True,
         null=True,
     )
     content = models.TextField(
-        'Содержание',
+        _('Content'),
         blank=True,
         null=True,
     )
     url = models.URLField(
-        'Ссылка на новость',
+        _('Link to news'),
         max_length=500,
     )
     image_url = models.URLField(
-        'Ссылка на изображение',
+        _('Image link'),
         max_length=500,
         blank=True,
         null=True,
     )
-    source_name = models.CharField('Название источника', max_length=200)
+    source_name = models.CharField(_('Source name'), max_length=200)
     source_id = models.CharField(
-        'ID источника',
+        _('ID_Source'),
         max_length=100,
         blank=True,
         null=True,
     )
     creator = models.CharField(
-        'Автор',
+        _('Author'),
         max_length=200,
         blank=True,
         null=True,
     )
-    published_at = models.DateTimeField('Дата публикации')
-    category = models.CharField('Категория', max_length=100, blank=True, null=True)
-    created_at = models.DateTimeField('Дата добавления', auto_now_add=True)
-    tags = models.JSONField('Теги', default=list, help_text='Теги для поиска и фильтрации')
+    published_at = models.DateTimeField(_('Publication date'))
+    category = models.CharField(_('Category'), max_length=100, blank=True, null=True)
+    created_at = models.DateTimeField(_('Date added'), auto_now_add=True)
+    tags = models.JSONField(_('Tags'), default=list, help_text=_('Tags for searching and filtering'))
 
     class Meta:
-        verbose_name = 'Избранная новость'
-        verbose_name_plural = 'Избранные новости'
+        verbose_name = _('Featured news')
+        verbose_name_plural = _('Featured News')
         unique_together = ['user', 'article_id']
         ordering = ['-created_at']
         indexes = [
