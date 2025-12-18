@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<h2 class="mb-4">{% trans "Everything" %}</h2>
+<div class="container py-4">
+
+    <form action="{% url 'news:guardian_news' %}" method="get" class="d-flex mb-3" role="search">
+        {% include "includes/search_area.html" %}
+    </form>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        {% for n in news %}
+        {% include "includes/news_card.html" %}
+        {% empty %}
+        <div class="col-12">
+            <div class="alert alert-info">{% trans "No_news_found" %}</div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% include "includes/page_select.html" %}
+
+</div>
+{% endblock %}

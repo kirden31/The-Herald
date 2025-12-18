@@ -1,86 +1,74 @@
-__all__ = ()
+__all__ = ('ProfileView', 'ProfileUpdateView', 'SignUpView')
 
-import datetime
+import django.contrib
+import django.contrib.auth
+import django.contrib.auth.mixins
+import django.contrib.messages
+import django.shortcuts
+import django.urls
+from django.utils.translation import gettext_lazy as _
+import django.views.generic
 
-from django.contrib import messages
-from django.contrib.auth import login
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import redirect
-from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView, TemplateView
-from users.forms import SignupForm
-from users.models import FavoriteArticle
+import users.forms
+import users.models
 
 
-class SignUpView(CreateView):
-    form_class = SignupForm
+class SignUpView(django.views.generic.CreateView):
+    form_class = users.forms.SignupForm
     template_name = 'users/signup.html'
-    success_url = reverse_lazy('home')
+    success_url = django.urls.reverse_lazy('users:profile')
 
     def form_valid(self, form):
         response = super().form_valid(form)
-        user = form.save()
-        user.backend = 'django.contrib.auth.backends.ModelBackend'
 
-        login(self.request, user)
+        django.contrib.auth.login(self.request, self.object)
 
-        messages.success(self.request, 'Регистрация прошла успешно! Добро пожаловать!')
+        django.contrib.messages.success(
+            self.request,
+            _('Registration successful! Welcome!'),
+        )
 
         return response
 
     def get(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
-            return redirect('home')
+        if request.user:
+            return django.shortcuts.redirect('/')
 
         return super().get(request, *args, **kwargs)
 
 
-class ProfileView(LoginRequiredMixin, TemplateView):
+class ProfileView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.generic.TemplateView):
     template_name = 'users/profile.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['user'] = self.request.user
-        context['profile'] = self.request.user.profile if hasattr(self.request.user, 'profile') else None
-        return context
-
-
-class FavoritesView(LoginRequiredMixin, ListView):
-    model = FavoriteArticle
-    template_name = 'users/favorites.html'
-    context_object_name = 'favorites'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
         user = self.request.user
-        week_ago = datetime.datetime.now() - datetime.timedelta(days=7)
-        week_qs = FavoriteArticle.objects.filter(
-            user=user,
-            created_at__gte=week_ago,
-        )
-        context['this_week_count'] = week_qs.count()
-        categories_qs = FavoriteArticle.objects.filter(user=user)
-        categories_qs = categories_qs.exclude(category__isnull=True)
-        context['categories_count'] = (
-            categories_qs.values(
-                'category',
-            )
-            .distinct()
-            .count()
-        )
-        sources_qs = FavoriteArticle.objects.filter(user=user)
-        context['sources_count'] = (
-            sources_qs.values(
-                'source_name',
-            )
-            .distinct()
-            .count()
-        )
-        all_cats_qs = FavoriteArticle.objects.filter(user=user)
-        all_cats_qs = all_cats_qs.exclude(category__isnull=True)
-        context['all_categories'] = all_cats_qs.values_list(
-            'category',
-            flat=True,
-        ).distinct()
-
+        context['favorite_count'] = user.favorite_articles.count()
         return context
+
+
+class ProfileUpdateView(
+    django.contrib.auth.mixins.LoginRequiredMixin,
+    django.views.generic.UpdateView,
+):
+    template_name = 'users/profile_update.html'
+    model = users.models.User
+    form_class = users.forms.ProfileForm
+    success_url = django.urls.reverse_lazy('users:profile')
+
+    def get_object(self, queryset=None):
+        profile, _ = users.models.Profile.objects.get_or_create(user=self.request.user)
+        return profile
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['user'] = self.request.user
+        return kwargs
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        django.contrib.messages.success(
+            self.request,
+            'Профиль успешно обновлен!',
+        )
+        return response

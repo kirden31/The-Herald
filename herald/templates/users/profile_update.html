@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Редактировать профиль" %}{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2>{% trans "Редактировать профиль" %}</h2>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% include "includes/form_errors.html" %}
+                <div class="mb-3">
+                    {{ form.email.label_tag }}
+                    {{ form.email }}
+                    {% if form.email.errors %}<div class="text-danger">{{ form.email.errors }}</div>{% endif %}
+                </div>
+                <div class="mb-3">
+                    {{ form.first_name.label_tag }}
+                    {{ form.first_name }}
+                </div>
+                <div class="mb-3">
+                    {{ form.last_name.label_tag }}
+                    {{ form.last_name }}
+                </div>
+                <div class="mb-3">
+                    {{ form.birthday.label_tag }}
+                    {{ form.birthday }}
+                    {% if form.birthday.help_text %}
+                        <small class="form-text text-muted">{{ form.birthday.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">{% trans "Локация" %}</label>
+                    <input type="text" class="form-control" name="location" value="{{ user.profile.location|default:'' }}" placeholder="{% trans 'Город или страна' %}">
+                </div>
+                <div class="mb-3">
+                    {{ form.image.label_tag }}
+                    {{ form.image }}
+                    {% if form.image.help_text %}
+                        <small class="form-text text-muted">{{ form.image.help_text }}</small>
+                    {% endif %}
+                </div>
+                <button type="submit" class="btn btn-primary">{% trans "Сохранить" %}</button>
+                <a href="{% url 'users:profile' %}" class="btn btn-secondary">{% trans "Отмена" %}</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

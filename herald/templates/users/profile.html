@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
 
-{% block title %}Профиль пользователя{% endblock %}
+{% block title %}{% trans "User profile" %}{% endblock %}
 
 {% block content %}
 <div class="row">
@@ -8,48 +10,58 @@
         <div class="card shadow-sm">
             <div class="card-body text-center">
                 <div class="mb-3">
-                    <i class="bi bi-person-circle display-1 text-primary"></i>
+                    {% if request.user.profile.image %}
+                    <img src="{{ request.user.profile.image.url }}"
+                         alt="{{ request.user.username }}"
+                         class="rounded-circle img-thumbnail border-3 border-primary mb-3"
+                         style="width: 200px; height: 200px; object-fit: cover;">
+                    {% else %}
+                    <img src="{% static 'img/no_image.jpg' %}"
+                         alt="{{ request.user.username }}"
+                         class="rounded-circle img-thumbnail border-3 border-secondary mb-3"
+                         style="width: 200px; height: 200px; object-fit: cover;">
+                    {% endif %}
                 </div>
                 <h4 class="card-title">{{ user.username }}</h4>
                 <p class="text-muted">{{ user.email }}</p>
-                
-                <div class="d-grid gap-2 mb-3">
-                    <button class="btn btn-primary">
-                        <i class="bi bi-pencil me-2"></i>Редактировать профиль
-                    </button>
 
-                    <a href="{% url 'users:favorites' %}" class="btn btn-outline-primary">
-                        <i class="bi bi-bookmark me-2"></i>Мои закладки
+                <div class="d-grid gap-2 mb-3">
+                    <a href="{% url 'users:profile_edit' %}" class="btn btn-primary">
+                        <i class="bi bi-pencil me-2"></i>{% trans "Edit profile" %}
+                    </a>
+
+                    <a href="{% url 'news:favorite' %}" class="btn btn-outline-primary">
+                        <i class="bi bi-bookmark me-2"></i>{% trans "My bookmarks" %}
                     </a>
 
                 </div>
-                
+
                 <div class="row text-center mt-3">
                     <div class="col-6">
-                        <h5 class="text-primary">0</h5>
-                        <small class="text-muted">Закладок</small>
+                        <h5 class="text-primary">{{ favorite_count }}</h5>
+                        <small class="text-muted">{% trans "Bookmarks" %}</small>
                     </div>
                     <div class="col-6">
                         <h5 class="text-success">0</h5>
-                        <small class="text-muted">Поисков</small>
+                        <small class="text-muted">{% trans "Searches" %}</small>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="card shadow-sm mt-3">
             <div class="card-body">
                 <h6 class="card-title mb-3">
-                    <i class="bi bi-gear me-2"></i>Настройки
-                </h6>                
+                    <i class="bi bi-gear me-2"></i>{% trans "Settings" %}
+                </h6>
                 {% if user == request.user %}
-                    {% url 'users:password_change' as password_change_url %}
-                      {% if password_change_url %}
-                        <a href="{{ password_change_url }}" class="btn btn-outline-secondary">
-                          <i class="bi bi-key me-1"></i>Изменить пароль
-                        </a>
-                      {% endif %}
-                  {% endif %}
+                {% url 'users:password_change' as password_change_url %}
+                {% if password_change_url %}
+                <a href="{{ password_change_url }}" class="btn btn-outline-secondary">
+                    <i class="bi bi-key me-1"></i>{% trans "Change password" %}
+                </a>
+                {% endif %}
+                {% endif %}
 
 
             </div>
@@ -60,68 +72,72 @@
         <div class="card shadow-sm mb-4">
             <div class="card-body">
                 <h5 class="card-title mb-4">
-                    <i class="bi bi-info-circle me-2"></i>Личная информация
+                    <i class="bi bi-info-circle me-2"></i>{% trans "Personal information" %}
                 </h5>
-                
+
                 <div class="row mb-3">
                     <div class="col-md-6">
-                        <label class="form-label text-muted">Имя</label>
-                        <p class="form-control-plaintext">{{ user.first_name|default:"Не указано" }}</p>
+                        <label class="form-label text-muted">{% trans "Name" %}</label>
+                        <p class="form-control-plaintext">{{ user.first_name|default:_("Not specified") }}</p>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label text-muted">Фамилия</label>
-                        <p class="form-control-plaintext">{{ user.last_name|default:"Не указано" }}</p>
+                        <label class="form-label text-muted">{% trans "Surname" %}</label>
+                        <p class="form-control-plaintext">{{ user.last_name|default:_("Not specified") }}</p>
                     </div>
                 </div>
-                
+
                 <div class="row mb-3">
                     <div class="col-md-6">
-                        <label class="form-label text-muted">Дата рождения</label>
+                        <label class="form-label text-muted">{% trans "Date of birth" %}</label>
                         <p class="form-control-plaintext">
                             {% if user.profile.birth_date %}
-                                {{ user.profile.birth_date|date:"d.m.Y" }}
+                            {{ user.profile.birth_date|date:"d.m.Y" }}
                             {% else %}
-                                Не указано
+                            {% trans "Not specified" %}
                             {% endif %}
                         </p>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label text-muted">Локация</label>
-                        <p class="form-control-plaintext">{{ user.profile.location|default:"Не указано" }}</p>
+                        <label class="form-label text-muted">{% trans "Location" %}</label>
+                        <p class="form-control-plaintext">
+                            {{ user.profile.location|default:_("Not specified") }}
+                        </p>
                     </div>
                 </div>
-                
+
                 <div class="row">
                     <div class="col-md-6">
-                        <label class="form-label text-muted">Дата регистрации</label>
+                        <label class="form-label text-muted">{% trans "Registration date" %}</label>
                         <p class="form-control-plaintext">{{ user.date_joined|date:"d.m.Y" }}</p>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label text-muted">Последний вход</label>
-                        <p class="form-control-plaintext">{{ user.last_login|date:"d.m.Y H:i"|default:"Недавно" }}</p>
+                        <label class="form-label text-muted">{% trans "Last entry" %}</label>
+                        <p class="form-control-plaintext">
+                            {{ user.last_login|date:"d.m.Y H:i"|default:_("Recently")}}
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="card shadow-sm mb-4">
             <div class="card-body">
                 <h5 class="card-title mb-4">
-                    <i class="bi bi-heart me-2 text-danger"></i>Любимые категории
+                    <i class="bi bi-heart me-2 text-danger"></i>{% trans "Favorite categories" %}
                 </h5>
-                
+
                 <div class="d-flex flex-wrap gap-2 mb-3">
                     {% if user.profile.favorite_categories %}
-                        {% for cat in user.profile.favorite_categories %}
-                            <span class="badge bg-primary">{{ cat }}</span>
-                        {% endfor %}
+                    {% for cat in user.profile.favorite_categories %}
+                    <span class="badge bg-primary">{{ cat }}</span>
+                    {% endfor %}
                     {% else %}
-                        <p class="text-muted">Вы еще не выбрали любимые категории</p>
+                    <p class="text-muted">{% trans "You haven't selected your favorite categories yet." %}</p>
                     {% endif %}
                 </div>
-                
+
                 <button class="btn btn-outline-primary btn-sm">
-                    <i class="bi bi-plus-circle me-1"></i>Добавить категории
+                    <i class="bi bi-plus-circle me-1"></i>{% trans "Add categories" %}
                 </button>
             </div>
         </div>

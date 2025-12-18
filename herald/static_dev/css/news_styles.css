@@ -1,0 +1,219 @@
+
+/* =========================================================
+   news-gray-green.css
+   Новостной сайт — серо-зелёная тема + полная тёмная версия
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Базовые переменные
+   --------------------------------------------------------- */
+:root {
+  --font-base: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Merriweather", Georgia, serif;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+
+  --container-width: 1200px;
+}
+
+/* =========================================================
+   Светлая тема
+   ========================================================= */
+.palette-gray-green {
+  --bg: #f4f6f5;
+  --surface: #ffffff;
+  --text: #1f2a26;
+  --muted: #6f7f78;
+  --accent: #5f8573;
+  --accent-2: #4f7262;
+  --accent-text: #ffffff;
+  --link: #587f6d;
+  --border: rgba(40, 60, 50, 0.08);
+  --shadow-sm: 0 6px 18px rgba(20, 40, 30, 0.06);
+  --shadow-md: 0 14px 36px rgba(20, 40, 30, 0.08);
+  --gray-100: #f8f9f7;
+  --gray-200: #eaecea;
+  --gray-300: #d9ded9;
+  --gray-400: #c7d1c9;
+  --gray-500: #b0b8b0;
+  --gray-600: #8f9a8f;
+  --gray-700: #6f7f78;
+  --gray-800: #4f6356;
+  --gray-900: #2f3a2f;
+
+  /* span dynamic */
+  --span-color: #2f4f43; /* читаемый на светлом фоне */
+  --span-bg-tag: #d9ede6;
+}
+
+/* =========================================================
+   Тёмная тема
+   ========================================================= */
+.palette-gray-green-dark {
+  --bg: #0f1412;
+  --surface: #1b221e;
+  --text: #e1e6e0;
+  --muted: #9aa49a;
+  --accent: #70a18c;
+  --accent-2: #4f8573;
+  --accent-text: #0f1412;
+  --link: #7fb79a;
+  --border: rgba(120, 160, 140, 0.2);
+  --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 14px 36px rgba(0, 0, 0, 0.6);
+  --gray-100: #1b221e;
+  --gray-200: #2a332a;
+  --gray-300: #3a4439;
+  --gray-400: #4a5548;
+  --gray-500: #5f7262;
+  --gray-600: #6f7f78;
+  --gray-700: #8f9a8f;
+  --gray-800: #aab5aa;
+  --gray-900: #c7d1c7;
+
+  /* span dynamic */
+  --span-color: #a3d4c1; /* читаемый на тёмном фоне */
+  --span-bg-tag: #39675b; /* для тегов на тёмном фоне */
+}
+
+/* =========================================================
+   Общие стили сайта
+   ========================================================= */
+.news-site {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-base);
+  line-height: 1.6;
+}
+
+.news-site a {
+  color: var(--link);
+}
+.news-site a:hover {
+  color: var(--accent-2);
+}
+
+.news-site .container,
+.news-site .container-fluid {
+  max-width: var(--container-width);
+}
+
+.news-site h1,
+.news-site h2,
+.news-site h3,
+.news-site h4,
+.news-site h5 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.news-site p {
+  margin-bottom: 1rem;
+}
+
+.news-site .muted,
+.news-site .text-muted {
+  color: var(--muted) !important;
+}
+
+.news-site .navbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.news-site .navbar-brand { color: var(--text); font-weight:800; }
+.news-site .nav-link { color: var(--muted); font-weight:600; }
+.news-site .nav-link.active, .news-site .nav-link:hover { color: var(--text); }
+
+.news-site .btn {
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  border: none;
+  transition: background .15s ease, box-shadow .15s ease;
+}
+.news-site .btn-primary {
+  background: linear-gradient(180deg, #6b9481, var(--accent));
+  color: var(--accent-text);
+}
+.news-site .btn-primary:hover { background: var(--accent-2); box-shadow: var(--shadow-sm); }
+.news-site .btn-outline-primary {
+  background: transparent;
+  border: 1px solid var(--gray-500);
+  color: var(--accent);
+}
+.news-site .btn-outline-primary:hover { background: rgba(95, 133, 115, 0.08); }
+
+.news-site .card, .news-site .article-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.news-site .card-title { color: var(--text); }
+.news-site .excerpt, .news-site .card-text { color: var(--muted); }
+
+.news-site .form-control {
+  background: var(--gray-100);
+  border: 1px solid var(--gray-400);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+}
+.news-site .form-control:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(95, 133, 115, 0.15); }
+
+.news-site table { width: 100%; }
+.news-site thead th { color: var(--muted); font-weight:700; border-bottom:2px solid var(--border); }
+.news-site tbody td { border-bottom:1px solid rgba(0,0,0,0.04); }
+
+/* ---------------------------------------------------------
+   Span и метки (динамический цвет)
+   --------------------------------------------------------- */
+.news-site span {
+  color: var(--span-color);
+  font-weight: 600;
+  line-height: 1.4;
+}
+.news-site span.meta, .news-site .meta span {
+  color: var(--muted);
+  font-weight: 500;
+}
+.news-site span.highlight {
+  color: var(--accent-2);
+  font-weight: 700;
+}
+.news-site span.tag {
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  margin-right: 0.25rem;
+  border-radius: 999px;
+  background: var(--span-bg-tag);
+  color: var(--accent-text);
+  font-size: 0.8em;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.news-site span:hover { color: var(--accent); cursor: pointer; }
+
+.badge-light-gray {
+    background-color: #e7efeb; /* светло-серо-зелёный */
+    color: #39675b;           /* контрастный текст */
+}
+
+/* общий вариант — переопределяет курсор для большинства help-текстов */
+.helptext,
+.form-help,
+.form-text,
+.news-site span:hover,
+.no-pointer-help {
+  cursor: default !important;
+  color: inherit !important;        /* сохраняем цвет текста без изменений */
+  text-decoration: none !important; /* убираем подчеркивание ссылок */
+}
+
+/* для help_text с span */
+span.no-pointer-help {
+  cursor: default !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}

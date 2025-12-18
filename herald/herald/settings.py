@@ -3,25 +3,27 @@ __all__ = ()
 import os
 import pathlib
 
-from django.urls import reverse_lazy
+import django.urls
+from django.utils.translation import gettext_lazy as _
+import dotenv
+
 import herald.tools
 
+dotenv.load_dotenv()
+
 BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
-
-STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static/'
-STATICFILES_DIRS = [BASE_DIR / 'static_dev/']
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media/'
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', default='not_so_secret')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = herald.tools.to_bool('DJANGO_DEBUG', True)
+DEBUG = herald.tools.to_bool('DJANGO_DEBUG', False)
 
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', default='*').split()
+
+# Your API keys
+NEWS_API_KEYS = os.getenv('NEWS_API_KEYS', 'no_api_key').split()
+GUARDIAN_API_KEYS = os.getenv('GUARDIAN_API_KEYS', 'no_api_key').split()
 
 MAX_AUTH_ATTEMPTS = os.getenv('DJANGO_MAX_AUTH_ATTEMPTS', default=3)
 
@@ -31,25 +33,39 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    # Installed apps
     'django.contrib.staticfiles',
     'sorl.thumbnail',
     # My apps
     'users.apps.UsersConfig',
+    'news.apps.NewsConfig',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'users.middleware.CustomRequestUser',
+]
+
+if DEBUG:
+    MIDDLEWARE.insert(
+        0,
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
+    )
+    INSTALLED_APPS.append('debug_toolbar')
+
+INTERNAL_IPS = [
+    '127.0.0.1',
 ]
 
 AUTHENTICATION_BACKENDS = [
     'users.backends.ConfigAuthBackend',
-    'django.contrib.auth.backends.ModelBackend',
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
@@ -67,6 +83,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',
+                'django.template.context_processors.media',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -98,17 +115,30 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = 'auth.User'
-LOGIN_URL = reverse_lazy('users:login')
-LOGIN_REDIRECT_URL = reverse_lazy('users:profile')
-LOGOUT_REDIRECT_URL = reverse_lazy('users:login')
+LANGUAGE_CODE = 'ru-RU'
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGES = [
+    ('en-US', _('English')),
+    ('ru-RU', _('Russian')),
+]
+
+LOGIN_URL = django.urls.reverse_lazy('users:login')
+LOGIN_REDIRECT_URL = django.urls.reverse_lazy('users:profile')
+LOGOUT_REDIRECT_URL = django.urls.reverse_lazy('users:login')
 
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
 USE_TZ = True
+
+LOCALE_PATHS = [BASE_DIR / 'locale']
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [BASE_DIR / 'static_dev']
+
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

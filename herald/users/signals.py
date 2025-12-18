@@ -1,20 +1,17 @@
-__all__ = ()
+__all__ = ('create_save_user_profile',)
 
-from django.contrib.auth.models import User
-from django.db.models.signals import post_save
-from django.dispatch import receiver
-from users.models import Profile
+import django.db.models.signals
+import django.dispatch
+
+import users.models
 
 
-@receiver(post_save, sender=User)
-def create_profile(sender, instance, created, **kwargs):
+@django.dispatch.receiver(
+    django.db.models.signals.post_save,
+    sender=users.models.User,
+)
+def create_save_user_profile(sender, instance, created, **_kwargs):
     if created:
-        Profile.objects.get_or_create(user=instance)
-
-
-@receiver(post_save, sender=User)
-def save_profile(sender, instance, **kwargs):
-    if hasattr(instance, 'profile'):
-        instance.profile.save()
+        users.models.Profile.objects.create(user=instance)
     else:
-        Profile.objects.get_or_create(user=instance)
+        users.models.Profile.objects.update_or_create(user=instance)

@@ -1,5 +1,5 @@
 [flake8]
-application-import-names=
+application-import-names=api,herald,news,users
 exclude=
     .git,
     __pycache__,
@@ -8,6 +8,5 @@ exclude=
     env/
     __init__.py
     manage.py
-inline-quotes = single
 max-line-length=120
 import-order-style=google
