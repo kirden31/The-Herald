@@ -15,7 +15,7 @@
                 
                 <form method="post" novalidate>
                     {% csrf_token %}
-
+                    {% include "includes/form_errors.html" %}
                     {% if form.non_field_errors %}
                     <div class="alert alert-danger">
                         {% for error in form.non_field_errors %}
@@ -101,10 +101,10 @@
                         {% endif %}
                     </div>
 
-                    <div class="form-check mb-4">
-                        <input class="form-check-input" type="checkbox" id="terms" required>
-                        <label class="form-check-label" for="terms">
-                            {% trans "Я согласен с условиями использования" %}
+                    <div class="mb-3 form-check">
+                        {{ form.accept_terms }}
+                        <label class="form-check-label" for="{{ form.accept_terms.id_for_label }}">
+                            {{ form.accept_terms.label }}
                         </label>
                     </div>
                     

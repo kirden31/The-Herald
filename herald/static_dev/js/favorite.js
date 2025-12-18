@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const csrfToken = form.querySelector('[name=csrfmiddlewaretoken]').value;
 
-      const url = form.action || '/users/save-favorite/';
+      const url = form.action || '/news/save-favorite/';
 
       try {
         const response = await fetch(url, {

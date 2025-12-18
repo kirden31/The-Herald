@@ -2,76 +2,72 @@
 {% load static %}
 
 <div class="col">
-    <div class="card h-100 shadow-sm">
+  <div class="card h-100 shadow-sm">
+    {% if n.urlToImage %}
+      <a href="{{ n.url }}" target="_blank" rel="noopener noreferrer">
+        <img src="{{ n.urlToImage }}" class="card-img-top" alt="{{ n.title|default:'Image' }}">
+      </a>
+    {% else %}
+    <a href="{{ n.url }}" target="_blank" rel="noopener noreferrer">
+      <img src="{% static 'img/no_article_image.jpg' %}" class="card-img-top" alt="No image">
+    </a>
+    {% endif %}
 
-        {% if n.urlToImage %}
-        <a href="{{ n.url }}" target="_blank" rel="noopener noreferrer">
-            <img src="{{ n.urlToImage }}" class="card-img-top" alt="{{ n.title|default:'Image' }}">
-        </a>
-        {% elif n.image_url %}
-        <a href="{{ n.url }}" target="_blank" rel="noopener noreferrer">
-            <img src="{{ n.image_url }}" class="card-img-top" alt="{{ n.title|default:'Image' }}">
-        </a>
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">{{ n.title|default:"Без заголовка"|truncatechars:70 }}</h5>
+
+      <p class="card-text text-muted flex-grow-1">
+        {{ n.description|default:""|truncatechars:120 }}
+      </p>
+
+      <div class="mt-auto">
+        <p class="mb-1">
+          {% if n.source %}
+            <span class="badge bg-primary">{{ n.source }}</span>
+          {% endif %}
+          {% if n.author %}
+            <small class="text-muted"> · {{ n.author }}</small>
+          {% endif %}
+        </p>
+
+        {% if n.publishedAt %}
+          <p class="text-muted small">
+            {{ n.publishedAt|date:"d M Y H:i" }}
+          </p>
         {% endif %}
 
-        <div class="card-body d-flex flex-column">
-            <h5 class="card-title">{{ n.title|default:"Без заголовка"|truncatechars:70 }}</h5>
+        <div class="d-flex justify-content-between align-items-center">
+          <a href="{{ n.url }}" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">
+            {% trans "Читать" %}
+          </a>
 
-            <p class="card-text text-muted flex-grow-1">
-                {{ n.description|default:""|truncatechars:120 }}
-            </p>
-
-            <div class="mt-auto">
-                <p class="mb-1">
-                    {% if n.source_name %}
-                    <span class="badge-light-gray">{{ n.source_name }}</span>
-                    {% endif %}
-                    {% if n.author or n.creator %}
-                    <small class="text-muted"> · {{ n.author|default:n.creator }}</small>
-                    {% endif %}
-                </p>
-
-                {% if n.publishedAt %}
-                <p class="text-muted small">
-                    {{ n.publishedAt|date:"d M Y H:i" }}
-                </p>
+          {% if user %}
+            <form class="favorite-form ms-2" method="post" action="{% url 'news:save_favorite' %}" style="display: inline;">
+              {% csrf_token %}
+              <input type="hidden" name="title" value="{{ n.title }}">
+              <input type="hidden" name="description" value="{{ n.description }}">
+              <input type="hidden" name="content" value="{{ n.content }}">
+              <input type="hidden" name="url" value="{{ n.url }}">
+              <input type="hidden" name="urlToImage" 
+                value="{% if n.urlToImage %}{{ n.urlToImage }}{% else %}{% static 'img/no_article_image.jpg' %}{% endif %}">
+              <input type="hidden" name="source" value="{{ n.source }}">
+              <input type="hidden" name="author" value="{{ n.author|default:'' }}">
+              <input type="hidden" name="publishedAt" value="{{ n.publishedAt|date:'c' }}">
+              <input type="hidden" name="category" value="{{ n.category|default:'' }}">
+              <button type="submit"
+                  class="favorite-btn btn btn-sm {% if n.is_favorite %}btn-warning{% else %}btn-outline-warning{% endif %}">
+                <i class="bi {% if n.is_favorite %}bi-bookmark-star-fill{% else %}bi-bookmark{% endif %}"></i>
+                {% if n.is_favorite %}
+                  {% trans "В избранном" %}
+                {% else %}
+                  {% trans "Сохранить" %}
                 {% endif %}
+              </button>
 
-                <div class="d-flex justify-content-between align-items-center">
-                    <a href="{{ n.url }}" class="btn btn-outline-primary btn-sm" target="_blank"
-                       rel="noopener noreferrer">
-                        {% trans "Читать" %}
-                    </a>
-
-                    {% if request.user.is_authenticated %}
-                    <form class="favorite-form ms-2" method="post" action="{% url 'users:save_favorite' %}"
-                          style="display: inline;">
-                        {% csrf_token %}
-                        <input type="hidden" name="article_id" value="{{ n.id }}">
-                        <input type="hidden" name="title" value="{{ n.title }}">
-                        <input type="hidden" name="description" value="{{ n.description }}">
-                        <input type="hidden" name="content" value="{{ n.content }}">
-                        <input type="hidden" name="url" value="{{ n.url }}">
-                        <input type="hidden" name="image_url" value="{{ n.urlToImage|default:n.image_url }}">
-                        <input type="hidden" name="source_name" value="{{ n.source_name }}">
-                        <input type="hidden" name="source_id" value="{{ n.source_id }}">
-                        <input type="hidden" name="creator" value="{{ n.creator|default:n.author|default:'' }}">
-                        <input type="hidden" name="published_at" value="{{ n.publishedAt|date:'c' }}">
-                        <input type="hidden" name="category" value="{{ n.category|default:'' }}">
-                        <input type="hidden" name="tags" value='{{ n.tags|default:"[]"|safe }}'>
-
-                        <button type="submit"
-                                class="btn btn-sm {% if n.is_favorite %}btn-warning{% else %}btn-outline-warning{% endif %} favorite-btn">
-                            {% if n.is_favorite %}
-                            <i class="bi bi-bookmark-star-fill"></i> {% trans "В избранном" %}
-                            {% else %}
-                            <i class="bi bi-bookmark"></i> {% trans "Сохранить" %}
-                            {% endif %}
-                        </button>
-                    </form>
-                    {% endif %}
-                </div>
-            </div>
+            </form>
+          {% endif %}
         </div>
+      </div>
     </div>
+  </div>
 </div>

@@ -22,6 +22,7 @@
     {% include "includes/header.html" %}
 </header>
 <main class="container flex-grow-1">
+    {% include "includes/messages.html" %}
     {% block content %}{% trans "There_is_nothing_interesting_on_this_page" %}{% endblock %}
 </main>
 <footer class="mt-auto w-100 bg-light">

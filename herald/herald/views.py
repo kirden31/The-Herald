@@ -1,6 +1,7 @@
 __all__ = ('HomeView',)
 
 import django.shortcuts
+import django.views
 
 
 class HomeView(django.views.View):
