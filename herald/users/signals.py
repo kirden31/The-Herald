@@ -1,6 +1,5 @@
 __all__ = ('create_save_user_profile',)
 
-import django.contrib.auth.models
 import django.db.models.signals
 import django.dispatch
 
@@ -9,7 +8,7 @@ import users.models
 
 @django.dispatch.receiver(
     django.db.models.signals.post_save,
-    sender=django.contrib.auth.models.User,
+    sender=users.models.User,
 )
 def create_save_user_profile(sender, instance, created, **_kwargs):
     if created:

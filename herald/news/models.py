@@ -1,7 +1,7 @@
 __all__ = ('FavoriteArticle',)
 
 
-import django.db
+import django.db.models
 from django.utils.translation import gettext_lazy as _
 
 import users.models
@@ -14,27 +14,47 @@ class FavoriteArticle(django.db.models.Model):
         related_name='favorite_articles',
         verbose_name=_('пользователь'),
     )
-    title = django.db.models.CharField(verbose_name=_('заголовок'))
-    description = django.db.models.TextField(verbose_name=_('описание'), blank=True, null=True)
-    content = django.db.models.TextField(verbose_name=_('содержание'), blank=True, null=True)
-    url = django.db.models.URLField(verbose_name=_('ссылка на новость'))
-    urlToImage = django.db.models.URLField(  # noqa: N815
-        verbose_name=_('ссылка на изображение'),
-        blank=True,
+
+    title = django.db.models.CharField(
+        verbose_name=_('заголовок'),
         null=True,
     )
-    source = django.db.models.CharField(verbose_name=_('название источника'))
-    author = django.db.models.CharField(verbose_name=_('автор'), blank=True, null=True)
-    publishedAt = django.db.models.DateTimeField(verbose_name=_('дата публикации'))  # noqa: N815
-    category = django.db.models.CharField(verbose_name=_('категория'), blank=True, null=True)
+    description = django.db.models.TextField(verbose_name=_('описание'), null=True)
+    content = django.db.models.TextField(
+        verbose_name=_('содержание'),
+        null=True,
+    )
+    url = django.db.models.URLField(
+        verbose_name=_('ссылка на новость'),
+    )
+    url_to_image = django.db.models.URLField(
+        verbose_name=_('ссылка на изображение'),
+        null=True,
+    )
+    source = django.db.models.CharField(
+        verbose_name=_('название источника'),
+        null=True,
+    )
+    author = django.db.models.CharField(
+        verbose_name=_('автор'),
+        null=True,
+    )
+    published_at = django.db.models.DateTimeField(
+        verbose_name=_('дата публикации'),
+        null=True,
+    )
+    category = django.db.models.CharField(
+        verbose_name=_('категория'),
+        null=True,
+    )
 
     class Meta:
         verbose_name = _('избранная новость')
         verbose_name_plural = _('избранные новости')
         unique_together = ['user', 'url']
-        ordering = ['-publishedAt']
+        ordering = ['-published_at']
         indexes = [
-            django.db.models.Index(fields=['user', 'publishedAt']),
+            django.db.models.Index(fields=['user', 'published_at']),
             django.db.models.Index(fields=['user', 'category']),
         ]
 
@@ -46,10 +66,10 @@ class FavoriteArticle(django.db.models.Model):
             'title': self.title,
             'description': self.description,
             'url': self.url,
-            'urlToImage': self.urlToImage,
+            'urlToImage': self.url_to_image,
             'source': self.source,
             'author': self.author,
-            'publishedAt': self.publishedAt.isoformat(),
+            'publishedAt': self.published_at.isoformat(),
             'category': self.category,
             'is_favorite': True,
         }

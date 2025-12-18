@@ -5,19 +5,42 @@ import sys
 import django.conf
 import django.contrib.auth.models
 import django.db
+import django.db.models
 from django.utils.translation import gettext_lazy as _
 import sorl.thumbnail
 
-if not any(cmd in sys.argv for cmd in ['makemigrations', 'migrate']):
-    django.contrib.auth.models.User._meta.get_field('email')._unique = True
+import users.validators
 
 
 class UserManager(django.contrib.auth.models.BaseUserManager):
+    EMAIL_DOMAIN_CANONICAL_FORM = {
+        'ya.ru': 'yandex.ru',
+    }
+    DOTS_CANONICAL_FORM = {
+        'yandex.ru': '-',
+        'gmail.com': '',
+    }
+
     def get_queryset(self):
         return super().get_queryset().select_related('profile')
 
     def active(self):
         return self.get_queryset().filter(is_active=True)
+
+    def normalize_email(self, email):
+        email = super().normalize_email(email)
+
+        if not email:
+            return email
+
+        local, domain = email.lower().split('@')
+
+        domain = self.EMAIL_DOMAIN_CANONICAL_FORM.get(domain, domain)
+
+        local = local.replace('.', self.DOTS_CANONICAL_FORM.get(domain, ''))
+
+        local = local.split('+')[0]
+        return f'{local}@{domain}'
 
 
 class User(django.contrib.auth.models.User):
@@ -33,7 +56,7 @@ class User(django.contrib.auth.models.User):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.username[:10]
+        return self.username[:15]
 
 
 class Profile(django.db.models.Model):
@@ -49,17 +72,20 @@ class Profile(django.db.models.Model):
     image = django.db.models.ImageField(
         upload_to=image_path,
         blank=True,
+        null=True,
         verbose_name=_('аватарка'),
         help_text=_('Аватарка пользователя.'),
     )
     birthday = django.db.models.DateField(
         blank=True,
         null=True,
+        validators=[users.validators.ValidateBirthdayDate()],
         verbose_name=_('дата рождения'),
         help_text=_('Дата рождения пользователя.'),
     )
     location = django.db.models.CharField(
         blank=True,
+        null=True,
         help_text=_('Город (или страна) проживания пользователя.'),
     )
     attempts_count = django.db.models.PositiveBigIntegerField(
@@ -84,4 +110,8 @@ class Profile(django.db.models.Model):
         verbose_name_plural = _('профили')
 
     def __str__(self):
-        return self.user.username[:10]
+        return self.user.username[:15]
+
+
+if not any(arg in ('makemigrations', 'migrate') for arg in sys.argv):
+    User._meta.get_field('email')._unique = True

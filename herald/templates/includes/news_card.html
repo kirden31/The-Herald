@@ -48,11 +48,11 @@
               <input type="hidden" name="description" value="{{ n.description }}">
               <input type="hidden" name="content" value="{{ n.content }}">
               <input type="hidden" name="url" value="{{ n.url }}">
-              <input type="hidden" name="urlToImage" 
+              <input type="hidden" name="url_to_image"
                 value="{% if n.urlToImage %}{{ n.urlToImage }}{% else %}{% static 'img/no_article_image.jpg' %}{% endif %}">
               <input type="hidden" name="source" value="{{ n.source }}">
               <input type="hidden" name="author" value="{{ n.author|default:'' }}">
-              <input type="hidden" name="publishedAt" value="{{ n.publishedAt|date:'c' }}">
+              <input type="hidden" name="published_at" value="{{ n.publishedAt|date:'c' }}">
               <input type="hidden" name="category" value="{{ n.category|default:'' }}">
               <button type="submit"
                   class="favorite-btn btn btn-sm {% if n.is_favorite %}btn-warning{% else %}btn-outline-warning{% endif %}">

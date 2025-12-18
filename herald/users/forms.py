@@ -1,9 +1,7 @@
 __all__ = (
-    'ChangeForm',
     'LoginForm',
     'ProfileForm',
     'SignupForm',
-    'UserForm',
 )
 
 import datetime
@@ -12,6 +10,7 @@ import django
 import django.contrib.auth
 import django.contrib.auth.forms
 import django.core.exceptions
+import django.forms
 from django.utils.translation import gettext_lazy
 
 import users.models
@@ -31,134 +30,85 @@ class BootstrapFormMixin:
 
 class SignupForm(BootstrapFormMixin, django.contrib.auth.forms.UserCreationForm):
     email = django.forms.EmailField(
-        required=True,
-        widget=django.forms.EmailInput(attrs={'class': 'form-control'}),
+        error_messages={'required': gettext_lazy('Пользователь с такой почтой уже существует')},
         label=gettext_lazy('Почта'),
     )
     accept_terms = django.forms.BooleanField(
         required=True,
         label=gettext_lazy('Я согласен с условиями использования'),
-        widget=django.forms.CheckboxInput(attrs={'class': 'form-check-input'}),
         error_messages={'required': gettext_lazy('Вы должны принять условия использования')},
     )
 
     class Meta(django.contrib.auth.forms.UserCreationForm.Meta):
-        model = User
-        exclude = (User.first_name.field.name,)
-        fields = django.contrib.auth.forms.UserCreationForm.Meta.fields + (
-            User.email.field.name,
+        model = users.models.User
+
+        fields = (
+            users.models.User.username.field.name,
+            users.models.User.email.field.name,
             'accept_terms',
         )
+
         labels = {
-            User.username.field.name: gettext_lazy('Логин'),
-            User.email.field.name: gettext_lazy('Почта'),
-            'accept_terms': gettext_lazy('Я согласен с условиями использования'),
+            users.models.User.username.field.name: gettext_lazy('Login'),
+            users.models.User.email.field.name: gettext_lazy('Email'),
+            'accept_terms': gettext_lazy('I_agree_to_the_terms_of_use'),
         }
+
         help_text = {
-            User.username.field.name: gettext_lazy('Введите логин'),
+            users.models.User.username.field.name: gettext_lazy('Enter_login'),
+            users.models.User.email.field.name: gettext_lazy('Enter_email'),
         }
-
-    def clean_email(self):
-        email = self.cleaned_data.get('email')
-        if User.objects.filter(email__iexact=email).exists():
-            raise django.core.exceptions.ValidationError(
-                gettext_lazy('Пользователь с таким email уже существует.'),
-                code='duplicate_code',
-            )
-
-        return email
 
     def clean_accept_terms(self):
         accepted = self.cleaned_data.get('accept_terms')
         if not accepted:
             raise django.core.exceptions.ValidationError(
-                gettext_lazy('Вы должны принять условия использования'),
+                gettext_lazy('Для регистрации вы должны принять условия использования'),
                 code='required',
             )
 
         return accepted
 
-    def save(self, commit=True):
-        user = super().save(commit=False)
-        user.email = self.cleaned_data.get('email')
-        if commit:
-            user.save()
 
-        return user
-
-
-class ChangeForm(BootstrapFormMixin, django.contrib.auth.forms.UserChangeForm):
-    class Meta(django.contrib.auth.forms.UserChangeForm.Meta):
-        model = User
-        fields = django.contrib.auth.forms.UserChangeForm.Meta.fields
-
-
-class UserForm(BootstrapFormMixin, django.forms.ModelForm):
-    class Meta:
-        model = User
-        fields = (
-            User.first_name.field.name,
-            User.last_name.field.name,
-            User.email.field.name,
-        )
-
-
-class ProfileForm(django.forms.ModelForm):
-    first_name = django.forms.CharField(max_length=150, required=False, label=gettext_lazy('Имя'))
+class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
+    first_name = django.forms.CharField(
+        max_length=150,
+        required=False,
+        label=gettext_lazy('Имя'),
+    )
     last_name = django.forms.CharField(
         max_length=150,
         required=False,
         label=gettext_lazy('Фамилия'),
     )
-    email = django.forms.EmailField(label=gettext_lazy('Email'))
+    email = django.forms.EmailField(
+        label=gettext_lazy('Email'),
+    )
 
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user', None)
         super().__init__(*args, **kwargs)
         if self.user:
-            self.fields[User.email.field.name].initial = self.user.email
-            self.fields[User.first_name.field.name].initial = self.user.first_name
-            self.fields[User.last_name.field.name].initial = self.user.last_name
-
-        for field in self.visible_fields():
-            field.field.widget.attrs['class'] = 'form-control'
-
-    def clean_birthday(self):
-        birth_date = self.cleaned_data.get('birthday')
-        if not birth_date:
-            return birth_date
-
-        today = datetime.date.today()
-        if birth_date >= today:
-            raise django.core.exceptions.ValidationError(
-                gettext_lazy(
-                    'Дата рождения не может быть в будущем. Введите корректную дату.',
-                ),
-            )
-
-        max_age = today.replace(year=today.year - 120)
-        if birth_date < max_age:
-            raise django.core.exceptions.ValidationError(
-                gettext_lazy(
-                    'Вы, оказывается, долгожитель ;) Мы не верим. Введите корректную дату.',
-                ),
-            )
-
-        return birth_date
+            self.fields['email'].initial = self.user.email
+            self.fields['first_name'].initial = self.user.first_name
+            self.fields['last_name'].initial = self.user.last_name
 
     class Meta:
         model = users.models.Profile
-        fields = [
+
+        fields = (
             users.models.Profile.birthday.field.name,
             users.models.Profile.location.field.name,
             users.models.Profile.image.field.name,
-        ]
+        )
+
         widgets = {
             users.models.Profile.birthday.field.name: django.forms.DateInput(
-                attrs={'type': 'date'},
+                attrs={'type': 'date', 'max': datetime.date.today()},
                 format='%Y-%m-%d',
             ),
         }
+
         help_texts = {
             users.models.Profile.image.field.name: gettext_lazy(
                 'загрузите изображение вашего профиля',
@@ -167,16 +117,13 @@ class ProfileForm(django.forms.ModelForm):
 
     def save(self, commit=True):
         profile = super().save(commit=False)
-        try:
-            if self.user:
-                self.user.email = self.cleaned_data.get('email')
-                self.user.first_name = self.cleaned_data.get('first_name')
-                self.user.last_name = self.cleaned_data.get('last_name')
-                self.user.save()
-        except django.core.exceptions.ValidationError:
-            return None
+
+        self.user.first_name = self.cleaned_data['first_name']
+        self.user.last_name = self.cleaned_data['last_name']
+        self.user.email = self.cleaned_data['email']
 
         if commit:
+            self.user.save()
             profile.save()
 
         return profile
@@ -194,16 +141,6 @@ class LoginForm(BootstrapFormMixin, django.contrib.auth.forms.AuthenticationForm
         widget=django.forms.PasswordInput,
         required=True,
     )
-
-    def clean_email(self):
-        email = self.cleaned_data.get('email')
-        if User.objects.filter(email__iexact=email).exists():
-            raise django.core.exceptions.ValidationError(
-                gettext_lazy('Пользователь с таким email уже существует.'),
-                code='duplicate_code',
-            )
-
-        return email
 
     def clean(self):
         username = self.cleaned_data.get('username')

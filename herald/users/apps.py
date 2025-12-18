@@ -10,12 +10,4 @@ class UsersConfig(django.apps.AppConfig):
     verbose_name = _('Пользователи')
 
     def ready(self):
-        import django.contrib.auth.models
-        import django.db.models.signals
-
-        import users.signals
-
-        django.db.models.signals.post_save.connect(
-            users.signals.create_save_user_profile,
-            sender=django.contrib.auth.models.User,
-        )
+        import users.signals  # noqa
