@@ -93,6 +93,12 @@ class Profile(django.db.models.Model):
         verbose_name=_('attempts'),
         help_text=_('Number of login attempts'),
     )
+    favorite_categories = django.db.models.JSONField(
+        default=list,
+        blank=True,
+        verbose_name=_('favorite categories'),
+        help_text=_('Favorite categories'),
+    )
 
     def get_image_300x300(self):
         if self.image:

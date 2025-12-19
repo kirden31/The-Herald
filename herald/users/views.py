@@ -52,7 +52,7 @@ class ProfileUpdateView(
     django.views.generic.UpdateView,
 ):
     template_name = 'users/profile_update.html'
-    model = users.models.User
+    model = users.models.Profile
     form_class = users.forms.ProfileForm
     success_url = django.urls.reverse_lazy('users:profile')
 

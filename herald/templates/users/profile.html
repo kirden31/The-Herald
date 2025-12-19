@@ -123,22 +123,40 @@
         <div class="card shadow-sm mb-4">
             <div class="card-body">
                 <h5 class="card-title mb-4">
-                    <i class="bi bi-heart me-2 text-danger"></i>{% trans "Favorite categories" %}
+                    <i class="bi bi-tags-fill me-2" style="color: var(--accent);"></i>{% trans "Favorite categories" %}
                 </h5>
 
-                <div class="d-flex flex-wrap gap-2 mb-3">
+                <div class="d-flex flex-wrap gap-3 mb-4">
                     {% if user.profile.favorite_categories %}
-                    {% for cat in user.profile.favorite_categories %}
-                    <span class="badge bg-primary">{{ cat }}</span>
-                    {% endfor %}
+                        {% for cat in user.profile.favorite_categories %}
+                            <a href="{% url 'news:top_headlines_news' %}?category={{ cat }}">
+                                <span class="badge category-badge">
+                                    <i class="bi bi-tag me-1"></i>{{ cat }}
+                                </span>
+                            </a>
+                        {% endfor %}
                     {% else %}
-                    <p class="text-muted">{% trans "You haven't selected your favorite categories yet." %}</p>
+                        <div class="text-center w-100 py-4">
+                            <i class="bi bi-inbox display-4 text-muted mb-3"></i>
+                            <p class="text-muted mb-3">{% trans "You haven't selected your favorite categories yet." %}</p>
+                            <a href="{% url 'users:profile_edit' %}" class="btn btn-outline-primary">
+                                <i class="bi bi-plus-circle me-1"></i>{% trans "Add categories" %}
+                            </a>
+                        </div>
                     {% endif %}
                 </div>
 
-                <button class="btn btn-outline-primary btn-sm">
-                    <i class="bi bi-plus-circle me-1"></i>{% trans "Add categories" %}
-                </button>
+                {% if user.profile.favorite_categories %}
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <small class="text-muted">
+                        <i class="bi bi-info-circle me-1"></i>
+                        {% trans "Click on a category to view related news" %}
+                    </small>
+                    <a href="{% url 'users:profile_edit' %}" class="btn btn-sm btn-outline-secondary">
+                        <i class="bi bi-pencil me-1"></i>{% trans "Edit" %}
+                    </a>
+                </div>
+                {% endif %}
             </div>
         </div>
     </div>
