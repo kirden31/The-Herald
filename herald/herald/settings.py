@@ -3,6 +3,7 @@ __all__ = ()
 import os
 import pathlib
 
+from django.contrib.messages import constants as messages
 import django.urls
 from django.utils.translation import gettext_lazy as _
 import dotenv
@@ -90,6 +91,15 @@ TEMPLATES = [
         },
     },
 ]
+
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'secondary',
+    messages.INFO: 'info',
+    messages.SUCCESS: 'success',
+    messages.WARNING: 'warning',
+    messages.ERROR: 'danger',
+}
 
 WSGI_APPLICATION = 'herald.wsgi.application'
 

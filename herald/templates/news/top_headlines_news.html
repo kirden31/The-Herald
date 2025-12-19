@@ -22,4 +22,13 @@
     {% include "includes/page_select.html" %}
 
 </div>
+<script src="{% static 'js/block_incompatible_fields.js' %}"></script>
+<script>
+    $(document).ready(function () {
+        initMutuallyExclusiveFields({
+            primary: $('#id_sources'),
+            secondary: $('#id_category, #id_country')
+        });
+    });
+</script>
 {% endblock %}

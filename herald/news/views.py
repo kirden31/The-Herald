@@ -1,11 +1,13 @@
-__all__ = ('EverythingNews', 'GuardianNews', 'TopHeadlinesNews', 'TopHeadlinesSource')
+__all__ = ('EverythingNews', 'GuardianNews', 'TopHeadlinesNews', 'NewsApiSources')
 
 from http import HTTPStatus
 import math
 
 import django.contrib.auth.mixins
+import django.contrib.messages
 import django.http
 import django.shortcuts
+from django.utils.translation import gettext as _
 import django.views
 
 import api.guardianApi
@@ -57,6 +59,12 @@ class TopHeadlinesNews(NewsApiBaseView):
                     'sources': filters_form.cleaned_data.get('sources'),
                 },
             )
+
+            if params.get('sources') and (params.get('category') or params.get('country')):
+                django.contrib.messages.error(
+                    self.request,
+                    _('You_cannot_select_sources_together_with_country_or_category'),
+                )
 
         try:
             cur_page = max(int(request.GET.get('page', '1')), 1)
@@ -147,6 +155,7 @@ class EverythingNews(NewsApiBaseView):
 
 class GuardianNews(NewsApiBaseView):
     template_name = 'news/guardian_news.html'
+    default_query = ''
 
     def get(self, request, *_args, **_kwargs):
         search_form = news.forms.SearchForm(request.GET or None)
@@ -166,6 +175,7 @@ class GuardianNews(NewsApiBaseView):
                     'use-date': filters_form.cleaned_data.get('use_date'),
                 },
             )
+
             params = {k: v for k, v in params.items() if v}
 
         try:
@@ -200,7 +210,7 @@ class GuardianNews(NewsApiBaseView):
         )
 
 
-class TopHeadlinesSource(NewsApiBaseView):
+class NewsApiSources(NewsApiBaseView):
     template_name = 'news/sources_list.html'
     default_query = ''
 

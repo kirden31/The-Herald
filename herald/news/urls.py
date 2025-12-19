@@ -27,7 +27,7 @@ urlpatterns = (
     ),
     path(
         'top-headlines-sources/',
-        news.views.TopHeadlinesSource.as_view(),
+        news.views.NewsApiSources.as_view(),
         name='top_headlines_sources',
     ),
     path(
