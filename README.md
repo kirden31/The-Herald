@@ -1,8 +1,9 @@
-# 📰 Новостной
-
 [![pipeline status](https://gitlab.crja72.ru/django/2025/autumn/course/students/216206-yzavitova-course-1474/badges/main/pipeline.svg)](https://gitlab.crja72.ru/django/2025/autumn/course/students/216206-yzavitova-course-1474/-/commits/main)
 [![Python](https://img.shields.io/badge/python-3.10%20|%203.11%20|%203.12-blue)](https://www.python.org/)
 [![Django](https://img.shields.io/badge/django-5.2-green)](https://www.django.org/)
+
+# Новостной
+![📰](herald/static_dev/img/fav/favicon-96x96.png)
 
 **Новостной** — современный веб-агрегатор новостей, собирающий информацию из различных авторитетных источников по всему миру. Платформа предоставляет удобный поиск, персонализацию контента и безопасное хранение данных пользователей.
 

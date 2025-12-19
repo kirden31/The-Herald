@@ -14,7 +14,6 @@ class SearchForm(django.forms.Form):
         label=_('Search'),
         max_length=500,
         required=False,
-        empty_value='',
         widget=django.forms.TextInput(
             attrs={
                 'placeholder': _('search_area_placeholder'),
@@ -108,7 +107,7 @@ class TopHeadlinesFilterForm(django.forms.Form):
     )
 
     category = django.forms.MultipleChoiceField(
-        label=_('Select_countries_default_all'),
+        label=_('Select_categories_default_all'),
         choices=news.forms_data.CATEGORIES_CHOICES,
         widget=django.forms.SelectMultiple(
             attrs={
@@ -175,7 +174,6 @@ class SourcesFilterForm(django.forms.Form):
 class GuardianFiltersForm(django.forms.Form):
     section = django.forms.MultipleChoiceField(
         label=_('Sections'),
-        help_text=_('Doesnt_work_with_search_query'),
         choices=news.forms_data.SECTIONS_CHOICES,
         widget=django.forms.SelectMultiple(
             attrs={

@@ -13,6 +13,7 @@ import django.core.exceptions
 import django.forms
 from django.utils.translation import gettext_lazy
 
+import news.forms_data
 import users.models
 
 User = django.contrib.auth.get_user_model()
@@ -79,10 +80,16 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
     last_name = django.forms.CharField(
         max_length=150,
         required=False,
-        label=gettext_lazy('Д'),
+        label=gettext_lazy('Фамилия'),
     )
     email = django.forms.EmailField(
         label=gettext_lazy('Email'),
+    )
+    favorite_categories = django.forms.MultipleChoiceField(
+        choices=news.forms_data.CATEGORIES_CHOICES,
+        widget=django.forms.CheckboxSelectMultiple(attrs={'class': 'form-check-input'}),
+        required=False,
+        label=gettext_lazy('Favorite categories'),
     )
 
     def __init__(self, *args, **kwargs):
@@ -92,6 +99,7 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
             self.fields['email'].initial = self.user.email
             self.fields['first_name'].initial = self.user.first_name
             self.fields['last_name'].initial = self.user.last_name
+            self.fields['favorite_categories'].initial = self.user.profile.favorite_categories
 
     class Meta:
         model = users.models.Profile
@@ -100,6 +108,7 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
             users.models.Profile.birthday.field.name,
             users.models.Profile.location.field.name,
             users.models.Profile.image.field.name,
+            users.models.Profile.favorite_categories.field.name,
         )
 
         widgets = {
@@ -121,6 +130,7 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
         self.user.first_name = self.cleaned_data['first_name']
         self.user.last_name = self.cleaned_data['last_name']
         self.user.email = self.cleaned_data['email']
+        self.user.profile.favorite_categories = self.cleaned_data['favorite_categories']
 
         if commit:
             self.user.save()
@@ -131,9 +141,9 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
 
 class LoginForm(BootstrapFormMixin, django.contrib.auth.forms.AuthenticationForm):
     error_messages = {
-        'invalid_login': 'Пожалуйста, введите правильные имя пользователя'
-        ' и пароль. Оба поля могут быть чувствительны к регистру.',
-        'inactive': 'Этот аккаунт неактивен.',
+        'invalid_login': 'Please enter the correct username.'
+        'and password. Both fields may be case-sensitive.',
+        'inactive': 'This account is inactive.',
     }
     username = django.forms.CharField(label=gettext_lazy('Login or email'))
     password = django.forms.CharField(

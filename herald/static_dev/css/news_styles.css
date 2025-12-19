@@ -48,36 +48,6 @@
 }
 
 /* =========================================================
-   Тёмная тема
-   ========================================================= */
-.palette-gray-green-dark {
-  --bg: #0f1412;
-  --surface: #1b221e;
-  --text: #e1e6e0;
-  --muted: #9aa49a;
-  --accent: #70a18c;
-  --accent-2: #4f8573;
-  --accent-text: #0f1412;
-  --link: #7fb79a;
-  --border: rgba(120, 160, 140, 0.2);
-  --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 14px 36px rgba(0, 0, 0, 0.6);
-  --gray-100: #1b221e;
-  --gray-200: #2a332a;
-  --gray-300: #3a4439;
-  --gray-400: #4a5548;
-  --gray-500: #5f7262;
-  --gray-600: #6f7f78;
-  --gray-700: #8f9a8f;
-  --gray-800: #aab5aa;
-  --gray-900: #c7d1c7;
-
-  /* span dynamic */
-  --span-color: #a3d4c1; /* читаемый на тёмном фоне */
-  --span-bg-tag: #39675b; /* для тегов на тёмном фоне */
-}
-
-/* =========================================================
    Общие стили сайта
    ========================================================= */
 .news-site {
@@ -216,4 +186,20 @@ span.no-pointer-help {
   cursor: default !important;
   color: inherit !important;
   text-decoration: none !important;
+}
+
+/* Анимация */
+.alert {
+  animation: fadeInDown 0.4s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

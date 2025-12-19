@@ -6,7 +6,7 @@ import django.contrib.auth.mixins
 import django.contrib.messages
 import django.shortcuts
 import django.urls
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext as _
 import django.views.generic
 
 import users.forms
@@ -52,7 +52,7 @@ class ProfileUpdateView(
     django.views.generic.UpdateView,
 ):
     template_name = 'users/profile_update.html'
-    model = users.models.User
+    model = users.models.Profile
     form_class = users.forms.ProfileForm
     success_url = django.urls.reverse_lazy('users:profile')
 

@@ -5,10 +5,10 @@
 #
 #, fuzzy
 msgid ""
-msgstr ""
+msgstr 
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-18 13:26+0000\n"
+"POT-Creation-Date: 2025-12-19 16:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,9 +19,78 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
 #: herald/settings.py:111
 msgid "Russian"
 msgstr "Русский"
+
+#: news/models.py:15 users/models.py:53 users/models.py:101
+msgid "user"
+msgstr "пользователь"
+
+#: news/models.py:19 users/models.py:109
+msgid "title"
+msgstr "заголовок"
+
+#: news/models.py:22
+#, fuzzy
+#| msgid "Description"
+msgid "description"
+msgstr "Описание"
+
+#: news/models.py:24
+#, fuzzy
+#| msgid "Content"
+msgid "content"
+msgstr "Содержание"
+
+#: news/models.py:28
+#, fuzzy
+#| msgid "Link to news"
+msgid "link to news"
+msgstr "Ссылка на новость"
+
+#: news/models.py:31
+#, fuzzy
+#| msgid "Image link"
+msgid "image link"
+msgstr "Ссылка на изображение"
+
+#: news/models.py:35
+#, fuzzy
+#| msgid "Source name"
+msgid "source name"
+msgstr "Название источника"
+
+#: news/models.py:39
+#, fuzzy
+#| msgid "Author"
+msgid "author"
+msgstr "Автор"
+
+#: news/models.py:43
+#, fuzzy
+#| msgid "Publication date"
+msgid "publication date"
+msgstr "Дата публикации"
+
+#: news/models.py:47
+#, fuzzy
+#| msgid "Category"
+msgid "category"
+msgstr "Категория"
+
+#: news/models.py:52
+#, fuzzy
+#| msgid "Featured news"
+msgid "featured news"
+msgstr "Рекомендуемые новости"
+
+#: news/models.py:53
+#, fuzzy
+#| msgid "Featured news"
+msgid "selected news"
+msgstr "Рекомендуемые новости"
 
 #: templates/base.html:8
 msgid "News aggregator"
@@ -39,6 +108,14 @@ msgstr "Главная - Агрегатор новостей"
 msgid "Search news"
 msgstr "Поиск новостей"
 
+#: templates/home.html:15
+msgid "Enter news topic..."
+msgstr "Enter news topic..."
+
+#: templates/home.html:17 templates/users/favorites.html:41
+msgid "All categories"
+msgstr "Все категории"
+
 #: templates/home.html:18 templates/users/favorites.html:43
 msgid "Policy"
 msgstr "Политика"
@@ -47,7 +124,7 @@ msgstr "Политика"
 msgid "Technologies"
 msgstr "Технологии"
 
-#: templates/home.html:20
+#: templates/home.html:20 templates/users/favorites.html:44
 msgid "Sport"
 msgstr "Спорт"
 
@@ -58,6 +135,10 @@ msgstr "Бизнес"
 #: templates/home.html:22 templates/users/favorites.html:46
 msgid "Entertainment"
 msgstr "Развлечение"
+
+#: templates/home.html:25
+msgid "Find"
+msgstr "найти"
 
 #: templates/home.html:37
 msgid "Breaking News"
@@ -89,7 +170,8 @@ msgstr "NewsHub"
 
 #: templates/includes/footer.html:10
 msgid "A news aggregator from various sources. Fast, convenient, and secure."
-msgstr "Агрегатор новостей из различных источников. Быстрый, удобный и безопасный."
+msgstr ""
+"Агрегатор новостей из различных источников. Быстрый, удобный и безопасный."
 
 #: templates/includes/footer.html:15
 msgid "Navigation"
@@ -178,10 +260,6 @@ msgstr "По имени"
 #: templates/users/favorites.html:39 users/models.py:146
 msgid "Category"
 msgstr "Категория"
-
-#: templates/users/favorites.html:41
-msgid "All categories"
-msgstr "Все категории"
 
 #: templates/users/favorites.html:47
 msgid "Science"
@@ -292,8 +370,12 @@ msgid "Login again"
 msgstr "Войти снова"
 
 #: templates/users/logout.html:30
-msgid "Your session has ended. For security reasons, we recommend closing your browser."
-msgstr "Ваша сессия завершена. В целях безопасности мы рекомендуем закрыть ваш браузер."
+msgid ""
+"Your session has ended. For security reasons, we recommend closing your "
+"browser."
+msgstr ""
+"Ваша сессия завершена. В целях безопасности мы рекомендуем закрыть ваш "
+"браузер."
 
 #: templates/users/password_change.html:3
 #: templates/users/password_change.html:12
@@ -333,24 +415,36 @@ msgid "Password changed successfully!"
 msgstr "Пароль успешно изменен!"
 
 #: templates/users/password_change_done.html:18
-msgid "Your password has been successfully changed. You can now use the new password to log in."
-msgstr "Ваш пароль успешно изменен. Теперь вы можете использовать новый пароль для входа в систему."
+msgid ""
+"Your password has been successfully changed. You can now use the new "
+"password to log in."
+msgstr ""
+"Ваш пароль успешно изменен. Теперь вы можете использовать новый пароль для "
+"входа в систему."
 
 #: templates/users/password_change_done.html:23
 msgid "Return to profile"
 msgstr "Вернуться в профиль"
 
 #: templates/users/password_change_done.html:36
-msgid "It is recommended to use different passwords for different services and change them regularly."
-msgstr "Рекомендуется использовать разные пароли для разных сервисов и регулярно их менять."
+msgid ""
+"It is recommended to use different passwords for different services and "
+"change them regularly."
+msgstr ""
+"Рекомендуется использовать разные пароли для разных сервисов и регулярно их "
+"менять."
 
 #: templates/users/password_reset.html:3 templates/users/password_reset.html:12
 msgid "Password reset"
 msgstr "Сброс пароля"
 
 #: templates/users/password_reset.html:14
-msgid "Forgot your password? Enter your email and we'll send you recovery instructions."
-msgstr "Забыли пароль? Введите свой адрес электронной почты, и мы вышлем вам инструкции по восстановлению."
+msgid ""
+"Forgot your password? Enter your email and we'll send you recovery "
+"instructions."
+msgstr ""
+"Забыли пароль? Введите свой адрес электронной почты, и мы вышлем вам "
+"инструкции по восстановлению."
 
 #: templates/users/password_reset.html:31
 msgid "Email address"
@@ -373,8 +467,12 @@ msgid "Password restored!"
 msgstr "Пароль восстановлен!"
 
 #: templates/users/password_reset_complete.html:17
-msgid "Your password has been successfully changed. You can now log in with your new password."
-msgstr "Ваш пароль успешно изменен. Теперь вы можете войти в систему, используя новый пароль."
+msgid ""
+"Your password has been successfully changed. You can now log in with your "
+"new password."
+msgstr ""
+"Ваш пароль успешно изменен. Теперь вы можете войти в систему, используя "
+"новый пароль."
 
 #: templates/users/password_reset_complete.html:22
 msgid "Sign in"
@@ -411,8 +509,12 @@ msgid "Password confirmation"
 msgstr "Подтверждение пароля"
 
 #: templates/users/password_reset_confirm.html:84
-msgid "The password reset link is invalid, possibly because it has already been used."
-msgstr "Ссылка для сброса пароля недействительна, возможно, потому что она уже была использована."
+msgid ""
+"The password reset link is invalid, possibly because it has already been "
+"used."
+msgstr ""
+"Ссылка для сброса пароля недействительна, возможно, потому что она уже была "
+"использована."
 
 #: templates/users/password_reset_confirm.html:85
 msgid "Please request a new password reset."
@@ -436,8 +538,12 @@ msgid "Check your mail"
 msgstr "Проверьте свою почту"
 
 #: templates/users/password_reset_done.html:17
-msgid "We have sent password recovery instructions to the email address you provided."
-msgstr "Мы отправили инструкции по восстановлению пароля на указанный вами адрес электронной почты."
+msgid ""
+"We have sent password recovery instructions to the email address you "
+"provided."
+msgstr ""
+"Мы отправили инструкции по восстановлению пароля на указанный вами адрес "
+"электронной почты."
 
 #: templates/users/password_reset_done.html:18
 msgid "You should receive them soon."
@@ -532,7 +638,7 @@ msgid "Already have an account?"
 msgstr "У вас уже есть аккаунт?"
 
 #: users/apps.py:10
-msgid "Users"
+msgid "Пользователи"
 msgstr "Пользователи"
 
 #: users/backends.py:66
@@ -540,8 +646,16 @@ msgid "The maximum number of attempts has been reached."
 msgstr "Достигнуто максимальное количество попыток."
 
 #: users/backends.py:76
-msgid "We have noticed suspicious activity,That s why your account was blocked. Follow the activation link (valid for 7 days):"
-msgstr "Мы заметили подозрительную активность, поэтому ваш аккаунт был заблокирован. Перейдите по ссылке для активации (действительна в течение 7 дней):"
+#, fuzzy
+#| msgid ""
+#| "We have noticed suspicious activity,That s why your account was blocked. "
+#| "Follow the activation link (valid for 7 days):"
+msgid ""
+"We have noticed suspicious activity,That s why your account was blocked."
+"Follow the activation link (valid for 7 days):"
+msgstr ""
+"Мы заметили подозрительную активность, поэтому ваш аккаунт был заблокирован. "
+"Перейдите по ссылке для активации (действительна в течение 7 дней):"
 
 #: users/backends.py:81
 msgid "Account activation."
@@ -561,11 +675,17 @@ msgstr "Пользователь с таким адресом электронн
 
 #: users/forms.py:102
 msgid "The date of birth cannot be in the future. Please enter a valid date."
-msgstr "Дата рождения не может быть в будущем. Пожалуйста, введите действительную дату."
+msgstr ""
+"Дата рождения не может быть в будущем. Пожалуйста, введите действительную "
+"дату."
 
 #: users/forms.py:110
-msgid "It turns out you re a long-liver ;) We don t believe you. Please enter a valid date."
-msgstr "Оказывается, вы долгожитель ;) Мы вам не верим. Пожалуйста, введите действительную дату."
+msgid ""
+"It turns out you re a long-liver ;) We don t believe you. Please enter a "
+"valid date."
+msgstr ""
+"Оказывается, вы долгожитель ;) Мы вам не верим. Пожалуйста, введите "
+"действительную дату."
 
 #: users/forms.py:130
 msgid "Upload your profile picture"
@@ -574,10 +694,6 @@ msgstr "Загрузите свою фотографию профиля."
 #: users/forms.py:157
 msgid "Login or email"
 msgstr "Логин или электронная почта"
-
-#: users/models.py:53 users/models.py:101
-msgid "user"
-msgstr "пользователь"
 
 #: users/models.py:58
 msgid "avatar"
@@ -618,10 +734,6 @@ msgstr "профили"
 #: users/models.py:104
 msgid "ID_News"
 msgstr "ID_новости"
-
-#: users/models.py:109
-msgid "title"
-msgstr "заголовок"
 
 #: users/models.py:113
 msgid "Description"
@@ -674,3 +786,6 @@ msgstr "Рекомендуемые новости"
 #: users/views.py:28
 msgid "Registration successful! Welcome!"
 msgstr "Регистрация прошла успешно! Добро пожаловать!"
+
+#~ msgid "Users"
+#~ msgstr "Пользователи"
