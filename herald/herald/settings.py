@@ -25,7 +25,7 @@ ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', default='*').split()
 NEWS_API_KEYS = os.getenv('NEWS_API_KEYS', 'no_api_key').split()
 GUARDIAN_API_KEYS = os.getenv('GUARDIAN_API_KEYS', 'no_api_key').split()
 
-MAX_AUTH_ATTEMPTS = os.getenv('DJANGO_MAX_AUTH_ATTEMPTS', default=3)
+MAX_AUTH_ATTEMPTS = int(os.getenv('DJANGO_MAX_AUTH_ATTEMPTS', default='3'))
 
 INSTALLED_APPS = [
     'django.contrib.admin',
