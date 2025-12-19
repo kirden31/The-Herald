@@ -10,4 +10,4 @@ def home(request):
 
 
 def search(request):
-    return HttpResponse('Какя новость?')
+    return HttpResponse('Whats the news?')

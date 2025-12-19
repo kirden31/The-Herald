@@ -12,7 +12,7 @@
                 </h4>
                 <form>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Введите тему новостей...">
+                        <input type="text" class="form-control" placeholder={% trans "Enter news topic..." %}%>
                         <select class="form-select" style="max-width: 150px;">
                             <option selected>{% trans "All categories" %}</option>
                             <option>{% trans "Policy" %}</option>
@@ -22,7 +22,7 @@
                             <option>{% trans "Entertainment" %}</option>
                         </select>
                         <button class="btn btn-primary" type="button">
-                            <i class="bi bi-search"></i> Найти
+                            <i class="bi bi-search"></i> {% trans "Find" %}
                         </button>
                     </div>
                 </form>

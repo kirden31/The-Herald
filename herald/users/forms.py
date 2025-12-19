@@ -150,9 +150,9 @@ class ProfileForm(forms.ModelForm):
 
 class LoginForm(BootstrapFormMixin, AuthenticationForm):
     error_messages = {
-        'invalid_login': 'Пожалуйста, введите правильные имя пользователя'
-        ' и пароль. Оба поля могут быть чувствительны к регистру.',
-        'inactive': 'Этот аккаунт неактивен.',
+        'invalid_login': 'Please enter the correct username.'
+        'and password. Both fields may be case-sensitive.',
+        'inactive': 'This account is inactive.',
     }
     username = forms.CharField(label=_('Login or email'))
     password = forms.CharField(
