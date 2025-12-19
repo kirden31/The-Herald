@@ -43,6 +43,7 @@ CATEGORIES_CHOICES = [
     ('general', _('General')),
     ('health', _('Health')),
     ('sports', _('Sports')),
+    ('science', _('Science')),
     ('technology', _('Technology')),
 ]
 

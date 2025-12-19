@@ -13,17 +13,8 @@ import django.core.exceptions
 import django.forms
 from django.utils.translation import gettext_lazy
 
+import news.forms_data
 import users.models
-
-CATEGORIES_CHOICES = [
-    ('business', gettext_lazy('Business')),
-    ('entertainment', gettext_lazy('Entertainment')),
-    ('general', gettext_lazy('General')),
-    ('health', gettext_lazy('Health')),
-    ('science', gettext_lazy('Science')),
-    ('sports', gettext_lazy('Sports')),
-    ('technology', gettext_lazy('Technology')),
-]
 
 User = django.contrib.auth.get_user_model()
 
@@ -95,7 +86,7 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
         label=gettext_lazy('Email'),
     )
     favorite_categories = django.forms.MultipleChoiceField(
-        choices=CATEGORIES_CHOICES,
+        choices=news.forms_data.CATEGORIES_CHOICES,
         widget=django.forms.CheckboxSelectMultiple(attrs={'class': 'form-check-input'}),
         required=False,
         label=gettext_lazy('Favorite categories'),
