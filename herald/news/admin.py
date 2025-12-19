@@ -1,13 +1,13 @@
 __all__ = ('FavoriteArticleAdmin',)
 
-from django.contrib import admin
+import django.contrib
 from django.utils.translation import gettext_lazy as _
 
 import news.models
 
 
-@admin.register(news.models.FavoriteArticle)
-class FavoriteArticleAdmin(admin.ModelAdmin):
+@django.contrib.admin.register(news.models.FavoriteArticle)
+class FavoriteArticleAdmin(django.contrib.admin.ModelAdmin):
     list_display = (
         news.models.FavoriteArticle.user.field.name,
         news.models.FavoriteArticle.title.field.name,
@@ -69,6 +69,6 @@ class FavoriteArticleAdmin(admin.ModelAdmin):
         ),
     )
 
-    @admin.display(description=_('Источник'))
+    @django.contrib.admin.display(description=_('Источник'))
     def get_source_preview(self, obj):
         return obj.source[:50] + '...' if obj.source and len(obj.source) > 50 else obj.source
