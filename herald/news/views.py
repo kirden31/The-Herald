@@ -117,12 +117,14 @@ class EverythingNews(NewsApiBaseView):
     def get(self, request, *_args, **_kwargs):
         search_form = news.forms.SearchForm(request.GET)
         filters_form = news.forms.EverythingFiltersForm(request.GET)
+        sort_form = news.forms.SortEverythingForm(request.GET)
 
-        if not (search_form.is_valid() and filters_form.is_valid()):
+        if not (search_form.is_valid() and filters_form.is_valid() and sort_form.is_valid()):
             django.contrib.messages.error(request, _('Forms_error'))
             context = {
                 'search_form': search_form,
                 'filters_form': filters_form,
+                'sort_form': sort_form,
                 'news': [],
                 'max_page': 0,
                 'cur_page': 1,
@@ -132,6 +134,7 @@ class EverythingNews(NewsApiBaseView):
 
         params = {
             'q': search_form.cleaned_data.get('query') or self.default_query,
+            'sortBy': sort_form.cleaned_data.get('sort_by'),
             'searchIn': ','.join(filters_form.cleaned_data.get('search_in')),
             'sources': ','.join(filters_form.cleaned_data.get('sources')),
             'from': filters_form.cleaned_data.get('_from'),
@@ -160,6 +163,7 @@ class EverythingNews(NewsApiBaseView):
         context = {
             'search_form': search_form,
             'filters_form': filters_form,
+            'sort_form': sort_form,
             'news': news_list,
             'max_page': max_page,
             'cur_page': cur_page,
@@ -180,12 +184,14 @@ class GuardianNews(NewsApiBaseView):
     def get(self, request, *_args, **_kwargs):
         search_form = news.forms.SearchForm(request.GET)
         filters_form = news.forms.GuardianFiltersForm(request.GET)
+        sort_form = news.forms.SortGuardianForm(request.GET)
 
-        if not (search_form.is_valid() and filters_form.is_valid()):
+        if not (search_form.is_valid() and filters_form.is_valid() and sort_form.is_valid()):
             django.contrib.messages.error(request, _('Forms_error'))
             context = {
                 'search_form': search_form,
                 'filters_form': filters_form,
+                'sort_form': sort_form,
                 'news': [],
                 'max_page': 0,
                 'cur_page': 1,
@@ -195,6 +201,7 @@ class GuardianNews(NewsApiBaseView):
 
         params = {
             'q': search_form.cleaned_data.get('query'),
+            'order-by': sort_form.cleaned_data.get('sort_by'),
             'section': filters_form.cleaned_data.get('section'),
             'star-rating': filters_form.cleaned_data.get('star_rating'),
             'from-date': filters_form.cleaned_data.get('_from'),
@@ -223,6 +230,7 @@ class GuardianNews(NewsApiBaseView):
         context = {
             'search_form': search_form,
             'filters_form': filters_form,
+            'sort_form': sort_form,
             'news': news_list,
             'max_page': max_page,
             'cur_page': cur_page,

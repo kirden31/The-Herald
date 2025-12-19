@@ -1,7 +1,9 @@
 {% load static %}
 {% load i18n %}
 <link href="{% static 'css/select2.min.css' %}" rel="stylesheet">
+
 {{ search_form.query }}
+{{ sort_form.sort_by }}
 
 {% if search_form %}
 <button class="btn btn-primary ms-2" type="submit">
@@ -49,6 +51,11 @@
             $('.js-example-basic-multiple').select2({
                 dropdownParent: $('#exampleModal')
             });
+        });
+    });
+    $(document).ready(function () {
+        $('.js-sort').on('change', function () {
+            $(this).closest('form').submit();
         });
     });
 </script>

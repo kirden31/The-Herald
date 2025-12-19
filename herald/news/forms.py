@@ -24,9 +24,37 @@ class SearchForm(django.forms.Form):
     )
 
 
+class SortEverythingForm(django.forms.Form):
+    sort_by = django.forms.ChoiceField(
+        label=_('Sort_by'),
+        choices=news.forms_data.SORT_BY_CHOICES,
+        initial=news.forms_data.PUBLISHED_AT,
+        widget=django.forms.Select(
+            attrs={
+                'class': 'js-sort js-example-basic-multiple ms-2',
+            },
+        ),
+        required=False,
+    )
+
+
+class SortGuardianForm(django.forms.Form):
+    sort_by = django.forms.ChoiceField(
+        label=_('Sort by'),
+        choices=news.forms_data.ORDER_BY_CHOICES,
+        initial=news.forms_data.NEWEST,
+        required=False,
+        widget=django.forms.Select(
+            attrs={
+                'class': 'js-sort js-example-basic-multiple ms-2',
+            },
+        ),
+    )
+
+
 class EverythingFiltersForm(django.forms.Form):
     search_in = django.forms.MultipleChoiceField(
-        label=_('Search_in'),
+        label=_('Search_in_default_all'),
         initial=(news.forms_data.TITLE, news.forms_data.DESCRIPTION, news.forms_data.CONTENT),
         choices=news.forms_data.SEARCH_IN_CHOICES,
         widget=django.forms.SelectMultiple(
@@ -45,7 +73,6 @@ class EverythingFiltersForm(django.forms.Form):
             attrs={
                 'class': 'js-example-basic-multiple',
                 'style': 'width: 100%;',
-                'max': 20,
             },
         ),
         required=False,
