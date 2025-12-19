@@ -78,11 +78,11 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label class="form-label text-muted">{% trans "Name" %}</label>
-                        <p class="form-control-plaintext">{{ user.first_name|default:_("Not specified") }}</p>
+                        <p class="form-control-plaintext">{{ user.first_name|default:_("Not_specified") }}</p>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label text-muted">{% trans "Surname" %}</label>
-                        <p class="form-control-plaintext">{{ user.last_name|default:_("Not specified") }}</p>
+                        <p class="form-control-plaintext">{{ user.last_name|default:_("Not_specified") }}</p>
                     </div>
                 </div>
 
@@ -93,7 +93,7 @@
                             {% if user.profile.birth_date %}
                             {{ user.profile.birth_date|date:"d.m.Y" }}
                             {% else %}
-                            {% trans "Not specified" %}
+                            {% trans "Not_specified" %}
                             {% endif %}
                         </p>
                     </div>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-19 20:29+0000\n"
+"POT-Creation-Date: 2025-12-20 00:34+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,30 +28,22 @@ msgstr "Английский"
 msgid "Russian"
 msgstr "Русский"
 
-#: news/forms.py:14 templates/home.html:41 templates/includes/footer.html:26
+#: news/forms.py:14 templates/home.html:39 templates/includes/footer.html:26
 #: templates/includes/search_area.html:8
 msgid "Search"
 msgstr "Поиск"
 
 #: news/forms.py:19
 msgid "search_area_placeholder"
-msgstr "заполнитель области поиска"
-
-#: news/forms.py:20
-#, fuzzy
-#| msgid "Searches"
-msgid "search_area"
-msgstr "Поиски"
+msgstr "Поиск..."
 
 #: news/forms.py:29
-#, fuzzy
-#| msgid "Search"
 msgid "Search_in"
-msgstr "Поиск"
+msgstr "Искать в"
 
 #: news/forms.py:42
 msgid "Select_sources_max_20_default_all"
-msgstr "Выберите источники (максимум 20), по умолчанию все."
+msgstr "Выберите до 20 источников(по умолчанию все)"
 
 #: news/forms.py:58 news/forms.py:196
 msgid "News_from"
@@ -59,81 +51,35 @@ msgstr "Новости от"
 
 #: news/forms.py:71 news/forms.py:208
 msgid "News_to"
-msgstr "Новости для"
+msgstr "Новости до"
 
 #: news/forms.py:84 news/forms.py:137
 msgid "Select_language_default_all"
-msgstr "Выбрать язык по умолчанию Все"
+msgstr "Выберите язык(по умолчанию все)"
 
 #: news/forms.py:98 news/forms.py:161
 msgid "Select_countries_default_all"
-msgstr "Выбрать страны по умолчанию Все"
+msgstr "Выберите страны(по умолчанию все)"
 
 #: news/forms.py:110 news/forms.py:149
 msgid "Select_categories_default_all"
-msgstr "Выбрать категории По умолчанию Все"
+msgstr "Выберите категории(по умолчанию все)"
 
 #: news/forms.py:122
 msgid "Select_sources_default_all"
-msgstr "Выбрать источник по умолчанию все"
+msgstr "Выберите источник(по умолчанию все)"
 
 #: news/forms.py:176
-#, fuzzy
-#| msgid "Send instructions"
 msgid "Sections"
-msgstr "Отправить инструкции"
+msgstr "Выберите разделы"
 
 #: news/forms.py:188
-#, fuzzy
-#| msgid "Sorting"
 msgid "Rating"
-msgstr "Сортировка"
-
-#: news/forms_data.py:7
-msgid "Arabic"
-msgstr "арабский"
-
-#: news/forms_data.py:8
-msgid "German"
-msgstr "немецкий"
-
-#: news/forms_data.py:10
-msgid "Spanish"
-msgstr "испанский"
-
-#: news/forms_data.py:11
-msgid "French"
-msgstr "Французский"
-
-#: news/forms_data.py:12
-msgid "Hebrew"
-msgstr "иврит"
-
-#: news/forms_data.py:13
-msgid "Italian"
-msgstr "итальянский"
-
-#: news/forms_data.py:14
-msgid "Dutch"
-msgstr "Голландский"
-
-#: news/forms_data.py:16
-msgid "Portuguese"
-msgstr "португальский"
-
-#: news/forms_data.py:18
-msgid "Swedish"
-msgstr "Шведский"
-
-#: news/forms_data.py:22 news/forms_data.py:109
-msgid "United States"
-msgstr "Соединенные Штаты"
+msgstr "Оценка"
 
 #: news/forms_data.py:29
-#, fuzzy
-#| msgid "title"
 msgid "Title"
-msgstr "заголовок"
+msgstr "Заголовок"
 
 #: news/forms_data.py:30
 msgid "Description"
@@ -153,7 +99,7 @@ msgstr "Развлечение"
 
 #: news/forms_data.py:50
 msgid "General"
-msgstr "Общий"
+msgstr "Общие"
 
 #: news/forms_data.py:51
 msgid "Health"
@@ -236,10 +182,8 @@ msgid "Egypt"
 msgstr "Египет"
 
 #: news/forms_data.py:73
-#, fuzzy
-#| msgid "Entrance"
 msgid "France"
-msgstr "Вход"
+msgstr "Франция"
 
 #: news/forms_data.py:74
 msgid "United Kingdom"
@@ -342,10 +286,8 @@ msgid "Serbia"
 msgstr "Сербия"
 
 #: news/forms_data.py:99
-#, fuzzy
-#| msgid "Russian"
 msgid "Russia"
-msgstr "Русский"
+msgstr "Россия"
 
 #: news/forms_data.py:100
 msgid "Saudi Arabia"
@@ -381,7 +323,7 @@ msgstr "Тайвань"
 
 #: news/forms_data.py:108
 msgid "Ukraine"
-msgstr ""
+msgstr "Украина"
 
 #: news/forms_data.py:110
 msgid "Venezuela"
@@ -393,15 +335,15 @@ msgstr "ЮАР"
 
 #: news/forms_data.py:122
 msgid "None"
-msgstr "ничего"
+msgstr "Нет"
 
 #: news/models.py:15 users/admin.py:13 users/models.py:70
 msgid "user"
-msgstr "пользователь"
+msgstr "Пользователь"
 
 #: news/models.py:19
 msgid "title"
-msgstr "заголовок"
+msgstr "Заголовок"
 
 #: news/models.py:22
 #, fuzzy
@@ -416,8 +358,6 @@ msgid "content"
 msgstr "Содержание"
 
 #: news/models.py:28
-#, fuzzy
-#| msgid "Link to news"
 msgid "link to news"
 msgstr "Ссылка на новость"
 
@@ -471,7 +411,7 @@ msgstr "Ошибка формы"
 msgid "You_cannot_select_sources_together_with_country_or_category"
 msgstr "Вы не можете выбирать источники одновременно по стране или категории."
 
-#: templates/base.html:6
+#: templates/base.html:6 templates/home.html:18
 msgid "The_Herald"
 msgstr "Вестник"
 
@@ -489,11 +429,11 @@ msgstr "Все новости в одном месте"
 msgid "Find._Read._Stay_informed."
 msgstr "Находите. Читайте. Будьте в курсе."
 
-#: templates/home.html:51
+#: templates/home.html:49
 msgid "Start by searching or go to"
 msgstr "Начните с поиска или перейдите по ссылке"
 
-#: templates/home.html:53
+#: templates/home.html:51
 msgid "main_news"
 msgstr "главные новости"
 
@@ -1012,8 +952,10 @@ msgid "Name"
 msgstr "Имя"
 
 #: templates/users/profile.html:81 templates/users/profile.html:85
-#: templates/users/profile.html:96
-msgid "Not specified"
+#: templates/users/profile.html:96 templates/users/profile.html:103
+#, fuzzy
+#| msgid "Not specified"
+msgid "Not_specified"
 msgstr "Не указан"
 
 #: templates/users/profile.html:84 users/forms.py:83
@@ -1029,12 +971,6 @@ msgstr "Дата рождения"
 #: templates/users/profile.html:101 templates/users/profile_update.html:35
 msgid "Location"
 msgstr "Локация"
-
-#: templates/users/profile.html:103
-#, fuzzy
-#| msgid "Not specified"
-msgid "Not_specified"
-msgstr "Не указан"
 
 #: templates/users/profile.html:110
 #, fuzzy
@@ -1231,6 +1167,9 @@ msgstr "ошибка даты рождения"
 #| msgid "Registration successful! Welcome!"
 msgid "Registration_successful!_Welcome!"
 msgstr "Регистрация прошла успешно! Добро пожаловать!"
+
+#~ msgid "Not specified"
+#~ msgstr "Не указан"
 
 #~ msgid "News aggregator"
 #~ msgstr "Агрегатор новостей"

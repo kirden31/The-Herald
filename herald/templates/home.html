@@ -15,7 +15,7 @@
                         <i class="bi bi-compass"></i>
                     </h1>
                     <h1 class="display-4 fw-bold mb-3">
-                        Herald<span class="text-primary">Новостной</span>
+                        {% trans "The_Herald" %}
                     </h1>
                     <p class="lead text-muted mb-0">
                         {% trans "Find._Read._Stay_informed." %}
@@ -32,12 +32,10 @@
                                     placeholder="🔍 Ищите новости по теме..."
                                     style="font-size: 1.1rem;"
                                     autocomplete="off"
-                                    autofocus
-                            >
+                                    autofocus>
                             <button
                                     type="submit"
-                                    class="btn btn-primary position-absolute top-50 end-0 translate-middle-y me-2 rounded-pill px-4"
-                            >
+                                    class="btn btn-primary position-absolute top-50 end-0 translate-middle-y me-2 rounded-pill px-4">
                                 {% trans "Search" %}
                             </button>
                         </div>
@@ -50,7 +48,8 @@
                             <i class="bi bi-info-circle me-1"></i>
                             {% trans "Start by searching or go to" %}
                             <a href="{% url 'news:top_headlines_news' %}" class="text-decoration-none">
-                                {% trans "main_news" %}</a>
+                                {% trans "main_news" %}
+                            </a>
                         </small>
                     </p>
                 </div>
