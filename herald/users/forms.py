@@ -141,9 +141,9 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
 
 class LoginForm(BootstrapFormMixin, django.contrib.auth.forms.AuthenticationForm):
     error_messages = {
-        'invalid_login': 'Пожалуйста, введите правильные имя пользователя'
-        ' и пароль. Оба поля могут быть чувствительны к регистру.',
-        'inactive': 'Этот аккаунт неактивен.',
+        'invalid_login': 'Please enter the correct username.'
+        'and password. Both fields may be case-sensitive.',
+        'inactive': 'This account is inactive.',
     }
     username = django.forms.CharField(label=gettext_lazy('Login or email'))
     password = django.forms.CharField(
