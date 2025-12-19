@@ -31,13 +31,13 @@ class BootstrapFormMixin:
 
 class SignupForm(BootstrapFormMixin, django.contrib.auth.forms.UserCreationForm):
     email = django.forms.EmailField(
-        error_messages={'required': gettext_lazy('Пользователь с такой почтой уже существует')},
+        error_messages={'required': gettext_lazy('A_user_with_this_email_already_exists.')},
         label=gettext_lazy('Mail'),
     )
     accept_terms = django.forms.BooleanField(
         required=True,
-        label=gettext_lazy('Я согласен с условиями использования'),
-        error_messages={'required': gettext_lazy('Вы должны принять условия использования')},
+        label=gettext_lazy('I_agree_to_the_terms_of_use'),
+        error_messages={'required': gettext_lazy('You_must_accept_the_terms_of_use')},
     )
 
     class Meta(django.contrib.auth.forms.UserCreationForm.Meta):
@@ -64,7 +64,7 @@ class SignupForm(BootstrapFormMixin, django.contrib.auth.forms.UserCreationForm)
         accepted = self.cleaned_data.get('accept_terms')
         if not accepted:
             raise django.core.exceptions.ValidationError(
-                gettext_lazy('Для регистрации вы должны принять условия использования'),
+                gettext_lazy('To_register_you_must_accept_the_terms_of_use.'),
                 code='required',
             )
 
@@ -75,12 +75,12 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
     first_name = django.forms.CharField(
         max_length=150,
         required=False,
-        label=gettext_lazy('Имя'),
+        label=gettext_lazy('Name'),
     )
     last_name = django.forms.CharField(
         max_length=150,
         required=False,
-        label=gettext_lazy('Фамилия'),
+        label=gettext_lazy('Surname'),
     )
     email = django.forms.EmailField(
         label=gettext_lazy('Email'),
@@ -89,7 +89,7 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
         choices=news.forms_data.CATEGORIES_CHOICES,
         widget=django.forms.CheckboxSelectMultiple(attrs={'class': 'form-check-input'}),
         required=False,
-        label=gettext_lazy('Favorite categories'),
+        label=gettext_lazy('Favorite_categories'),
     )
 
     def __init__(self, *args, **kwargs):
@@ -120,7 +120,7 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
 
         help_texts = {
             users.models.Profile.image.field.name: gettext_lazy(
-                'Upload your profile picture',
+                'Upload_your_profile_picture',
             ),
         }
 
@@ -141,11 +141,11 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
 
 class LoginForm(BootstrapFormMixin, django.contrib.auth.forms.AuthenticationForm):
     error_messages = {
-        'invalid_login': 'Please enter the correct username.'
-        'and password. Both fields may be case-sensitive.',
-        'inactive': 'This account is inactive.',
+        'invalid_login': 'Please_enter_the_correct_username.'
+        'and_password._Both_fields_may_be_case-sensitive.',
+        'inactive': 'This_account_is_inactive.',
     }
-    username = django.forms.CharField(label=gettext_lazy('Login or email'))
+    username = django.forms.CharField(label=gettext_lazy('Login_or_email'))
     password = django.forms.CharField(
         label=gettext_lazy('Password'),
         widget=django.forms.PasswordInput,

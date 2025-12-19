@@ -2,7 +2,7 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}Herald - {% trans "Все новости в одном месте" %}{% endblock %}
+{% block title %}Herald - {% trans "All_news_in_one_place" %}{% endblock %}
 
 {% block content %}
 <div class="min-vh-100 d-flex flex-column justify-content-center">
@@ -18,7 +18,7 @@
                         Herald<span class="text-primary">Новостной</span>
                     </h1>
                     <p class="lead text-muted mb-0">
-                        {% trans "Находите. Читайте. Оставайтесь в курсе." %}
+                        {% trans "Find._Read._Stay_informed." %}
                     </p>
                 </div>
 
@@ -48,9 +48,9 @@
                     <p class="text-secondary">
                         <small>
                             <i class="bi bi-info-circle me-1"></i>
-                            {% trans "Начните с поиска или перейдите к" %}
+                            {% trans "Start by searching or go to" %}
                             <a href="{% url 'news:top_headlines_news' %}" class="text-decoration-none">
-                                {% trans "главным новостям" %}</a>
+                                {% trans "main_news" %}</a>
                         </small>
                     </p>
                 </div>
