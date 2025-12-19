@@ -12,45 +12,45 @@ class FavoriteArticle(django.db.models.Model):
         users.models.User,
         on_delete=django.db.models.CASCADE,
         related_name='favorite_articles',
-        verbose_name=_('пользователь'),
+        verbose_name=_('user'),
     )
 
     title = django.db.models.CharField(
-        verbose_name=_('заголовок'),
+        verbose_name=_('title'),
         null=True,
     )
-    description = django.db.models.TextField(verbose_name=_('описание'), null=True)
+    description = django.db.models.TextField(verbose_name=_('description'), null=True)
     content = django.db.models.TextField(
-        verbose_name=_('содержание'),
+        verbose_name=_('content'),
         null=True,
     )
     url = django.db.models.URLField(
-        verbose_name=_('ссылка на новость'),
+        verbose_name=_('link to news'),
     )
     url_to_image = django.db.models.URLField(
-        verbose_name=_('ссылка на изображение'),
+        verbose_name=_('image link'),
         null=True,
     )
     source = django.db.models.CharField(
-        verbose_name=_('название источника'),
+        verbose_name=_('source name'),
         null=True,
     )
     author = django.db.models.CharField(
-        verbose_name=_('автор'),
+        verbose_name=_('author'),
         null=True,
     )
     published_at = django.db.models.DateTimeField(
-        verbose_name=_('дата публикации'),
+        verbose_name=_('publication date'),
         null=True,
     )
     category = django.db.models.CharField(
-        verbose_name=_('категория'),
+        verbose_name=_('category'),
         null=True,
     )
 
     class Meta:
-        verbose_name = _('избранная новость')
-        verbose_name_plural = _('избранные новости')
+        verbose_name = _('featured news')
+        verbose_name_plural = _('selected news')
         unique_together = ['user', 'url']
         ordering = ['-published_at']
         indexes = [

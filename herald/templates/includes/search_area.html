@@ -3,9 +3,11 @@
 <link href="{% static 'css/select2.min.css' %}" rel="stylesheet">
 {{ search_form.query }}
 
+{% if search_form %}
 <button class="btn btn-primary ms-2" type="submit">
     {% trans "Search" %}
 </button>
+{% endif %}
 
 <button type="button" class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
     {% trans "Filters" %}

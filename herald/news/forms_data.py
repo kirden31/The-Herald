@@ -37,14 +37,21 @@ SOURCES_CHOICES = [(s['id'], s['name']) for s in sources_response['sources']]
 sections = api.guardianApi.GuardianApi().get_sections_list()
 SECTIONS_CHOICES = [(s['id'], s['webTitle']) for s in sections['sections']]
 
+BUSINESS = 'business'
+ENTERTAINMENT = 'entertainment'
+GENERAL = 'general'
+HEALTH = 'health'
+SPORTS = 'sports'
+SCIENCE = 'science'
+TECHNOLOGY = 'technology'
 CATEGORIES_CHOICES = [
-    ('business', _('Business')),
-    ('entertainment', _('Entertainment')),
-    ('general', _('General')),
-    ('health', _('Health')),
-    ('sports', _('Sports')),
-    ('science', _('Science')),
-    ('technology', _('Technology')),
+    (BUSINESS, _('Business')),
+    (ENTERTAINMENT, _('Entertainment')),
+    (GENERAL, _('General')),
+    (HEALTH, _('Health')),
+    (SPORTS, _('Sports')),
+    (SCIENCE, _('Science')),
+    (TECHNOLOGY, _('Technology')),
 ]
 
 COUNTRIES_CHOICES_SOURCES = [
