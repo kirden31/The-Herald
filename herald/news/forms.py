@@ -14,7 +14,6 @@ class SearchForm(django.forms.Form):
         label=_('Search'),
         max_length=500,
         required=False,
-        empty_value='',
         widget=django.forms.TextInput(
             attrs={
                 'placeholder': _('search_area_placeholder'),
