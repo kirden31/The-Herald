@@ -54,6 +54,24 @@ CATEGORIES_CHOICES = [
     (TECHNOLOGY, _('Technology')),
 ]
 
+RELEVANCY = 'relevancy'
+POPULARITY = 'popularity'
+PUBLISHED_AT = 'publishedAt'
+SORT_BY_CHOICES = [
+    (RELEVANCY, _('Relevancy')),
+    (POPULARITY, _('Popularity')),
+    (PUBLISHED_AT, _('Published_at')),
+]
+
+NEWEST = 'newest'
+OLDEST = 'oldest'
+RELEVANCE = 'relevance'
+ORDER_BY_CHOICES = [
+    (NEWEST, _('Newest')),
+    (OLDEST, _('Oldest')),
+    (RELEVANCE, _('Relevance')),
+]
+
 COUNTRIES_CHOICES_SOURCES = [
     ('ae', _('United Arab Emirates')),
     ('ar', _('Argentina')),
