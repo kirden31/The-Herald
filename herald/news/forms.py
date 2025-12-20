@@ -17,7 +17,6 @@ class SearchForm(django.forms.Form):
         widget=django.forms.TextInput(
             attrs={
                 'placeholder': _('search_area_placeholder'),
-                'aria-label': _('search_area'),
                 'class': 'form-control',
             },
         ),

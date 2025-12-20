@@ -10,7 +10,7 @@ import users.models
 class ProfileInline(django.contrib.admin.StackedInline):
     model = users.models.Profile
     can_delete = False
-    verbose_name_plural = _('Профиль')
+    verbose_name_plural = _('user')
     fk_name = 'user'
 
     fields = (

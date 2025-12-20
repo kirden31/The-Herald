@@ -11,7 +11,7 @@ import django.contrib.auth
 import django.contrib.auth.forms
 import django.core.exceptions
 import django.forms
-from django.utils.translation import gettext_lazy
+from django.utils.translation import gettext_lazy as _
 
 import news.forms_data
 import users.models
@@ -31,13 +31,13 @@ class BootstrapFormMixin:
 
 class SignupForm(BootstrapFormMixin, django.contrib.auth.forms.UserCreationForm):
     email = django.forms.EmailField(
-        error_messages={'required': gettext_lazy('Пользователь с такой почтой уже существует')},
-        label=gettext_lazy('Mail'),
+        error_messages={'required': _('A user with this email already exists.')},
+        label=_('Mail'),
     )
     accept_terms = django.forms.BooleanField(
         required=True,
-        label=gettext_lazy('Я согласен с условиями использования'),
-        error_messages={'required': gettext_lazy('Вы должны принять условия использования')},
+        label=_('I agree to the terms of use'),
+        error_messages={'required': _('You must accept the terms of use')},
     )
 
     class Meta(django.contrib.auth.forms.UserCreationForm.Meta):
@@ -50,21 +50,21 @@ class SignupForm(BootstrapFormMixin, django.contrib.auth.forms.UserCreationForm)
         )
 
         labels = {
-            users.models.User.username.field.name: gettext_lazy('Login'),
-            users.models.User.email.field.name: gettext_lazy('Email'),
-            'accept_terms': gettext_lazy('I_agree_to_the_terms_of_use'),
+            users.models.User.username.field.name: _('Login'),
+            users.models.User.email.field.name: _('Email'),
+            'accept_terms': _('I agree to the terms of use'),
         }
 
         help_text = {
-            users.models.User.username.field.name: gettext_lazy('Enter_login'),
-            users.models.User.email.field.name: gettext_lazy('Enter_email'),
+            users.models.User.username.field.name: _('Enter_login'),
+            users.models.User.email.field.name: _('Enter email'),
         }
 
     def clean_accept_terms(self):
-        accepted = self.cleaned_data.get('accept_terms')
+        accepted = self.cleaned_data.get('accept terms')
         if not accepted:
             raise django.core.exceptions.ValidationError(
-                gettext_lazy('Для регистрации вы должны принять условия использования'),
+                _('To register you must accept the terms of use.'),
                 code='required',
             )
 
@@ -75,21 +75,21 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
     first_name = django.forms.CharField(
         max_length=150,
         required=False,
-        label=gettext_lazy('Имя'),
+        label=_('Name'),
     )
     last_name = django.forms.CharField(
         max_length=150,
         required=False,
-        label=gettext_lazy('Фамилия'),
+        label=_('Surname'),
     )
     email = django.forms.EmailField(
-        label=gettext_lazy('Email'),
+        label=_('Email'),
     )
     favorite_categories = django.forms.MultipleChoiceField(
         choices=news.forms_data.CATEGORIES_CHOICES,
         widget=django.forms.CheckboxSelectMultiple(attrs={'class': 'form-check-input'}),
         required=False,
-        label=gettext_lazy('Favorite categories'),
+        label=_('Favorite_categories'),
     )
 
     def __init__(self, *args, **kwargs):
@@ -119,9 +119,7 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
         }
 
         help_texts = {
-            users.models.Profile.image.field.name: gettext_lazy(
-                'Upload your profile picture',
-            ),
+            users.models.Profile.image.field.name: _('Upload your profile picture'),
         }
 
     def save(self, commit=True):
@@ -141,13 +139,12 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
 
 class LoginForm(BootstrapFormMixin, django.contrib.auth.forms.AuthenticationForm):
     error_messages = {
-        'invalid_login': 'Please enter the correct username.'
-        'and password. Both fields may be case-sensitive.',
-        'inactive': 'This account is inactive.',
+        'invalid_login': _('Please enter the correct username and password. Both fields may be case-sensitive.'),
+        'inactive': _('This account is inactive.'),
     }
-    username = django.forms.CharField(label=gettext_lazy('Login or email'))
+    username = django.forms.CharField(label=_('Login or email'))
     password = django.forms.CharField(
-        label=gettext_lazy('Password'),
+        label=_('Password'),
         widget=django.forms.PasswordInput,
         required=True,
     )
