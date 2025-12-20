@@ -27,19 +27,24 @@ class ConfigAuthBackend(django.contrib.auth.backends.ModelBackend):
         if user.check_password(password) and self.user_can_authenticate(
             user=user,
         ):
-            user.profile.attempts_count = 0
-            user.profile.save()
+            profile = user.profile
+            profile.attempts_count = 0
+            profile.blocked_at = None
+            profile.save()
             return user
 
-        user.profile.attempts_count += 1
+        profile = user.profile
+        profile.attempts_count += 1
 
-        if user.profile.attempts_count > django.conf.settings.MAX_AUTH_ATTEMPTS:
+        if profile.attempts_count > django.conf.settings.MAX_AUTH_ATTEMPTS:
             user.is_active = False
-            user.profile.block_date = django.utils.timezone.now()
+            profile.blocked_at = django.utils.timezone.now()
+            user.save()
+            profile.save()
 
             if request:
                 activation_url = request.build_absolute_uri(
-                    django.urls.reverse('users:reactivate', kwargs={'pk': user.id}),
+                    django.urls.reverse('users:account_reactivate', kwargs={'pk': user.id}),
                 )
 
                 msg = gettext_lazy(
@@ -55,7 +60,6 @@ class ConfigAuthBackend(django.contrib.auth.backends.ModelBackend):
                     fail_silently=False,
                 )
 
-        user.save()
         return None
 
     def get_user(self, user_id):

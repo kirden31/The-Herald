@@ -99,6 +99,12 @@ class Profile(django.db.models.Model):
         verbose_name=_('favorite categories'),
         help_text=_('Favorite categories'),
     )
+    blocked_at = django.db.models.DateTimeField(
+        verbose_name=_('deactivate in'),
+        help_text=_('account was deactivated'),
+        null=True,
+        editable=False,
+    )
 
     def get_image_300x300(self):
         if self.image:
