@@ -46,16 +46,22 @@
 <script src="{% static 'js/jQuery.js' %}"></script>
 <script src="{% static 'js/select2.js' %}"></script>
 <script>
-    $(document).ready(function() {
-        $('#exampleModal').on('shown.bs.modal', function () {
-            $('.js-example-basic-multiple').select2({
-                dropdownParent: $('#exampleModal')
-            });
+$(document).ready(function () {
+
+    // sort select — вне модалки
+    $('.js-sort').select2();
+
+    // автосабмит при выборе
+    $('.js-sort').on('change', function () {
+        $(this).closest('form').submit();
+    });
+
+    // select2 внутри модального окна
+    $('#exampleModal').on('shown.bs.modal', function () {
+        $(this).find('.js-example-basic-multiple').select2({
+            dropdownParent: $('#exampleModal')
         });
     });
-    $(document).ready(function () {
-        $('.js-sort').on('change', function () {
-            $(this).closest('form').submit();
-        });
-    });
+
+});
 </script>

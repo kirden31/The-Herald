@@ -67,7 +67,7 @@ class EverythingFiltersForm(django.forms.Form):
     )
 
     sources = django.forms.MultipleChoiceField(
-        label=_('Select_sources_max_20_default_all'),
+        label=_('Select_sources_max_default_all'),
         choices=news.forms_data.SOURCES_CHOICES,
         widget=django.forms.SelectMultiple(
             attrs={

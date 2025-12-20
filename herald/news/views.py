@@ -30,10 +30,9 @@ class NewsApiBaseView(django.views.View):
         return range(left_page, right_page + 1)
 
     @staticmethod
-    def get_random_favorite_category(request, form, query):
+    def get_random_favorite_category(request, form, query, country):
         cat = form.cleaned_data.get('category')
-
-        if cat or query:
+        if cat or query or country[-1]:
             return cat
 
         if request.user:
@@ -65,12 +64,18 @@ class TopHeadlinesNews(NewsApiBaseView):
 
         params = {
             'q': search_form.cleaned_data.get('query'),
-            'country': ','.join(filters_form.cleaned_data.get('country')),
             'sources': filters_form.cleaned_data.get('sources'),
             'pageSize': self.page_size,
         }
 
-        params['category'] = self.get_random_favorite_category(request, filters_form, params['q'])
+        if not params['sources']:
+            params['country'] = (','.join(filters_form.cleaned_data.get('country')),)
+            params['category'] = self.get_random_favorite_category(
+                request,
+                filters_form,
+                params['q'],
+                params['country'],
+            )
 
         if params.get('sources') and (params.get('category') or params.get('country')):
             django.contrib.messages.error(
@@ -133,16 +138,18 @@ class EverythingNews(NewsApiBaseView):
             return django.shortcuts.render(request, self.template_name, context)
 
         params = {
-            'q': search_form.cleaned_data.get('query') or self.default_query,
+            'q': search_form.cleaned_data.get('query'),
             'sortBy': sort_form.cleaned_data.get('sort_by'),
             'searchIn': ','.join(filters_form.cleaned_data.get('search_in')),
             'sources': ','.join(filters_form.cleaned_data.get('sources')),
             'from': filters_form.cleaned_data.get('_from'),
             'to': filters_form.cleaned_data.get('to'),
-            'language': ','.join(filters_form.cleaned_data.get('language'))
-            or request.LANGUAGE_CODE.split('-')[0],
+            'language': ','.join(filters_form.cleaned_data.get('language')),
             'pageSize': self.page_size,
         }
+
+        if not (params['q'] or params['sources']):
+            params['q'] = self.default_query
 
         try:
             cur_page = max(int(request.GET.get('page', '1')), 1)
@@ -179,7 +186,6 @@ class EverythingNews(NewsApiBaseView):
 
 class GuardianNews(NewsApiBaseView):
     template_name = 'news/guardian_news.html'
-    default_query = ''
 
     def get(self, request, *_args, **_kwargs):
         search_form = news.forms.SearchForm(request.GET)
@@ -246,7 +252,6 @@ class GuardianNews(NewsApiBaseView):
 
 class NewsApiSources(NewsApiBaseView):
     template_name = 'news/sources_list.html'
-    default_query = ''
 
     def get(self, request, *_args, **_kwargs):
         filters_form = news.forms.SourcesFilterForm(request.GET)
