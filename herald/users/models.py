@@ -74,30 +74,30 @@ class Profile(django.db.models.Model):
         blank=True,
         null=True,
         verbose_name=_('avatar'),
-        help_text=_('User avatar.'),
+        help_text=_('User_avatar.'),
     )
     birthday = django.db.models.DateField(
         blank=True,
         null=True,
         validators=[users.validators.ValidateBirthdayDate()],
-        verbose_name=_('date of birth'),
-        help_text=_('User date of birth.'),
+        verbose_name=_('date_of_birth'),
+        help_text=_('User_date_of_birth.'),
     )
     location = django.db.models.CharField(
         blank=True,
         null=True,
-        help_text=_('The user city (or country) of residence.'),
+        help_text=_('The_user_city_(or_country)_of_residence.'),
     )
     attempts_count = django.db.models.PositiveBigIntegerField(
         default=0,
         verbose_name=_('attempts'),
-        help_text=_('Number of login attempts'),
+        help_text=_('Number_of_login_attempts'),
     )
     favorite_categories = django.db.models.JSONField(
         default=list,
         blank=True,
-        verbose_name=_('favorite categories'),
-        help_text=_('Favorite categories'),
+        verbose_name=_('favorite_categories'),
+        help_text=_('Favorite_categories'),
     )
 
     def get_image_300x300(self):
