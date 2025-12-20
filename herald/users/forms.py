@@ -123,7 +123,7 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
 class LoginForm(BootstrapFormMixin, django.contrib.auth.forms.AuthenticationForm):
     error_messages = {
         'invalid_login': _(
-            """Please enter the correct username and password.Both fields may be case-sensitive.""",
+            """Please enter the correct username and password. Both fields may be case-sensitive.""",
         ),
         'inactive': _('This account is inactive.'),
     }
