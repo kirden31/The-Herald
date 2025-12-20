@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<div class="container">
+    <h1>{% trans "Account verification" %}</h1>
+    <h3>{% trans "User:" %} {{ user.username }}</h3>
+    <h3>{{ mes }}</h3>
+    <div class="text-center">
+        <p class="mb-0">
+            <a href="{% url 'users:login' %}" class="text-decoration-none">
+                {% trans "Login" %}
+            </a>
+        </p>
+    </div>
+</div>
+{% endblock %}

@@ -6,6 +6,16 @@ import users.views
 
 app_name = 'users'
 urlpatterns = [
+    path(
+        'activate/<str:username>',
+        users.views.AccountActivateView.as_view(),
+        name='account_activate',
+    ),
+    path(
+        'reactivate/<int:pk>',
+        users.views.AccountReactivateView.as_view(),
+        name='account_reactivate',
+    ),
     path('signup/', users.views.SignUpView.as_view(), name='signup'),
     path('profile/', users.views.ProfileView.as_view(), name='profile'),
     path('profile/edit/', users.views.ProfileUpdateView.as_view(), name='profile_edit'),

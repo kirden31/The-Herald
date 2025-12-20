@@ -1,5 +1,7 @@
 __all__ = ('ProfileView', 'ProfileUpdateView', 'SignUpView')
 
+import datetime
+
 import django.contrib
 import django.contrib.auth
 import django.contrib.auth.mixins
@@ -11,6 +13,61 @@ import django.views.generic
 
 import users.forms
 import users.models
+
+ACTIVATE_LINK_VALID_HOURS = 12
+REACTIVATE_LINK_VALID_HOURS = 7 * 24
+
+
+class AccountActivateView(django.views.View):
+    template_name = 'users/account_activate.html'
+    model = users.models.User
+    time_delta = ACTIVATE_LINK_VALID_HOURS
+
+    def get(self, request, pk, *args, **kwargs):
+        user = django.shortcuts.get_object_or_404(
+            users.models.User,
+            pk=pk,
+        )
+
+        if user.is_active:
+            context = {'mes': _('Already_activated'), 'user': user}
+        else:
+            context = self.account_action(user)
+
+        return django.shortcuts.render(request, self.template_name, context)
+
+    def check_delta(self, dt):
+        now = django.utils.timezone.now()
+        delta = now - dt
+
+        if delta <= datetime.timedelta(hours=self.time_delta):
+            return True
+
+        return False
+
+    def account_action(self, user):
+        if self.check_delta(user.date_joined):
+            user.is_active = True
+            user.save()
+            return {'mes': _('Activation_successful'), 'user': user}
+
+        return {'mes': _('Activation_time_expired'), 'user': user}
+
+
+class AccountReactivateView(AccountActivateView):
+    time_delta = REACTIVATE_LINK_VALID_HOURS
+
+    def account_action(self, user):
+        if user.profile.blocked_at:
+            if self.check_delta(user.profile.blocked_at):
+                user.is_active = True
+                user.profile.blocked_at = None
+                user.save()
+                return {'mes': _('Activation_successful'), 'user': user}
+
+            return {'mes': _('Activation_time_expired'), 'user': user}
+
+        return {'mes': _('Account_is_not_deactivated'), 'user': user}
 
 
 class SignUpView(django.views.generic.CreateView):
