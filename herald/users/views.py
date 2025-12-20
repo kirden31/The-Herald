@@ -25,7 +25,7 @@ class SignUpView(django.views.generic.CreateView):
 
         django.contrib.messages.success(
             self.request,
-            _('Registration_successful!_Welcome!'),
+            _('Registration successful! Welcome!'),
         )
 
         return response
@@ -69,6 +69,6 @@ class ProfileUpdateView(
         response = super().form_valid(form)
         django.contrib.messages.success(
             self.request,
-            'Profile_successfully_updated!',
+            'Profile successfully updated!',
         )
         return response

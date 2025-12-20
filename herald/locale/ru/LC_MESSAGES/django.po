@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-20 00:34+0300\n"
+"POT-Creation-Date: 2025-12-20 10:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -364,13 +364,13 @@ msgstr "Ссылка на новость"
 #: news/models.py:31
 #, fuzzy
 #| msgid "Image link"
-msgid "image link"
+msgid "image_link"
 msgstr "Ссылка на изображение"
 
 #: news/models.py:35
 #, fuzzy
 #| msgid "Source name"
-msgid "source name"
+msgid "source_name"
 msgstr "Название источника"
 
 #: news/models.py:39
@@ -382,7 +382,7 @@ msgstr "Автор"
 #: news/models.py:43
 #, fuzzy
 #| msgid "Publication date"
-msgid "publication date"
+msgid "publication_date"
 msgstr "Дата публикации"
 
 #: news/models.py:47
@@ -394,13 +394,13 @@ msgstr "Категория"
 #: news/models.py:52
 #, fuzzy
 #| msgid "Featured news"
-msgid "featured news"
+msgid "featured_news"
 msgstr "Рекомендуемые новости"
 
 #: news/models.py:53
 #, fuzzy
 #| msgid "Featured news"
-msgid "selected news"
+msgid "selected_news"
 msgstr "Рекомендуемые новости"
 
 #: news/views.py:55 news/views.py:122 news/views.py:185 news/views.py:247
@@ -408,32 +408,36 @@ msgid "Forms_error"
 msgstr "Ошибка формы"
 
 #: news/views.py:78
-msgid "You_cannot_select_sources_together_with_country_or_category"
+#, fuzzy
+#| msgid "You_cannot_select_sources_together_with_country_or_category"
+msgid "You cannot select sources together with country or category"
 msgstr "Вы не можете выбирать источники одновременно по стране или категории."
 
-#: templates/base.html:6 templates/home.html:18
 msgid "The_Herald"
 msgstr "Вестник"
 
 #: templates/base.html:26
 #, fuzzy
 #| msgid "The content was not delivered :("
-msgid "The_content_was_not_delivered :("
+msgid "The content was not delivered :("
 msgstr "Контент не был доставлен :("
 
 #: templates/home.html:5
-msgid "All_news_in_one_place"
+#, fuzzy
+#| msgid "All_news_in_one_place"
+msgid "All news in one place"
 msgstr "Все новости в одном месте"
 
 #: templates/home.html:21
-msgid "Find._Read._Stay_informed."
+#, fuzzy
+#| msgid "Find._Read._Stay_informed."
+msgid "Find. Read. Stay informed."
 msgstr "Находите. Читайте. Будьте в курсе."
 
 #: templates/home.html:49
 msgid "Start by searching or go to"
 msgstr "Начните с поиска или перейдите по ссылке"
 
-#: templates/home.html:51
 msgid "main_news"
 msgstr "главные новости"
 
@@ -444,7 +448,7 @@ msgstr "Новостной"
 #: templates/includes/footer.html:11
 #, fuzzy
 #| msgid "Description"
-msgid "footer_site_descriptions"
+msgid "footer site descriptions"
 msgstr "Описание"
 
 #: templates/includes/footer.html:17
@@ -488,11 +492,15 @@ msgid "Contacts"
 msgstr "Контакты"
 
 #: templates/includes/header.html:11
-msgid "Select_language"
+#, fuzzy
+#| msgid "Select_language"
+msgid "Select language"
 msgstr "Выберите язык"
 
 #: templates/includes/header.html:18 templates/news/top_headlines_news.html:5
-msgid "Top_headlines"
+#, fuzzy
+#| msgid "Top_headlines"
+msgid "Top headlines"
 msgstr "Верхний заголовок"
 
 #: templates/includes/header.html:24 templates/news/everything_news.html:5
@@ -509,12 +517,14 @@ msgid "Language"
 msgstr "Язык"
 
 #: templates/includes/header.html:77
-msgid "Log_out"
-msgstr "Выход из системы"
+msgid "Log out"
+msgstr "Выйти"
 
 #: templates/includes/header.html:85
-msgid "Log_in"
-msgstr "Авторизоваться"
+#, fuzzy
+#| msgid "Log out"
+msgid "Log in"
+msgstr "Выйти"
 
 #: templates/includes/header.html:89
 msgid "Sign_up"
@@ -556,11 +566,15 @@ msgstr "посетить"
 
 #: templates/news/everything_news.html:17 templates/news/guardian_news.html:17
 #: templates/news/top_headlines_news.html:17
-msgid "No_news_found"
+#, fuzzy
+#| msgid "No_news_found"
+msgid "No news found"
 msgstr "Новости не найдены"
 
 #: templates/news/sources_list.html:17
-msgid "No_sources_found"
+#, fuzzy
+#| msgid "No_sources_found"
+msgid "No sources found"
 msgstr "Источники не найдены"
 
 #: templates/users/favorites.html:4
@@ -570,19 +584,19 @@ msgstr "Избранное"
 #: templates/users/favorites.html:8
 #, fuzzy
 #| msgid "All your saved articles"
-msgid "All_your_saved_articles"
+msgid "All your saved articles"
 msgstr "Все ваши сохраненные статьи"
 
 #: templates/users/favorites.html:19
 #, fuzzy
 #| msgid "It's empty here yet"
-msgid "It's_empty_here_yet"
+msgid "It's empty here yet"
 msgstr "Здесь пока пусто."
 
 #: templates/users/favorites.html:20
 #, fuzzy
 #| msgid "Search news"
-msgid "Search_news"
+msgid "Search news"
 msgstr "Поиск новостей"
 
 #: templates/users/login.html:4
@@ -597,19 +611,19 @@ msgstr "Авторизоваться"
 #: templates/users/login.html:13
 #, fuzzy
 #| msgid "Enter your credentials"
-msgid "Enter_your_credentials"
+msgid "Enter your credentials"
 msgstr "Введите свои учетные данные"
 
 #: templates/users/login.html:60
 #, fuzzy
 #| msgid "Remember me"
-msgid "Remember_me"
+msgid "Remember me"
 msgstr "Запомнить меня"
 
 #: templates/users/login.html:74
 #, fuzzy
 #| msgid "Forgot your password?"
-msgid "Forgot_your_password?"
+msgid "Forgot your password?"
 msgstr "Забыли пароль?"
 
 #: templates/users/login.html:78
@@ -627,19 +641,19 @@ msgstr "Выход из системы"
 #: templates/users/logout.html:12
 #, fuzzy
 #| msgid "You are logged out"
-msgid "You_are_logged_out"
+msgid "You are logged out"
 msgstr "Вы вышли из системы."
 
 #: templates/users/logout.html:15
 #, fuzzy
 #| msgid "Thank you for visiting our website. We hope to see you again!"
-msgid "Thank_you_for_visiting_our_website._We_hope_to_see_you_again!"
+msgid "Thank you for visiting our website. We hope to see you again!"
 msgstr "Спасибо за посещение нашего сайта. Надеемся увидеть вас снова!"
 
 #: templates/users/logout.html:20
 #, fuzzy
 #| msgid "Login again"
-msgid "Login_again"
+msgid "Login again"
 msgstr "Войти снова"
 
 #: templates/users/logout.html:31
@@ -648,8 +662,8 @@ msgstr "Войти снова"
 #| "Your session has ended. For security reasons, we recommend closing your "
 #| "browser."
 msgid ""
-"Your_session_has_ended._For_security_reasons,"
-"_we_recommend_closing_your_browser."
+"Your session has ended. For security reasons, we recommend closing your "
+"browser."
 msgstr ""
 "Ваша сессия завершена. В целях безопасности мы рекомендуем закрыть ваш "
 "браузер."
@@ -661,32 +675,32 @@ msgstr ""
 #: templates/users/profile.html:61
 #, fuzzy
 #| msgid "Change password"
-msgid "Change_password"
+msgid "Change password"
 msgstr "Изменить пароль"
 
 #: templates/users/password_change.html:14
 #, fuzzy
 #| msgid "Enter your current password and new password"
-msgid "Enter_your_current_password_and_new_password"
+msgid "Enter your current password and new password"
 msgstr "Введите ваш текущий пароль и новый пароль."
 
 #: templates/users/password_change.html:30
 #, fuzzy
 #| msgid "Current Password"
-msgid "Current_Password"
+msgid "Current Password"
 msgstr "Текущий пароль"
 
 #: templates/users/password_change.html:47
 #: templates/users/password_reset_confirm.html:37
 #, fuzzy
 #| msgid "New Password"
-msgid "New_Password"
+msgid "New Password"
 msgstr "Новый пароль"
 
 #: templates/users/password_change.html:69
 #, fuzzy
 #| msgid "Confirming a new password"
-msgid "Confirming_a_new_password"
+msgid "Confirming a new password"
 msgstr "Подтверждение нового пароля"
 
 #: templates/users/password_change.html:89
@@ -697,13 +711,13 @@ msgstr "Отмена"
 #: templates/users/password_change_done.html:4
 #, fuzzy
 #| msgid "Password changed"
-msgid "Password_changed"
+msgid "Password changed"
 msgstr "Пароль изменен"
 
 #: templates/users/password_change_done.html:15
 #, fuzzy
 #| msgid "Password changed successfully!"
-msgid "Password_changed_successfully!"
+msgid "Password changed successfully!"
 msgstr "Пароль успешно изменен!"
 
 #: templates/users/password_change_done.html:18
@@ -712,8 +726,8 @@ msgstr "Пароль успешно изменен!"
 #| "Your password has been successfully changed. You can now use the new "
 #| "password to log in."
 msgid ""
-"Your_password_has_been_successfully_changed."
-"_You_can_now_use_the_new_password_to_log_in."
+"Your password has been successfully changed. You can now use the new "
+"password to log in."
 msgstr ""
 "Ваш пароль успешно изменен. Теперь вы можете использовать новый пароль для "
 "входа в систему."
@@ -721,7 +735,7 @@ msgstr ""
 #: templates/users/password_change_done.html:23
 #, fuzzy
 #| msgid "Return to profile"
-msgid "Return_to_profile"
+msgid "Return to profile"
 msgstr "Вернуться в профиль"
 
 #: templates/users/password_change_done.html:36
@@ -729,18 +743,14 @@ msgstr "Вернуться в профиль"
 #| msgid ""
 #| "It is recommended to use different passwords for different services and "
 #| "change them regularly."
-msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regularly."
+msgid ""
+"It is recommended to use different passwords for different services and "
+"change them regularly."
 msgstr ""
 "Рекомендуется использовать разные пароли для разных сервисов и регулярно их "
 "менять."
 
-#: templates/users/password_reset.html:4
-#, fuzzy
-#| msgid "Password reset"
-msgid "Password_reset"
-msgstr "Сброс пароля"
-
-#: templates/users/password_reset.html:13
+#: templates/users/password_reset.html:4 templates/users/password_reset.html:13
 msgid "Password reset"
 msgstr "Сброс пароля"
 
@@ -750,7 +760,7 @@ msgstr "Сброс пароля"
 #| "Forgot your password? Enter your email and we'll send you recovery "
 #| "instructions."
 msgid ""
-"Forgot_your_password?_Enter_your_email_address_We'll_send_you_instructions."
+"Forgot your password? Enter your email address We'll send you instructions."
 msgstr ""
 "Забыли пароль? Введите свой адрес электронной почты, и мы вышлем вам "
 "инструкции по восстановлению."
@@ -758,31 +768,31 @@ msgstr ""
 #: templates/users/password_reset.html:32
 #, fuzzy
 #| msgid "Email address"
-msgid "Email_address"
+msgid "Email address"
 msgstr "Адрес электронной почты"
 
 #: templates/users/password_reset.html:49
 #, fuzzy
 #| msgid "Send instructions"
-msgid "Send_instructions"
+msgid "Send instructions"
 msgstr "Отправить инструкции"
 
 #: templates/users/password_reset.html:52
 #, fuzzy
 #| msgid "Back to the entrance"
-msgid "Back_to_the_entrance"
+msgid "Back to the entrance"
 msgstr "Вернуться к входу"
 
 #: templates/users/password_reset_complete.html:4
 #, fuzzy
 #| msgid "Password restored"
-msgid "Password_restored"
+msgid "Password restored"
 msgstr "Пароль восстановлен"
 
 #: templates/users/password_reset_complete.html:15
 #, fuzzy
 #| msgid "Password restored!"
-msgid "Password_restored!"
+msgid "Password restored!"
 msgstr "Пароль восстановлен!"
 
 #: templates/users/password_reset_complete.html:18
@@ -791,8 +801,8 @@ msgstr "Пароль восстановлен!"
 #| "Your password has been successfully changed. You can now log in with your "
 #| "new password."
 msgid ""
-"Your_password_has_been_successfully_changed."
-"_You_can_now_log_in_with_your_new_password."
+"Your password has been successfully changed. You can now log in with your "
+"new password."
 msgstr ""
 "Ваш пароль успешно изменен. Теперь вы можете войти в систему, используя "
 "новый пароль."
@@ -800,51 +810,51 @@ msgstr ""
 #: templates/users/password_reset_complete.html:23
 #, fuzzy
 #| msgid "Sign in"
-msgid "Sign_in"
+msgid "Sign in"
 msgstr "Войти"
 
 #: templates/users/password_reset_complete.html:37
 #, fuzzy
 #| msgid "Your account is now protected with a new password."
-msgid "Your_account_is_now_protected_with_a_new_password."
+msgid "Your account is now protected with a new password."
 msgstr "Ваш аккаунт теперь защищен новым паролем."
 
 #: templates/users/password_reset_complete.html:38
 #, fuzzy
 #| msgid "It is recommended to use unique passwords for different services."
-msgid "It_is_recommended_to_use_unique_passwords_for_different_services."
+msgid "It is recommended to use unique passwords for different services."
 msgstr "Рекомендуется использовать уникальные пароли для разных сервисов."
 
 #: templates/users/password_reset_confirm.html:4
 #: templates/users/password_reset_confirm.html:15
 #, fuzzy
 #| msgid "Enter new password"
-msgid "Enter_new_password"
+msgid "Enter new password"
 msgstr "Введите новый пароль"
 
 #: templates/users/password_reset_confirm.html:16
 #, fuzzy
 #| msgid "Please enter the new password twice."
-msgid "Please_enter_the_new_password_twice."
+msgid "Please enter the new password twice."
 msgstr "Пожалуйста, введите новый пароль дважды."
 
 #: templates/users/password_reset_confirm.html:18
 #, fuzzy
 #| msgid "Restore Error"
-msgid "Restore_Error"
+msgid "Restore Error"
 msgstr "Ошибка восстановления"
 
 #: templates/users/password_reset_confirm.html:19
 #, fuzzy
 #| msgid "The password reset link is invalid."
-msgid "The_password_reset_link_is_invalid."
+msgid "The password reset link is invalid."
 msgstr "Ссылка для сброса пароля недействительна."
 
 #: templates/users/password_reset_confirm.html:59
 #: templates/users/signup.html:82
 #, fuzzy
 #| msgid "Password confirmation"
-msgid "Password_confirmation"
+msgid "Password confirmation"
 msgstr "Подтверждение пароля"
 
 #: templates/users/password_reset_confirm.html:85
@@ -853,8 +863,8 @@ msgstr "Подтверждение пароля"
 #| "The password reset link is invalid, possibly because it has already been "
 #| "used."
 msgid ""
-"The_password_reset_link_is_invalid,"
-"_possibly_because_it_has_already_been_used."
+"The password reset link is invalid, possibly because it has already been "
+"used."
 msgstr ""
 "Ссылка для сброса пароля недействительна, возможно, потому что она уже была "
 "использована."
@@ -862,20 +872,20 @@ msgstr ""
 #: templates/users/password_reset_confirm.html:86
 #, fuzzy
 #| msgid "Please request a new password reset."
-msgid "Please_request_a_new_password_reset."
+msgid "Please request a new password reset."
 msgstr "Пожалуйста, запросите сброс пароля."
 
 #: templates/users/password_reset_confirm.html:93
 #, fuzzy
 #| msgid "Request a new password reset"
-msgid "Request_a_new_password_reset"
+msgid "Request a new password reset"
 msgstr "Запросить сброс пароля"
 
 #: templates/users/password_reset_confirm.html:96
 #: templates/users/password_reset_done.html:36
 #, fuzzy
 #| msgid "Return to the entrance"
-msgid "Return_to_the_entrance"
+msgid "Return to the entrance"
 msgstr "Вернитесь ко входу"
 
 #: templates/users/password_reset_done.html:4
@@ -891,7 +901,9 @@ msgstr "Проверьте свою почту"
 #| msgid ""
 #| "We have sent password recovery instructions to the email address you "
 #| "provided."
-msgid "We_have_sent_password_recovery_instructions_to_the_email_address_you_provided."
+msgid ""
+"We have sent password recovery instructions to the email address you "
+"provided."
 msgstr ""
 "Мы отправили инструкции по восстановлению пароля на указанный вами адрес "
 "электронной почты."
@@ -899,38 +911,38 @@ msgstr ""
 #: templates/users/password_reset_done.html:19
 #, fuzzy
 #| msgid "You should receive them soon."
-msgid "You_should_receive_them_soon."
+msgid "You should receive them soon."
 msgstr "Вы должны получить их в ближайшее время."
 
 #: templates/users/password_reset_done.html:27
 #, fuzzy
 #| msgid "If you don't see the email, check your spam folder."
-msgid "If_you_don't_see_the_email,_check_your_spam_folder."
+msgid "If you don't see the email, check your spam folder."
 msgstr "Если вы не видите письмо, проверьте папку «Спам»."
 
 #: templates/users/password_reset_done.html:28
 #, fuzzy
 #| msgid "Sometimes password recovery emails can end up there."
-msgid "Sometimes_password_recovery_emails_can_end_up_there."
+msgid "Sometimes password recovery emails can end up there."
 msgstr "Иногда письма с запросом на восстановление пароля могут попасть туда."
 
 #: templates/users/profile.html:5
 #, fuzzy
 #| msgid "User profile"
-msgid "User_profile"
+msgid "User profile"
 msgstr "Профиль пользователя"
 
 #: templates/users/profile.html:30 templates/users/profile_update.html:4
 #: templates/users/profile_update.html:10
 #, fuzzy
 #| msgid "Edit profile"
-msgid "Edit_profile"
+msgid "Edit profile"
 msgstr "Редактировать профиль"
 
 #: templates/users/profile.html:34
 #, fuzzy
 #| msgid "My bookmarks"
-msgid "My_bookmarks"
+msgid "My bookmarks"
 msgstr "Мои закладки"
 
 #: templates/users/profile.html:42
@@ -944,7 +956,7 @@ msgstr "Поиски"
 #: templates/users/profile.html:75
 #, fuzzy
 #| msgid "Personal information"
-msgid "Personal_information"
+msgid "Personal information"
 msgstr "Персональная информация"
 
 #: templates/users/profile.html:80 users/forms.py:78
@@ -965,7 +977,7 @@ msgstr "Фамилия"
 #: templates/users/profile.html:91
 #, fuzzy
 #| msgid "Date of birth"
-msgid "Date_of_birth"
+msgid "Date of birth"
 msgstr "Дата рождения"
 
 #: templates/users/profile.html:101 templates/users/profile_update.html:35
@@ -975,39 +987,41 @@ msgstr "Локация"
 #: templates/users/profile.html:110
 #, fuzzy
 #| msgid "Registration date"
-msgid "Registration_date"
+msgid "Registration date"
 msgstr "Дата регистрации"
 
 #: templates/users/profile.html:114
 #, fuzzy
 #| msgid "Last entry"
-msgid "Last_entry"
+msgid "Last entry"
 msgstr "Последняя запись"
 
 #: templates/users/profile.html:116
 msgid "Recently"
 msgstr "Недавно"
 
-#: templates/users/profile.html:126 users/forms.py:92 users/models.py:100
+#: templates/users/profile.html:126
 #, fuzzy
 #| msgid "Favorite categories"
-msgid "Favorite_categories"
+msgid "Favorite categories"
 msgstr "Любимые категории"
 
 #: templates/users/profile.html:141
 #, fuzzy
 #| msgid "You haven't selected your favorite categories yet."
-msgid "You_haven't_selected_your_favorite_categories_yet."
+msgid "You haven't selected your favorite categories yet."
 msgstr "Вы еще не выбрали свои любимые категории."
 
 #: templates/users/profile.html:143
 #, fuzzy
 #| msgid "Add categories"
-msgid "Add_categories"
+msgid "Add categories"
 msgstr "Добавить категории"
 
 #: templates/users/profile.html:153
-msgid "Click_on_a_category_to_view_related_news"
+#, fuzzy
+#| msgid "Click_on_a_category_to_view_related_news"
+msgid "Click on a category to view related news"
 msgstr "Нажмите на категорию, чтобы просмотреть связанные новости."
 
 #: templates/users/profile.html:156
@@ -1015,7 +1029,9 @@ msgid "Edit"
 msgstr "Редактировать"
 
 #: templates/users/profile_update.html:36
-msgid "City_or_country"
+#, fuzzy
+#| msgid "City_or_country"
+msgid "City or country"
 msgstr "Город или страна"
 
 #: templates/users/signup.html:4 templates/users/signup.html:12
@@ -1025,7 +1041,7 @@ msgstr "Регистрация"
 #: templates/users/signup.html:13
 #, fuzzy
 #| msgid "Create a new account"
-msgid "Create_a_new_account"
+msgid "Create a new account"
 msgstr "Создать новую учетную запись"
 
 #: templates/users/signup.html:58 users/forms.py:150
@@ -1059,7 +1075,7 @@ msgstr "Активация аккаунта."
 #: users/forms.py:34
 #, fuzzy
 #| msgid "A user with this email already exists."
-msgid "A_user_with_this_email_already_exists."
+msgid "A user with this email already exists."
 msgstr "Пользователь с таким адресом электронной почты уже существует."
 
 #: users/forms.py:35
@@ -1069,11 +1085,13 @@ msgstr "Почта"
 #: users/forms.py:39 users/forms.py:55
 #, fuzzy
 #| msgid "I agree to the terms of use"
-msgid "I_agree_to_the_terms_of_use"
+msgid "I agree to the terms of use"
 msgstr "Я согласен с условиями использования."
 
 #: users/forms.py:40
-msgid "You_must_accept_the_terms_of_use"
+#, fuzzy
+#| msgid "You_must_accept_the_terms_of_use"
+msgid "You must accept the terms of use"
 msgstr "Вы обязаны принять условия использования."
 
 #: users/forms.py:54 users/forms.py:86
@@ -1087,23 +1105,33 @@ msgid "Enter_login"
 msgstr "Введите свой логин"
 
 #: users/forms.py:60
-msgid "Enter_email"
+#, fuzzy
+#| msgid "Enter_email"
+msgid "Enter email"
 msgstr "Введите адрес электронной почты"
 
 #: users/forms.py:67
-msgid "To_register_you_must_accept_the_terms_of_use."
+#, fuzzy
+#| msgid "To_register_you_must_accept_the_terms_of_use."
+msgid "To register you must accept the terms of use."
 msgstr "Для регистрации необходимо принять Условия использования."
+
+#: users/forms.py:92 users/models.py:100
+#, fuzzy
+#| msgid "Favorite categories"
+msgid "Favorite_categories"
+msgstr "Любимые категории"
 
 #: users/forms.py:123
 #, fuzzy
 #| msgid "Upload your profile picture"
-msgid "Upload_your_profile_picture"
+msgid "Upload your profile picture"
 msgstr "Загрузите свою фотографию профиля."
 
 #: users/forms.py:148
 #, fuzzy
 #| msgid "Login or email"
-msgid "Login_or_email"
+msgid "Login or email"
 msgstr "Логин или электронная почта"
 
 #: users/models.py:76
@@ -1165,11 +1193,19 @@ msgstr "ошибка даты рождения"
 #: users/views.py:28
 #, fuzzy
 #| msgid "Registration successful! Welcome!"
-msgid "Registration_successful!_Welcome!"
+msgid "Registration successful! Welcome!"
 msgstr "Регистрация прошла успешно! Добро пожаловать!"
 
-#~ msgid "Not specified"
-#~ msgstr "Не указан"
+#~ msgid "Log_out"
+#~ msgstr "Выход из системы"
+
+#~ msgid "Log_in"
+#~ msgstr "Авторизоваться"
+
+#, fuzzy
+#~| msgid "Password reset"
+#~ msgid "Password_reset"
+#~ msgstr "Сброс пароля"
 
 #~ msgid "News aggregator"
 #~ msgstr "Агрегатор новостей"
@@ -1217,9 +1253,6 @@ msgstr "Регистрация прошла успешно! Добро пожа�
 
 #~ msgid "2025 NewsHub. All rights reserved."
 #~ msgstr "2025 NewsHub. Все права защищены."
-
-#~ msgid "Log out"
-#~ msgstr "Выйти"
 
 #~ msgid "Featured News"
 #~ msgstr "Рекомендуемые новости"

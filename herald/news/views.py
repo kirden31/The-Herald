@@ -75,7 +75,7 @@ class TopHeadlinesNews(NewsApiBaseView):
         if params.get('sources') and (params.get('category') or params.get('country')):
             django.contrib.messages.error(
                 self.request,
-                _('You_cannot_select_sources_together_with_country_or_category'),
+                _('You cannot select sources together with country or category'),
             )
 
         try:
