@@ -25,14 +25,14 @@ class FavoriteArticle(django.db.models.Model):
         null=True,
     )
     url = django.db.models.URLField(
-        verbose_name=_('link to news'),
+        verbose_name=_('link_to_news'),
     )
     url_to_image = django.db.models.URLField(
-        verbose_name=_('image link'),
+        verbose_name=_('image_link'),
         null=True,
     )
     source = django.db.models.CharField(
-        verbose_name=_('source name'),
+        verbose_name=_('source_name'),
         null=True,
     )
     author = django.db.models.CharField(
@@ -40,7 +40,7 @@ class FavoriteArticle(django.db.models.Model):
         null=True,
     )
     published_at = django.db.models.DateTimeField(
-        verbose_name=_('publication date'),
+        verbose_name=_('publication_date'),
         null=True,
     )
     category = django.db.models.CharField(
@@ -49,8 +49,8 @@ class FavoriteArticle(django.db.models.Model):
     )
 
     class Meta:
-        verbose_name = _('featured news')
-        verbose_name_plural = _('selected news')
+        verbose_name = _('featured_news')
+        verbose_name_plural = _('selected_news')
         unique_together = ['user', 'url']
         ordering = ['-published_at']
         indexes = [
