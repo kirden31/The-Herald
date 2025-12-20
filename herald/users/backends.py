@@ -31,31 +31,33 @@ class ConfigAuthBackend(django.contrib.auth.backends.ModelBackend):
             user.profile.save()
             return user
 
-        user.profile.attempts_count += 1
+        if hasattr(user, 'profile'):
+            user.profile.attempts_count += 1
 
-        if user.profile.attempts_count > django.conf.settings.MAX_AUTH_ATTEMPTS:
-            user.is_active = False
-            user.profile.block_date = django.utils.timezone.now()
+            if user.profile.attempts_count > django.conf.settings.MAX_AUTH_ATTEMPTS:
+                user.is_active = False
+                user.profile.block_date = django.utils.timezone.now()
 
-            if request:
-                activation_url = request.build_absolute_uri(
-                    django.urls.reverse('users:reactivate', kwargs={'pk': user.id}),
-                )
+                if request:
+                    activation_url = request.build_absolute_uri(
+                        django.urls.reverse('users:reactivate', kwargs={'pk': user.id}),
+                    )
 
-                msg = _(
-                    'We have noticed suspicious activity,'
-                    'That s why your account was blocked.'
-                    'Follow the activation link (valid for 7 days):',
-                )
-                django.core.mail.send_mail(
-                    subject=_('Account activation.'),
-                    message=f'{msg} {activation_url}',
-                    from_email=django.conf.settings.DEFAULT_FROM_EMAIL,
-                    recipient_list=[user.email],
-                    fail_silently=False,
-                )
+                    msg = _(
+                        'We have noticed suspicious activity,'
+                        'That s why your account was blocked.'
+                        'Follow the activation link (valid for 7 days):',
+                    )
+                    django.core.mail.send_mail(
+                        subject=_('Account activation.'),
+                        message=f'{msg} {activation_url}',
+                        from_email=django.conf.settings.DEFAULT_FROM_EMAIL,
+                        recipient_list=[user.email],
+                        fail_silently=False,
+                    )
 
-        user.save()
+            user.save()
+
         return None
 
     def get_user(self, user_id):

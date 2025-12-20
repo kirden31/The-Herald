@@ -107,8 +107,8 @@ class SignupViewTest(django.test.TestCase):
             'email': 'new@example.com',
             'password1': 'verystrongpass123',
             'password2': 'verystrongpass123',
-            'accept_terms': True,
         }
+
         response = self.client.post(django.urls.reverse('users:signup'), data)
         self.assertEqual(response.status_code, http.HTTPStatus.FOUND)
         self.assertTrue(users.models.User.objects.filter(username='newuser').exists())

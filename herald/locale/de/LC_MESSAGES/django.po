@@ -945,10 +945,6 @@ msgstr "Mail"
 msgid "I agree to the terms of use"
 msgstr "Ich stimme den Nutzungsbedingungen zu"
 
-#: users/forms.py:40
-msgid "You must accept the terms of use"
-msgstr "Sie müssen den Nutzungsbedingungen zustimmen"
-
 #: users/forms.py:54 users/forms.py:86
 msgid "Email"
 msgstr "E-Mail"

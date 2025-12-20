@@ -130,7 +130,7 @@ LANGUAGE_CODE = 'ru-RU'
 LANGUAGES = [
     ('en-US', _('English')),
     ('ru-RU', _('Russian')),
-('de-DE', _('German')),
+    ('de-DE', _('German')),
     ('nb-NO', _('Norwegian')),
 ]
 

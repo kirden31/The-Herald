@@ -50,24 +50,21 @@ venv\Scripts\activate
 # 4. Установка зависимостей
 pip install -r requirements/prod.txt
 
-# 5. Применение миграций
-python manage.py migrate
-
-# 6. Настройка переменных окружения
+# 5. Настройка переменных окружения
 cp template.env .env
 # Отредактируйте .env файл по необходимости
 
-# 7. Применение миграций
+# 6. Применение миграций
 cd herald
 python manage.py migrate
 
-# 8. Применение локализации
+# 7. Применение локализации
 django-admin compilemessages
 
-# 9. Создание суперпользователя
+# 8. Создание суперпользователя
 python manage.py createsuperuser
 
-# 10. Запуск сервера
+# 9. Запуск сервера
 python manage.py runserver
 ```
 

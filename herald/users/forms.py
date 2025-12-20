@@ -22,7 +22,7 @@ User = django.contrib.auth.get_user_model()
 class BootstrapFormMixin:
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        for _, field in self.fields.items():
+        for __, field in self.fields.items():
             if isinstance(field.widget, django.forms.CheckboxInput):
                 field.widget.attrs['class'] = 'form-check-input'
             else:
@@ -34,11 +34,6 @@ class SignupForm(BootstrapFormMixin, django.contrib.auth.forms.UserCreationForm)
         error_messages={'required': _('A user with this email already exists.')},
         label=_('Mail'),
     )
-    accept_terms = django.forms.BooleanField(
-        required=True,
-        label=_('I agree to the terms of use'),
-        error_messages={'required': _('You must accept the terms of use')},
-    )
 
     class Meta(django.contrib.auth.forms.UserCreationForm.Meta):
         model = users.models.User
@@ -46,29 +41,17 @@ class SignupForm(BootstrapFormMixin, django.contrib.auth.forms.UserCreationForm)
         fields = (
             users.models.User.username.field.name,
             users.models.User.email.field.name,
-            'accept_terms',
         )
 
         labels = {
             users.models.User.username.field.name: _('Login'),
             users.models.User.email.field.name: _('Email'),
-            'accept_terms': _('I agree to the terms of use'),
         }
 
         help_text = {
             users.models.User.username.field.name: _('Enter_login'),
             users.models.User.email.field.name: _('Enter email'),
         }
-
-    def clean_accept_terms(self):
-        accepted = self.cleaned_data.get('accept terms')
-        if not accepted:
-            raise django.core.exceptions.ValidationError(
-                _('To register you must accept the terms of use.'),
-                code='required',
-            )
-
-        return accepted
 
 
 class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
@@ -139,7 +122,9 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
 
 class LoginForm(BootstrapFormMixin, django.contrib.auth.forms.AuthenticationForm):
     error_messages = {
-        'invalid_login': _('Please enter the correct username and password. Both fields may be case-sensitive.'),
+        'invalid_login': _(
+            """Please enter the correct username and password.Both fields may be case-sensitive.""",
+        ),
         'inactive': _('This account is inactive.'),
     }
     username = django.forms.CharField(label=_('Login or email'))
