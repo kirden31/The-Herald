@@ -31,7 +31,6 @@ class BootstrapFormMixin:
 
 class SignupForm(BootstrapFormMixin, django.contrib.auth.forms.UserCreationForm):
     email = django.forms.EmailField(
-        error_messages={'required': _('A user with this email already exists.')},
         label=_('Mail'),
     )
 
@@ -50,7 +49,7 @@ class SignupForm(BootstrapFormMixin, django.contrib.auth.forms.UserCreationForm)
 
         help_text = {
             users.models.User.username.field.name: _('Enter_login'),
-            users.models.User.email.field.name: _('Enter email'),
+            users.models.User.email.field.name: _('Enter_email'),
         }
 
 
@@ -102,7 +101,7 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
         }
 
         help_texts = {
-            users.models.Profile.image.field.name: _('Upload your profile picture'),
+            users.models.Profile.image.field.name: _('Upload_your_profile_picture'),
         }
 
     def save(self, commit=True):
@@ -123,9 +122,9 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
 class LoginForm(BootstrapFormMixin, django.contrib.auth.forms.AuthenticationForm):
     error_messages = {
         'invalid_login': _(
-            """Please enter the correct username and password. Both fields may be case-sensitive.""",
+            'invalid_login_text',
         ),
-        'inactive': _('This account is inactive.'),
+        'inactive': _('This_account_is_inactive'),
     }
     username = django.forms.CharField(label=_('Login or email'))
     password = django.forms.CharField(

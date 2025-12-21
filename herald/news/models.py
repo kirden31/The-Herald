@@ -59,7 +59,7 @@ class FavoriteArticle(django.db.models.Model):
         ]
 
     def __str__(self):
-        return f'{self.user.username[:10]} - {self.title[:50]}'
+        return f'{self.user.username[:10]} - {self.title[:50] if self.title else None}'
 
     def to_dict(self):
         return {

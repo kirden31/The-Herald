@@ -88,8 +88,8 @@ DJANGO_MAX_AUTH_ATTEMPTS=5
 # Email (опционально)
 DEFAULT_FROM_EMAIL=<noreply@newshub.ru>
 
-NEWS_API_KEYS= <ВАШ API КЛЮЧ С NewsAPI>
-GUARDIAN_API_KEY=<ВАШ API КЛЮЧ С The Guardian>
+NEWS_API_KEYS= <ВАШИ API КЛЮЧИ С NewsAPI>
+GUARDIAN_API_KEYS=<ВАШИ API КЛЮЧИ С The Guardian>
 ```
 
 **Важно:** 

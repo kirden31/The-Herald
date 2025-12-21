@@ -1,74 +1,80 @@
 __all__ = ('FavoriteArticleAdmin',)
 
-import django.contrib
+import django.contrib.admin
 from django.utils.translation import gettext_lazy as _
 
-import news.models
+from news.models import FavoriteArticle
 
 
-@django.contrib.admin.register(news.models.FavoriteArticle)
+@django.contrib.admin.register(FavoriteArticle)
 class FavoriteArticleAdmin(django.contrib.admin.ModelAdmin):
     list_display = (
-        news.models.FavoriteArticle.user.field.name,
-        news.models.FavoriteArticle.title.field.name,
-        news.models.FavoriteArticle.published_at.field.name,
+        FavoriteArticle.user.field.name,
+        FavoriteArticle.title.field.name,
+        FavoriteArticle.published_at.field.name,
         'get_source_preview',
     )
     list_filter = (
-        news.models.FavoriteArticle.user.field.name,
-        news.models.FavoriteArticle.published_at.field.name,
+        FavoriteArticle.user.field.name,
+        FavoriteArticle.published_at.field.name,
     )
     search_fields = (
-        news.models.FavoriteArticle.title.field.name,
-        news.models.FavoriteArticle.description.field.name,
-        news.models.FavoriteArticle.user.field.name,
-        news.models.FavoriteArticle.source.field.name,
-        news.models.FavoriteArticle.author.field.name,
+        FavoriteArticle.title.field.name,
+        FavoriteArticle.description.field.name,
+        FavoriteArticle.user.field.name,
+        FavoriteArticle.source.field.name,
+        FavoriteArticle.author.field.name,
     )
-    ordering = (news.models.FavoriteArticle.published_at.field.name,)
+    ordering = (FavoriteArticle.published_at.field.name,)
     readonly_fields = (
-        news.models.FavoriteArticle.title.field.name,
-        news.models.FavoriteArticle.description.field.name,
-        news.models.FavoriteArticle.user.field.name,
-        news.models.FavoriteArticle.source.field.name,
-        news.models.FavoriteArticle.author.field.name,
-        news.models.FavoriteArticle.published_at.field.name,
-        news.models.FavoriteArticle.url.field.name,
-        news.models.FavoriteArticle.url_to_image.field.name,
+        FavoriteArticle.title.field.name,
+        FavoriteArticle.description.field.name,
+        FavoriteArticle.user.field.name,
+        FavoriteArticle.source.field.name,
+        FavoriteArticle.author.field.name,
+        FavoriteArticle.published_at.field.name,
+        FavoriteArticle.url.field.name,
+        FavoriteArticle.url_to_image.field.name,
+    )
+
+    user_and_source = (
+        FavoriteArticle.user.field.name,
+        FavoriteArticle.source.field.name,
+        FavoriteArticle.author.field.name,
+    )
+
+    news_content = (
+        FavoriteArticle.title.field.name,
+        FavoriteArticle.description.field.name,
+    )
+
+    link_and_date = (
+        FavoriteArticle.url.field.name,
+        FavoriteArticle.url_to_image.field.name,
+        FavoriteArticle.published_at.field.name,
     )
 
     fieldsets = (
         (
-            _('Пользователь и источник'),
+            _('User_and_source'),
             {
-                'fields': (
-                    news.models.FavoriteArticle.user.field.name,
-                    news.models.FavoriteArticle.source.field.name,
-                    news.models.FavoriteArticle.author.field.name,
-                ),
+                'fields': user_and_source,
             },
         ),
         (
-            _('Содержание новости'),
+            _('News_content'),
             {
-                'fields': (
-                    news.models.FavoriteArticle.title.field.name,
-                    news.models.FavoriteArticle.description.field.name,
-                ),
+                'fields': news_content,
             },
         ),
         (
-            _('Ссылки и дата'),
+            _('Link_and_date'),
             {
-                'fields': (
-                    news.models.FavoriteArticle.url.field.name,
-                    news.models.FavoriteArticle.url_to_image.field.name,
-                    news.models.FavoriteArticle.published_at.field.name,
-                ),
+                'fields': link_and_date,
             },
         ),
     )
 
-    @django.contrib.admin.display(description=_('Источник'))
+    @django.contrib.admin.display(description=_('Source'))
     def get_source_preview(self, obj):
         return obj.source[:50] + '...' if obj.source and len(obj.source) > 50 else obj.source

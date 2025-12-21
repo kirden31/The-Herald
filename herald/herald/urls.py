@@ -5,8 +5,6 @@ import django.urls
 
 import herald.views
 
-app_name = 'herald'
-
 urlpatterns = [
     django.urls.path('', herald.views.HomeView.as_view()),
     django.urls.path('news/', django.urls.include('news.urls')),

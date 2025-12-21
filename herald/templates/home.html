@@ -2,7 +2,7 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}{% trans "Herald" %} - {% trans "All news in one place" %}{% endblock %}
+{% block title %}{% trans "Herald" %} - {% trans "All_news_in_one_place" %}{% endblock %}
 
 {% block content %}
 <div class="min-vh-100 d-flex flex-column justify-content-center">
@@ -15,10 +15,10 @@
                         <i class="bi bi-compass"></i>
                     </h1>
                     <h1 class="display-4 fw-bold mb-3">
-                        {% trans "The_Herald" %}
+                        {% trans "Herald" %}
                     </h1>
                     <p class="lead text-muted mb-0">
-                        {% trans "Find. Read. Stay informed." %}
+                        {% trans "Find_Read_Stay_informed" %}
                     </p>
                 </div>
 
@@ -29,7 +29,7 @@
                                     type="text"
                                     name="query"
                                     class="form-control form-control-lg border-3 py-3 px-4 rounded-pill shadow-sm"
-                                    placeholder="🔍 Ищите новости по теме..."
+                                    placeholder="🔍 ..."
                                     style="font-size: 1.1rem;"
                                     autocomplete="off"
                                     autofocus>
@@ -46,7 +46,7 @@
                     <p class="text-secondary">
                         <small>
                             <i class="bi bi-info-circle me-1"></i>
-                            {% trans "Start by searching or go to" %}
+                            {% trans "Start_by_searching_or_go_to" %}
                             <a href="{% url 'news:top_headlines_news' %}" class="text-decoration-none">
                                 {% trans "main news" %}
                             </a>

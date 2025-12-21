@@ -80,7 +80,7 @@ class TopHeadlinesNews(NewsApiBaseView):
         if params.get('sources') and (params.get('category') or params.get('country')):
             django.contrib.messages.error(
                 self.request,
-                _('You cannot select sources together with country or category'),
+                _('You_cannot_select_sources_together_with_country_or_category'),
             )
 
         try:
@@ -94,7 +94,8 @@ class TopHeadlinesNews(NewsApiBaseView):
         response = api.newsApi.NewsApi().get_news_list(endpoint, params)
 
         news_list = response.get('news', [])
-        news_list = news.services.enrich_with_favorites(news_list, request.user)
+        if request.user:
+            news_list = news.services.enrich_with_favorites(news_list, request.user)
 
         max_page = math.ceil(response.get('total', 0) / self.page_size)
         pages_view_list = self.get_view_pages_numbers(cur_page, max_page)
@@ -150,6 +151,10 @@ class EverythingNews(NewsApiBaseView):
 
         if not (params['q'] or params['sources']):
             params['q'] = self.default_query
+            django.contrib.messages.warning(
+                request,
+                f'{_("Used_default_query")}: {self.default_query}',
+            )
 
         try:
             cur_page = max(int(request.GET.get('page', '1')), 1)
@@ -162,7 +167,8 @@ class EverythingNews(NewsApiBaseView):
         response = api.newsApi.NewsApi().get_news_list(endpoint, params)
 
         news_list = response.get('news', [])
-        news_list = news.services.enrich_with_favorites(news_list, request.user)
+        if request.user:
+            news_list = news.services.enrich_with_favorites(news_list, request.user)
 
         max_page = math.ceil(response.get('total', 0) / self.page_size)
         pages_view_list = self.get_view_pages_numbers(cur_page, max_page)
@@ -228,7 +234,9 @@ class GuardianNews(NewsApiBaseView):
         response = api.guardianApi.GuardianApi().get_news_list(endpoint, params)
 
         news_list = response.get('news', [])
-        news_list = news.services.enrich_with_favorites(news_list, request.user)
+
+        if request.user:
+            news_list = news.services.enrich_with_favorites(news_list, request.user)
 
         max_page = response.get('pages', 0)
         pages_view_list = self.get_view_pages_numbers(cur_page, max_page)
@@ -317,28 +325,33 @@ class FavoritesView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.
 
 class SaveFavoriteView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.View):
     def post(self, request, *_args, **_kwargs):
-        url = request.POST.get('url')
+        data = request.POST
+
+        url = data.get('url')
+
         if not url:
             return django.http.JsonResponse(
                 {'error': 'URL is required'},
                 status=HTTPStatus.BAD_REQUEST,
             )
 
-        deleted, _ = news.models.FavoriteArticle.objects.filter(user=request.user, url=url).delete()
-        if deleted:
+        favorite, created = news.models.FavoriteArticle.objects.get_or_create(
+            user=request.user,
+            url=url,
+            defaults={
+                'title': data.get('title'),
+                'description': data.get('description'),
+                'content': data.get('content'),
+                'url_to_image': data.get('url_to_image'),
+                'source': data.get('source'),
+                'author': data.get('author'),
+                'published_at': data.get('published_at'),
+                'category': data.get('category'),
+            },
+        )
+
+        if not created:
+            favorite.delete()
             return django.http.JsonResponse({'status': 'removed'}, status=HTTPStatus.OK)
 
-        data = request.POST
-        news.models.FavoriteArticle.objects.create(
-            user=request.user,
-            title=data.get('title'),
-            description=data.get('description'),
-            content=data.get('content'),
-            url=url,
-            url_to_image=data.get('url_to_image'),
-            source=data.get('source'),
-            author=data.get('author'),
-            published_at=data.get('published_at'),
-            category=data.get('category'),
-        )
         return django.http.JsonResponse({'status': 'added'}, status=HTTPStatus.CREATED)

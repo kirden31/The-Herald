@@ -1,3 +1,15 @@
+__all__ = (
+    'LANGUAGE_CHOICES',
+    'COUNTRIES_CHOICES_NEWS',
+    'get_sources_choices',
+    'get_sections_choices',
+    'CATEGORIES_CHOICES',
+    'SORT_BY_CHOICES',
+    'ORDER_BY_CHOICES',
+    'COUNTRIES_CHOICES_SOURCES',
+    'RATING_CHOICES',
+)
+
 from django.utils.translation import gettext_lazy as _
 
 import api.guardianApi
@@ -12,7 +24,7 @@ LANGUAGE_CHOICES = [
     ('he', _('Hebrew')),
     ('it', _('Italian')),
     ('nl', _('Dutch')),
-    ('no', f"{_('Norwegian Bokmål')} / {_('Norwegian Nynorsk')}"),
+    ('no', f"{_('Norwegian_Bokmal')} / {_('Norwegian_Nynorsk')}"),
     ('pt', _('Portuguese')),
     ('ru', _('Russian')),
     ('sv', _('Swedish')),
@@ -31,11 +43,16 @@ SEARCH_IN_CHOICES = (
     (CONTENT, _('Content')),
 )
 
-sources_response = api.newsApi.NewsApi().get_sources_list()
-SOURCES_CHOICES = [(s['id'], s['name']) for s in sources_response['sources']]
 
-sections = api.guardianApi.GuardianApi().get_sections_list()
-SECTIONS_CHOICES = [(s['id'], s['webTitle']) for s in sections['sections']]
+def get_sources_choices():
+    response = api.newsApi.NewsApi().get_sources_list()
+    return [(s['id'], s['name']) for s in response['sources']]
+
+
+def get_sections_choices():
+    sections = api.guardianApi.GuardianApi().get_sections_list()
+    return [(s['id'], s['webTitle']) for s in sections['sections']]
+
 
 BUSINESS = 'business'
 ENTERTAINMENT = 'entertainment'

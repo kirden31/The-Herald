@@ -7,7 +7,7 @@ import django.core.exceptions
 import django.core.mail
 import django.core.validators
 import django.urls
-import django.utils
+import django.utils.timezone
 from django.utils.translation import gettext_lazy as _
 
 import users.models
@@ -47,13 +47,9 @@ class ConfigAuthBackend(django.contrib.auth.backends.ModelBackend):
                     django.urls.reverse('users:account_reactivate', kwargs={'pk': user.id}),
                 )
 
-                msg = _(
-                    'We have noticed suspicious activity,'
-                    'That s why your account was blocked.'
-                    'Follow the activation link (valid for 7 days):',
-                )
+                msg = _('account_activation_mail_text')
                 django.core.mail.send_mail(
-                    subject=_('Account activation.'),
+                    subject=_('Account_activation'),
                     message=f'{msg} {activation_url}',
                     from_email=django.conf.settings.DEFAULT_FROM_EMAIL,
                     recipient_list=[user.email],

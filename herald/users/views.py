@@ -82,7 +82,7 @@ class SignUpView(django.views.generic.CreateView):
 
         django.contrib.messages.success(
             self.request,
-            _('Registration successful! Welcome!'),
+            _('Registration_successful_Welcome'),
         )
 
         return response
@@ -96,12 +96,6 @@ class SignUpView(django.views.generic.CreateView):
 
 class ProfileView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.generic.TemplateView):
     template_name = 'users/profile.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        user = self.request.user
-        context['favorite_count'] = user.favorite_articles.count()
-        return context
 
 
 class ProfileUpdateView(

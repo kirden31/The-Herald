@@ -39,7 +39,7 @@ class SortEverythingForm(django.forms.Form):
 
 class SortGuardianForm(django.forms.Form):
     sort_by = django.forms.ChoiceField(
-        label=_('Sort by'),
+        label=_('Sort_by'),
         choices=news.forms_data.ORDER_BY_CHOICES,
         initial=news.forms_data.NEWEST,
         required=False,
@@ -67,7 +67,7 @@ class EverythingFiltersForm(django.forms.Form):
 
     sources = django.forms.MultipleChoiceField(
         label=_('Select_sources_max_default_all'),
-        choices=news.forms_data.SOURCES_CHOICES,
+        choices=[],
         widget=django.forms.SelectMultiple(
             attrs={
                 'class': 'js-example-basic-multiple',
@@ -118,6 +118,10 @@ class EverythingFiltersForm(django.forms.Form):
         required=False,
     )
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['sources'].choices = news.forms_data.get_sources_choices()
+
 
 class TopHeadlinesFilterForm(django.forms.Form):
     country = django.forms.MultipleChoiceField(
@@ -146,7 +150,7 @@ class TopHeadlinesFilterForm(django.forms.Form):
 
     sources = django.forms.MultipleChoiceField(
         label=_('Select_sources_default_all'),
-        choices=news.forms_data.SOURCES_CHOICES,
+        choices=[],
         widget=django.forms.SelectMultiple(
             attrs={
                 'class': 'js-example-basic-multiple',
@@ -156,6 +160,10 @@ class TopHeadlinesFilterForm(django.forms.Form):
         ),
         required=False,
     )
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['sources'].choices = news.forms_data.get_sources_choices()
 
 
 class SourcesFilterForm(django.forms.Form):
@@ -200,7 +208,7 @@ class SourcesFilterForm(django.forms.Form):
 class GuardianFiltersForm(django.forms.Form):
     section = django.forms.MultipleChoiceField(
         label=_('Sections'),
-        choices=news.forms_data.SECTIONS_CHOICES,
+        choices=[],
         widget=django.forms.SelectMultiple(
             attrs={
                 'class': 'js-example-basic-multiple',
@@ -241,3 +249,7 @@ class GuardianFiltersForm(django.forms.Form):
         ),
         required=False,
     )
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['section'].choices = news.forms_data.get_sections_choices()

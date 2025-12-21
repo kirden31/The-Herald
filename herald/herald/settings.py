@@ -131,7 +131,9 @@ LANGUAGES = [
     ('en-US', _('English')),
     ('ru-RU', _('Russian')),
     ('de-DE', _('German')),
-    ('nb-NO', _('Norwegian')),
+    ('nb-NO', _('Norwegian Bokmål')),
+    ('fr-FR', _('French')),
+    ('es-ES', _('Spanish')),
 ]
 
 LOGIN_URL = django.urls.reverse_lazy('users:login')
