@@ -1,4 +1,4 @@
-[![pipeline status](https://gitlab.crja72.ru/django/2025/autumn/course/students/216206-yzavitova-course-1474/badges/main/pipeline.svg)](https://gitlab.crja72.ru/django/2025/autumn/course/students/216206-yzavitova-course-1474/-/commits/main)
+![CI](https://github.com/kirden31/The-Herald/actions/workflows/ci.yml/badge.svg)
 [![Python](https://img.shields.io/badge/python-3.10%20|%203.11%20|%203.12-blue)](https://www.python.org/)
 [![Django](https://img.shields.io/badge/django-5.2-green)](https://www.django.org/)
 
@@ -93,7 +93,7 @@ GUARDIAN_API_KEYS=<ВАШИ API КЛЮЧИ С The Guardian>
 ```
 
 **Важно:** 
-В `DJANGO_ALLOWED_HOSTS`, `NEWS_API_KEYS` и `GUARDIAN_API_KEY` указывайте хосты через пробел, без запятых!
+В `DJANGO_ALLOWED_HOSTS`, `NEWS_API_KEYS` и `GUARDIAN_API_KEYS` указывайте значения через _пробел_, **без запятых**!
 
 ### Настройки для разработки
 
@@ -102,6 +102,45 @@ GUARDIAN_API_KEYS=<ВАШИ API КЛЮЧИ С The Guardian>
 ```bash
 # Установка зависимостей для разработки
 pip install -r requirements/dev.txt
+```
+
+### Команды разработки
+- За подробностями обращайтесь к документации [Django](https://docs.djangoproject.com/en/6.0/)
+
+```bash
+# Создание миграций
+python manage.py makemigrations
+
+# Применение миграций
+python manage.py migrate
+
+# Создание суперпользователя
+python manage.py createsuperuser
+
+# Запуск тестов
+python manage.py test
+
+# Сбор статических файлов
+python manage.py collectstatic
+
+# Создание дампа базы данных
+python manage.py dumpdata <ПРИЛОЖЕНИЕ> > <ПУТЬ СОЗДАНИЯ>
+
+# Загрузка тестовых данных
+python manage.py loaddata fixtures/data.json
+```
+
+### Настройка переводов
+
+```bash
+# Создание файлов перевода
+django-admin makemessages -l <КОД ЯЗЫКА>
+
+# Редактирование файлов перевода
+# Отредактируйте locale/<КОД ЯЗЫКА>/LC_MESSAGES/django.po
+
+# Компиляция переводов
+django-admin compilemessages
 ```
 
 ## 🎯 Использование
@@ -143,45 +182,6 @@ pip install -r requirements/dev.txt
 | **NewsAPI**      | Основной поиск новостей, топ новости, источники | 100 запросов/день |
 | **The Guardian** | Поиск новостей с The Guardian                   | 500 запросов/день |
 ## 🛠 Разработка
-
-### Команды разработки
-- За подробностями обращайтесь к документации [Django](https://docs.djangoproject.com/en/6.0/)
-
-```bash
-# Создание миграций
-python manage.py makemigrations
-
-# Применение миграций
-python manage.py migrate
-
-# Создание суперпользователя
-python manage.py createsuperuser
-
-# Запуск тестов
-python manage.py test
-
-# Сбор статических файлов
-python manage.py collectstatic
-
-# Создание дампа базы данных
-python manage.py dumpdata <ПРИЛОЖЕНИЕ> > <ПУТЬ СОЗДАНИЯ>
-
-# Загрузка тестовых данных
-python manage.py loaddata fixtures/data.json
-```
-
-### Настройка переводов
-
-```bash
-# Создание файлов перевода
-django-admin makemessages -l <КОД ЯЗЫКА>
-
-# Редактирование файлов перевода
-# Отредактируйте locale/<КОД ЯЗЫКА>/LC_MESSAGES/django.po
-
-# Компиляция переводов
-django-admin compilemessages
-```
 
 ## 🚀 Деплой
 
