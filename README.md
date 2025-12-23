@@ -1,4 +1,4 @@
-![CI](https://github.com/kirden31/The-Herald/blob/kirden31-create-ci/.github/workflows/ci.yml/badge.svg)
+![CI](https://github.com/kirden31/The-Herald/actions/workflows/ci.yml/badge.svg)
 [![Python](https://img.shields.io/badge/python-3.10%20|%203.11%20|%203.12-blue)](https://www.python.org/)
 [![Django](https://img.shields.io/badge/django-5.2-green)](https://www.django.org/)
 
