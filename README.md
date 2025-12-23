@@ -1,4 +1,4 @@
-[![pipeline status](https://gitlab.crja72.ru/django/2025/autumn/course/students/216206-yzavitova-course-1474/badges/main/pipeline.svg)](https://gitlab.crja72.ru/django/2025/autumn/course/students/216206-yzavitova-course-1474/-/commits/main)
+![CI](https://github.com/kirden31/The-Herald/blob/kirden31-create-ci/.github/workflows/ci.yml/badge.svg)
 [![Python](https://img.shields.io/badge/python-3.10%20|%203.11%20|%203.12-blue)](https://www.python.org/)
 [![Django](https://img.shields.io/badge/django-5.2-green)](https://www.django.org/)
 
