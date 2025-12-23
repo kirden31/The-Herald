@@ -87,10 +87,10 @@ def mocked_requests_get(*args, **kwargs):
             self.status_code = status_code
 
         def json(self):
-            return self.json_data
+            return self.json_data or {}
 
         def url(self):
-            return self.url_data
+            return self.url_data or ''
 
     if args[0] == 'https://newsapi.org/v2/everything':
         return MockResponse(news_api_data_news, 200)

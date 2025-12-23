@@ -10,7 +10,7 @@
             <div class="card-body p-4">
                 <div class="text-center mb-4">
                     <h2 class="card-title">{% trans "Login" %}</h2>
-                    <p class="text-muted">{% trans "Enter your credentials" %}</p>
+                    <p class="text-muted">{% trans "Enter_your_credentials" %}</p>
                 </div>
                 
                 <form method="post" novalidate>
@@ -52,15 +52,6 @@
                         </div>
                         {% endif %}
                     </div>
-                    
-                    <div class="mb-4">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="remember_me" name="remember_me">
-                            <label class="form-check-label" for="remember_me">
-                                {% trans "Remember me" %}
-                            </label>
-                        </div>
-                    </div>
 
                     <div class="d-grid gap-2 mb-3">
                         <button type="submit" class="btn btn-primary">
@@ -71,11 +62,11 @@
                     <div class="text-center">
                         <p class="mb-2">
                             <a href="{% url 'users:password_reset' %}" class="text-decoration-none">
-                                {% trans "Forgot your password?" %}
+                                {% trans "Forgot_your_password" %}
                             </a>
                         </p>
                         <p class="mb-0">
-                            {% trans "Don't have an account?" %}
+                            {% trans "Dont_have_an_account" %}
                             <a href="{% url 'users:signup' %}" class="text-decoration-none">
                                 {% trans "Register" %}
                             </a>

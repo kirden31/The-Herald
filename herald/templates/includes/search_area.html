@@ -1,7 +1,9 @@
 {% load static %}
 {% load i18n %}
 <link href="{% static 'css/select2.min.css' %}" rel="stylesheet">
+
 {{ search_form.query }}
+{{ sort_form.sort_by }}
 
 {% if search_form %}
 <button class="btn btn-primary ms-2" type="submit">
@@ -44,11 +46,22 @@
 <script src="{% static 'js/jQuery.js' %}"></script>
 <script src="{% static 'js/select2.js' %}"></script>
 <script>
-    $(document).ready(function() {
-        $('#exampleModal').on('shown.bs.modal', function () {
-            $('.js-example-basic-multiple').select2({
-                dropdownParent: $('#exampleModal')
-            });
+$(document).ready(function () {
+
+    // sort select — вне модалки
+    $('.js-sort').select2();
+
+    // автосабмит при выборе
+    $('.js-sort').on('change', function () {
+        $(this).closest('form').submit();
+    });
+
+    // select2 внутри модального окна
+    $('#exampleModal').on('shown.bs.modal', function () {
+        $(this).find('.js-example-basic-multiple').select2({
+            dropdownParent: $('#exampleModal')
         });
     });
+
+});
 </script>

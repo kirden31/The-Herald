@@ -15,16 +15,20 @@
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'news:top_headlines_news' %}">{% trans "Top_headlines" %}</a>
+                    <a class="nav-link {% if request.resolver_match.url_name == 'top_headlines_news' %}active{% endif %}"
+                       href="{% url 'news:top_headlines_news' %}">{% trans "Top_headlines" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'news:top_headlines_sources' %}">{% trans "Sources" %}</a>
+                    <a class="nav-link {% if request.resolver_match.url_name == 'top_headlines_sources' %}active{% endif %}"
+                       href="{% url 'news:top_headlines_sources' %}">{% trans "Sources" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'news:everything_news' %}">{% trans "Everything" %}</a>
+                    <a class="nav-link {% if request.resolver_match.url_name == 'everything_news' %}active{% endif %}"
+                       href="{% url 'news:everything_news' %}">{% trans "Everything" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'news:guardian_news' %}">{% trans "Guardian" %}</a>
+                    <a class="nav-link {% if request.resolver_match.url_name == 'guardian_news' %}active{% endif %}"
+                       href="{% url 'news:guardian_news' %}">{% trans "Guardian" %}</a>
                 </li>
             </ul>
 
@@ -86,7 +90,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="btn btn-outline-primary btn-sm ms-2" href="{% url 'users:signup' %}">
-                        {% trans "Sing_up" %}
+                        {% trans "Sign_up" %}
                     </a>
                 </li>
                 {% endif %}

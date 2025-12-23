@@ -67,37 +67,44 @@ class Profile(django.db.models.Model):
         django.conf.settings.AUTH_USER_MODEL,
         on_delete=django.db.models.CASCADE,
         related_name='profile',
-        verbose_name=_('user'),
+        verbose_name=_('User'),
     )
     image = django.db.models.ImageField(
         upload_to=image_path,
         blank=True,
         null=True,
-        verbose_name=_('avatar'),
-        help_text=_('User avatar.'),
+        verbose_name=_('Avatar'),
+        help_text=_('User_avatar'),
     )
     birthday = django.db.models.DateField(
         blank=True,
         null=True,
         validators=[users.validators.ValidateBirthdayDate()],
-        verbose_name=_('date of birth'),
-        help_text=_('User date of birth.'),
+        verbose_name=_('Date_of_birth'),
+        help_text=_('User_date_of_birth'),
     )
     location = django.db.models.CharField(
         blank=True,
         null=True,
-        help_text=_('The user city (or country) of residence.'),
+        help_text=_('location_help_text'),
+        # The_user_city_(or_country)_of_residence
     )
     attempts_count = django.db.models.PositiveBigIntegerField(
         default=0,
-        verbose_name=_('attempts'),
-        help_text=_('Number of login attempts'),
+        verbose_name=_('Attempts'),
+        help_text=_('Number_of_login_attempts'),
     )
     favorite_categories = django.db.models.JSONField(
         default=list,
         blank=True,
-        verbose_name=_('favorite categories'),
-        help_text=_('Favorite categories'),
+        verbose_name=_('Favorite_categories'),
+        help_text=_('Favorite_categories'),
+    )
+    blocked_at = django.db.models.DateTimeField(
+        verbose_name=_('deactivate in'),
+        help_text=_('account was deactivated'),
+        null=True,
+        editable=False,
     )
 
     def get_image_300x300(self):

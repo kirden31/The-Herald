@@ -30,10 +30,9 @@ class NewsApiBaseView(django.views.View):
         return range(left_page, right_page + 1)
 
     @staticmethod
-    def get_random_favorite_category(request, form, query):
+    def get_random_favorite_category(request, form, query, country):
         cat = form.cleaned_data.get('category')
-
-        if cat or query:
+        if cat or query or country[-1]:
             return cat
 
         if request.user:
@@ -65,12 +64,18 @@ class TopHeadlinesNews(NewsApiBaseView):
 
         params = {
             'q': search_form.cleaned_data.get('query'),
-            'country': ','.join(filters_form.cleaned_data.get('country')),
             'sources': filters_form.cleaned_data.get('sources'),
             'pageSize': self.page_size,
         }
 
-        params['category'] = self.get_random_favorite_category(request, filters_form, params['q'])
+        if not params['sources']:
+            params['country'] = (','.join(filters_form.cleaned_data.get('country')),)
+            params['category'] = self.get_random_favorite_category(
+                request,
+                filters_form,
+                params['q'],
+                params['country'],
+            )
 
         if params.get('sources') and (params.get('category') or params.get('country')):
             django.contrib.messages.error(
@@ -89,7 +94,8 @@ class TopHeadlinesNews(NewsApiBaseView):
         response = api.newsApi.NewsApi().get_news_list(endpoint, params)
 
         news_list = response.get('news', [])
-        news_list = news.services.enrich_with_favorites(news_list, request.user)
+        if request.user:
+            news_list = news.services.enrich_with_favorites(news_list, request.user)
 
         max_page = math.ceil(response.get('total', 0) / self.page_size)
         pages_view_list = self.get_view_pages_numbers(cur_page, max_page)
@@ -117,12 +123,14 @@ class EverythingNews(NewsApiBaseView):
     def get(self, request, *_args, **_kwargs):
         search_form = news.forms.SearchForm(request.GET)
         filters_form = news.forms.EverythingFiltersForm(request.GET)
+        sort_form = news.forms.SortEverythingForm(request.GET)
 
-        if not (search_form.is_valid() and filters_form.is_valid()):
+        if not (search_form.is_valid() and filters_form.is_valid() and sort_form.is_valid()):
             django.contrib.messages.error(request, _('Forms_error'))
             context = {
                 'search_form': search_form,
                 'filters_form': filters_form,
+                'sort_form': sort_form,
                 'news': [],
                 'max_page': 0,
                 'cur_page': 1,
@@ -131,15 +139,22 @@ class EverythingNews(NewsApiBaseView):
             return django.shortcuts.render(request, self.template_name, context)
 
         params = {
-            'q': search_form.cleaned_data.get('query') or self.default_query,
+            'q': search_form.cleaned_data.get('query'),
+            'sortBy': sort_form.cleaned_data.get('sort_by'),
             'searchIn': ','.join(filters_form.cleaned_data.get('search_in')),
             'sources': ','.join(filters_form.cleaned_data.get('sources')),
             'from': filters_form.cleaned_data.get('_from'),
             'to': filters_form.cleaned_data.get('to'),
-            'language': ','.join(filters_form.cleaned_data.get('language'))
-            or request.LANGUAGE_CODE.split('-')[0],
+            'language': ','.join(filters_form.cleaned_data.get('language')),
             'pageSize': self.page_size,
         }
+
+        if not (params['q'] or params['sources']):
+            params['q'] = self.default_query
+            django.contrib.messages.warning(
+                request,
+                f'{_("Used_default_query")}: {self.default_query}',
+            )
 
         try:
             cur_page = max(int(request.GET.get('page', '1')), 1)
@@ -152,7 +167,8 @@ class EverythingNews(NewsApiBaseView):
         response = api.newsApi.NewsApi().get_news_list(endpoint, params)
 
         news_list = response.get('news', [])
-        news_list = news.services.enrich_with_favorites(news_list, request.user)
+        if request.user:
+            news_list = news.services.enrich_with_favorites(news_list, request.user)
 
         max_page = math.ceil(response.get('total', 0) / self.page_size)
         pages_view_list = self.get_view_pages_numbers(cur_page, max_page)
@@ -160,6 +176,7 @@ class EverythingNews(NewsApiBaseView):
         context = {
             'search_form': search_form,
             'filters_form': filters_form,
+            'sort_form': sort_form,
             'news': news_list,
             'max_page': max_page,
             'cur_page': cur_page,
@@ -175,17 +192,18 @@ class EverythingNews(NewsApiBaseView):
 
 class GuardianNews(NewsApiBaseView):
     template_name = 'news/guardian_news.html'
-    default_query = ''
 
     def get(self, request, *_args, **_kwargs):
         search_form = news.forms.SearchForm(request.GET)
         filters_form = news.forms.GuardianFiltersForm(request.GET)
+        sort_form = news.forms.SortGuardianForm(request.GET)
 
-        if not (search_form.is_valid() and filters_form.is_valid()):
+        if not (search_form.is_valid() and filters_form.is_valid() and sort_form.is_valid()):
             django.contrib.messages.error(request, _('Forms_error'))
             context = {
                 'search_form': search_form,
                 'filters_form': filters_form,
+                'sort_form': sort_form,
                 'news': [],
                 'max_page': 0,
                 'cur_page': 1,
@@ -195,6 +213,7 @@ class GuardianNews(NewsApiBaseView):
 
         params = {
             'q': search_form.cleaned_data.get('query'),
+            'order-by': sort_form.cleaned_data.get('sort_by'),
             'section': filters_form.cleaned_data.get('section'),
             'star-rating': filters_form.cleaned_data.get('star_rating'),
             'from-date': filters_form.cleaned_data.get('_from'),
@@ -215,7 +234,9 @@ class GuardianNews(NewsApiBaseView):
         response = api.guardianApi.GuardianApi().get_news_list(endpoint, params)
 
         news_list = response.get('news', [])
-        news_list = news.services.enrich_with_favorites(news_list, request.user)
+
+        if request.user:
+            news_list = news.services.enrich_with_favorites(news_list, request.user)
 
         max_page = response.get('pages', 0)
         pages_view_list = self.get_view_pages_numbers(cur_page, max_page)
@@ -223,6 +244,7 @@ class GuardianNews(NewsApiBaseView):
         context = {
             'search_form': search_form,
             'filters_form': filters_form,
+            'sort_form': sort_form,
             'news': news_list,
             'max_page': max_page,
             'cur_page': cur_page,
@@ -238,7 +260,6 @@ class GuardianNews(NewsApiBaseView):
 
 class NewsApiSources(NewsApiBaseView):
     template_name = 'news/sources_list.html'
-    default_query = ''
 
     def get(self, request, *_args, **_kwargs):
         filters_form = news.forms.SourcesFilterForm(request.GET)
@@ -304,28 +325,33 @@ class FavoritesView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.
 
 class SaveFavoriteView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.View):
     def post(self, request, *_args, **_kwargs):
-        url = request.POST.get('url')
+        data = request.POST
+
+        url = data.get('url')
+
         if not url:
             return django.http.JsonResponse(
                 {'error': 'URL is required'},
                 status=HTTPStatus.BAD_REQUEST,
             )
 
-        deleted, _ = news.models.FavoriteArticle.objects.filter(user=request.user, url=url).delete()
-        if deleted:
+        favorite, created = news.models.FavoriteArticle.objects.get_or_create(
+            user=request.user,
+            url=url,
+            defaults={
+                'title': data.get('title'),
+                'description': data.get('description'),
+                'content': data.get('content'),
+                'url_to_image': data.get('url_to_image'),
+                'source': data.get('source'),
+                'author': data.get('author'),
+                'published_at': data.get('published_at'),
+                'category': data.get('category'),
+            },
+        )
+
+        if not created:
+            favorite.delete()
             return django.http.JsonResponse({'status': 'removed'}, status=HTTPStatus.OK)
 
-        data = request.POST
-        news.models.FavoriteArticle.objects.create(
-            user=request.user,
-            title=data.get('title'),
-            description=data.get('description'),
-            content=data.get('content'),
-            url=url,
-            url_to_image=data.get('url_to_image'),
-            source=data.get('source'),
-            author=data.get('author'),
-            published_at=data.get('published_at'),
-            category=data.get('category'),
-        )
         return django.http.JsonResponse({'status': 'added'}, status=HTTPStatus.CREATED)

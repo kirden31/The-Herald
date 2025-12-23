@@ -2,7 +2,7 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}{% trans "User profile" %}{% endblock %}
+{% block title %}{% trans "User_profile" %}{% endblock %}
 
 {% block content %}
 <div class="row">
@@ -34,17 +34,6 @@
                         <i class="bi bi-bookmark me-2"></i>{% trans "My bookmarks" %}
                     </a>
 
-                </div>
-
-                <div class="row text-center mt-3">
-                    <div class="col-6">
-                        <h5 class="text-primary">{{ favorite_count }}</h5>
-                        <small class="text-muted">{% trans "Bookmarks" %}</small>
-                    </div>
-                    <div class="col-6">
-                        <h5 class="text-success">0</h5>
-                        <small class="text-muted">{% trans "Searches" %}</small>
-                    </div>
                 </div>
             </div>
         </div>
@@ -78,11 +67,11 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label class="form-label text-muted">{% trans "Name" %}</label>
-                        <p class="form-control-plaintext">{{ user.first_name|default:_("Not specified") }}</p>
+                        <p class="form-control-plaintext">{{ user.first_name|default:_("Not_specified") }}</p>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label text-muted">{% trans "Surname" %}</label>
-                        <p class="form-control-plaintext">{{ user.last_name|default:_("Not specified") }}</p>
+                        <p class="form-control-plaintext">{{ user.last_name|default:_("Not_specified") }}</p>
                     </div>
                 </div>
 
@@ -90,17 +79,17 @@
                     <div class="col-md-6">
                         <label class="form-label text-muted">{% trans "Date of birth" %}</label>
                         <p class="form-control-plaintext">
-                            {% if user.profile.birth_date %}
-                            {{ user.profile.birth_date|date:"d.m.Y" }}
+                            {% if user.profile.birthday %}
+                            {{ user.profile.birthday|date:"d.m.Y" }}
                             {% else %}
-                            {% trans "Not specified" %}
+                            {% trans "Not_specified" %}
                             {% endif %}
                         </p>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label text-muted">{% trans "Location" %}</label>
                         <p class="form-control-plaintext">
-                            {{ user.profile.location|default:_("Not specified") }}
+                            {{ user.profile.location|default:_("Not_specified") }}
                         </p>
                     </div>
                 </div>

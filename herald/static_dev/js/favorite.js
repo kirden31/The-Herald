@@ -6,40 +6,40 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('.favorite-btn');
-      const originalHTML = btn.innerHTML;
+      const icon = btn.querySelector('i');
+      const status = btn.querySelector('.favorite-status');
       btn.disabled = true;
-      btn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>';
+
+      const originalIconClass = icon.className;
+      icon.className = 'spinner-border spinner-border-sm';
 
       const csrfToken = form.querySelector('[name=csrfmiddlewaretoken]').value;
-
       const url = form.action || '/news/save-favorite/';
 
       try {
         const response = await fetch(url, {
           method: 'POST',
           body: new FormData(form),
-          headers: {
-            'X-CSRFToken': csrfToken,
-          }
+          headers: { 'X-CSRFToken': csrfToken }
         });
 
         const result = await response.json();
 
         if (response.ok) {
           if (result.status === 'added') {
-            btn.className = 'btn btn-sm btn-warning favorite-btn';
-            btn.innerHTML = '<i class="bi bi-bookmark-star-fill"></i> В избранном';
+            icon.className = 'bi bi-bookmark-star-fill';
+            status.textContent = '✔️';
           } else if (result.status === 'removed') {
-            btn.className = 'btn btn-sm btn-outline-warning favorite-btn';
-            btn.innerHTML = '<i class="bi bi-bookmark"></i> Сохранить';
+            icon.className = 'bi bi-bookmark';
+            status.textContent = '❌';
           }
         } else {
-          btn.innerHTML = originalHTML;
-          alert('Не удалось обновить избранное.');
+          icon.className = originalIconClass;
+          alert('Failed to update favorites');
         }
       } catch (err) {
-        btn.innerHTML = originalHTML;
-        alert('Ошибка сети.');
+        icon.className = originalIconClass;
+        alert('Network error');
       } finally {
         btn.disabled = false;
       }
