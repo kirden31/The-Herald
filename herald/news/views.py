@@ -153,7 +153,10 @@ class EverythingNews(NewsApiBaseView):
             params['q'] = self.default_query
             django.contrib.messages.warning(
                 request,
-                f'{_("Used_default_query")}: {self.default_query}',
+                '{message}: {default_query}'.format(
+                    message=_("Used_default_query"),
+                    default_query=self.default_query,
+                ),
             )
 
         try:
