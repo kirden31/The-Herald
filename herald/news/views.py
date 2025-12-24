@@ -154,7 +154,7 @@ class EverythingNews(NewsApiBaseView):
             django.contrib.messages.warning(
                 request,
                 '{message}: {default_query}'.format(
-                    message=_("Used_default_query"),
+                    message=_('Used_default_query'),
                     default_query=self.default_query,
                 ),
             )
