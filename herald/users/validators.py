@@ -1,4 +1,4 @@
-__all__ = ('ValidateBirthdayDate','ValidateMaxFileSize')
+__all__ = ('ValidateBirthdayDate', 'ValidateMaxFileSize')
 
 import datetime
 
@@ -25,6 +25,7 @@ class ValidateBirthdayDate:
             )
 
         return date_value
+
 
 @django.utils.deconstruct.deconstructible
 class ValidateMaxFileSize:

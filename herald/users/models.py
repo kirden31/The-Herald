@@ -75,7 +75,7 @@ class Profile(django.db.models.Model):
         null=True,
         verbose_name=_('Avatar'),
         help_text=_('User_avatar'),
-        validators=[users.validators.ValidateMaxFileSize()]
+        validators=[users.validators.ValidateMaxFileSize()],
     )
     birthday = django.db.models.DateField(
         blank=True,
