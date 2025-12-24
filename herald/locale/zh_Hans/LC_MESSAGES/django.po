@@ -3,481 +3,481 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-23 18:23+0300\n"
-"PO-Revision-Date: 2025-12-21 00:00+0000\n"
-"Last-Translator: Translator Name <translator@example.com>\n"
-"Language-Team: German <de@li.org>\n"
-"Language: de\n"
+"PO-Revision-Date: 2025-12-24 00:00+0000\n"
+"Last-Translator: ChatGPT <translator@example.com>\n"
+"Language-Team: Chinese (Simplified) <zh-Hans@li.org>\n"
+"Language: zh-Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: herald/settings.py:131 news/forms_data.py:21
 msgid "English"
-msgstr "Englisch"
+msgstr "英语"
 
 #: herald/settings.py:132 news/forms_data.py:29
 msgid "Russian"
-msgstr "Russisch"
+msgstr "俄语"
 
 #: herald/settings.py:133 news/forms_data.py:20
 msgid "German"
-msgstr "Deutsch"
+msgstr "德语"
 
 #: herald/settings.py:134
 #, fuzzy
 #| msgid "Norwegian"
 msgid "Norwegian Bokmål"
-msgstr "Norwegisches Bokmål"
+msgstr "挪威语（博克mål）"
 
 #: herald/settings.py:135 news/forms_data.py:23
 msgid "French"
-msgstr "Französisch"
+msgstr "法语"
 
 #: herald/settings.py:136 news/forms_data.py:22
 msgid "Spanish"
-msgstr "Spanisch"
+msgstr "西班牙语"
 
 #: news/admin.py:59
 msgid "User_and_source"
-msgstr "Benutzer und Quelle"
+msgstr "用户与来源"
 
 #: news/admin.py:65
 msgid "News_content"
-msgstr "Nachrichteninhalt"
+msgstr "新闻内容"
 
 #: news/admin.py:71
 msgid "Link_and_date"
-msgstr "Link und Datum"
+msgstr "链接与日期"
 
 #: news/admin.py:78
 msgid "Source"
-msgstr "Quelle"
+msgstr "来源"
 
 #: news/apps.py:10
 msgid "News"
-msgstr "Nachrichten"
+msgstr "新闻"
 
 #: news/forms.py:14 templates/home.html:39 templates/includes/footer.html:25
 #: templates/includes/search_area.html:10
 msgid "Search"
-msgstr "Suche"
+msgstr "搜索"
 
 #: news/forms.py:19
 msgid "search_area_placeholder"
-msgstr "Suche..."
+msgstr "搜索…"
 
 #: news/forms.py:28 news/forms.py:42
 msgid "Sort_by"
-msgstr "Sortieren nach"
+msgstr "排序方式"
 
 #: news/forms.py:56
 msgid "Search_in_default_all"
-msgstr "Sprache wählen (Standard — alle)"
+msgstr "选择语言（默认 — 全部）"
 
 #: news/forms.py:69
 msgid "Select_sources_max_default_all"
-msgstr "Wählen Sie bis zu 20 Quellen (Standard — alle)"
+msgstr "最多选择 20 个来源（默认 — 全部）"
 
 #: news/forms.py:84 news/forms.py:230
 msgid "News_from"
-msgstr "Nachrichten von"
+msgstr "新闻自"
 
 #: news/forms.py:97 news/forms.py:242
 msgid "News_to"
-msgstr "Nachrichten bis"
+msgstr "新闻至"
 
 #: news/forms.py:110 news/forms.py:171
 msgid "Select_language_default_all"
-msgstr "Sprache wählen (Standard — alle)"
+msgstr "选择语言（默认 — 全部）"
 
 #: news/forms.py:128 news/forms.py:195
 msgid "Select_countries_default_all"
-msgstr "Länder wählen (Standard — alle)"
+msgstr "选择国家（默认 — 全部）"
 
 #: news/forms.py:140 news/forms.py:183
 msgid "Select_categories_default_all"
-msgstr "Kategorien wählen (Standard — alle)"
+msgstr "选择分类（默认 — 全部）"
 
 #: news/forms.py:152
 msgid "Select_sources_default_all"
-msgstr "Quelle wählen (Standard — alle)"
+msgstr "选择来源（默认 — 全部）"
 
 #: news/forms.py:210
 msgid "Sections"
-msgstr "Abschnitte"
+msgstr "版块"
 
 #: news/forms.py:222
 msgid "Rating"
-msgstr "Bewertung"
+msgstr "评分"
 
 #: news/forms_data.py:19
 msgid "Arabic"
-msgstr "Arabisch"
+msgstr "阿拉伯语"
 
 #: news/forms_data.py:24
 msgid "Hebrew"
-msgstr "Hebräisch"
+msgstr "希伯来语"
 
 #: news/forms_data.py:25
 msgid "Italian"
-msgstr "Italienisch"
+msgstr "意大利语"
 
 #: news/forms_data.py:26
 msgid "Dutch"
-msgstr "Niederländisch"
+msgstr "荷兰语"
 
 #: news/forms_data.py:28
 msgid "Portuguese"
-msgstr "Portugiesisch"
+msgstr "葡萄牙语"
 
 #: news/forms_data.py:30
 msgid "Swedish"
-msgstr "Schwedisch"
+msgstr "瑞典语"
 
 #: news/forms_data.py:34 news/forms_data.py:144
 msgid "United States"
-msgstr "Vereinigte Staaten"
+msgstr "美国"
 
 #: news/forms_data.py:41
 msgid "Title"
-msgstr "Titel"
+msgstr "标题"
 
 #: news/forms_data.py:42
 msgid "Description"
-msgstr "Beschreibung"
+msgstr "描述"
 
 #: news/forms_data.py:43
 msgid "Content"
-msgstr "Inhalt"
+msgstr "内容"
 
 #: news/forms_data.py:65
 msgid "Business"
-msgstr "Wirtschaft"
+msgstr "商业"
 
 #: news/forms_data.py:66
 msgid "Entertainment"
-msgstr "Unterhaltung"
+msgstr "娱乐"
 
 #: news/forms_data.py:67
 msgid "General"
-msgstr "Allgemein"
+msgstr "综合"
 
 #: news/forms_data.py:68
 msgid "Health"
-msgstr "Gesundheit"
+msgstr "健康"
 
 #: news/forms_data.py:69
 msgid "Sports"
-msgstr "Sport"
+msgstr "体育"
 
 #: news/forms_data.py:70
 msgid "Science"
-msgstr "Wissenschaft"
+msgstr "科学"
 
 #: news/forms_data.py:71
 msgid "Technology"
-msgstr "Technologie"
+msgstr "科技"
 
 #: news/forms_data.py:78
 msgid "Relevancy"
-msgstr "Relevanz"
+msgstr "相关性"
 
 #: news/forms_data.py:79
 msgid "Popularity"
-msgstr "Beliebtheit"
+msgstr "流行度"
 
 #: news/forms_data.py:80
 msgid "Published_at"
-msgstr "Veröffentlicht am"
+msgstr "发布日期"
 
 #: news/forms_data.py:87
 msgid "Newest"
-msgstr "Neueste zuerst"
+msgstr "最新优先"
 
 #: news/forms_data.py:88
 msgid "Oldest"
-msgstr "Älteste zuerst"
+msgstr "最旧优先"
 
 #: news/forms_data.py:89
 msgid "Relevance"
-msgstr "Relevanz"
+msgstr "相关度"
 
 #: news/forms_data.py:93
 msgid "United Arab Emirates"
-msgstr "Vereinigte Arabische Emirate"
+msgstr "阿拉伯联合酋长国"
 
 #: news/forms_data.py:94
 msgid "Argentina"
-msgstr "Argentinien"
+msgstr "阿根廷"
 
 #: news/forms_data.py:95
 msgid "Austria"
-msgstr "Österreich"
+msgstr "奥地利"
 
 #: news/forms_data.py:96
 msgid "Australia"
-msgstr "Australien"
+msgstr "澳大利亚"
 
 #: news/forms_data.py:97
 msgid "Belgium"
-msgstr "Belgien"
+msgstr "比利时"
 
 #: news/forms_data.py:98
 msgid "Bulgaria"
-msgstr "Bulgarien"
+msgstr "保加利亚"
 
 #: news/forms_data.py:99
 msgid "Brazil"
-msgstr "Brasilien"
+msgstr "巴西"
 
 #: news/forms_data.py:100
 msgid "Canada"
-msgstr "Kanada"
+msgstr "加拿大"
 
 #: news/forms_data.py:101
 msgid "Switzerland"
-msgstr "Schweiz"
+msgstr "瑞士"
 
 #: news/forms_data.py:102
 msgid "China"
-msgstr "China"
+msgstr "中国"
 
 #: news/forms_data.py:103
 msgid "Colombia"
-msgstr "Kolumbien"
+msgstr "哥伦比亚"
 
 #: news/forms_data.py:104
 msgid "Cuba"
-msgstr "Kuba"
+msgstr "古巴"
 
 #: news/forms_data.py:105
 msgid "Czech Republic"
-msgstr "Tschechische Republik"
+msgstr "捷克共和国"
 
 #: news/forms_data.py:106
 msgid "Germany"
-msgstr "Deutschland"
+msgstr "德国"
 
 #: news/forms_data.py:107
 msgid "Egypt"
-msgstr "Ägypten"
+msgstr "埃及"
 
 #: news/forms_data.py:108
 msgid "France"
-msgstr "Frankreich"
+msgstr "法国"
 
 #: news/forms_data.py:109
 msgid "United Kingdom"
-msgstr "Vereinigtes Königreich"
+msgstr "英国"
 
 #: news/forms_data.py:110
 msgid "Greece"
-msgstr "Griechenland"
+msgstr "希腊"
 
 #: news/forms_data.py:111
 msgid "Hong Kong"
-msgstr "Hongkong"
+msgstr "香港"
 
 #: news/forms_data.py:112
 msgid "Hungary"
-msgstr "Ungarn"
+msgstr "匈牙利"
 
 #: news/forms_data.py:113
 msgid "Indonesia"
-msgstr "Indonesien"
+msgstr "印度尼西亚"
 
 #: news/forms_data.py:114
 msgid "Ireland"
-msgstr "Irland"
+msgstr "爱尔兰"
 
 #: news/forms_data.py:115
 msgid "Israel"
-msgstr "Israel"
+msgstr "以色列"
 
 #: news/forms_data.py:116
 msgid "India"
-msgstr "Indien"
+msgstr "印度"
 
 #: news/forms_data.py:117
 msgid "Italy"
-msgstr "Italien"
+msgstr "意大利"
 
 #: news/forms_data.py:118
 msgid "Japan"
-msgstr "Japan"
+msgstr "日本"
 
 #: news/forms_data.py:119
 msgid "South Korea"
-msgstr "Südkorea"
+msgstr "韩国"
 
 #: news/forms_data.py:120
 msgid "Lithuania"
-msgstr "Litauen"
+msgstr "立陶宛"
 
 #: news/forms_data.py:121
 msgid "Latvia"
-msgstr "Lettland"
+msgstr "拉脱维亚"
 
 #: news/forms_data.py:122
 msgid "Morocco"
-msgstr "Marokko"
+msgstr "摩洛哥"
 
 #: news/forms_data.py:123
 msgid "Mexico"
-msgstr "Mexiko"
+msgstr "墨西哥"
 
 #: news/forms_data.py:124
 msgid "Malaysia"
-msgstr "Malaysia"
+msgstr "马来西亚"
 
 #: news/forms_data.py:125
 msgid "Nigeria"
-msgstr "Nigeria"
+msgstr "尼日利亚"
 
 #: news/forms_data.py:126
 msgid "Netherlands"
-msgstr "Niederlande"
+msgstr "荷兰"
 
 #: news/forms_data.py:127
 msgid "Norway"
-msgstr "Norwegen"
+msgstr "挪威"
 
 #: news/forms_data.py:128
 msgid "New Zealand"
-msgstr "Neuseeland"
+msgstr "新西兰"
 
 #: news/forms_data.py:129
 msgid "Philippines"
-msgstr "Philippinen"
+msgstr "菲律宾"
 
 #: news/forms_data.py:130
 msgid "Poland"
-msgstr "Polen"
+msgstr "波兰"
 
 #: news/forms_data.py:131
 msgid "Portugal"
-msgstr "Portugal"
+msgstr "葡萄牙"
 
 #: news/forms_data.py:132
 msgid "Romania"
-msgstr "Rumänien"
+msgstr "罗马尼亚"
 
 #: news/forms_data.py:133
 msgid "Serbia"
-msgstr "Serbien"
+msgstr "塞尔维亚"
 
 #: news/forms_data.py:134
 msgid "Russia"
-msgstr "Russland"
+msgstr "俄罗斯"
 
 #: news/forms_data.py:135
 msgid "Saudi Arabia"
-msgstr "Saudi-Arabien"
+msgstr "沙特阿拉伯"
 
 #: news/forms_data.py:136
 msgid "Sweden"
-msgstr "Schweden"
+msgstr "瑞典"
 
 #: news/forms_data.py:137
 msgid "Singapore"
-msgstr "Singapur"
+msgstr "新加坡"
 
 #: news/forms_data.py:138
 msgid "Slovenia"
-msgstr "Slowenien"
+msgstr "斯洛文尼亚"
 
 #: news/forms_data.py:139
 msgid "Slovakia"
-msgstr "Slowakei"
+msgstr "斯洛伐克"
 
 #: news/forms_data.py:140
 msgid "Thailand"
-msgstr "Thailand"
+msgstr "泰国"
 
 #: news/forms_data.py:141
 msgid "Turkey"
-msgstr "Türkei"
+msgstr "土耳其"
 
 #: news/forms_data.py:142
 msgid "Taiwan"
-msgstr "Taiwan"
+msgstr "台湾"
 
 #: news/forms_data.py:143
 msgid "Ukraine"
-msgstr "Ukraine"
+msgstr "乌克兰"
 
 #: news/forms_data.py:145
 msgid "Venezuela"
-msgstr "Venezuela"
+msgstr "委内瑞拉"
 
 #: news/forms_data.py:146
 msgid "South Africa"
-msgstr "Südafrika"
+msgstr "南非"
 
 #: news/forms_data.py:157
 msgid "None"
-msgstr "Keine"
+msgstr "无"
 
 #: news/models.py:15 users/admin.py:13
 msgid "user"
-msgstr "Benutzer"
+msgstr "用户"
 
 #: news/models.py:19
 msgid "title"
-msgstr "Titel"
+msgstr "标题"
 
 #: news/models.py:22
 msgid "description"
-msgstr "Beschreibung"
+msgstr "描述"
 
 #: news/models.py:24
 msgid "content"
-msgstr "Inhalt"
+msgstr "内容"
 
 #: news/models.py:28
 msgid "link_to_news"
-msgstr "Link zur Nachricht"
+msgstr "新闻链接"
 
 #: news/models.py:31
 msgid "image_link"
-msgstr "Link zum Bild"
+msgstr "图片链接"
 
 #: news/models.py:35
 msgid "source_name"
-msgstr "Name der Quelle"
+msgstr "来源名称"
 
 #: news/models.py:39
 msgid "author"
-msgstr "Autor"
+msgstr "作者"
 
 #: news/models.py:43
 msgid "publication_date"
-msgstr "Veröffentlichungsdatum"
+msgstr "发布日期"
 
 #: news/models.py:47
 msgid "category"
-msgstr "Kategorie"
+msgstr "分类"
 
 #: news/models.py:52
 msgid "featured_news"
-msgstr "ausgewählte Nachrichten"
+msgstr "精选新闻"
 
 #: news/models.py:53
 msgid "selected_news"
-msgstr "empfohlene Nachrichten"
+msgstr "推荐新闻"
 
 #: news/views.py:54 news/views.py:129 news/views.py:205 news/views.py:271
 msgid "Forms_error"
-msgstr "Formularfehler"
+msgstr "表单错误"
 
 #: news/views.py:83
 msgid "You_cannot_select_sources_together_with_country_or_category"
-msgstr "Sie können Quellen nicht zusammen mit Land oder Kategorie auswählen."
+msgstr "不能在选择国家或分类的同时选择具体来源。"
 
 #: news/views.py:157
 msgid "Used_default_query"
-msgstr "Standardabfrage verwendet"
+msgstr "使用默认查询"
 
 #: templates/base.html:6 templates/home.html:5 templates/home.html:18
 #: templates/includes/footer.html:8 templates/includes/header.html:7
@@ -487,76 +487,76 @@ msgstr "Herald"
 
 #: templates/base.html:25
 msgid "The content was not delivered :("
-msgstr "Der Inhalt wurde nicht geliefert :("
+msgstr "内容未能送达 :("
 
 #: templates/home.html:5
 msgid "All_news_in_one_place"
-msgstr "Alle Nachrichten an einem Ort"
+msgstr "所有新闻，尽在一处"
 
 #: templates/home.html:21
 msgid "Find_Read_Stay_informed"
-msgstr "Finden. Lesen. Bleiben Sie informiert."
+msgstr "查找。阅读。保持知情。"
 
 #: templates/home.html:49
 msgid "Start_by_searching_or_go_to"
-msgstr "Beginnen Sie mit der Suche oder gehen Sie zu"
+msgstr "从搜索开始或前往"
 
 #: templates/home.html:51
 msgid "main news"
-msgstr "Hauptnachrichten"
+msgstr "头条新闻"
 
 #: templates/includes/footer.html:11
 msgid "footer_site_descriptions"
-msgstr "Nachrichten-Aggregator aus verschiedenen Quellen. Schnell, bequem und sicher."
+msgstr "来自不同来源的新闻聚合器。快速、便捷且安全。"
 
 #: templates/includes/footer.html:16
 msgid "Navigation"
-msgstr "Navigation"
+msgstr "导航"
 
 #: templates/includes/footer.html:20 templates/users/logout.html:23
 #: templates/users/password_change_done.html:26
 #: templates/users/password_reset_complete.html:26
 #: templates/users/password_reset_done.html:39
 msgid "Home"
-msgstr "Startseite"
+msgstr "主页"
 
 #: templates/includes/footer.html:30 templates/includes/header.html:23
 #: templates/news/sources_list.html:5
 msgid "Sources"
-msgstr "Quellen"
+msgstr "来源"
 
 #: templates/includes/footer.html:37 users/models.py:70
 msgid "User"
-msgstr "Benutzer"
+msgstr "用户"
 
 #: templates/includes/footer.html:41 templates/includes/header.html:71
 msgid "Profile"
-msgstr "Profil"
+msgstr "个人资料"
 
 #: templates/includes/footer.html:46
 msgid "Favorite"
-msgstr "Favorit"
+msgstr "收藏"
 
 #: templates/includes/footer.html:51 templates/users/profile.html:44
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "设置"
 
 #: templates/includes/footer.html:58
 msgid "Contacts"
-msgstr "Kontakte"
+msgstr "联系"
 
 #: templates/includes/header.html:11
 msgid "Select_language"
-msgstr "Sprache wählen"
+msgstr "选择语言"
 
 #: templates/includes/header.html:19
 msgid "Top_headlines"
-msgstr "Top-Schlagzeilen"
+msgstr "头条"
 
 #: templates/includes/header.html:27 templates/news/everything_news.html:5
 #: templates/news/guardian_news.html:5
 msgid "Everything"
-msgstr "Alles"
+msgstr "全部"
 
 #: templates/includes/header.html:31
 msgid "Guardian"
@@ -564,512 +564,512 @@ msgstr "Guardian"
 
 #: templates/includes/header.html:42
 msgid "Language"
-msgstr "Sprache"
+msgstr "语言"
 
 #: templates/includes/header.html:81
 msgid "Log_out"
-msgstr "Abmelden"
+msgstr "登出"
 
 #: templates/includes/header.html:89
 msgid "Log_in"
-msgstr "Anmelden"
+msgstr "登录"
 
 #: templates/includes/header.html:93
 msgid "Sign_up"
-msgstr "Registrieren"
+msgstr "注册"
 
 #: templates/includes/messages.html:17 templates/includes/search_area.html:35
 msgid "Close"
-msgstr "Schließen"
+msgstr "关闭"
 
 #: templates/includes/news_card.html:38
 msgid "Read"
-msgstr "Lesen"
+msgstr "阅读"
 
 #: templates/includes/news_card.html:57
 msgid "In favorites"
-msgstr "In Favoriten"
+msgstr "已收藏"
 
 #: templates/includes/search_area.html:15
 #: templates/includes/search_area.html:24
 msgid "Filters"
-msgstr "Filter"
+msgstr "筛选"
 
 #: templates/includes/search_area.html:38
 #: templates/users/profile_update.html:81
 msgid "Save"
-msgstr "Speichern"
+msgstr "保存"
 
 #: templates/includes/source_card.html:27
 msgid "No_description"
-msgstr "Keine Beschreibung"
+msgstr "无描述"
 
 #: templates/includes/source_card.html:46
 msgid "Visit"
-msgstr "Besuchen"
+msgstr "访问"
 
 #: templates/news/everything_news.html:17 templates/news/guardian_news.html:17
 #: templates/news/top_headlines_news.html:17
 msgid "No news found"
-msgstr "Keine Nachrichten gefunden"
+msgstr "未找到新闻"
 
 #: templates/news/sources_list.html:17
 msgid "No sources found"
-msgstr "Keine Quellen gefunden"
+msgstr "未找到来源"
 
 #: templates/news/top_headlines_news.html:5
 msgid "Top headlines"
-msgstr "Top-Schlagzeilen"
+msgstr "要闻"
 
 #: templates/users/account_activate.html:6
 msgid "Account verification"
-msgstr "Konto verifizieren"
+msgstr "账号验证"
 
 #: templates/users/account_activate.html:7
 msgid "User:"
-msgstr "Benutzer:"
+msgstr "用户："
 
 #: templates/users/account_activate.html:12 templates/users/login.html:12
 #: templates/users/login.html:58 templates/users/signup.html:114
 #: users/forms.py:46
 msgid "Login"
-msgstr "Anmelden"
+msgstr "登录"
 
 #: templates/users/favorites.html:4
 msgid "Favorites"
-msgstr "Favoriten"
+msgstr "收藏夹"
 
 #: templates/users/favorites.html:8
 msgid "All_your_saved_articles"
-msgstr "Alle Ihre gespeicherten Artikel"
+msgstr "您保存的所有文章"
 
 #: templates/users/favorites.html:19
 msgid "Its_empty_here_yet"
-msgstr "Hier ist noch nichts."
+msgstr "这里暂时还是空的。"
 
 #: templates/users/favorites.html:20
 msgid "Search_news"
-msgstr "Nachrichten suchen"
+msgstr "搜索新闻"
 
 #: templates/users/login.html:4
 msgid "Entrance"
-msgstr "Eingang"
+msgstr "入口"
 
 #: templates/users/login.html:13
 msgid "Enter_your_credentials"
-msgstr "Geben Sie Ihre Anmeldedaten ein"
+msgstr "输入您的凭证"
 
 #: templates/users/login.html:65
 msgid "Forgot_your_password"
-msgstr "Passwort vergessen?"
+msgstr "忘记密码？"
 
 #: templates/users/login.html:69
 msgid "Dont_have_an_account"
-msgstr "Noch keinen Account?"
+msgstr "没有账号？"
 
 #: templates/users/login.html:71 templates/users/signup.html:106
 msgid "Register"
-msgstr "Registrieren"
+msgstr "注册"
 
 #: templates/users/logout.html:4
 msgid "Logout"
-msgstr "Abmelden"
+msgstr "退出"
 
 #: templates/users/logout.html:12
 msgid "You_are_logged_out"
-msgstr "Sie sind abgemeldet."
+msgstr "您已登出。"
 
 #: templates/users/logout.html:15
 msgid "Thank_you_for_visiting_our_website_We_hope_to_see_you_again"
-msgstr "Danke für den Besuch unserer Website. Wir hoffen, Sie wiederzusehen!"
+msgstr "感谢访问我们的网站，期待您再次光临！"
 
 #: templates/users/logout.html:20
 msgid "Login_again"
-msgstr "Erneut anmelden"
+msgstr "再次登录"
 
 #: templates/users/logout.html:31
 msgid "Your_session_has_ended_For_security_reasons_we_recommend_closing_your_browser"
-msgstr "Ihre Sitzung ist beendet. Aus Sicherheitsgründen empfehlen wir, Ihren Browser zu schließen."
+msgstr "您的会话已结束。为安全起见，建议关闭浏览器。"
 
 #: templates/users/password_change.html:4
 #: templates/users/password_change.html:13
 #: templates/users/password_change.html:86
 msgid "Change_password"
-msgstr "Passwort ändern"
+msgstr "更改密码"
 
 #: templates/users/password_change.html:14
 msgid "Enter_your_current_password_and_new_password"
-msgstr "Geben Sie Ihr aktuelles und neues Passwort ein."
+msgstr "请输入当前密码和新密码。"
 
 #: templates/users/password_change.html:30
 msgid "Current_Password"
-msgstr "Aktuelles Passwort"
+msgstr "当前密码"
 
 #: templates/users/password_change.html:47
 msgid "New_Password"
-msgstr "Neues Passwort"
+msgstr "新密码"
 
 #: templates/users/password_change.html:69
 msgid "Confirming_a_new_password"
-msgstr "Neues Passwort bestätigen"
+msgstr "确认新密码"
 
 #: templates/users/password_change.html:89
 #: templates/users/profile_update.html:82
 msgid "Cancel"
-msgstr "Abbrechen"
+msgstr "取消"
 
 #: templates/users/password_change_done.html:4
 msgid "Password_changed"
-msgstr "Passwort geändert"
+msgstr "密码已更改"
 
 #: templates/users/password_change_done.html:15
 msgid "Password_changed_successfully"
-msgstr "Passwort erfolgreich geändert!"
+msgstr "密码已成功更改！"
 
 #: templates/users/password_change_done.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_use_the_new_password_to_log_in"
-msgstr "Ihr Passwort wurde erfolgreich geändert. Sie können sich jetzt mit dem neuen Passwort anmelden."
+msgstr "您的密码已成功更改。现在可以使用新密码登录。"
 
 #: templates/users/password_change_done.html:23
 msgid "Return_to_profile"
-msgstr "Zurück zum Profil"
+msgstr "返回个人资料"
 
 #: templates/users/password_change_done.html:36
 msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regularly"
-msgstr "Es wird empfohlen, für verschiedene Dienste unterschiedliche Passwörter zu verwenden und diese regelmäßig zu ändern."
+msgstr "建议为不同服务使用不同密码，并定期更换。"
 
 #: templates/users/password_reset.html:4 templates/users/password_reset.html:13
 msgid "Password_reset"
-msgstr "Passwort zurücksetzen"
+msgstr "重置密码"
 
 #: templates/users/password_reset.html:15
 msgid "Forgot_your_password_Enter_your_email_address_Well_send_you_instructions"
-msgstr "Passwort vergessen? Geben Sie Ihre E-Mail-Adresse ein — wir senden Ihnen Anweisungen."
+msgstr "忘记密码？请输入您的电子邮箱 — 我们会发送说明。"
 
 #: templates/users/password_reset.html:32
 msgid "Email_address"
-msgstr "E-Mail-Adresse"
+msgstr "电子邮件地址"
 
 #: templates/users/password_reset.html:49
 msgid "Send_instructions"
-msgstr "Anweisungen senden"
+msgstr "发送说明"
 
 #: templates/users/password_reset.html:52
 msgid "Back_to_the_entrance"
-msgstr "Zurück zur Anmeldung"
+msgstr "返回登录"
 
 #: templates/users/password_reset.html:61
 msgid ""
 "If you haven't received the email, check your spam folder or make sure you "
 "entered the correct email address."
 msgstr ""
-"Wenn Sie die E-Mail nicht erhalten haben, prüfen Sie Ihren Spam-Ordner oder stellen Sie sicher, dass Sie die richtige E-Mail-Adresse eingegeben haben."
+"如果您未收到邮件，请检查垃圾邮件文件夹，或确认您输入的电子邮箱地址正确。"
 
 #: templates/users/password_reset_complete.html:4
 #: templates/users/password_reset_complete.html:15
 msgid "Password_restored"
-msgstr "Passwort wiederhergestellt"
+msgstr "密码已恢复"
 
 #: templates/users/password_reset_complete.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_log_in_with_your_new_password"
-msgstr "Ihr Passwort wurde erfolgreich geändert. Sie können sich jetzt mit Ihrem neuen Passwort anmelden."
+msgstr "您的密码已成功更改。您现在可以使用新密码登录。"
 
 #: templates/users/password_reset_complete.html:23
 msgid "Sign_in"
-msgstr "Anmelden"
+msgstr "登录"
 
 #: templates/users/password_reset_complete.html:37
 msgid "Your_account_is_now_protected_with_a_new_password"
-msgstr "Ihr Konto ist jetzt durch ein neues Passwort geschützt."
+msgstr "您的账户现已由新密码保护。"
 
 #: templates/users/password_reset_complete.html:38
 msgid "It_is_recommended_to_use_unique_passwords_for_different_services"
-msgstr "Es wird empfohlen, für verschiedene Dienste einzigartige Passwörter zu verwenden."
+msgstr "建议为不同服务使用唯一密码。"
 
 #: templates/users/password_reset_confirm.html:4
 msgid "Enter_new_password"
-msgstr "Neues Passwort eingeben"
+msgstr "输入新密码"
 
 #: templates/users/password_reset_confirm.html:15
 msgid "Enter new password"
-msgstr "Neues Passwort eingeben"
+msgstr "输入新密码"
 
 #: templates/users/password_reset_confirm.html:16
 msgid "Please enter the new password twice."
-msgstr "Bitte geben Sie das neue Passwort zweimal ein."
+msgstr "请将新密码输入两次。"
 
 #: templates/users/password_reset_confirm.html:18
 msgid "Restore Error"
-msgstr "Wiederherstellungsfehler"
+msgstr "恢复错误"
 
 #: templates/users/password_reset_confirm.html:19
 msgid "The password reset link is invalid."
-msgstr "Der Link zum Zurücksetzen des Passworts ist ungültig."
+msgstr "重置密码的链接无效。"
 
 #: templates/users/password_reset_confirm.html:37
 msgid "New Password"
-msgstr "Neues Passwort"
+msgstr "新密码"
 
 #: templates/users/password_reset_confirm.html:59
 #: templates/users/signup.html:82
 msgid "Password confirmation"
-msgstr "Passwortbestätigung"
+msgstr "密码确认"
 
 #: templates/users/password_reset_confirm.html:76
 #: templates/users/profile.html:50
 msgid "Change password"
-msgstr "Passwort ändern"
+msgstr "更改密码"
 
 #: templates/users/password_reset_confirm.html:85
 msgid ""
 "The password reset link is invalid, possibly because it has already been "
 "used."
 msgstr ""
-"Der Link zum Zurücksetzen des Passworts ist ungültig — möglicherweise wurde er bereits verwendet."
+"重置密码的链接无效，可能已被使用。"
 
 #: templates/users/password_reset_confirm.html:86
 msgid "Please request a new password reset."
-msgstr "Bitte fordern Sie ein neues Zurücksetzen des Passworts an."
+msgstr "请申请新的密码重置。"
 
 #: templates/users/password_reset_confirm.html:93
 msgid "Request a new password reset"
-msgstr "Neues Zurücksetzen des Passworts anfordern"
+msgstr "请求新的密码重置"
 
 #: templates/users/password_reset_confirm.html:96
 #: templates/users/password_reset_done.html:36
 msgid "Return to the entrance"
-msgstr "Zurück zur Anmeldung"
+msgstr "返回登录"
 
 #: templates/users/password_reset_done.html:4
 msgid "Instructions_have_been_sent"
-msgstr "Anweisungen wurden gesendet."
+msgstr "说明已发送。"
 
 #: templates/users/password_reset_done.html:15
 msgid "Check_your_mail"
-msgstr "Überprüfen Sie Ihre E-Mails"
+msgstr "检查您的邮件"
 
 #: templates/users/password_reset_done.html:18
 msgid "We_have_sent_password_recovery_instructions_to_the_email_address_you_provided"
-msgstr "Wir haben Anweisungen zur Wiederherstellung des Passworts an die von Ihnen angegebene E-Mail-Adresse gesendet."
+msgstr "我们已将密码恢复说明发送至您提供的电子邮箱。"
 
 #: templates/users/password_reset_done.html:19
 msgid "You_should_receive_them_soon"
-msgstr "Sie sollten sie bald erhalten."
+msgstr "您应很快收到。"
 
 #: templates/users/password_reset_done.html:27
 msgid "If_you_dont_see_the_email_check_your_spam_folder"
-msgstr "Wenn Sie die E-Mail nicht sehen, prüfen Sie Ihren Spam-Ordner"
+msgstr "如果您未看到邮件，请检查垃圾邮件文件夹"
 
 #: templates/users/password_reset_done.html:28
 msgid "Sometimes_password_recovery_emails_can_end_up_there"
-msgstr "Manchmal landen E-Mails zur Passwortwiederherstellung dort."
+msgstr "有时密码恢复邮件会被放入其中。"
 
 #: templates/users/profile.html:5
 msgid "User_profile"
-msgstr "Benutzerprofil"
+msgstr "用户资料"
 
 #: templates/users/profile.html:30 templates/users/profile_update.html:4
 #: templates/users/profile_update.html:10
 msgid "Edit profile"
-msgstr "Profil bearbeiten"
+msgstr "编辑资料"
 
 #: templates/users/profile.html:34
 msgid "My bookmarks"
-msgstr "Meine Lesezeichen"
+msgstr "我的书签"
 
 #: templates/users/profile.html:64
 msgid "Personal information"
-msgstr "Persönliche Informationen"
+msgstr "个人信息"
 
 #: templates/users/profile.html:69 users/forms.py:60
 msgid "Name"
-msgstr "Vorname"
+msgstr "名字"
 
 #: templates/users/profile.html:70 templates/users/profile.html:74
 #: templates/users/profile.html:85 templates/users/profile.html:92
 msgid "Not_specified"
-msgstr "Nicht angegeben"
+msgstr "未指定"
 
 #: templates/users/profile.html:73 users/forms.py:65
 msgid "Surname"
-msgstr "Nachname"
+msgstr "姓氏"
 
 #: templates/users/profile.html:80
 msgid "Date of birth"
-msgstr "Geburtsdatum"
+msgstr "出生日期"
 
 #: templates/users/profile.html:90 templates/users/profile_update.html:35
 msgid "Location"
-msgstr "Ort"
+msgstr "地点"
 
 #: templates/users/profile.html:99
 msgid "Registration date"
-msgstr "Registrierungsdatum"
+msgstr "注册日期"
 
 #: templates/users/profile.html:103
 msgid "Last entry"
-msgstr "Letzter Eintrag"
+msgstr "最后活动"
 
 #: templates/users/profile.html:105
 msgid "Recently"
-msgstr "Kürzlich"
+msgstr "最近"
 
 #: templates/users/profile.html:115
 msgid "Favorite categories"
-msgstr "Lieblingskategorien"
+msgstr "收藏分类"
 
 #: templates/users/profile.html:130
 msgid "You haven't selected your favorite categories yet."
-msgstr "Sie haben Ihre Lieblingskategorien noch nicht ausgewählt."
+msgstr "您尚未选择收藏分类。"
 
 #: templates/users/profile.html:132
 msgid "Add categories"
-msgstr "Kategorien hinzufügen"
+msgstr "添加分类"
 
 #: templates/users/profile.html:142
 msgid "Click on a category to view related news"
-msgstr "Klicken Sie auf eine Kategorie, um verwandte Nachrichten anzuzeigen."
+msgstr "点击分类以查看相关新闻。"
 
 #: templates/users/profile.html:145
 msgid "Edit"
-msgstr "Bearbeiten"
+msgstr "编辑"
 
 #: templates/users/profile_update.html:36
 msgid "City or country"
-msgstr "Stadt oder Land"
+msgstr "城市或国家"
 
 #: templates/users/signup.html:4 templates/users/signup.html:12
 msgid "Registration"
-msgstr "Registrierung"
+msgstr "注册"
 
 #: templates/users/signup.html:13
 msgid "Create a new account"
-msgstr "Ein neues Konto erstellen"
+msgstr "创建新账号"
 
 #: templates/users/signup.html:58 users/forms.py:131
 msgid "Password"
-msgstr "Passwort"
+msgstr "密码"
 
 #: templates/users/signup.html:112
 msgid "Already have an account?"
-msgstr "Haben Sie bereits ein Konto?"
+msgstr "已经有账号？"
 
 #: users/apps.py:10
 msgid "Users"
-msgstr "Benutzer"
+msgstr "用户"
 
 #: users/backends.py:50
 msgid "account_activation_mail_text"
-msgstr "Kontenaktivierung"
+msgstr "账户激活"
 
 #: users/backends.py:52
 msgid "Account_activation"
-msgstr "Kontenaktivierung"
+msgstr "账户激活"
 
 #: users/forms.py:34
 msgid "Mail"
-msgstr "Post"
+msgstr "邮件"
 
 #: users/forms.py:47 users/forms.py:68
 msgid "Email"
-msgstr "E-Mail"
+msgstr "电子邮件"
 
 #: users/forms.py:51
 msgid "Enter_login"
-msgstr "Login eingeben"
+msgstr "输入登录名"
 
 #: users/forms.py:52
 msgid "Enter_email"
-msgstr "E-Mail-Adresse eingeben"
+msgstr "输入电子邮箱"
 
 #: users/forms.py:74 users/models.py:100 users/models.py:101
 msgid "Favorite_categories"
-msgstr "Lieblingskategorien"
+msgstr "收藏分类"
 
 #: users/forms.py:104
 msgid "Upload_your_profile_picture"
-msgstr "Laden Sie Ihr Profilbild hoch."
+msgstr "上传您的头像。"
 
 #: users/forms.py:125
 msgid "invalid_login_text"
-msgstr "Ungültiger Benutzername oder Passwort."
+msgstr "用户名或密码无效。"
 
 #: users/forms.py:127
 msgid "This_account_is_inactive"
-msgstr "Dieses Konto ist inaktiv."
+msgstr "该账户已被禁用。"
 
 #: users/forms.py:129
 msgid "Login or email"
-msgstr "Login oder E-Mail"
+msgstr "登录名或电子邮件"
 
 #: users/models.py:76
 msgid "Avatar"
-msgstr "Avatar"
+msgstr "头像"
 
 #: users/models.py:77
 msgid "User_avatar"
-msgstr "Benutzer-Avatar."
+msgstr "用户头像。"
 
 #: users/models.py:83
 msgid "Date_of_birth"
-msgstr "Geburtsdatum"
+msgstr "出生日期"
 
 #: users/models.py:84
 msgid "User_date_of_birth"
-msgstr "Geburtsdatum des Benutzers."
+msgstr "用户出生日期。"
 
 #: users/models.py:89
 msgid "location_help_text"
-msgstr "Geben Sie die Stadt oder das Land des Wohnsitzes an."
+msgstr "请填写居住城市或国家。"
 
 #: users/models.py:94
 msgid "Attempts"
-msgstr "Versuche"
+msgstr "尝试次数"
 
 #: users/models.py:95
 msgid "Number_of_login_attempts"
-msgstr "Anzahl der Anmeldeversuche"
+msgstr "登录尝试次数"
 
 #: users/models.py:104
 msgid "deactivate in"
-msgstr "deaktivieren in"
+msgstr "将在…后停用"
 
 #: users/models.py:105
 msgid "account was deactivated"
-msgstr "Konto wurde deaktiviert"
+msgstr "账户已被停用"
 
 #: users/models.py:122
 msgid "profile"
-msgstr "Profil"
+msgstr "资料"
 
 #: users/models.py:123
 msgid "profiles"
-msgstr "Profile"
+msgstr "资料列表"
 
 #: users/validators.py:24
 msgid "birthday_date_error"
-msgstr "Fehler beim Geburtsdatum"
+msgstr "出生日期错误"
 
 #: users/views.py:33
 msgid "Already_activated"
-msgstr "Bereits aktiviert"
+msgstr "已激活"
 
 #: users/views.py:52 users/views.py:66
 msgid "Activation_successful"
-msgstr "Aktivierung erfolgreich"
+msgstr "激活成功"
 
 #: users/views.py:54 users/views.py:68
 msgid "Activation_time_expired"
-msgstr "Aktivierungszeit abgelaufen"
+msgstr "激活时间已过期"
 
 #: users/views.py:70
 msgid "Account_is_not_deactivated"
-msgstr "Konto ist nicht deaktiviert"
+msgstr "账户未被停用"
 
 #: users/views.py:85
 msgid "Registration_successful_Welcome"
-msgstr "Registrierung erfolgreich! Willkommen!"
+msgstr "注册成功！欢迎！"
 
 #: users/views.py:123
 msgid "Profile_successfully_updated"
-msgstr "Profil erfolgreich aktualisiert"
+msgstr "资料更新成功"

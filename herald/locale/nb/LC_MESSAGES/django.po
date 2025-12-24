@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-21 17:40+0300\n"
-"PO-Revision-Date: 2025-12-21 00:00+0000\n"
-"Last-Translator: Oversetter Navn <translator@example.com>\n"
-"Language-Team: Norwegian <no@li.org>\n"
-"Language: no\n"
+"POT-Creation-Date: 2025-12-23 18:23+0300\n"
+"PO-Revision-Date: 2025-12-24 00:00+0000\n"
+"Last-Translator: ChatGPT <translator@example.com>\n"
+"Language-Team: Norwegian Bokmål\n"
+"Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,8 +25,18 @@ msgid "German"
 msgstr "Tysk"
 
 #: herald/settings.py:134
-msgid "Norwegian"
-msgstr "Norsk"
+#, fuzzy
+#| msgid "Norwegian"
+msgid "Norwegian Bokmål"
+msgstr "Norsk bokmål"
+
+#: herald/settings.py:135 news/forms_data.py:23
+msgid "French"
+msgstr "Fransk"
+
+#: herald/settings.py:136 news/forms_data.py:22
+msgid "Spanish"
+msgstr "Spansk"
 
 #: news/admin.py:59
 msgid "User_and_source"
@@ -55,7 +65,7 @@ msgstr "Søk"
 
 #: news/forms.py:19
 msgid "search_area_placeholder"
-msgstr "Søk..."
+msgstr "Søk…"
 
 #: news/forms.py:28 news/forms.py:42
 msgid "Sort_by"
@@ -104,14 +114,6 @@ msgstr "Vurdering"
 #: news/forms_data.py:19
 msgid "Arabic"
 msgstr "Arabisk"
-
-#: news/forms_data.py:22
-msgid "Spanish"
-msgstr "Spansk"
-
-#: news/forms_data.py:23
-msgid "French"
-msgstr "Fransk"
 
 #: news/forms_data.py:24
 msgid "Hebrew"
@@ -191,15 +193,227 @@ msgstr "Publisert"
 
 #: news/forms_data.py:87
 msgid "Newest"
-msgstr "Nyeste"
+msgstr "Nyeste først"
 
 #: news/forms_data.py:88
 msgid "Oldest"
-msgstr "Eldste"
+msgstr "Eldste først"
 
 #: news/forms_data.py:89
 msgid "Relevance"
 msgstr "Relevans"
+
+#: news/forms_data.py:93
+msgid "United Arab Emirates"
+msgstr "De forente arabiske emirater"
+
+#: news/forms_data.py:94
+msgid "Argentina"
+msgstr "Argentina"
+
+#: news/forms_data.py:95
+msgid "Austria"
+msgstr "Østerrike"
+
+#: news/forms_data.py:96
+msgid "Australia"
+msgstr "Australia"
+
+#: news/forms_data.py:97
+msgid "Belgium"
+msgstr "Belgia"
+
+#: news/forms_data.py:98
+msgid "Bulgaria"
+msgstr "Bulgaria"
+
+#: news/forms_data.py:99
+msgid "Brazil"
+msgstr "Brasil"
+
+#: news/forms_data.py:100
+msgid "Canada"
+msgstr "Canada"
+
+#: news/forms_data.py:101
+msgid "Switzerland"
+msgstr "Sveits"
+
+#: news/forms_data.py:102
+msgid "China"
+msgstr "Kina"
+
+#: news/forms_data.py:103
+msgid "Colombia"
+msgstr "Colombia"
+
+#: news/forms_data.py:104
+msgid "Cuba"
+msgstr "Cuba"
+
+#: news/forms_data.py:105
+msgid "Czech Republic"
+msgstr "Tsjekkia"
+
+#: news/forms_data.py:106
+msgid "Germany"
+msgstr "Tyskland"
+
+#: news/forms_data.py:107
+msgid "Egypt"
+msgstr "Egypt"
+
+#: news/forms_data.py:108
+msgid "France"
+msgstr "Frankrike"
+
+#: news/forms_data.py:109
+msgid "United Kingdom"
+msgstr "Storbritannia"
+
+#: news/forms_data.py:110
+msgid "Greece"
+msgstr "Hellas"
+
+#: news/forms_data.py:111
+msgid "Hong Kong"
+msgstr "Hongkong"
+
+#: news/forms_data.py:112
+msgid "Hungary"
+msgstr "Ungarn"
+
+#: news/forms_data.py:113
+msgid "Indonesia"
+msgstr "Indonesia"
+
+#: news/forms_data.py:114
+msgid "Ireland"
+msgstr "Irland"
+
+#: news/forms_data.py:115
+msgid "Israel"
+msgstr "Israel"
+
+#: news/forms_data.py:116
+msgid "India"
+msgstr "India"
+
+#: news/forms_data.py:117
+msgid "Italy"
+msgstr "Italia"
+
+#: news/forms_data.py:118
+msgid "Japan"
+msgstr "Japan"
+
+#: news/forms_data.py:119
+msgid "South Korea"
+msgstr "Sør-Korea"
+
+#: news/forms_data.py:120
+msgid "Lithuania"
+msgstr "Litauen"
+
+#: news/forms_data.py:121
+msgid "Latvia"
+msgstr "Latvia"
+
+#: news/forms_data.py:122
+msgid "Morocco"
+msgstr "Marokko"
+
+#: news/forms_data.py:123
+msgid "Mexico"
+msgstr "Mexico"
+
+#: news/forms_data.py:124
+msgid "Malaysia"
+msgstr "Malaysia"
+
+#: news/forms_data.py:125
+msgid "Nigeria"
+msgstr "Nigeria"
+
+#: news/forms_data.py:126
+msgid "Netherlands"
+msgstr "Nederland"
+
+#: news/forms_data.py:127
+msgid "Norway"
+msgstr "Norge"
+
+#: news/forms_data.py:128
+msgid "New Zealand"
+msgstr "New Zealand"
+
+#: news/forms_data.py:129
+msgid "Philippines"
+msgstr "Filippinene"
+
+#: news/forms_data.py:130
+msgid "Poland"
+msgstr "Polen"
+
+#: news/forms_data.py:131
+msgid "Portugal"
+msgstr "Portugal"
+
+#: news/forms_data.py:132
+msgid "Romania"
+msgstr "Romania"
+
+#: news/forms_data.py:133
+msgid "Serbia"
+msgstr "Serbia"
+
+#: news/forms_data.py:134
+msgid "Russia"
+msgstr "Russland"
+
+#: news/forms_data.py:135
+msgid "Saudi Arabia"
+msgstr "Saudi-Arabia"
+
+#: news/forms_data.py:136
+msgid "Sweden"
+msgstr "Sverige"
+
+#: news/forms_data.py:137
+msgid "Singapore"
+msgstr "Singapore"
+
+#: news/forms_data.py:138
+msgid "Slovenia"
+msgstr "Slovenia"
+
+#: news/forms_data.py:139
+msgid "Slovakia"
+msgstr "Slovakia"
+
+#: news/forms_data.py:140
+msgid "Thailand"
+msgstr "Thailand"
+
+#: news/forms_data.py:141
+msgid "Turkey"
+msgstr "Tyrkia"
+
+#: news/forms_data.py:142
+msgid "Taiwan"
+msgstr "Taiwan"
+
+#: news/forms_data.py:143
+msgid "Ukraine"
+msgstr "Ukraina"
+
+#: news/forms_data.py:145
+msgid "Venezuela"
+msgstr "Venezuela"
+
+#: news/forms_data.py:146
+msgid "South Africa"
+msgstr "Sør-Afrika"
 
 #: news/forms_data.py:157
 msgid "None"
@@ -207,59 +421,63 @@ msgstr "Ingen"
 
 #: news/models.py:15 users/admin.py:13
 msgid "user"
-msgstr "Bruker"
+msgstr "bruker"
 
 #: news/models.py:19
 msgid "title"
-msgstr "Tittel"
+msgstr "tittel"
 
 #: news/models.py:22
 msgid "description"
-msgstr "Beskrivelse"
+msgstr "beskrivelse"
 
 #: news/models.py:24
 msgid "content"
-msgstr "Innhold"
+msgstr "innhold"
 
 #: news/models.py:28
 msgid "link_to_news"
-msgstr "Lenke til nyhet"
+msgstr "lenke til nyheten"
 
 #: news/models.py:31
 msgid "image_link"
-msgstr "Lenke til bilde"
+msgstr "bildelenke"
 
 #: news/models.py:35
 msgid "source_name"
-msgstr "Kildenavn"
+msgstr "kildenavn"
 
 #: news/models.py:39
 msgid "author"
-msgstr "Forfatter"
+msgstr "forfatter"
 
 #: news/models.py:43
 msgid "publication_date"
-msgstr "Publiseringsdato"
+msgstr "publiseringsdato"
 
 #: news/models.py:47
 msgid "category"
-msgstr "Kategori"
+msgstr "kategori"
 
 #: news/models.py:52
 msgid "featured_news"
-msgstr "Fremhevede nyheter"
+msgstr "fremhevede nyheter"
 
 #: news/models.py:53
 msgid "selected_news"
-msgstr "Anbefalte nyheter"
+msgstr "anbefalte nyheter"
 
-#: news/views.py:54 news/views.py:129 news/views.py:202 news/views.py:268
+#: news/views.py:54 news/views.py:129 news/views.py:205 news/views.py:271
 msgid "Forms_error"
-msgstr "Skjema feil"
+msgstr "Skjemafeil"
 
 #: news/views.py:83
 msgid "You_cannot_select_sources_together_with_country_or_category"
-msgstr "Du kan ikke velge kilder sammen med land eller kategori."
+msgstr "Du kan ikke velge kilder samtidig som du angir land eller kategori."
+
+#: news/views.py:157
+msgid "Used_default_query"
+msgstr "Standardspørring brukes"
 
 #: templates/base.html:6 templates/home.html:5 templates/home.html:18
 #: templates/includes/footer.html:8 templates/includes/header.html:7
@@ -277,11 +495,11 @@ msgstr "Alle nyheter på ett sted"
 
 #: templates/home.html:21
 msgid "Find_Read_Stay_informed"
-msgstr "Finn. Les. Hold deg informert."
+msgstr "Finn. Les. Hold deg oppdatert."
 
 #: templates/home.html:49
 msgid "Start_by_searching_or_go_to"
-msgstr "Start med å søke eller gå til"
+msgstr "Start med søk eller gå til"
 
 #: templates/home.html:51
 msgid "main news"
@@ -289,7 +507,7 @@ msgstr "Hovednyheter"
 
 #: templates/includes/footer.html:11
 msgid "footer_site_descriptions"
-msgstr "Nyhetsaggregator fra ulike kilder. Raskt, praktisk og trygt."
+msgstr "Nyhetsaggregator fra ulike kilder. Raskt, praktisk og sikkert."
 
 #: templates/includes/footer.html:16
 msgid "Navigation"
@@ -317,7 +535,7 @@ msgstr "Profil"
 
 #: templates/includes/footer.html:46
 msgid "Favorite"
-msgstr "Favoritter"
+msgstr "Favoritt"
 
 #: templates/includes/footer.html:51 templates/users/profile.html:44
 msgid "Settings"
@@ -325,7 +543,7 @@ msgstr "Innstillinger"
 
 #: templates/includes/footer.html:58
 msgid "Contacts"
-msgstr "Kontakt"
+msgstr "Kontakter"
 
 #: templates/includes/header.html:11
 msgid "Select_language"
@@ -423,7 +641,7 @@ msgstr "Favoritter"
 
 #: templates/users/favorites.html:8
 msgid "All_your_saved_articles"
-msgstr "Alle dine lagrede artikler"
+msgstr "Alle lagrede artiklene dine"
 
 #: templates/users/favorites.html:19
 msgid "Its_empty_here_yet"
@@ -431,11 +649,11 @@ msgstr "Det er tomt her ennå."
 
 #: templates/users/favorites.html:20
 msgid "Search_news"
-msgstr "Søk etter nyheter"
+msgstr "Søk i nyheter"
 
 #: templates/users/login.html:4
 msgid "Entrance"
-msgstr "Innlogging"
+msgstr "Inngang"
 
 #: templates/users/login.html:13
 msgid "Enter_your_credentials"
@@ -463,7 +681,7 @@ msgstr "Du er logget ut."
 
 #: templates/users/logout.html:15
 msgid "Thank_you_for_visiting_our_website_We_hope_to_see_you_again"
-msgstr "Takk for besøket. Vi håper å se deg igjen!"
+msgstr "Takk for at du besøkte nettstedet vårt. Vi håper å se deg igjen!"
 
 #: templates/users/logout.html:20
 msgid "Login_again"
@@ -471,15 +689,17 @@ msgstr "Logg inn igjen"
 
 #: templates/users/logout.html:31
 msgid "Your_session_has_ended_For_security_reasons_we_recommend_closing_your_browser"
-msgstr "Din økt er avsluttet. Av sikkerhetsgrunner anbefaler vi å lukke nettleseren."
+msgstr "Økten din er avsluttet. Av sikkerhetsårsaker anbefaler vi å lukke nettleseren."
 
 #: templates/users/password_change.html:4
+#: templates/users/password_change.html:13
+#: templates/users/password_change.html:86
 msgid "Change_password"
 msgstr "Endre passord"
 
 #: templates/users/password_change.html:14
 msgid "Enter_your_current_password_and_new_password"
-msgstr "Skriv inn ditt nåværende passord og nytt passord"
+msgstr "Skriv inn gjeldende passord og nytt passord."
 
 #: templates/users/password_change.html:30
 msgid "Current_Password"
@@ -512,11 +732,11 @@ msgstr "Passordet ditt er endret. Du kan nå logge inn med det nye passordet."
 
 #: templates/users/password_change_done.html:23
 msgid "Return_to_profile"
-msgstr "Tilbake til profilen"
+msgstr "Gå tilbake til profilen"
 
 #: templates/users/password_change_done.html:36
 msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regularly"
-msgstr "Det anbefales å bruke forskjellige passord for forskjellige tjenester og bytte dem regelmessig."
+msgstr "Det anbefales å bruke forskjellige passord for ulike tjenester og endre dem jevnlig."
 
 #: templates/users/password_reset.html:4 templates/users/password_reset.html:13
 msgid "Password_reset"
@@ -524,7 +744,7 @@ msgstr "Tilbakestill passord"
 
 #: templates/users/password_reset.html:15
 msgid "Forgot_your_password_Enter_your_email_address_Well_send_you_instructions"
-msgstr "Glemt passordet? Skriv inn e-postadressen din — vi sender instruksjoner."
+msgstr "Glemt passord? Skriv inn e-posten din — vi sender instruksjoner."
 
 #: templates/users/password_reset.html:32
 msgid "Email_address"
@@ -536,14 +756,14 @@ msgstr "Send instruksjoner"
 
 #: templates/users/password_reset.html:52
 msgid "Back_to_the_entrance"
-msgstr "Tilbake til innlogging"
+msgstr "Tilbake til pålogging"
 
 #: templates/users/password_reset.html:61
 msgid ""
 "If you haven't received the email, check your spam folder or make sure you "
 "entered the correct email address."
 msgstr ""
-"Hvis du ikke har mottatt e-posten, sjekk søppelpostmappen eller sørg for at du skrev inn riktig adresse."
+"Hvis du ikke har mottatt e-posten, sjekk søppelpostmappen eller forsikre deg om at du skrev inn riktig e-postadresse."
 
 #: templates/users/password_reset_complete.html:4
 #: templates/users/password_reset_complete.html:15
@@ -552,7 +772,7 @@ msgstr "Passord gjenopprettet"
 
 #: templates/users/password_reset_complete.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_log_in_with_your_new_password"
-msgstr "Passordet ditt ble vellykket endret. Du kan nå logge inn med det nye passordet."
+msgstr "Passordet ditt ble endret. Du kan nå logge inn med det nye passordet."
 
 #: templates/users/password_reset_complete.html:23
 msgid "Sign_in"
@@ -605,11 +825,11 @@ msgid ""
 "The password reset link is invalid, possibly because it has already been "
 "used."
 msgstr ""
-"Lenken for tilbakestilling av passord er ugyldig, muligens fordi den allerede er brukt."
+"Lenken for tilbakestilling av passord er ugyldig — den kan ha blitt brukt allerede."
 
 #: templates/users/password_reset_confirm.html:86
 msgid "Please request a new password reset."
-msgstr "Be om en ny tilbakestilling av passord."
+msgstr "Vennligst be om en ny tilbakestilling av passord."
 
 #: templates/users/password_reset_confirm.html:93
 msgid "Request a new password reset"
@@ -618,11 +838,11 @@ msgstr "Be om ny tilbakestilling av passord"
 #: templates/users/password_reset_confirm.html:96
 #: templates/users/password_reset_done.html:36
 msgid "Return to the entrance"
-msgstr "Tilbake til innlogging"
+msgstr "Gå tilbake til pålogging"
 
 #: templates/users/password_reset_done.html:4
 msgid "Instructions_have_been_sent"
-msgstr "Instruksjoner er sendt."
+msgstr "Instruksjonene er sendt."
 
 #: templates/users/password_reset_done.html:15
 msgid "Check_your_mail"
@@ -638,11 +858,11 @@ msgstr "Du bør motta dem snart."
 
 #: templates/users/password_reset_done.html:27
 msgid "If_you_dont_see_the_email_check_your_spam_folder"
-msgstr "Hvis du ikke ser e-posten, sjekk søppelpostmappen."
+msgstr "Hvis du ikke ser e-posten, sjekk søppelpostmappen"
 
 #: templates/users/password_reset_done.html:28
 msgid "Sometimes_password_recovery_emails_can_end_up_there"
-msgstr "Noen ganger kan e-poster for passordgjenoppretting ende opp der."
+msgstr "Noen ganger kan e-poster for passordgjenoppretting havne der."
 
 #: templates/users/profile.html:5
 msgid "User_profile"
@@ -668,7 +888,7 @@ msgstr "Navn"
 #: templates/users/profile.html:70 templates/users/profile.html:74
 #: templates/users/profile.html:85 templates/users/profile.html:92
 msgid "Not_specified"
-msgstr "Ikke angitt"
+msgstr "Ikke spesifisert"
 
 #: templates/users/profile.html:73 users/forms.py:65
 msgid "Surname"
@@ -680,7 +900,7 @@ msgstr "Fødselsdato"
 
 #: templates/users/profile.html:90 templates/users/profile_update.html:35
 msgid "Location"
-msgstr "Sted"
+msgstr "Beliggenhet"
 
 #: templates/users/profile.html:99
 msgid "Registration date"
@@ -740,15 +960,15 @@ msgstr "Brukere"
 
 #: users/backends.py:50
 msgid "account_activation_mail_text"
-msgstr "Kontoverifisering"
+msgstr "Kontobody for aktivering"
 
-#: users/backends.py:55
+#: users/backends.py:52
 msgid "Account_activation"
-msgstr "Kontoverifisering"
+msgstr "Kontoaktivering"
 
 #: users/forms.py:34
 msgid "Mail"
-msgstr "E-post"
+msgstr "Post"
 
 #: users/forms.py:47 users/forms.py:68
 msgid "Email"
@@ -756,11 +976,11 @@ msgstr "E-post"
 
 #: users/forms.py:51
 msgid "Enter_login"
-msgstr "Angi brukernavn"
+msgstr "Skriv inn brukernavn"
 
 #: users/forms.py:52
 msgid "Enter_email"
-msgstr "Angi e-post"
+msgstr "Skriv inn e-post"
 
 #: users/forms.py:74 users/models.py:100 users/models.py:101
 msgid "Favorite_categories"
@@ -772,7 +992,7 @@ msgstr "Last opp profilbilde."
 
 #: users/forms.py:125
 msgid "invalid_login_text"
-msgstr "Vennligst skriv inn riktig brukernavn og passord."
+msgstr "Ugyldig brukernavn eller passord."
 
 #: users/forms.py:127
 msgid "This_account_is_inactive"
@@ -788,7 +1008,7 @@ msgstr "Avatar"
 
 #: users/models.py:77
 msgid "User_avatar"
-msgstr "Bruker-avatar."
+msgstr "Brukerens avatar."
 
 #: users/models.py:83
 msgid "Date_of_birth"
@@ -800,7 +1020,7 @@ msgstr "Brukerens fødselsdato."
 
 #: users/models.py:89
 msgid "location_help_text"
-msgstr "Brukerens by (eller land) for bosted."
+msgstr "Oppgi byen eller landet du bor i."
 
 #: users/models.py:94
 msgid "Attempts"
@@ -808,7 +1028,7 @@ msgstr "Forsøk"
 
 #: users/models.py:95
 msgid "Number_of_login_attempts"
-msgstr "Antall innloggingsforsøk"
+msgstr "Antall påloggingsforsøk"
 
 #: users/models.py:104
 msgid "deactivate in"
@@ -816,7 +1036,7 @@ msgstr "deaktiver om"
 
 #: users/models.py:105
 msgid "account was deactivated"
-msgstr "Kontoen ble deaktivert"
+msgstr "kontoen ble deaktivert"
 
 #: users/models.py:122
 msgid "profile"
@@ -840,7 +1060,7 @@ msgstr "Aktivering vellykket"
 
 #: users/views.py:54 users/views.py:68
 msgid "Activation_time_expired"
-msgstr "Aktiveringstiden er utløpt"
+msgstr "Tiden for aktivering er utløpt"
 
 #: users/views.py:70
 msgid "Account_is_not_deactivated"

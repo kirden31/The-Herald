@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-21 17:40+0300\n"
+"POT-Creation-Date: 2025-12-23 18:23+0300\n"
 "PO-Revision-Date: 2025-12-21 00:00+0000\n"
-"Last-Translator: Traductor Nombre <translator@example.com>\n"
+"Last-Translator: Translator Name <translator@example.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -25,8 +25,18 @@ msgid "German"
 msgstr "Alemán"
 
 #: herald/settings.py:134
-msgid "Norwegian"
-msgstr "Noruego"
+#, fuzzy
+#| msgid "Norwegian"
+msgid "Norwegian Bokmål"
+msgstr "Noruego Bokmål"
+
+#: herald/settings.py:135 news/forms_data.py:23
+msgid "French"
+msgstr "Francés"
+
+#: herald/settings.py:136 news/forms_data.py:22
+msgid "Spanish"
+msgstr "Español"
 
 #: news/admin.py:59
 msgid "User_and_source"
@@ -99,19 +109,11 @@ msgstr "Secciones"
 
 #: news/forms.py:222
 msgid "Rating"
-msgstr "Clasificación"
+msgstr "Calificación"
 
 #: news/forms_data.py:19
 msgid "Arabic"
 msgstr "Árabe"
-
-#: news/forms_data.py:22
-msgid "Spanish"
-msgstr "Español"
-
-#: news/forms_data.py:23
-msgid "French"
-msgstr "Francés"
 
 #: news/forms_data.py:24
 msgid "Hebrew"
@@ -191,15 +193,227 @@ msgstr "Publicado en"
 
 #: news/forms_data.py:87
 msgid "Newest"
-msgstr "Más recientes"
+msgstr "Más nuevos primero"
 
 #: news/forms_data.py:88
 msgid "Oldest"
-msgstr "Más antiguos"
+msgstr "Más antiguos primero"
 
 #: news/forms_data.py:89
 msgid "Relevance"
 msgstr "Relevancia"
+
+#: news/forms_data.py:93
+msgid "United Arab Emirates"
+msgstr "Emiratos Árabes Unidos"
+
+#: news/forms_data.py:94
+msgid "Argentina"
+msgstr "Argentina"
+
+#: news/forms_data.py:95
+msgid "Austria"
+msgstr "Austria"
+
+#: news/forms_data.py:96
+msgid "Australia"
+msgstr "Australia"
+
+#: news/forms_data.py:97
+msgid "Belgium"
+msgstr "Bélgica"
+
+#: news/forms_data.py:98
+msgid "Bulgaria"
+msgstr "Bulgaria"
+
+#: news/forms_data.py:99
+msgid "Brazil"
+msgstr "Brasil"
+
+#: news/forms_data.py:100
+msgid "Canada"
+msgstr "Canadá"
+
+#: news/forms_data.py:101
+msgid "Switzerland"
+msgstr "Suiza"
+
+#: news/forms_data.py:102
+msgid "China"
+msgstr "China"
+
+#: news/forms_data.py:103
+msgid "Colombia"
+msgstr "Colombia"
+
+#: news/forms_data.py:104
+msgid "Cuba"
+msgstr "Cuba"
+
+#: news/forms_data.py:105
+msgid "Czech Republic"
+msgstr "República Checa"
+
+#: news/forms_data.py:106
+msgid "Germany"
+msgstr "Alemania"
+
+#: news/forms_data.py:107
+msgid "Egypt"
+msgstr "Egipto"
+
+#: news/forms_data.py:108
+msgid "France"
+msgstr "Francia"
+
+#: news/forms_data.py:109
+msgid "United Kingdom"
+msgstr "Reino Unido"
+
+#: news/forms_data.py:110
+msgid "Greece"
+msgstr "Grecia"
+
+#: news/forms_data.py:111
+msgid "Hong Kong"
+msgstr "Hong Kong"
+
+#: news/forms_data.py:112
+msgid "Hungary"
+msgstr "Hungría"
+
+#: news/forms_data.py:113
+msgid "Indonesia"
+msgstr "Indonesia"
+
+#: news/forms_data.py:114
+msgid "Ireland"
+msgstr "Irlanda"
+
+#: news/forms_data.py:115
+msgid "Israel"
+msgstr "Israel"
+
+#: news/forms_data.py:116
+msgid "India"
+msgstr "India"
+
+#: news/forms_data.py:117
+msgid "Italy"
+msgstr "Italia"
+
+#: news/forms_data.py:118
+msgid "Japan"
+msgstr "Japón"
+
+#: news/forms_data.py:119
+msgid "South Korea"
+msgstr "Corea del Sur"
+
+#: news/forms_data.py:120
+msgid "Lithuania"
+msgstr "Lituania"
+
+#: news/forms_data.py:121
+msgid "Latvia"
+msgstr "Letonia"
+
+#: news/forms_data.py:122
+msgid "Morocco"
+msgstr "Marruecos"
+
+#: news/forms_data.py:123
+msgid "Mexico"
+msgstr "México"
+
+#: news/forms_data.py:124
+msgid "Malaysia"
+msgstr "Malasia"
+
+#: news/forms_data.py:125
+msgid "Nigeria"
+msgstr "Nigeria"
+
+#: news/forms_data.py:126
+msgid "Netherlands"
+msgstr "Países Bajos"
+
+#: news/forms_data.py:127
+msgid "Norway"
+msgstr "Noruega"
+
+#: news/forms_data.py:128
+msgid "New Zealand"
+msgstr "Nueva Zelanda"
+
+#: news/forms_data.py:129
+msgid "Philippines"
+msgstr "Filipinas"
+
+#: news/forms_data.py:130
+msgid "Poland"
+msgstr "Polonia"
+
+#: news/forms_data.py:131
+msgid "Portugal"
+msgstr "Portugal"
+
+#: news/forms_data.py:132
+msgid "Romania"
+msgstr "Rumanía"
+
+#: news/forms_data.py:133
+msgid "Serbia"
+msgstr "Serbia"
+
+#: news/forms_data.py:134
+msgid "Russia"
+msgstr "Rusia"
+
+#: news/forms_data.py:135
+msgid "Saudi Arabia"
+msgstr "Arabia Saudita"
+
+#: news/forms_data.py:136
+msgid "Sweden"
+msgstr "Suecia"
+
+#: news/forms_data.py:137
+msgid "Singapore"
+msgstr "Singapur"
+
+#: news/forms_data.py:138
+msgid "Slovenia"
+msgstr "Eslovenia"
+
+#: news/forms_data.py:139
+msgid "Slovakia"
+msgstr "Eslovaquia"
+
+#: news/forms_data.py:140
+msgid "Thailand"
+msgstr "Tailandia"
+
+#: news/forms_data.py:141
+msgid "Turkey"
+msgstr "Turquía"
+
+#: news/forms_data.py:142
+msgid "Taiwan"
+msgstr "Taiwán"
+
+#: news/forms_data.py:143
+msgid "Ukraine"
+msgstr "Ucrania"
+
+#: news/forms_data.py:145
+msgid "Venezuela"
+msgstr "Venezuela"
+
+#: news/forms_data.py:146
+msgid "South Africa"
+msgstr "Sudáfrica"
 
 #: news/forms_data.py:157
 msgid "None"
@@ -253,13 +467,17 @@ msgstr "Noticias destacadas"
 msgid "selected_news"
 msgstr "Noticias recomendadas"
 
-#: news/views.py:54 news/views.py:129 news/views.py:202 news/views.py:268
+#: news/views.py:54 news/views.py:129 news/views.py:205 news/views.py:271
 msgid "Forms_error"
-msgstr "Error en el formulario"
+msgstr "Error de formulario"
 
 #: news/views.py:83
 msgid "You_cannot_select_sources_together_with_country_or_category"
 msgstr "No puede seleccionar fuentes junto con país o categoría."
+
+#: news/views.py:157
+msgid "Used_default_query"
+msgstr "Se utiliza la consulta predeterminada"
 
 #: templates/base.html:6 templates/home.html:5 templates/home.html:18
 #: templates/includes/footer.html:8 templates/includes/header.html:7
@@ -277,15 +495,15 @@ msgstr "Todas las noticias en un solo lugar"
 
 #: templates/home.html:21
 msgid "Find_Read_Stay_informed"
-msgstr "Busca. Lee. Mantente informado."
+msgstr "Encuentra. Lee. Mantente informado."
 
 #: templates/home.html:49
 msgid "Start_by_searching_or_go_to"
-msgstr "Comienza buscando o ve a"
+msgstr "Comience buscando o vaya a"
 
 #: templates/home.html:51
 msgid "main news"
-msgstr "Noticias principales"
+msgstr "noticias principales"
 
 #: templates/includes/footer.html:11
 msgid "footer_site_descriptions"
@@ -321,7 +539,7 @@ msgstr "Favorito"
 
 #: templates/includes/footer.html:51 templates/users/profile.html:44
 msgid "Settings"
-msgstr "Ajustes"
+msgstr "Configuración"
 
 #: templates/includes/footer.html:58
 msgid "Contacts"
@@ -329,7 +547,7 @@ msgstr "Contactos"
 
 #: templates/includes/header.html:11
 msgid "Select_language"
-msgstr "Seleccionar idioma"
+msgstr "Seleccione idioma"
 
 #: templates/includes/header.html:19
 msgid "Top_headlines"
@@ -338,7 +556,7 @@ msgstr "Titulares principales"
 #: templates/includes/header.html:27 templates/news/everything_news.html:5
 #: templates/news/guardian_news.html:5
 msgid "Everything"
-msgstr "Todas las noticias"
+msgstr "Todos"
 
 #: templates/includes/header.html:31
 msgid "Guardian"
@@ -384,7 +602,7 @@ msgstr "Guardar"
 
 #: templates/includes/source_card.html:27
 msgid "No_description"
-msgstr "Sin descripción"
+msgstr "Descripción no disponible"
 
 #: templates/includes/source_card.html:46
 msgid "Visit"
@@ -435,15 +653,15 @@ msgstr "Buscar noticias"
 
 #: templates/users/login.html:4
 msgid "Entrance"
-msgstr "Acceso"
+msgstr "Entrada"
 
 #: templates/users/login.html:13
 msgid "Enter_your_credentials"
-msgstr "Introduce tus credenciales"
+msgstr "Introduzca sus credenciales"
 
 #: templates/users/login.html:65
 msgid "Forgot_your_password"
-msgstr "¿Olvidaste tu contraseña?"
+msgstr "¿Olvidó su contraseña?"
 
 #: templates/users/login.html:69
 msgid "Dont_have_an_account"
@@ -459,11 +677,11 @@ msgstr "Cerrar sesión"
 
 #: templates/users/logout.html:12
 msgid "You_are_logged_out"
-msgstr "Has cerrado la sesión."
+msgstr "Has cerrado sesión."
 
 #: templates/users/logout.html:15
 msgid "Thank_you_for_visiting_our_website_We_hope_to_see_you_again"
-msgstr "Gracias por visitar nuestro sitio web. ¡Esperamos verte de nuevo!"
+msgstr "¡Gracias por visitar nuestro sitio web! ¡Esperamos verte de nuevo!"
 
 #: templates/users/logout.html:20
 msgid "Login_again"
@@ -471,15 +689,17 @@ msgstr "Iniciar sesión de nuevo"
 
 #: templates/users/logout.html:31
 msgid "Your_session_has_ended_For_security_reasons_we_recommend_closing_your_browser"
-msgstr "Tu sesión ha terminado. Por razones de seguridad, recomendamos cerrar el navegador."
+msgstr "Su sesión ha terminado. Por razones de seguridad, le recomendamos cerrar su navegador."
 
 #: templates/users/password_change.html:4
+#: templates/users/password_change.html:13
+#: templates/users/password_change.html:86
 msgid "Change_password"
 msgstr "Cambiar contraseña"
 
 #: templates/users/password_change.html:14
 msgid "Enter_your_current_password_and_new_password"
-msgstr "Introduce tu contraseña actual y la nueva"
+msgstr "Ingrese su contraseña actual y la nueva."
 
 #: templates/users/password_change.html:30
 msgid "Current_Password"
@@ -491,7 +711,7 @@ msgstr "Nueva contraseña"
 
 #: templates/users/password_change.html:69
 msgid "Confirming_a_new_password"
-msgstr "Confirmar nueva contraseña"
+msgstr "Confirmar la nueva contraseña"
 
 #: templates/users/password_change.html:89
 #: templates/users/profile_update.html:82
@@ -508,7 +728,7 @@ msgstr "¡Contraseña cambiada con éxito!"
 
 #: templates/users/password_change_done.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_use_the_new_password_to_log_in"
-msgstr "Tu contraseña se ha cambiado correctamente. Ahora puedes iniciar sesión con la nueva contraseña."
+msgstr "Su contraseña se ha cambiado correctamente. Ahora puede iniciar sesión con la nueva contraseña."
 
 #: templates/users/password_change_done.html:23
 msgid "Return_to_profile"
@@ -516,7 +736,7 @@ msgstr "Volver al perfil"
 
 #: templates/users/password_change_done.html:36
 msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regularly"
-msgstr "Se recomienda usar contraseñas diferentes para distintos servicios y cambiarlas con regularidad."
+msgstr "Se recomienda usar contraseñas diferentes para distintos servicios y cambiarlas regularmente."
 
 #: templates/users/password_reset.html:4 templates/users/password_reset.html:13
 msgid "Password_reset"
@@ -524,11 +744,11 @@ msgstr "Restablecer contraseña"
 
 #: templates/users/password_reset.html:15
 msgid "Forgot_your_password_Enter_your_email_address_Well_send_you_instructions"
-msgstr "¿Olvidaste tu contraseña? Introduce tu correo electrónico — te enviaremos instrucciones."
+msgstr "¿Olvidó su contraseña? Introduzca su dirección de correo electrónico — le enviaremos instrucciones."
 
 #: templates/users/password_reset.html:32
 msgid "Email_address"
-msgstr "Dirección de correo"
+msgstr "Dirección de correo electrónico"
 
 #: templates/users/password_reset.html:49
 msgid "Send_instructions"
@@ -543,7 +763,7 @@ msgid ""
 "If you haven't received the email, check your spam folder or make sure you "
 "entered the correct email address."
 msgstr ""
-"Si no has recibido el correo, revisa la carpeta de spam o asegúrate de haber introducido la dirección correcta."
+"Si no ha recibido el correo, revise la carpeta de spam o asegúrese de haber introducido la dirección correcta."
 
 #: templates/users/password_reset_complete.html:4
 #: templates/users/password_reset_complete.html:15
@@ -552,7 +772,7 @@ msgstr "Contraseña restaurada"
 
 #: templates/users/password_reset_complete.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_log_in_with_your_new_password"
-msgstr "Tu contraseña se ha cambiado correctamente. Ya puedes iniciar sesión con la nueva contraseña."
+msgstr "Su contraseña ha sido cambiada con éxito. Ahora puede iniciar sesión con su nueva contraseña."
 
 #: templates/users/password_reset_complete.html:23
 msgid "Sign_in"
@@ -560,23 +780,23 @@ msgstr "Iniciar sesión"
 
 #: templates/users/password_reset_complete.html:37
 msgid "Your_account_is_now_protected_with_a_new_password"
-msgstr "Tu cuenta ahora está protegida con una nueva contraseña."
+msgstr "Su cuenta ahora está protegida con una nueva contraseña."
 
 #: templates/users/password_reset_complete.html:38
 msgid "It_is_recommended_to_use_unique_passwords_for_different_services"
-msgstr "Se recomienda usar contraseñas únicas para diferentes servicios."
+msgstr "Se recomienda usar contraseñas únicas para distintos servicios."
 
 #: templates/users/password_reset_confirm.html:4
 msgid "Enter_new_password"
-msgstr "Introduce nueva contraseña"
+msgstr "Introduzca nueva contraseña"
 
 #: templates/users/password_reset_confirm.html:15
 msgid "Enter new password"
-msgstr "Introduce nueva contraseña"
+msgstr "Introduzca nueva contraseña"
 
 #: templates/users/password_reset_confirm.html:16
 msgid "Please enter the new password twice."
-msgstr "Por favor introduce la nueva contraseña dos veces."
+msgstr "Por favor, introduzca la nueva contraseña dos veces."
 
 #: templates/users/password_reset_confirm.html:18
 msgid "Restore Error"
@@ -584,7 +804,7 @@ msgstr "Error de restauración"
 
 #: templates/users/password_reset_confirm.html:19
 msgid "The password reset link is invalid."
-msgstr "El enlace para restablecer la contraseña no es válido."
+msgstr "El enlace para restablecer la contraseña es inválido."
 
 #: templates/users/password_reset_confirm.html:37
 msgid "New Password"
@@ -605,11 +825,11 @@ msgid ""
 "The password reset link is invalid, possibly because it has already been "
 "used."
 msgstr ""
-"El enlace para restablecer la contraseña no es válido, posiblemente porque ya se ha usado."
+"El enlace para restablecer la contraseña es inválido, posiblemente porque ya se ha utilizado."
 
 #: templates/users/password_reset_confirm.html:86
 msgid "Please request a new password reset."
-msgstr "Por favor solicita un nuevo restablecimiento de contraseña."
+msgstr "Por favor solicite un nuevo restablecimiento de contraseña."
 
 #: templates/users/password_reset_confirm.html:93
 msgid "Request a new password reset"
@@ -626,23 +846,23 @@ msgstr "Se han enviado las instrucciones."
 
 #: templates/users/password_reset_done.html:15
 msgid "Check_your_mail"
-msgstr "Revisa tu correo"
+msgstr "Revise su correo"
 
 #: templates/users/password_reset_done.html:18
 msgid "We_have_sent_password_recovery_instructions_to_the_email_address_you_provided"
-msgstr "Hemos enviado instrucciones de recuperación de contraseña a la dirección de correo que proporcionaste."
+msgstr "Hemos enviado instrucciones para recuperar la contraseña a la dirección de correo que proporcionó."
 
 #: templates/users/password_reset_done.html:19
 msgid "You_should_receive_them_soon"
-msgstr "Deberías recibirlas pronto."
+msgstr "Debería recibirlas pronto."
 
 #: templates/users/password_reset_done.html:27
 msgid "If_you_dont_see_the_email_check_your_spam_folder"
-msgstr "Si no ves el correo, revisa la carpeta de spam."
+msgstr "Si no ve el correo, revise su carpeta de spam"
 
 #: templates/users/password_reset_done.html:28
 msgid "Sometimes_password_recovery_emails_can_end_up_there"
-msgstr "A veces los correos de recuperación de contraseña pueden acabar ahí."
+msgstr "A veces los correos de recuperación de contraseña pueden terminar allí."
 
 #: templates/users/profile.html:5
 msgid "User_profile"
@@ -700,7 +920,7 @@ msgstr "Categorías favoritas"
 
 #: templates/users/profile.html:130
 msgid "You haven't selected your favorite categories yet."
-msgstr "Aún no has seleccionado tus categorías favoritas."
+msgstr "Aún no ha seleccionado sus categorías favoritas."
 
 #: templates/users/profile.html:132
 msgid "Add categories"
@@ -708,7 +928,7 @@ msgstr "Agregar categorías"
 
 #: templates/users/profile.html:142
 msgid "Click on a category to view related news"
-msgstr "Haz clic en una categoría para ver noticias relacionadas."
+msgstr "Haga clic en una categoría para ver noticias relacionadas."
 
 #: templates/users/profile.html:145
 msgid "Edit"
@@ -742,7 +962,7 @@ msgstr "Usuarios"
 msgid "account_activation_mail_text"
 msgstr "Activación de cuenta"
 
-#: users/backends.py:55
+#: users/backends.py:52
 msgid "Account_activation"
 msgstr "Activación de cuenta"
 
@@ -756,11 +976,11 @@ msgstr "Correo electrónico"
 
 #: users/forms.py:51
 msgid "Enter_login"
-msgstr "Introduzca el usuario"
+msgstr "Ingrese el nombre de usuario"
 
 #: users/forms.py:52
 msgid "Enter_email"
-msgstr "Introduzca el correo"
+msgstr "Ingrese la dirección de correo"
 
 #: users/forms.py:74 users/models.py:100 users/models.py:101
 msgid "Favorite_categories"
@@ -768,11 +988,11 @@ msgstr "Categorías favoritas"
 
 #: users/forms.py:104
 msgid "Upload_your_profile_picture"
-msgstr "Sube tu foto de perfil."
+msgstr "Sube la foto de tu perfil."
 
 #: users/forms.py:125
 msgid "invalid_login_text"
-msgstr "Por favor introduzca el nombre de usuario y la contraseña correctos."
+msgstr "Nombre de usuario o contraseña inválidos."
 
 #: users/forms.py:127
 msgid "This_account_is_inactive"
@@ -780,7 +1000,7 @@ msgstr "Esta cuenta está inactiva."
 
 #: users/forms.py:129
 msgid "Login or email"
-msgstr "Usuario o correo"
+msgstr "Nombre de usuario o correo"
 
 #: users/models.py:76
 msgid "Avatar"
@@ -800,7 +1020,7 @@ msgstr "Fecha de nacimiento del usuario."
 
 #: users/models.py:89
 msgid "location_help_text"
-msgstr "Ciudad (o país) de residencia del usuario."
+msgstr "Indique la ciudad o el país de residencia."
 
 #: users/models.py:94
 msgid "Attempts"
@@ -816,7 +1036,7 @@ msgstr "desactivar en"
 
 #: users/models.py:105
 msgid "account was deactivated"
-msgstr "La cuenta fue desactivada"
+msgstr "la cuenta fue desactivada"
 
 #: users/models.py:122
 msgid "profile"
@@ -840,7 +1060,7 @@ msgstr "Activación exitosa"
 
 #: users/views.py:54 users/views.py:68
 msgid "Activation_time_expired"
-msgstr "Tiempo de activación expirado"
+msgstr "El tiempo de activación ha expirado"
 
 #: users/views.py:70
 msgid "Account_is_not_deactivated"

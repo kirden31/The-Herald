@@ -125,15 +125,19 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = 'ru-RU'
+LANGUAGE_CODE = 'ru'
 
 LANGUAGES = [
-    ('en-US', _('English')),
-    ('ru-RU', _('Russian')),
-    ('de-DE', _('German')),
-    ('nb-NO', _('Norwegian Bokmål')),
-    ('fr-FR', _('French')),
-    ('es-ES', _('Spanish')),
+    ('en', _('English')),
+    ('ru', _('Russian')),
+    ('de', _('German')),
+    ('nb', _('Norwegian Bokmål')),
+    ('fr', _('French')),
+    ('es', _('Spanish')),
+    ('zh-hans', _('Chinese (Simplified)')),
+    ('ja', _('Japanese')),
+    ('el', _('Greek')),
+    ('ar', _('Arabic')),
 ]
 
 LOGIN_URL = django.urls.reverse_lazy('users:login')

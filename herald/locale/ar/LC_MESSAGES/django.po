@@ -3,481 +3,481 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-23 18:23+0300\n"
-"PO-Revision-Date: 2025-12-21 00:00+0000\n"
-"Last-Translator: Translator Name <translator@example.com>\n"
-"Language-Team: German <de@li.org>\n"
-"Language: de\n"
+"PO-Revision-Date: 2025-12-24 00:00+0000\n"
+"Last-Translator: ChatGPT <translator@example.com>\n"
+"Language-Team: Arabic <ar@li.org>\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=6; plural=(n==0?0:n==1?1:n==2?2:(n%100>=3 && n%100<=10)?3:(n%100>=11 && n%100<=99)?4:5);\n"
 
 #: herald/settings.py:131 news/forms_data.py:21
 msgid "English"
-msgstr "Englisch"
+msgstr "الإنجليزية"
 
 #: herald/settings.py:132 news/forms_data.py:29
 msgid "Russian"
-msgstr "Russisch"
+msgstr "الروسية"
 
 #: herald/settings.py:133 news/forms_data.py:20
 msgid "German"
-msgstr "Deutsch"
+msgstr "الألمانية"
 
 #: herald/settings.py:134
 #, fuzzy
 #| msgid "Norwegian"
 msgid "Norwegian Bokmål"
-msgstr "Norwegisches Bokmål"
+msgstr "النرويجية بوكمول"
 
 #: herald/settings.py:135 news/forms_data.py:23
 msgid "French"
-msgstr "Französisch"
+msgstr "الفرنسية"
 
 #: herald/settings.py:136 news/forms_data.py:22
 msgid "Spanish"
-msgstr "Spanisch"
+msgstr "الإسبانية"
 
 #: news/admin.py:59
 msgid "User_and_source"
-msgstr "Benutzer und Quelle"
+msgstr "المستخدم والمصدر"
 
 #: news/admin.py:65
 msgid "News_content"
-msgstr "Nachrichteninhalt"
+msgstr "محتوى الخبر"
 
 #: news/admin.py:71
 msgid "Link_and_date"
-msgstr "Link und Datum"
+msgstr "الرابط والتاريخ"
 
 #: news/admin.py:78
 msgid "Source"
-msgstr "Quelle"
+msgstr "المصدر"
 
 #: news/apps.py:10
 msgid "News"
-msgstr "Nachrichten"
+msgstr "أخبار"
 
 #: news/forms.py:14 templates/home.html:39 templates/includes/footer.html:25
 #: templates/includes/search_area.html:10
 msgid "Search"
-msgstr "Suche"
+msgstr "بحث"
 
 #: news/forms.py:19
 msgid "search_area_placeholder"
-msgstr "Suche..."
+msgstr "بحث…"
 
 #: news/forms.py:28 news/forms.py:42
 msgid "Sort_by"
-msgstr "Sortieren nach"
+msgstr "الترتيب حسب"
 
 #: news/forms.py:56
 msgid "Search_in_default_all"
-msgstr "Sprache wählen (Standard — alle)"
+msgstr "اختر اللغة (الافتراضي — الكل)"
 
 #: news/forms.py:69
 msgid "Select_sources_max_default_all"
-msgstr "Wählen Sie bis zu 20 Quellen (Standard — alle)"
+msgstr "اختر حتى 20 مصدراً (الافتراضي — الكل)"
 
 #: news/forms.py:84 news/forms.py:230
 msgid "News_from"
-msgstr "Nachrichten von"
+msgstr "الأخبار من"
 
 #: news/forms.py:97 news/forms.py:242
 msgid "News_to"
-msgstr "Nachrichten bis"
+msgstr "الأخبار إلى"
 
 #: news/forms.py:110 news/forms.py:171
 msgid "Select_language_default_all"
-msgstr "Sprache wählen (Standard — alle)"
+msgstr "اختر اللغة (الافتراضي — الكل)"
 
 #: news/forms.py:128 news/forms.py:195
 msgid "Select_countries_default_all"
-msgstr "Länder wählen (Standard — alle)"
+msgstr "اختر الدول (الافتراضي — الكل)"
 
 #: news/forms.py:140 news/forms.py:183
 msgid "Select_categories_default_all"
-msgstr "Kategorien wählen (Standard — alle)"
+msgstr "اختر الفئات (الافتراضي — الكل)"
 
 #: news/forms.py:152
 msgid "Select_sources_default_all"
-msgstr "Quelle wählen (Standard — alle)"
+msgstr "اختر المصدر (الافتراضي — الكل)"
 
 #: news/forms.py:210
 msgid "Sections"
-msgstr "Abschnitte"
+msgstr "الأقسام"
 
 #: news/forms.py:222
 msgid "Rating"
-msgstr "Bewertung"
+msgstr "التقييم"
 
 #: news/forms_data.py:19
 msgid "Arabic"
-msgstr "Arabisch"
+msgstr "العربية"
 
 #: news/forms_data.py:24
 msgid "Hebrew"
-msgstr "Hebräisch"
+msgstr "العبرية"
 
 #: news/forms_data.py:25
 msgid "Italian"
-msgstr "Italienisch"
+msgstr "الإيطالية"
 
 #: news/forms_data.py:26
 msgid "Dutch"
-msgstr "Niederländisch"
+msgstr "الهولندية"
 
 #: news/forms_data.py:28
 msgid "Portuguese"
-msgstr "Portugiesisch"
+msgstr "البرتغالية"
 
 #: news/forms_data.py:30
 msgid "Swedish"
-msgstr "Schwedisch"
+msgstr "السويدية"
 
 #: news/forms_data.py:34 news/forms_data.py:144
 msgid "United States"
-msgstr "Vereinigte Staaten"
+msgstr "الولايات المتحدة"
 
 #: news/forms_data.py:41
 msgid "Title"
-msgstr "Titel"
+msgstr "العنوان"
 
 #: news/forms_data.py:42
 msgid "Description"
-msgstr "Beschreibung"
+msgstr "الوصف"
 
 #: news/forms_data.py:43
 msgid "Content"
-msgstr "Inhalt"
+msgstr "المحتوى"
 
 #: news/forms_data.py:65
 msgid "Business"
-msgstr "Wirtschaft"
+msgstr "أعمال"
 
 #: news/forms_data.py:66
 msgid "Entertainment"
-msgstr "Unterhaltung"
+msgstr "ترفيه"
 
 #: news/forms_data.py:67
 msgid "General"
-msgstr "Allgemein"
+msgstr "عام"
 
 #: news/forms_data.py:68
 msgid "Health"
-msgstr "Gesundheit"
+msgstr "الصحة"
 
 #: news/forms_data.py:69
 msgid "Sports"
-msgstr "Sport"
+msgstr "رياضة"
 
 #: news/forms_data.py:70
 msgid "Science"
-msgstr "Wissenschaft"
+msgstr "علوم"
 
 #: news/forms_data.py:71
 msgid "Technology"
-msgstr "Technologie"
+msgstr "تكنولوجيا"
 
 #: news/forms_data.py:78
 msgid "Relevancy"
-msgstr "Relevanz"
+msgstr "الملاءمة"
 
 #: news/forms_data.py:79
 msgid "Popularity"
-msgstr "Beliebtheit"
+msgstr "الشعبية"
 
 #: news/forms_data.py:80
 msgid "Published_at"
-msgstr "Veröffentlicht am"
+msgstr "تاريخ النشر"
 
 #: news/forms_data.py:87
 msgid "Newest"
-msgstr "Neueste zuerst"
+msgstr "الأحدث أولاً"
 
 #: news/forms_data.py:88
 msgid "Oldest"
-msgstr "Älteste zuerst"
+msgstr "الأقدم أولاً"
 
 #: news/forms_data.py:89
 msgid "Relevance"
-msgstr "Relevanz"
+msgstr "الملاءمة"
 
 #: news/forms_data.py:93
 msgid "United Arab Emirates"
-msgstr "Vereinigte Arabische Emirate"
+msgstr "الإمارات العربية المتحدة"
 
 #: news/forms_data.py:94
 msgid "Argentina"
-msgstr "Argentinien"
+msgstr "الأرجنتين"
 
 #: news/forms_data.py:95
 msgid "Austria"
-msgstr "Österreich"
+msgstr "النمسا"
 
 #: news/forms_data.py:96
 msgid "Australia"
-msgstr "Australien"
+msgstr "أستراليا"
 
 #: news/forms_data.py:97
 msgid "Belgium"
-msgstr "Belgien"
+msgstr "بلجيكا"
 
 #: news/forms_data.py:98
 msgid "Bulgaria"
-msgstr "Bulgarien"
+msgstr "بلغاريا"
 
 #: news/forms_data.py:99
 msgid "Brazil"
-msgstr "Brasilien"
+msgstr "البرازيل"
 
 #: news/forms_data.py:100
 msgid "Canada"
-msgstr "Kanada"
+msgstr "كندا"
 
 #: news/forms_data.py:101
 msgid "Switzerland"
-msgstr "Schweiz"
+msgstr "سويسرا"
 
 #: news/forms_data.py:102
 msgid "China"
-msgstr "China"
+msgstr "الصين"
 
 #: news/forms_data.py:103
 msgid "Colombia"
-msgstr "Kolumbien"
+msgstr "كولومبيا"
 
 #: news/forms_data.py:104
 msgid "Cuba"
-msgstr "Kuba"
+msgstr "كوبا"
 
 #: news/forms_data.py:105
 msgid "Czech Republic"
-msgstr "Tschechische Republik"
+msgstr "جمهورية التشيك"
 
 #: news/forms_data.py:106
 msgid "Germany"
-msgstr "Deutschland"
+msgstr "ألمانيا"
 
 #: news/forms_data.py:107
 msgid "Egypt"
-msgstr "Ägypten"
+msgstr "مصر"
 
 #: news/forms_data.py:108
 msgid "France"
-msgstr "Frankreich"
+msgstr "فرنسا"
 
 #: news/forms_data.py:109
 msgid "United Kingdom"
-msgstr "Vereinigtes Königreich"
+msgstr "المملكة المتحدة"
 
 #: news/forms_data.py:110
 msgid "Greece"
-msgstr "Griechenland"
+msgstr "اليونان"
 
 #: news/forms_data.py:111
 msgid "Hong Kong"
-msgstr "Hongkong"
+msgstr "هونغ كونغ"
 
 #: news/forms_data.py:112
 msgid "Hungary"
-msgstr "Ungarn"
+msgstr "المجر"
 
 #: news/forms_data.py:113
 msgid "Indonesia"
-msgstr "Indonesien"
+msgstr "إندونيسيا"
 
 #: news/forms_data.py:114
 msgid "Ireland"
-msgstr "Irland"
+msgstr "أيرلندا"
 
 #: news/forms_data.py:115
 msgid "Israel"
-msgstr "Israel"
+msgstr "إسرائيل"
 
 #: news/forms_data.py:116
 msgid "India"
-msgstr "Indien"
+msgstr "الهند"
 
 #: news/forms_data.py:117
 msgid "Italy"
-msgstr "Italien"
+msgstr "إيطاليا"
 
 #: news/forms_data.py:118
 msgid "Japan"
-msgstr "Japan"
+msgstr "اليابان"
 
 #: news/forms_data.py:119
 msgid "South Korea"
-msgstr "Südkorea"
+msgstr "كوريا الجنوبية"
 
 #: news/forms_data.py:120
 msgid "Lithuania"
-msgstr "Litauen"
+msgstr "ليتوانيا"
 
 #: news/forms_data.py:121
 msgid "Latvia"
-msgstr "Lettland"
+msgstr "لاتفيا"
 
 #: news/forms_data.py:122
 msgid "Morocco"
-msgstr "Marokko"
+msgstr "المغرب"
 
 #: news/forms_data.py:123
 msgid "Mexico"
-msgstr "Mexiko"
+msgstr "المكسيك"
 
 #: news/forms_data.py:124
 msgid "Malaysia"
-msgstr "Malaysia"
+msgstr "ماليزيا"
 
 #: news/forms_data.py:125
 msgid "Nigeria"
-msgstr "Nigeria"
+msgstr "نيجيريا"
 
 #: news/forms_data.py:126
 msgid "Netherlands"
-msgstr "Niederlande"
+msgstr "هولندا"
 
 #: news/forms_data.py:127
 msgid "Norway"
-msgstr "Norwegen"
+msgstr "النرويج"
 
 #: news/forms_data.py:128
 msgid "New Zealand"
-msgstr "Neuseeland"
+msgstr "نيوزيلندا"
 
 #: news/forms_data.py:129
 msgid "Philippines"
-msgstr "Philippinen"
+msgstr "الفلبين"
 
 #: news/forms_data.py:130
 msgid "Poland"
-msgstr "Polen"
+msgstr "بولندا"
 
 #: news/forms_data.py:131
 msgid "Portugal"
-msgstr "Portugal"
+msgstr "البرتغال"
 
 #: news/forms_data.py:132
 msgid "Romania"
-msgstr "Rumänien"
+msgstr "رومانيا"
 
 #: news/forms_data.py:133
 msgid "Serbia"
-msgstr "Serbien"
+msgstr "صربيا"
 
 #: news/forms_data.py:134
 msgid "Russia"
-msgstr "Russland"
+msgstr "روسيا"
 
 #: news/forms_data.py:135
 msgid "Saudi Arabia"
-msgstr "Saudi-Arabien"
+msgstr "المملكة العربية السعودية"
 
 #: news/forms_data.py:136
 msgid "Sweden"
-msgstr "Schweden"
+msgstr "السويد"
 
 #: news/forms_data.py:137
 msgid "Singapore"
-msgstr "Singapur"
+msgstr "سنغافورة"
 
 #: news/forms_data.py:138
 msgid "Slovenia"
-msgstr "Slowenien"
+msgstr "سلوفينيا"
 
 #: news/forms_data.py:139
 msgid "Slovakia"
-msgstr "Slowakei"
+msgstr "سلوفاكيا"
 
 #: news/forms_data.py:140
 msgid "Thailand"
-msgstr "Thailand"
+msgstr "تايلاند"
 
 #: news/forms_data.py:141
 msgid "Turkey"
-msgstr "Türkei"
+msgstr "تركيا"
 
 #: news/forms_data.py:142
 msgid "Taiwan"
-msgstr "Taiwan"
+msgstr "تايوان"
 
 #: news/forms_data.py:143
 msgid "Ukraine"
-msgstr "Ukraine"
+msgstr "أوكرانيا"
 
 #: news/forms_data.py:145
 msgid "Venezuela"
-msgstr "Venezuela"
+msgstr "فنزويلا"
 
 #: news/forms_data.py:146
 msgid "South Africa"
-msgstr "Südafrika"
+msgstr "جنوب أفريقيا"
 
 #: news/forms_data.py:157
 msgid "None"
-msgstr "Keine"
+msgstr "لا شيء"
 
 #: news/models.py:15 users/admin.py:13
 msgid "user"
-msgstr "Benutzer"
+msgstr "المستخدم"
 
 #: news/models.py:19
 msgid "title"
-msgstr "Titel"
+msgstr "العنوان"
 
 #: news/models.py:22
 msgid "description"
-msgstr "Beschreibung"
+msgstr "الوصف"
 
 #: news/models.py:24
 msgid "content"
-msgstr "Inhalt"
+msgstr "المحتوى"
 
 #: news/models.py:28
 msgid "link_to_news"
-msgstr "Link zur Nachricht"
+msgstr "رابط الخبر"
 
 #: news/models.py:31
 msgid "image_link"
-msgstr "Link zum Bild"
+msgstr "رابط الصورة"
 
 #: news/models.py:35
 msgid "source_name"
-msgstr "Name der Quelle"
+msgstr "اسم المصدر"
 
 #: news/models.py:39
 msgid "author"
-msgstr "Autor"
+msgstr "المؤلف"
 
 #: news/models.py:43
 msgid "publication_date"
-msgstr "Veröffentlichungsdatum"
+msgstr "تاريخ النشر"
 
 #: news/models.py:47
 msgid "category"
-msgstr "Kategorie"
+msgstr "الفئة"
 
 #: news/models.py:52
 msgid "featured_news"
-msgstr "ausgewählte Nachrichten"
+msgstr "الأخبار المميزة"
 
 #: news/models.py:53
 msgid "selected_news"
-msgstr "empfohlene Nachrichten"
+msgstr "الأخبار الموصى بها"
 
 #: news/views.py:54 news/views.py:129 news/views.py:205 news/views.py:271
 msgid "Forms_error"
-msgstr "Formularfehler"
+msgstr "خطأ في النموذج"
 
 #: news/views.py:83
 msgid "You_cannot_select_sources_together_with_country_or_category"
-msgstr "Sie können Quellen nicht zusammen mit Land oder Kategorie auswählen."
+msgstr "لا يمكنك اختيار مصادر مع تحديد البلد أو الفئة في نفس الوقت."
 
 #: news/views.py:157
 msgid "Used_default_query"
-msgstr "Standardabfrage verwendet"
+msgstr "تم استخدام الاستعلام الافتراضي"
 
 #: templates/base.html:6 templates/home.html:5 templates/home.html:18
 #: templates/includes/footer.html:8 templates/includes/header.html:7
@@ -487,76 +487,76 @@ msgstr "Herald"
 
 #: templates/base.html:25
 msgid "The content was not delivered :("
-msgstr "Der Inhalt wurde nicht geliefert :("
+msgstr "لم يتم تسليم المحتوى :("
 
 #: templates/home.html:5
 msgid "All_news_in_one_place"
-msgstr "Alle Nachrichten an einem Ort"
+msgstr "كل الأخبار في مكان واحد"
 
 #: templates/home.html:21
 msgid "Find_Read_Stay_informed"
-msgstr "Finden. Lesen. Bleiben Sie informiert."
+msgstr "ابحث. اقرأ. ابقَ مطلعاً."
 
 #: templates/home.html:49
 msgid "Start_by_searching_or_go_to"
-msgstr "Beginnen Sie mit der Suche oder gehen Sie zu"
+msgstr "ابدأ بالبحث أو انتقل إلى"
 
 #: templates/home.html:51
 msgid "main news"
-msgstr "Hauptnachrichten"
+msgstr "الأخبار الرئيسية"
 
 #: templates/includes/footer.html:11
 msgid "footer_site_descriptions"
-msgstr "Nachrichten-Aggregator aus verschiedenen Quellen. Schnell, bequem und sicher."
+msgstr "مجمع أخبار من مصادر مختلفة. سريع ومريح وآمن."
 
 #: templates/includes/footer.html:16
 msgid "Navigation"
-msgstr "Navigation"
+msgstr "التنقل"
 
 #: templates/includes/footer.html:20 templates/users/logout.html:23
 #: templates/users/password_change_done.html:26
 #: templates/users/password_reset_complete.html:26
 #: templates/users/password_reset_done.html:39
 msgid "Home"
-msgstr "Startseite"
+msgstr "الرئيسية"
 
 #: templates/includes/footer.html:30 templates/includes/header.html:23
 #: templates/news/sources_list.html:5
 msgid "Sources"
-msgstr "Quellen"
+msgstr "المصادر"
 
 #: templates/includes/footer.html:37 users/models.py:70
 msgid "User"
-msgstr "Benutzer"
+msgstr "المستخدمون"
 
 #: templates/includes/footer.html:41 templates/includes/header.html:71
 msgid "Profile"
-msgstr "Profil"
+msgstr "الملف الشخصي"
 
 #: templates/includes/footer.html:46
 msgid "Favorite"
-msgstr "Favorit"
+msgstr "المفضلة"
 
 #: templates/includes/footer.html:51 templates/users/profile.html:44
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "الإعدادات"
 
 #: templates/includes/footer.html:58
 msgid "Contacts"
-msgstr "Kontakte"
+msgstr "جهات الاتصال"
 
 #: templates/includes/header.html:11
 msgid "Select_language"
-msgstr "Sprache wählen"
+msgstr "اختر اللغة"
 
 #: templates/includes/header.html:19
 msgid "Top_headlines"
-msgstr "Top-Schlagzeilen"
+msgstr "أهم العناوين"
 
 #: templates/includes/header.html:27 templates/news/everything_news.html:5
 #: templates/news/guardian_news.html:5
 msgid "Everything"
-msgstr "Alles"
+msgstr "الكل"
 
 #: templates/includes/header.html:31
 msgid "Guardian"
@@ -564,512 +564,512 @@ msgstr "Guardian"
 
 #: templates/includes/header.html:42
 msgid "Language"
-msgstr "Sprache"
+msgstr "اللغة"
 
 #: templates/includes/header.html:81
 msgid "Log_out"
-msgstr "Abmelden"
+msgstr "تسجيل الخروج"
 
 #: templates/includes/header.html:89
 msgid "Log_in"
-msgstr "Anmelden"
+msgstr "تسجيل الدخول"
 
 #: templates/includes/header.html:93
 msgid "Sign_up"
-msgstr "Registrieren"
+msgstr "التسجيل"
 
 #: templates/includes/messages.html:17 templates/includes/search_area.html:35
 msgid "Close"
-msgstr "Schließen"
+msgstr "إغلاق"
 
 #: templates/includes/news_card.html:38
 msgid "Read"
-msgstr "Lesen"
+msgstr "اقرأ"
 
 #: templates/includes/news_card.html:57
 msgid "In favorites"
-msgstr "In Favoriten"
+msgstr "في المفضلة"
 
 #: templates/includes/search_area.html:15
 #: templates/includes/search_area.html:24
 msgid "Filters"
-msgstr "Filter"
+msgstr "الفلاتر"
 
 #: templates/includes/search_area.html:38
 #: templates/users/profile_update.html:81
 msgid "Save"
-msgstr "Speichern"
+msgstr "حفظ"
 
 #: templates/includes/source_card.html:27
 msgid "No_description"
-msgstr "Keine Beschreibung"
+msgstr "لا يوجد وصف"
 
 #: templates/includes/source_card.html:46
 msgid "Visit"
-msgstr "Besuchen"
+msgstr "زيارة"
 
 #: templates/news/everything_news.html:17 templates/news/guardian_news.html:17
 #: templates/news/top_headlines_news.html:17
 msgid "No news found"
-msgstr "Keine Nachrichten gefunden"
+msgstr "لا توجد أخبار"
 
 #: templates/news/sources_list.html:17
 msgid "No sources found"
-msgstr "Keine Quellen gefunden"
+msgstr "لم يتم العثور على مصادر"
 
 #: templates/news/top_headlines_news.html:5
 msgid "Top headlines"
-msgstr "Top-Schlagzeilen"
+msgstr "أهم العناوين"
 
 #: templates/users/account_activate.html:6
 msgid "Account verification"
-msgstr "Konto verifizieren"
+msgstr "التحقق من الحساب"
 
 #: templates/users/account_activate.html:7
 msgid "User:"
-msgstr "Benutzer:"
+msgstr "المستخدم:"
 
 #: templates/users/account_activate.html:12 templates/users/login.html:12
 #: templates/users/login.html:58 templates/users/signup.html:114
 #: users/forms.py:46
 msgid "Login"
-msgstr "Anmelden"
+msgstr "تسجيل الدخول"
 
 #: templates/users/favorites.html:4
 msgid "Favorites"
-msgstr "Favoriten"
+msgstr "المفضلة"
 
 #: templates/users/favorites.html:8
 msgid "All_your_saved_articles"
-msgstr "Alle Ihre gespeicherten Artikel"
+msgstr "كل مقالاتك المحفوظة"
 
 #: templates/users/favorites.html:19
 msgid "Its_empty_here_yet"
-msgstr "Hier ist noch nichts."
+msgstr "لا يوجد شيء هنا بعد."
 
 #: templates/users/favorites.html:20
 msgid "Search_news"
-msgstr "Nachrichten suchen"
+msgstr "ابحث عن أخبار"
 
 #: templates/users/login.html:4
 msgid "Entrance"
-msgstr "Eingang"
+msgstr "دخول"
 
 #: templates/users/login.html:13
 msgid "Enter_your_credentials"
-msgstr "Geben Sie Ihre Anmeldedaten ein"
+msgstr "أدخل بيانات الدخول الخاصة بك"
 
 #: templates/users/login.html:65
 msgid "Forgot_your_password"
-msgstr "Passwort vergessen?"
+msgstr "هل نسيت كلمة المرور؟"
 
 #: templates/users/login.html:69
 msgid "Dont_have_an_account"
-msgstr "Noch keinen Account?"
+msgstr "ليس لديك حساب؟"
 
 #: templates/users/login.html:71 templates/users/signup.html:106
 msgid "Register"
-msgstr "Registrieren"
+msgstr "سجل"
 
 #: templates/users/logout.html:4
 msgid "Logout"
-msgstr "Abmelden"
+msgstr "تسجيل الخروج"
 
 #: templates/users/logout.html:12
 msgid "You_are_logged_out"
-msgstr "Sie sind abgemeldet."
+msgstr "تم تسجيل خروجك."
 
 #: templates/users/logout.html:15
 msgid "Thank_you_for_visiting_our_website_We_hope_to_see_you_again"
-msgstr "Danke für den Besuch unserer Website. Wir hoffen, Sie wiederzusehen!"
+msgstr "شكراً لزيارتك موقعنا. نأمل أن نراك مجدداً!"
 
 #: templates/users/logout.html:20
 msgid "Login_again"
-msgstr "Erneut anmelden"
+msgstr "تسجيل الدخول مرة أخرى"
 
 #: templates/users/logout.html:31
 msgid "Your_session_has_ended_For_security_reasons_we_recommend_closing_your_browser"
-msgstr "Ihre Sitzung ist beendet. Aus Sicherheitsgründen empfehlen wir, Ihren Browser zu schließen."
+msgstr "انتهت جلستك. لأسباب أمنية نوصي بإغلاق المتصفح."
 
 #: templates/users/password_change.html:4
 #: templates/users/password_change.html:13
 #: templates/users/password_change.html:86
 msgid "Change_password"
-msgstr "Passwort ändern"
+msgstr "تغيير كلمة المرور"
 
 #: templates/users/password_change.html:14
 msgid "Enter_your_current_password_and_new_password"
-msgstr "Geben Sie Ihr aktuelles und neues Passwort ein."
+msgstr "أدخل كلمة المرور الحالية والجديدة."
 
 #: templates/users/password_change.html:30
 msgid "Current_Password"
-msgstr "Aktuelles Passwort"
+msgstr "كلمة المرور الحالية"
 
 #: templates/users/password_change.html:47
 msgid "New_Password"
-msgstr "Neues Passwort"
+msgstr "كلمة مرور جديدة"
 
 #: templates/users/password_change.html:69
 msgid "Confirming_a_new_password"
-msgstr "Neues Passwort bestätigen"
+msgstr "تأكيد كلمة المرور الجديدة"
 
 #: templates/users/password_change.html:89
 #: templates/users/profile_update.html:82
 msgid "Cancel"
-msgstr "Abbrechen"
+msgstr "إلغاء"
 
 #: templates/users/password_change_done.html:4
 msgid "Password_changed"
-msgstr "Passwort geändert"
+msgstr "تم تغيير كلمة المرور"
 
 #: templates/users/password_change_done.html:15
 msgid "Password_changed_successfully"
-msgstr "Passwort erfolgreich geändert!"
+msgstr "تم تغيير كلمة المرور بنجاح!"
 
 #: templates/users/password_change_done.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_use_the_new_password_to_log_in"
-msgstr "Ihr Passwort wurde erfolgreich geändert. Sie können sich jetzt mit dem neuen Passwort anmelden."
+msgstr "تم تغيير كلمة المرور بنجاح. يمكنك الآن تسجيل الدخول بالكلمة الجديدة."
 
 #: templates/users/password_change_done.html:23
 msgid "Return_to_profile"
-msgstr "Zurück zum Profil"
+msgstr "العودة إلى الملف الشخصي"
 
 #: templates/users/password_change_done.html:36
 msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regularly"
-msgstr "Es wird empfohlen, für verschiedene Dienste unterschiedliche Passwörter zu verwenden und diese regelmäßig zu ändern."
+msgstr "يوصى باستخدام كلمات مرور مختلفة للخدمات المختلفة وتغييرها بانتظام."
 
 #: templates/users/password_reset.html:4 templates/users/password_reset.html:13
 msgid "Password_reset"
-msgstr "Passwort zurücksetzen"
+msgstr "إعادة تعيين كلمة المرور"
 
 #: templates/users/password_reset.html:15
 msgid "Forgot_your_password_Enter_your_email_address_Well_send_you_instructions"
-msgstr "Passwort vergessen? Geben Sie Ihre E-Mail-Adresse ein — wir senden Ihnen Anweisungen."
+msgstr "هل نسيت كلمة المرور؟ أدخل بريدك الإلكتروني — سنرسل لك التعليمات."
 
 #: templates/users/password_reset.html:32
 msgid "Email_address"
-msgstr "E-Mail-Adresse"
+msgstr "البريد الإلكتروني"
 
 #: templates/users/password_reset.html:49
 msgid "Send_instructions"
-msgstr "Anweisungen senden"
+msgstr "إرسال التعليمات"
 
 #: templates/users/password_reset.html:52
 msgid "Back_to_the_entrance"
-msgstr "Zurück zur Anmeldung"
+msgstr "العودة إلى تسجيل الدخول"
 
 #: templates/users/password_reset.html:61
 msgid ""
 "If you haven't received the email, check your spam folder or make sure you "
 "entered the correct email address."
 msgstr ""
-"Wenn Sie die E-Mail nicht erhalten haben, prüfen Sie Ihren Spam-Ordner oder stellen Sie sicher, dass Sie die richtige E-Mail-Adresse eingegeben haben."
+"إذا لم تتلق الرسالة، فتحقق من مجلد الرسائل المزعجة أو تأكد من إدخال عنوان البريد الإلكتروني الصحيح."
 
 #: templates/users/password_reset_complete.html:4
 #: templates/users/password_reset_complete.html:15
 msgid "Password_restored"
-msgstr "Passwort wiederhergestellt"
+msgstr "تم استعادة كلمة المرور"
 
 #: templates/users/password_reset_complete.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_log_in_with_your_new_password"
-msgstr "Ihr Passwort wurde erfolgreich geändert. Sie können sich jetzt mit Ihrem neuen Passwort anmelden."
+msgstr "تم تغيير كلمة المرور بنجاح. يمكنك الآن تسجيل الدخول بكلمة المرور الجديدة."
 
 #: templates/users/password_reset_complete.html:23
 msgid "Sign_in"
-msgstr "Anmelden"
+msgstr "تسجيل الدخول"
 
 #: templates/users/password_reset_complete.html:37
 msgid "Your_account_is_now_protected_with_a_new_password"
-msgstr "Ihr Konto ist jetzt durch ein neues Passwort geschützt."
+msgstr "حسابك محمي الآن بكلمة مرور جديدة."
 
 #: templates/users/password_reset_complete.html:38
 msgid "It_is_recommended_to_use_unique_passwords_for_different_services"
-msgstr "Es wird empfohlen, für verschiedene Dienste einzigartige Passwörter zu verwenden."
+msgstr "يوصى باستخدام كلمات مرور فريدة للخدمات المختلفة."
 
 #: templates/users/password_reset_confirm.html:4
 msgid "Enter_new_password"
-msgstr "Neues Passwort eingeben"
+msgstr "أدخل كلمة مرور جديدة"
 
 #: templates/users/password_reset_confirm.html:15
 msgid "Enter new password"
-msgstr "Neues Passwort eingeben"
+msgstr "أدخل كلمة مرور جديدة"
 
 #: templates/users/password_reset_confirm.html:16
 msgid "Please enter the new password twice."
-msgstr "Bitte geben Sie das neue Passwort zweimal ein."
+msgstr "يرجى إدخال كلمة المرور الجديدة مرتين."
 
 #: templates/users/password_reset_confirm.html:18
 msgid "Restore Error"
-msgstr "Wiederherstellungsfehler"
+msgstr "خطأ في الاستعادة"
 
 #: templates/users/password_reset_confirm.html:19
 msgid "The password reset link is invalid."
-msgstr "Der Link zum Zurücksetzen des Passworts ist ungültig."
+msgstr "رابط إعادة تعيين كلمة المرور غير صالح."
 
 #: templates/users/password_reset_confirm.html:37
 msgid "New Password"
-msgstr "Neues Passwort"
+msgstr "كلمة مرور جديدة"
 
 #: templates/users/password_reset_confirm.html:59
 #: templates/users/signup.html:82
 msgid "Password confirmation"
-msgstr "Passwortbestätigung"
+msgstr "تأكيد كلمة المرور"
 
 #: templates/users/password_reset_confirm.html:76
 #: templates/users/profile.html:50
 msgid "Change password"
-msgstr "Passwort ändern"
+msgstr "تغيير كلمة المرور"
 
 #: templates/users/password_reset_confirm.html:85
 msgid ""
 "The password reset link is invalid, possibly because it has already been "
 "used."
 msgstr ""
-"Der Link zum Zurücksetzen des Passworts ist ungültig — möglicherweise wurde er bereits verwendet."
+"رابط إعادة التعيين غير صالح، ربما لأنه قد استُخدم بالفعل."
 
 #: templates/users/password_reset_confirm.html:86
 msgid "Please request a new password reset."
-msgstr "Bitte fordern Sie ein neues Zurücksetzen des Passworts an."
+msgstr "يرجى طلب إعادة تعيين كلمة مرور جديدة."
 
 #: templates/users/password_reset_confirm.html:93
 msgid "Request a new password reset"
-msgstr "Neues Zurücksetzen des Passworts anfordern"
+msgstr "طلب إعادة تعيين كلمة مرور جديدة"
 
 #: templates/users/password_reset_confirm.html:96
 #: templates/users/password_reset_done.html:36
 msgid "Return to the entrance"
-msgstr "Zurück zur Anmeldung"
+msgstr "العودة إلى تسجيل الدخول"
 
 #: templates/users/password_reset_done.html:4
 msgid "Instructions_have_been_sent"
-msgstr "Anweisungen wurden gesendet."
+msgstr "تم إرسال التعليمات."
 
 #: templates/users/password_reset_done.html:15
 msgid "Check_your_mail"
-msgstr "Überprüfen Sie Ihre E-Mails"
+msgstr "تحقق من بريدك"
 
 #: templates/users/password_reset_done.html:18
 msgid "We_have_sent_password_recovery_instructions_to_the_email_address_you_provided"
-msgstr "Wir haben Anweisungen zur Wiederherstellung des Passworts an die von Ihnen angegebene E-Mail-Adresse gesendet."
+msgstr "لقد أرسلنا تعليمات استرداد كلمة المرور إلى عنوان البريد الإلكتروني الذي قدمته."
 
 #: templates/users/password_reset_done.html:19
 msgid "You_should_receive_them_soon"
-msgstr "Sie sollten sie bald erhalten."
+msgstr "يجب أن تتلقاها قريبًا."
 
 #: templates/users/password_reset_done.html:27
 msgid "If_you_dont_see_the_email_check_your_spam_folder"
-msgstr "Wenn Sie die E-Mail nicht sehen, prüfen Sie Ihren Spam-Ordner"
+msgstr "إذا لم تر الرسالة، فتحقق من مجلد الرسائل المزعجة"
 
 #: templates/users/password_reset_done.html:28
 msgid "Sometimes_password_recovery_emails_can_end_up_there"
-msgstr "Manchmal landen E-Mails zur Passwortwiederherstellung dort."
+msgstr "أحيانًا تنتهي رسائل استرداد كلمة المرور هناك."
 
 #: templates/users/profile.html:5
 msgid "User_profile"
-msgstr "Benutzerprofil"
+msgstr "ملف المستخدم"
 
 #: templates/users/profile.html:30 templates/users/profile_update.html:4
 #: templates/users/profile_update.html:10
 msgid "Edit profile"
-msgstr "Profil bearbeiten"
+msgstr "تعديل الملف الشخصي"
 
 #: templates/users/profile.html:34
 msgid "My bookmarks"
-msgstr "Meine Lesezeichen"
+msgstr "مفضلتي"
 
 #: templates/users/profile.html:64
 msgid "Personal information"
-msgstr "Persönliche Informationen"
+msgstr "معلومات شخصية"
 
 #: templates/users/profile.html:69 users/forms.py:60
 msgid "Name"
-msgstr "Vorname"
+msgstr "الاسم"
 
 #: templates/users/profile.html:70 templates/users/profile.html:74
 #: templates/users/profile.html:85 templates/users/profile.html:92
 msgid "Not_specified"
-msgstr "Nicht angegeben"
+msgstr "لم يتم التحديد"
 
 #: templates/users/profile.html:73 users/forms.py:65
 msgid "Surname"
-msgstr "Nachname"
+msgstr "اسم العائلة"
 
 #: templates/users/profile.html:80
 msgid "Date of birth"
-msgstr "Geburtsdatum"
+msgstr "تاريخ الميلاد"
 
 #: templates/users/profile.html:90 templates/users/profile_update.html:35
 msgid "Location"
-msgstr "Ort"
+msgstr "الموقع"
 
 #: templates/users/profile.html:99
 msgid "Registration date"
-msgstr "Registrierungsdatum"
+msgstr "تاريخ التسجيل"
 
 #: templates/users/profile.html:103
 msgid "Last entry"
-msgstr "Letzter Eintrag"
+msgstr "آخر دخول"
 
 #: templates/users/profile.html:105
 msgid "Recently"
-msgstr "Kürzlich"
+msgstr "مؤخرًا"
 
 #: templates/users/profile.html:115
 msgid "Favorite categories"
-msgstr "Lieblingskategorien"
+msgstr "الفئات المفضلة"
 
 #: templates/users/profile.html:130
 msgid "You haven't selected your favorite categories yet."
-msgstr "Sie haben Ihre Lieblingskategorien noch nicht ausgewählt."
+msgstr "لم تختر فئاتك المفضلة بعد."
 
 #: templates/users/profile.html:132
 msgid "Add categories"
-msgstr "Kategorien hinzufügen"
+msgstr "إضافة فئات"
 
 #: templates/users/profile.html:142
 msgid "Click on a category to view related news"
-msgstr "Klicken Sie auf eine Kategorie, um verwandte Nachrichten anzuzeigen."
+msgstr "انقر على فئة لعرض الأخبار ذات الصلة."
 
 #: templates/users/profile.html:145
 msgid "Edit"
-msgstr "Bearbeiten"
+msgstr "تعديل"
 
 #: templates/users/profile_update.html:36
 msgid "City or country"
-msgstr "Stadt oder Land"
+msgstr "المدينة أو الدولة"
 
 #: templates/users/signup.html:4 templates/users/signup.html:12
 msgid "Registration"
-msgstr "Registrierung"
+msgstr "التسجيل"
 
 #: templates/users/signup.html:13
 msgid "Create a new account"
-msgstr "Ein neues Konto erstellen"
+msgstr "إنشاء حساب جديد"
 
 #: templates/users/signup.html:58 users/forms.py:131
 msgid "Password"
-msgstr "Passwort"
+msgstr "كلمة المرور"
 
 #: templates/users/signup.html:112
 msgid "Already have an account?"
-msgstr "Haben Sie bereits ein Konto?"
+msgstr "هل لديك حساب بالفعل؟"
 
 #: users/apps.py:10
 msgid "Users"
-msgstr "Benutzer"
+msgstr "المستخدمون"
 
 #: users/backends.py:50
 msgid "account_activation_mail_text"
-msgstr "Kontenaktivierung"
+msgstr "تفعيل الحساب"
 
 #: users/backends.py:52
 msgid "Account_activation"
-msgstr "Kontenaktivierung"
+msgstr "تفعيل الحساب"
 
 #: users/forms.py:34
 msgid "Mail"
-msgstr "Post"
+msgstr "البريد"
 
 #: users/forms.py:47 users/forms.py:68
 msgid "Email"
-msgstr "E-Mail"
+msgstr "البريد الإلكتروني"
 
 #: users/forms.py:51
 msgid "Enter_login"
-msgstr "Login eingeben"
+msgstr "أدخل اسم المستخدم"
 
 #: users/forms.py:52
 msgid "Enter_email"
-msgstr "E-Mail-Adresse eingeben"
+msgstr "أدخل البريد الإلكتروني"
 
 #: users/forms.py:74 users/models.py:100 users/models.py:101
 msgid "Favorite_categories"
-msgstr "Lieblingskategorien"
+msgstr "الفئات المفضلة"
 
 #: users/forms.py:104
 msgid "Upload_your_profile_picture"
-msgstr "Laden Sie Ihr Profilbild hoch."
+msgstr "حمّل صورة ملفك الشخصي."
 
 #: users/forms.py:125
 msgid "invalid_login_text"
-msgstr "Ungültiger Benutzername oder Passwort."
+msgstr "اسم المستخدم أو كلمة المرور غير صحيحة."
 
 #: users/forms.py:127
 msgid "This_account_is_inactive"
-msgstr "Dieses Konto ist inaktiv."
+msgstr "هذا الحساب غير نشط."
 
 #: users/forms.py:129
 msgid "Login or email"
-msgstr "Login oder E-Mail"
+msgstr "اسم المستخدم أو البريد الإلكتروني"
 
 #: users/models.py:76
 msgid "Avatar"
-msgstr "Avatar"
+msgstr "الصورة الرمزية"
 
 #: users/models.py:77
 msgid "User_avatar"
-msgstr "Benutzer-Avatar."
+msgstr "صورة المستخدم."
 
 #: users/models.py:83
 msgid "Date_of_birth"
-msgstr "Geburtsdatum"
+msgstr "تاريخ الميلاد"
 
 #: users/models.py:84
 msgid "User_date_of_birth"
-msgstr "Geburtsdatum des Benutzers."
+msgstr "تاريخ ميلاد المستخدم."
 
 #: users/models.py:89
 msgid "location_help_text"
-msgstr "Geben Sie die Stadt oder das Land des Wohnsitzes an."
+msgstr "حدد المدينة أو الدولة التي تقيم بها."
 
 #: users/models.py:94
 msgid "Attempts"
-msgstr "Versuche"
+msgstr "محاولات"
 
 #: users/models.py:95
 msgid "Number_of_login_attempts"
-msgstr "Anzahl der Anmeldeversuche"
+msgstr "عدد محاولات تسجيل الدخول"
 
 #: users/models.py:104
 msgid "deactivate in"
-msgstr "deaktivieren in"
+msgstr "سيتم التعطيل بعد"
 
 #: users/models.py:105
 msgid "account was deactivated"
-msgstr "Konto wurde deaktiviert"
+msgstr "تم تعطيل الحساب"
 
 #: users/models.py:122
 msgid "profile"
-msgstr "Profil"
+msgstr "الملف الشخصي"
 
 #: users/models.py:123
 msgid "profiles"
-msgstr "Profile"
+msgstr "الملفات الشخصية"
 
 #: users/validators.py:24
 msgid "birthday_date_error"
-msgstr "Fehler beim Geburtsdatum"
+msgstr "خطأ في تاريخ الميلاد"
 
 #: users/views.py:33
 msgid "Already_activated"
-msgstr "Bereits aktiviert"
+msgstr "تم التفعيل بالفعل"
 
 #: users/views.py:52 users/views.py:66
 msgid "Activation_successful"
-msgstr "Aktivierung erfolgreich"
+msgstr "تم التفعيل بنجاح"
 
 #: users/views.py:54 users/views.py:68
 msgid "Activation_time_expired"
-msgstr "Aktivierungszeit abgelaufen"
+msgstr "انتهت مهلة التفعيل"
 
 #: users/views.py:70
 msgid "Account_is_not_deactivated"
-msgstr "Konto ist nicht deaktiviert"
+msgstr "الحساب لم يتم تعطيله"
 
 #: users/views.py:85
 msgid "Registration_successful_Welcome"
-msgstr "Registrierung erfolgreich! Willkommen!"
+msgstr "تم التسجيل بنجاح! مرحبًا بك!"
 
 #: users/views.py:123
 msgid "Profile_successfully_updated"
-msgstr "Profil erfolgreich aktualisiert"
+msgstr "تم تحديث الملف الشخصي بنجاح"
