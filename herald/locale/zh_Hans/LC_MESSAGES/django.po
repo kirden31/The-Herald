@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-23 18:23+0300\n"
+"POT-Creation-Date: 2025-12-24 20:59+0300\n"
 "PO-Revision-Date: 2025-12-24 00:00+0000\n"
 "Last-Translator: ChatGPT <translator@example.com>\n"
 "Language-Team: Chinese (Simplified) <zh-Hans@li.org>\n"
@@ -12,31 +12,51 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: herald/settings.py:131 news/forms_data.py:21
+#: herald/settings.py:133 news/forms_data.py:21
 msgid "English"
 msgstr "英语"
 
-#: herald/settings.py:132 news/forms_data.py:29
+#: herald/settings.py:134 news/forms_data.py:29
 msgid "Russian"
 msgstr "俄语"
 
-#: herald/settings.py:133 news/forms_data.py:20
+#: herald/settings.py:135 news/forms_data.py:20
 msgid "German"
 msgstr "德语"
 
-#: herald/settings.py:134
+#: herald/settings.py:136
 #, fuzzy
 #| msgid "Norwegian"
 msgid "Norwegian Bokmål"
 msgstr "挪威语（博克mål）"
 
-#: herald/settings.py:135 news/forms_data.py:23
+#: herald/settings.py:137 news/forms_data.py:23
 msgid "French"
 msgstr "法语"
 
-#: herald/settings.py:136 news/forms_data.py:22
+#: herald/settings.py:138 news/forms_data.py:22
 msgid "Spanish"
 msgstr "西班牙语"
+
+#: herald/settings.py:139
+msgid "Chinese (Simplified)"
+msgstr ""
+
+#: herald/settings.py:140
+#, fuzzy
+#| msgid "Japan"
+msgid "Japanese"
+msgstr "日本"
+
+#: herald/settings.py:141
+#, fuzzy
+#| msgid "Greece"
+msgid "Greek"
+msgstr "希腊"
+
+#: herald/settings.py:142 news/forms_data.py:19
+msgid "Arabic"
+msgstr "阿拉伯语"
 
 #: news/admin.py:59
 msgid "User_and_source"
@@ -110,10 +130,6 @@ msgstr "版块"
 #: news/forms.py:222
 msgid "Rating"
 msgstr "评分"
-
-#: news/forms_data.py:19
-msgid "Arabic"
-msgstr "阿拉伯语"
 
 #: news/forms_data.py:24
 msgid "Hebrew"
@@ -537,7 +553,7 @@ msgstr "个人资料"
 msgid "Favorite"
 msgstr "收藏"
 
-#: templates/includes/footer.html:51 templates/users/profile.html:44
+#: templates/includes/footer.html:51 templates/users/profile.html:40
 msgid "Settings"
 msgstr "设置"
 
@@ -816,7 +832,7 @@ msgid "Password confirmation"
 msgstr "密码确认"
 
 #: templates/users/password_reset_confirm.html:76
-#: templates/users/profile.html:50
+#: templates/users/profile.html:46
 msgid "Change password"
 msgstr "更改密码"
 
@@ -824,8 +840,7 @@ msgstr "更改密码"
 msgid ""
 "The password reset link is invalid, possibly because it has already been "
 "used."
-msgstr ""
-"重置密码的链接无效，可能已被使用。"
+msgstr "重置密码的链接无效，可能已被使用。"
 
 #: templates/users/password_reset_confirm.html:86
 msgid "Please request a new password reset."
@@ -868,69 +883,69 @@ msgstr "有时密码恢复邮件会被放入其中。"
 msgid "User_profile"
 msgstr "用户资料"
 
-#: templates/users/profile.html:30 templates/users/profile_update.html:4
+#: templates/users/profile.html:26 templates/users/profile_update.html:4
 #: templates/users/profile_update.html:10
 msgid "Edit profile"
 msgstr "编辑资料"
 
-#: templates/users/profile.html:34
+#: templates/users/profile.html:30
 msgid "My bookmarks"
 msgstr "我的书签"
 
-#: templates/users/profile.html:64
+#: templates/users/profile.html:60
 msgid "Personal information"
 msgstr "个人信息"
 
-#: templates/users/profile.html:69 users/forms.py:60
+#: templates/users/profile.html:65 users/forms.py:60
 msgid "Name"
 msgstr "名字"
 
-#: templates/users/profile.html:70 templates/users/profile.html:74
-#: templates/users/profile.html:85 templates/users/profile.html:92
+#: templates/users/profile.html:66 templates/users/profile.html:70
+#: templates/users/profile.html:81 templates/users/profile.html:88
 msgid "Not_specified"
 msgstr "未指定"
 
-#: templates/users/profile.html:73 users/forms.py:65
+#: templates/users/profile.html:69 users/forms.py:65
 msgid "Surname"
 msgstr "姓氏"
 
-#: templates/users/profile.html:80
+#: templates/users/profile.html:76
 msgid "Date of birth"
 msgstr "出生日期"
 
-#: templates/users/profile.html:90 templates/users/profile_update.html:35
+#: templates/users/profile.html:86 templates/users/profile_update.html:35
 msgid "Location"
 msgstr "地点"
 
-#: templates/users/profile.html:99
+#: templates/users/profile.html:95
 msgid "Registration date"
 msgstr "注册日期"
 
-#: templates/users/profile.html:103
+#: templates/users/profile.html:99
 msgid "Last entry"
 msgstr "最后活动"
 
-#: templates/users/profile.html:105
+#: templates/users/profile.html:101
 msgid "Recently"
 msgstr "最近"
 
-#: templates/users/profile.html:115
+#: templates/users/profile.html:111
 msgid "Favorite categories"
 msgstr "收藏分类"
 
-#: templates/users/profile.html:130
+#: templates/users/profile.html:126
 msgid "You haven't selected your favorite categories yet."
 msgstr "您尚未选择收藏分类。"
 
-#: templates/users/profile.html:132
+#: templates/users/profile.html:128
 msgid "Add categories"
 msgstr "添加分类"
 
-#: templates/users/profile.html:142
+#: templates/users/profile.html:138
 msgid "Click on a category to view related news"
 msgstr "点击分类以查看相关新闻。"
 
-#: templates/users/profile.html:145
+#: templates/users/profile.html:141
 msgid "Edit"
 msgstr "编辑"
 
@@ -1010,15 +1025,15 @@ msgstr "头像"
 msgid "User_avatar"
 msgstr "用户头像。"
 
-#: users/models.py:83
+#: users/models.py:84
 msgid "Date_of_birth"
 msgstr "出生日期"
 
-#: users/models.py:84
+#: users/models.py:85
 msgid "User_date_of_birth"
 msgstr "用户出生日期。"
 
-#: users/models.py:89
+#: users/models.py:90
 msgid "location_help_text"
 msgstr "请填写居住城市或国家。"
 
@@ -1049,6 +1064,10 @@ msgstr "资料列表"
 #: users/validators.py:24
 msgid "birthday_date_error"
 msgstr "出生日期错误"
+
+#: users/validators.py:37
+msgid "Max_file_size_limit"
+msgstr "您的文件太大。最大大小： "
 
 #: users/views.py:33
 msgid "Already_activated"

@@ -10,17 +10,13 @@
         <div class="card shadow-sm">
             <div class="card-body text-center">
                 <div class="mb-3">
-                    {% if request.user.profile.image %}
-                    <img src="{{ request.user.profile.image.url }}"
+                    {% with thumb=user.profile.get_image_300x300 %}
+                    <img src="{{ thumb.url }}"
                          alt="{{ request.user.username }}"
-                         class="rounded-circle img-thumbnail border-3 border-primary mb-3"
+                         onerror="this.onerror=null; this.src='{% static 'img/no_image.jpg' %}';"
+                         class="rounded-circle img-thumbnail border-3 border-seconde mb-3"
                          style="width: 200px; height: 200px; object-fit: cover;">
-                    {% else %}
-                    <img src="{% static 'img/no_image.jpg' %}"
-                         alt="{{ request.user.username }}"
-                         class="rounded-circle img-thumbnail border-3 border-secondary mb-3"
-                         style="width: 200px; height: 200px; object-fit: cover;">
-                    {% endif %}
+                    {% endwith %}
                 </div>
                 <h4 class="card-title">{{ user.username }}</h4>
                 <p class="text-muted">{{ user.email }}</p>
@@ -117,21 +113,21 @@
 
                 <div class="d-flex flex-wrap gap-3 mb-4">
                     {% if user.profile.favorite_categories %}
-                        {% for cat in user.profile.favorite_categories %}
-                            <a href="{% url 'news:top_headlines_news' %}?category={{ cat }}">
+                    {% for cat in user.profile.favorite_categories %}
+                    <a href="{% url 'news:top_headlines_news' %}?category={{ cat }}">
                                 <span class="badge category-badge">
                                     <i class="bi bi-tag me-1"></i>{{ cat }}
                                 </span>
-                            </a>
-                        {% endfor %}
+                    </a>
+                    {% endfor %}
                     {% else %}
-                        <div class="text-center w-100 py-4">
-                            <i class="bi bi-inbox display-4 text-muted mb-3"></i>
-                            <p class="text-muted mb-3">{% trans "You haven't selected your favorite categories yet." %}</p>
-                            <a href="{% url 'users:profile_edit' %}" class="btn btn-outline-primary">
-                                <i class="bi bi-plus-circle me-1"></i>{% trans "Add categories" %}
-                            </a>
-                        </div>
+                    <div class="text-center w-100 py-4">
+                        <i class="bi bi-inbox display-4 text-muted mb-3"></i>
+                        <p class="text-muted mb-3">{% trans "You haven't selected your favorite categories yet." %}</p>
+                        <a href="{% url 'users:profile_edit' %}" class="btn btn-outline-primary">
+                            <i class="bi bi-plus-circle me-1"></i>{% trans "Add categories" %}
+                        </a>
+                    </div>
                     {% endif %}
                 </div>
 

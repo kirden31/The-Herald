@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-23 18:23+0300\n"
+"POT-Creation-Date: 2025-12-24 20:59+0300\n"
 "PO-Revision-Date: 2025-12-21 00:00+0000\n"
 "Last-Translator: Translator Name <translator@example.com>\n"
 "Language-Team: English <en@li.org>\n"
@@ -12,31 +12,51 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: herald/settings.py:131 news/forms_data.py:21
+#: herald/settings.py:133 news/forms_data.py:21
 msgid "English"
 msgstr "English"
 
-#: herald/settings.py:132 news/forms_data.py:29
+#: herald/settings.py:134 news/forms_data.py:29
 msgid "Russian"
 msgstr "Russian"
 
-#: herald/settings.py:133 news/forms_data.py:20
+#: herald/settings.py:135 news/forms_data.py:20
 msgid "German"
 msgstr "German"
 
-#: herald/settings.py:134
+#: herald/settings.py:136
 #, fuzzy
 #| msgid "Norwegian"
 msgid "Norwegian Bokmål"
 msgstr "Norwegian Bokmål"
 
-#: herald/settings.py:135 news/forms_data.py:23
+#: herald/settings.py:137 news/forms_data.py:23
 msgid "French"
 msgstr "French"
 
-#: herald/settings.py:136 news/forms_data.py:22
+#: herald/settings.py:138 news/forms_data.py:22
 msgid "Spanish"
 msgstr "Spanish"
+
+#: herald/settings.py:139
+msgid "Chinese (Simplified)"
+msgstr ""
+
+#: herald/settings.py:140
+#, fuzzy
+#| msgid "Japan"
+msgid "Japanese"
+msgstr "Japan"
+
+#: herald/settings.py:141
+#, fuzzy
+#| msgid "Greece"
+msgid "Greek"
+msgstr "Greece"
+
+#: herald/settings.py:142 news/forms_data.py:19
+msgid "Arabic"
+msgstr "Arabic"
 
 #: news/admin.py:59
 msgid "User_and_source"
@@ -110,10 +130,6 @@ msgstr "Sections"
 #: news/forms.py:222
 msgid "Rating"
 msgstr "Rating"
-
-#: news/forms_data.py:19
-msgid "Arabic"
-msgstr "Arabic"
 
 #: news/forms_data.py:24
 msgid "Hebrew"
@@ -537,7 +553,7 @@ msgstr "Profile"
 msgid "Favorite"
 msgstr "Favorite"
 
-#: templates/includes/footer.html:51 templates/users/profile.html:44
+#: templates/includes/footer.html:51 templates/users/profile.html:40
 msgid "Settings"
 msgstr "Settings"
 
@@ -689,7 +705,9 @@ msgstr "Log in again"
 
 #: templates/users/logout.html:31
 msgid "Your_session_has_ended_For_security_reasons_we_recommend_closing_your_browser"
-msgstr "Your session has ended. For security reasons we recommend closing your browser."
+msgstr ""
+"Your session has ended. For security reasons we recommend closing your "
+"browser."
 
 #: templates/users/password_change.html:4
 #: templates/users/password_change.html:13
@@ -728,7 +746,9 @@ msgstr "Password changed successfully!"
 
 #: templates/users/password_change_done.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_use_the_new_password_to_log_in"
-msgstr "Your password has been successfully changed. You can now use the new password to log in."
+msgstr ""
+"Your password has been successfully changed. You can now use the new "
+"password to log in."
 
 #: templates/users/password_change_done.html:23
 msgid "Return_to_profile"
@@ -736,7 +756,9 @@ msgstr "Return to profile"
 
 #: templates/users/password_change_done.html:36
 msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regularly"
-msgstr "It is recommended to use different passwords for different services and change them regularly."
+msgstr ""
+"It is recommended to use different passwords for different services and "
+"change them regularly."
 
 #: templates/users/password_reset.html:4 templates/users/password_reset.html:13
 msgid "Password_reset"
@@ -744,7 +766,8 @@ msgstr "Password reset"
 
 #: templates/users/password_reset.html:15
 msgid "Forgot_your_password_Enter_your_email_address_Well_send_you_instructions"
-msgstr "Forgot your password? Enter your email address — we'll send instructions."
+msgstr ""
+"Forgot your password? Enter your email address — we'll send instructions."
 
 #: templates/users/password_reset.html:32
 msgid "Email_address"
@@ -763,7 +786,8 @@ msgid ""
 "If you haven't received the email, check your spam folder or make sure you "
 "entered the correct email address."
 msgstr ""
-"If you haven't received the email, check your spam folder or make sure you entered the correct email address."
+"If you haven't received the email, check your spam folder or make sure you "
+"entered the correct email address."
 
 #: templates/users/password_reset_complete.html:4
 #: templates/users/password_reset_complete.html:15
@@ -772,7 +796,9 @@ msgstr "Password restored"
 
 #: templates/users/password_reset_complete.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_log_in_with_your_new_password"
-msgstr "Your password has been successfully changed. You can now log in with your new password."
+msgstr ""
+"Your password has been successfully changed. You can now log in with your "
+"new password."
 
 #: templates/users/password_reset_complete.html:23
 msgid "Sign_in"
@@ -816,7 +842,7 @@ msgid "Password confirmation"
 msgstr "Password confirmation"
 
 #: templates/users/password_reset_confirm.html:76
-#: templates/users/profile.html:50
+#: templates/users/profile.html:46
 msgid "Change password"
 msgstr "Change password"
 
@@ -850,7 +876,9 @@ msgstr "Check your mail"
 
 #: templates/users/password_reset_done.html:18
 msgid "We_have_sent_password_recovery_instructions_to_the_email_address_you_provided"
-msgstr "We have sent password recovery instructions to the email address you provided."
+msgstr ""
+"We have sent password recovery instructions to the email address you "
+"provided."
 
 #: templates/users/password_reset_done.html:19
 msgid "You_should_receive_them_soon"
@@ -868,69 +896,69 @@ msgstr "Sometimes password recovery emails can end up there."
 msgid "User_profile"
 msgstr "User profile"
 
-#: templates/users/profile.html:30 templates/users/profile_update.html:4
+#: templates/users/profile.html:26 templates/users/profile_update.html:4
 #: templates/users/profile_update.html:10
 msgid "Edit profile"
 msgstr "Edit profile"
 
-#: templates/users/profile.html:34
+#: templates/users/profile.html:30
 msgid "My bookmarks"
 msgstr "My bookmarks"
 
-#: templates/users/profile.html:64
+#: templates/users/profile.html:60
 msgid "Personal information"
 msgstr "Personal information"
 
-#: templates/users/profile.html:69 users/forms.py:60
+#: templates/users/profile.html:65 users/forms.py:60
 msgid "Name"
 msgstr "Name"
 
-#: templates/users/profile.html:70 templates/users/profile.html:74
-#: templates/users/profile.html:85 templates/users/profile.html:92
+#: templates/users/profile.html:66 templates/users/profile.html:70
+#: templates/users/profile.html:81 templates/users/profile.html:88
 msgid "Not_specified"
 msgstr "Not specified"
 
-#: templates/users/profile.html:73 users/forms.py:65
+#: templates/users/profile.html:69 users/forms.py:65
 msgid "Surname"
 msgstr "Surname"
 
-#: templates/users/profile.html:80
+#: templates/users/profile.html:76
 msgid "Date of birth"
 msgstr "Date of birth"
 
-#: templates/users/profile.html:90 templates/users/profile_update.html:35
+#: templates/users/profile.html:86 templates/users/profile_update.html:35
 msgid "Location"
 msgstr "Location"
 
-#: templates/users/profile.html:99
+#: templates/users/profile.html:95
 msgid "Registration date"
 msgstr "Registration date"
 
-#: templates/users/profile.html:103
+#: templates/users/profile.html:99
 msgid "Last entry"
 msgstr "Last entry"
 
-#: templates/users/profile.html:105
+#: templates/users/profile.html:101
 msgid "Recently"
 msgstr "Recently"
 
-#: templates/users/profile.html:115
+#: templates/users/profile.html:111
 msgid "Favorite categories"
 msgstr "Favorite categories"
 
-#: templates/users/profile.html:130
+#: templates/users/profile.html:126
 msgid "You haven't selected your favorite categories yet."
 msgstr "You haven't selected your favorite categories yet."
 
-#: templates/users/profile.html:132
+#: templates/users/profile.html:128
 msgid "Add categories"
 msgstr "Add categories"
 
-#: templates/users/profile.html:142
+#: templates/users/profile.html:138
 msgid "Click on a category to view related news"
 msgstr "Click on a category to view related news."
 
-#: templates/users/profile.html:145
+#: templates/users/profile.html:141
 msgid "Edit"
 msgstr "Edit"
 
@@ -1010,15 +1038,15 @@ msgstr "Avatar"
 msgid "User_avatar"
 msgstr "User avatar."
 
-#: users/models.py:83
+#: users/models.py:84
 msgid "Date_of_birth"
 msgstr "Date of birth"
 
-#: users/models.py:84
+#: users/models.py:85
 msgid "User_date_of_birth"
 msgstr "User date of birth."
 
-#: users/models.py:89
+#: users/models.py:90
 msgid "location_help_text"
 msgstr "Specify the city or country of residence."
 
@@ -1049,6 +1077,10 @@ msgstr "profiles"
 #: users/validators.py:24
 msgid "birthday_date_error"
 msgstr "Birthday date error"
+
+#: users/validators.py:37
+msgid "Max_file_size_limit"
+msgstr "Your file is too large. Maximum size: "
 
 #: users/views.py:33
 msgid "Already_activated"

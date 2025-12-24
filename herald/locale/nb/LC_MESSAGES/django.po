@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-23 18:23+0300\n"
+"POT-Creation-Date: 2025-12-24 20:59+0300\n"
 "PO-Revision-Date: 2025-12-24 00:00+0000\n"
 "Last-Translator: ChatGPT <translator@example.com>\n"
 "Language-Team: Norwegian Bokmål\n"
@@ -12,31 +12,51 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: herald/settings.py:131 news/forms_data.py:21
+#: herald/settings.py:133 news/forms_data.py:21
 msgid "English"
 msgstr "Engelsk"
 
-#: herald/settings.py:132 news/forms_data.py:29
+#: herald/settings.py:134 news/forms_data.py:29
 msgid "Russian"
 msgstr "Russisk"
 
-#: herald/settings.py:133 news/forms_data.py:20
+#: herald/settings.py:135 news/forms_data.py:20
 msgid "German"
 msgstr "Tysk"
 
-#: herald/settings.py:134
+#: herald/settings.py:136
 #, fuzzy
 #| msgid "Norwegian"
 msgid "Norwegian Bokmål"
 msgstr "Norsk bokmål"
 
-#: herald/settings.py:135 news/forms_data.py:23
+#: herald/settings.py:137 news/forms_data.py:23
 msgid "French"
 msgstr "Fransk"
 
-#: herald/settings.py:136 news/forms_data.py:22
+#: herald/settings.py:138 news/forms_data.py:22
 msgid "Spanish"
 msgstr "Spansk"
+
+#: herald/settings.py:139
+msgid "Chinese (Simplified)"
+msgstr ""
+
+#: herald/settings.py:140
+#, fuzzy
+#| msgid "Japan"
+msgid "Japanese"
+msgstr "Japan"
+
+#: herald/settings.py:141
+#, fuzzy
+#| msgid "Greece"
+msgid "Greek"
+msgstr "Hellas"
+
+#: herald/settings.py:142 news/forms_data.py:19
+msgid "Arabic"
+msgstr "Arabisk"
 
 #: news/admin.py:59
 msgid "User_and_source"
@@ -110,10 +130,6 @@ msgstr "Seksjoner"
 #: news/forms.py:222
 msgid "Rating"
 msgstr "Vurdering"
-
-#: news/forms_data.py:19
-msgid "Arabic"
-msgstr "Arabisk"
 
 #: news/forms_data.py:24
 msgid "Hebrew"
@@ -537,7 +553,7 @@ msgstr "Profil"
 msgid "Favorite"
 msgstr "Favoritt"
 
-#: templates/includes/footer.html:51 templates/users/profile.html:44
+#: templates/includes/footer.html:51 templates/users/profile.html:40
 msgid "Settings"
 msgstr "Innstillinger"
 
@@ -689,7 +705,9 @@ msgstr "Logg inn igjen"
 
 #: templates/users/logout.html:31
 msgid "Your_session_has_ended_For_security_reasons_we_recommend_closing_your_browser"
-msgstr "Økten din er avsluttet. Av sikkerhetsårsaker anbefaler vi å lukke nettleseren."
+msgstr ""
+"Økten din er avsluttet. Av sikkerhetsårsaker anbefaler vi å lukke "
+"nettleseren."
 
 #: templates/users/password_change.html:4
 #: templates/users/password_change.html:13
@@ -736,7 +754,9 @@ msgstr "Gå tilbake til profilen"
 
 #: templates/users/password_change_done.html:36
 msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regularly"
-msgstr "Det anbefales å bruke forskjellige passord for ulike tjenester og endre dem jevnlig."
+msgstr ""
+"Det anbefales å bruke forskjellige passord for ulike tjenester og endre dem "
+"jevnlig."
 
 #: templates/users/password_reset.html:4 templates/users/password_reset.html:13
 msgid "Password_reset"
@@ -763,7 +783,8 @@ msgid ""
 "If you haven't received the email, check your spam folder or make sure you "
 "entered the correct email address."
 msgstr ""
-"Hvis du ikke har mottatt e-posten, sjekk søppelpostmappen eller forsikre deg om at du skrev inn riktig e-postadresse."
+"Hvis du ikke har mottatt e-posten, sjekk søppelpostmappen eller forsikre deg "
+"om at du skrev inn riktig e-postadresse."
 
 #: templates/users/password_reset_complete.html:4
 #: templates/users/password_reset_complete.html:15
@@ -816,7 +837,7 @@ msgid "Password confirmation"
 msgstr "Bekreft passord"
 
 #: templates/users/password_reset_confirm.html:76
-#: templates/users/profile.html:50
+#: templates/users/profile.html:46
 msgid "Change password"
 msgstr "Endre passord"
 
@@ -825,7 +846,8 @@ msgid ""
 "The password reset link is invalid, possibly because it has already been "
 "used."
 msgstr ""
-"Lenken for tilbakestilling av passord er ugyldig — den kan ha blitt brukt allerede."
+"Lenken for tilbakestilling av passord er ugyldig — den kan ha blitt brukt "
+"allerede."
 
 #: templates/users/password_reset_confirm.html:86
 msgid "Please request a new password reset."
@@ -850,7 +872,9 @@ msgstr "Sjekk e-posten din"
 
 #: templates/users/password_reset_done.html:18
 msgid "We_have_sent_password_recovery_instructions_to_the_email_address_you_provided"
-msgstr "Vi har sendt instruksjoner for passordgjenoppretting til e-postadressen du oppga."
+msgstr ""
+"Vi har sendt instruksjoner for passordgjenoppretting til e-postadressen du "
+"oppga."
 
 #: templates/users/password_reset_done.html:19
 msgid "You_should_receive_them_soon"
@@ -868,69 +892,69 @@ msgstr "Noen ganger kan e-poster for passordgjenoppretting havne der."
 msgid "User_profile"
 msgstr "Brukerprofil"
 
-#: templates/users/profile.html:30 templates/users/profile_update.html:4
+#: templates/users/profile.html:26 templates/users/profile_update.html:4
 #: templates/users/profile_update.html:10
 msgid "Edit profile"
 msgstr "Rediger profil"
 
-#: templates/users/profile.html:34
+#: templates/users/profile.html:30
 msgid "My bookmarks"
 msgstr "Mine bokmerker"
 
-#: templates/users/profile.html:64
+#: templates/users/profile.html:60
 msgid "Personal information"
 msgstr "Personlig informasjon"
 
-#: templates/users/profile.html:69 users/forms.py:60
+#: templates/users/profile.html:65 users/forms.py:60
 msgid "Name"
 msgstr "Navn"
 
-#: templates/users/profile.html:70 templates/users/profile.html:74
-#: templates/users/profile.html:85 templates/users/profile.html:92
+#: templates/users/profile.html:66 templates/users/profile.html:70
+#: templates/users/profile.html:81 templates/users/profile.html:88
 msgid "Not_specified"
 msgstr "Ikke spesifisert"
 
-#: templates/users/profile.html:73 users/forms.py:65
+#: templates/users/profile.html:69 users/forms.py:65
 msgid "Surname"
 msgstr "Etternavn"
 
-#: templates/users/profile.html:80
+#: templates/users/profile.html:76
 msgid "Date of birth"
 msgstr "Fødselsdato"
 
-#: templates/users/profile.html:90 templates/users/profile_update.html:35
+#: templates/users/profile.html:86 templates/users/profile_update.html:35
 msgid "Location"
 msgstr "Beliggenhet"
 
-#: templates/users/profile.html:99
+#: templates/users/profile.html:95
 msgid "Registration date"
 msgstr "Registreringsdato"
 
-#: templates/users/profile.html:103
+#: templates/users/profile.html:99
 msgid "Last entry"
 msgstr "Siste aktivitet"
 
-#: templates/users/profile.html:105
+#: templates/users/profile.html:101
 msgid "Recently"
 msgstr "Nylig"
 
-#: templates/users/profile.html:115
+#: templates/users/profile.html:111
 msgid "Favorite categories"
 msgstr "Favorittkategorier"
 
-#: templates/users/profile.html:130
+#: templates/users/profile.html:126
 msgid "You haven't selected your favorite categories yet."
 msgstr "Du har ikke valgt favorittkategorier ennå."
 
-#: templates/users/profile.html:132
+#: templates/users/profile.html:128
 msgid "Add categories"
 msgstr "Legg til kategorier"
 
-#: templates/users/profile.html:142
+#: templates/users/profile.html:138
 msgid "Click on a category to view related news"
 msgstr "Klikk på en kategori for å se relaterte nyheter."
 
-#: templates/users/profile.html:145
+#: templates/users/profile.html:141
 msgid "Edit"
 msgstr "Rediger"
 
@@ -1010,15 +1034,15 @@ msgstr "Avatar"
 msgid "User_avatar"
 msgstr "Brukerens avatar."
 
-#: users/models.py:83
+#: users/models.py:84
 msgid "Date_of_birth"
 msgstr "Fødselsdato"
 
-#: users/models.py:84
+#: users/models.py:85
 msgid "User_date_of_birth"
 msgstr "Brukerens fødselsdato."
 
-#: users/models.py:89
+#: users/models.py:90
 msgid "location_help_text"
 msgstr "Oppgi byen eller landet du bor i."
 
@@ -1049,6 +1073,10 @@ msgstr "profiler"
 #: users/validators.py:24
 msgid "birthday_date_error"
 msgstr "Feil i fødselsdato"
+
+#: users/validators.py:37
+msgid "Max_file_size_limit"
+msgstr "Filen din er for stor. Maksimal størrelse: "
 
 #: users/views.py:33
 msgid "Already_activated"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-23 18:23+0300\n"
+"POT-Creation-Date: 2025-12-24 20:59+0300\n"
 "PO-Revision-Date: 2025-12-21 00:00+0000\n"
 "Last-Translator: Translator Name <translator@example.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -12,31 +12,51 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: herald/settings.py:131 news/forms_data.py:21
+#: herald/settings.py:133 news/forms_data.py:21
 msgid "English"
 msgstr "Inglés"
 
-#: herald/settings.py:132 news/forms_data.py:29
+#: herald/settings.py:134 news/forms_data.py:29
 msgid "Russian"
 msgstr "Ruso"
 
-#: herald/settings.py:133 news/forms_data.py:20
+#: herald/settings.py:135 news/forms_data.py:20
 msgid "German"
 msgstr "Alemán"
 
-#: herald/settings.py:134
+#: herald/settings.py:136
 #, fuzzy
 #| msgid "Norwegian"
 msgid "Norwegian Bokmål"
 msgstr "Noruego Bokmål"
 
-#: herald/settings.py:135 news/forms_data.py:23
+#: herald/settings.py:137 news/forms_data.py:23
 msgid "French"
 msgstr "Francés"
 
-#: herald/settings.py:136 news/forms_data.py:22
+#: herald/settings.py:138 news/forms_data.py:22
 msgid "Spanish"
 msgstr "Español"
+
+#: herald/settings.py:139
+msgid "Chinese (Simplified)"
+msgstr ""
+
+#: herald/settings.py:140
+#, fuzzy
+#| msgid "Japan"
+msgid "Japanese"
+msgstr "Japón"
+
+#: herald/settings.py:141
+#, fuzzy
+#| msgid "Greece"
+msgid "Greek"
+msgstr "Grecia"
+
+#: herald/settings.py:142 news/forms_data.py:19
+msgid "Arabic"
+msgstr "Árabe"
 
 #: news/admin.py:59
 msgid "User_and_source"
@@ -110,10 +130,6 @@ msgstr "Secciones"
 #: news/forms.py:222
 msgid "Rating"
 msgstr "Calificación"
-
-#: news/forms_data.py:19
-msgid "Arabic"
-msgstr "Árabe"
 
 #: news/forms_data.py:24
 msgid "Hebrew"
@@ -537,7 +553,7 @@ msgstr "Perfil"
 msgid "Favorite"
 msgstr "Favorito"
 
-#: templates/includes/footer.html:51 templates/users/profile.html:44
+#: templates/includes/footer.html:51 templates/users/profile.html:40
 msgid "Settings"
 msgstr "Configuración"
 
@@ -689,7 +705,9 @@ msgstr "Iniciar sesión de nuevo"
 
 #: templates/users/logout.html:31
 msgid "Your_session_has_ended_For_security_reasons_we_recommend_closing_your_browser"
-msgstr "Su sesión ha terminado. Por razones de seguridad, le recomendamos cerrar su navegador."
+msgstr ""
+"Su sesión ha terminado. Por razones de seguridad, le recomendamos cerrar su "
+"navegador."
 
 #: templates/users/password_change.html:4
 #: templates/users/password_change.html:13
@@ -728,7 +746,9 @@ msgstr "¡Contraseña cambiada con éxito!"
 
 #: templates/users/password_change_done.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_use_the_new_password_to_log_in"
-msgstr "Su contraseña se ha cambiado correctamente. Ahora puede iniciar sesión con la nueva contraseña."
+msgstr ""
+"Su contraseña se ha cambiado correctamente. Ahora puede iniciar sesión con "
+"la nueva contraseña."
 
 #: templates/users/password_change_done.html:23
 msgid "Return_to_profile"
@@ -736,7 +756,9 @@ msgstr "Volver al perfil"
 
 #: templates/users/password_change_done.html:36
 msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regularly"
-msgstr "Se recomienda usar contraseñas diferentes para distintos servicios y cambiarlas regularmente."
+msgstr ""
+"Se recomienda usar contraseñas diferentes para distintos servicios y "
+"cambiarlas regularmente."
 
 #: templates/users/password_reset.html:4 templates/users/password_reset.html:13
 msgid "Password_reset"
@@ -744,7 +766,9 @@ msgstr "Restablecer contraseña"
 
 #: templates/users/password_reset.html:15
 msgid "Forgot_your_password_Enter_your_email_address_Well_send_you_instructions"
-msgstr "¿Olvidó su contraseña? Introduzca su dirección de correo electrónico — le enviaremos instrucciones."
+msgstr ""
+"¿Olvidó su contraseña? Introduzca su dirección de correo electrónico — le "
+"enviaremos instrucciones."
 
 #: templates/users/password_reset.html:32
 msgid "Email_address"
@@ -763,7 +787,8 @@ msgid ""
 "If you haven't received the email, check your spam folder or make sure you "
 "entered the correct email address."
 msgstr ""
-"Si no ha recibido el correo, revise la carpeta de spam o asegúrese de haber introducido la dirección correcta."
+"Si no ha recibido el correo, revise la carpeta de spam o asegúrese de haber "
+"introducido la dirección correcta."
 
 #: templates/users/password_reset_complete.html:4
 #: templates/users/password_reset_complete.html:15
@@ -772,7 +797,9 @@ msgstr "Contraseña restaurada"
 
 #: templates/users/password_reset_complete.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_log_in_with_your_new_password"
-msgstr "Su contraseña ha sido cambiada con éxito. Ahora puede iniciar sesión con su nueva contraseña."
+msgstr ""
+"Su contraseña ha sido cambiada con éxito. Ahora puede iniciar sesión con su "
+"nueva contraseña."
 
 #: templates/users/password_reset_complete.html:23
 msgid "Sign_in"
@@ -816,7 +843,7 @@ msgid "Password confirmation"
 msgstr "Confirmación de contraseña"
 
 #: templates/users/password_reset_confirm.html:76
-#: templates/users/profile.html:50
+#: templates/users/profile.html:46
 msgid "Change password"
 msgstr "Cambiar contraseña"
 
@@ -825,7 +852,8 @@ msgid ""
 "The password reset link is invalid, possibly because it has already been "
 "used."
 msgstr ""
-"El enlace para restablecer la contraseña es inválido, posiblemente porque ya se ha utilizado."
+"El enlace para restablecer la contraseña es inválido, posiblemente porque ya "
+"se ha utilizado."
 
 #: templates/users/password_reset_confirm.html:86
 msgid "Please request a new password reset."
@@ -850,7 +878,9 @@ msgstr "Revise su correo"
 
 #: templates/users/password_reset_done.html:18
 msgid "We_have_sent_password_recovery_instructions_to_the_email_address_you_provided"
-msgstr "Hemos enviado instrucciones para recuperar la contraseña a la dirección de correo que proporcionó."
+msgstr ""
+"Hemos enviado instrucciones para recuperar la contraseña a la dirección de "
+"correo que proporcionó."
 
 #: templates/users/password_reset_done.html:19
 msgid "You_should_receive_them_soon"
@@ -862,75 +892,76 @@ msgstr "Si no ve el correo, revise su carpeta de spam"
 
 #: templates/users/password_reset_done.html:28
 msgid "Sometimes_password_recovery_emails_can_end_up_there"
-msgstr "A veces los correos de recuperación de contraseña pueden terminar allí."
+msgstr ""
+"A veces los correos de recuperación de contraseña pueden terminar allí."
 
 #: templates/users/profile.html:5
 msgid "User_profile"
 msgstr "Perfil de usuario"
 
-#: templates/users/profile.html:30 templates/users/profile_update.html:4
+#: templates/users/profile.html:26 templates/users/profile_update.html:4
 #: templates/users/profile_update.html:10
 msgid "Edit profile"
 msgstr "Editar perfil"
 
-#: templates/users/profile.html:34
+#: templates/users/profile.html:30
 msgid "My bookmarks"
 msgstr "Mis marcadores"
 
-#: templates/users/profile.html:64
+#: templates/users/profile.html:60
 msgid "Personal information"
 msgstr "Información personal"
 
-#: templates/users/profile.html:69 users/forms.py:60
+#: templates/users/profile.html:65 users/forms.py:60
 msgid "Name"
 msgstr "Nombre"
 
-#: templates/users/profile.html:70 templates/users/profile.html:74
-#: templates/users/profile.html:85 templates/users/profile.html:92
+#: templates/users/profile.html:66 templates/users/profile.html:70
+#: templates/users/profile.html:81 templates/users/profile.html:88
 msgid "Not_specified"
 msgstr "No especificado"
 
-#: templates/users/profile.html:73 users/forms.py:65
+#: templates/users/profile.html:69 users/forms.py:65
 msgid "Surname"
 msgstr "Apellido"
 
-#: templates/users/profile.html:80
+#: templates/users/profile.html:76
 msgid "Date of birth"
 msgstr "Fecha de nacimiento"
 
-#: templates/users/profile.html:90 templates/users/profile_update.html:35
+#: templates/users/profile.html:86 templates/users/profile_update.html:35
 msgid "Location"
 msgstr "Ubicación"
 
-#: templates/users/profile.html:99
+#: templates/users/profile.html:95
 msgid "Registration date"
 msgstr "Fecha de registro"
 
-#: templates/users/profile.html:103
+#: templates/users/profile.html:99
 msgid "Last entry"
 msgstr "Última actividad"
 
-#: templates/users/profile.html:105
+#: templates/users/profile.html:101
 msgid "Recently"
 msgstr "Recientemente"
 
-#: templates/users/profile.html:115
+#: templates/users/profile.html:111
 msgid "Favorite categories"
 msgstr "Categorías favoritas"
 
-#: templates/users/profile.html:130
+#: templates/users/profile.html:126
 msgid "You haven't selected your favorite categories yet."
 msgstr "Aún no ha seleccionado sus categorías favoritas."
 
-#: templates/users/profile.html:132
+#: templates/users/profile.html:128
 msgid "Add categories"
 msgstr "Agregar categorías"
 
-#: templates/users/profile.html:142
+#: templates/users/profile.html:138
 msgid "Click on a category to view related news"
 msgstr "Haga clic en una categoría para ver noticias relacionadas."
 
-#: templates/users/profile.html:145
+#: templates/users/profile.html:141
 msgid "Edit"
 msgstr "Editar"
 
@@ -1010,15 +1041,15 @@ msgstr "Avatar"
 msgid "User_avatar"
 msgstr "Avatar del usuario."
 
-#: users/models.py:83
+#: users/models.py:84
 msgid "Date_of_birth"
 msgstr "Fecha de nacimiento"
 
-#: users/models.py:84
+#: users/models.py:85
 msgid "User_date_of_birth"
 msgstr "Fecha de nacimiento del usuario."
 
-#: users/models.py:89
+#: users/models.py:90
 msgid "location_help_text"
 msgstr "Indique la ciudad o el país de residencia."
 
@@ -1049,6 +1080,10 @@ msgstr "perfiles"
 #: users/validators.py:24
 msgid "birthday_date_error"
 msgstr "Error en la fecha de nacimiento"
+
+#: users/validators.py:37
+msgid "Max_file_size_limit"
+msgstr "Su archivo es demasiado grande. Tamaño máximo: "
 
 #: users/views.py:33
 msgid "Already_activated"

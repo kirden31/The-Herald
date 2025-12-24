@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-21 17:40+0300\n"
+"POT-Creation-Date: 2025-12-24 20:59+0300\n"
 "PO-Revision-Date: 2025-12-21 00:00+0000\n"
 "Last-Translator: Translator Name <translator@example.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -18,21 +18,45 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : (n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2));\n"
 
-#: herald/settings.py:131 news/forms_data.py:21
+#: herald/settings.py:133 news/forms_data.py:21
 msgid "English"
 msgstr "Английский"
 
-#: herald/settings.py:132 news/forms_data.py:29
+#: herald/settings.py:134 news/forms_data.py:29
 msgid "Russian"
 msgstr "Русский"
 
-#: herald/settings.py:133 news/forms_data.py:20
+#: herald/settings.py:135 news/forms_data.py:20
 msgid "German"
 msgstr "Немецкий"
 
-#: herald/settings.py:134
-msgid "Norwegian"
+#: herald/settings.py:136
+msgid "Norwegian Bokmål"
 msgstr "Норвежский"
+
+#: herald/settings.py:137 news/forms_data.py:23
+msgid "French"
+msgstr "Французский"
+
+#: herald/settings.py:138 news/forms_data.py:22
+msgid "Spanish"
+msgstr "Испанский"
+
+#: herald/settings.py:139
+msgid "Chinese (Simplified)"
+msgstr ""
+
+#: herald/settings.py:140
+msgid "Japanese"
+msgstr "Япония"
+
+#: herald/settings.py:141
+msgid "Greek"
+msgstr "Греция"
+
+#: herald/settings.py:142 news/forms_data.py:19
+msgid "Arabic"
+msgstr "Арабский"
 
 #: news/admin.py:59
 msgid "User_and_source"
@@ -106,18 +130,6 @@ msgstr "Разделы"
 #: news/forms.py:222
 msgid "Rating"
 msgstr "Рейтинг"
-
-#: news/forms_data.py:19
-msgid "Arabic"
-msgstr "Арабский"
-
-#: news/forms_data.py:22
-msgid "Spanish"
-msgstr "Испанский"
-
-#: news/forms_data.py:23
-msgid "French"
-msgstr "Французский"
 
 #: news/forms_data.py:24
 msgid "Hebrew"
@@ -471,13 +483,18 @@ msgstr "Избранные новости"
 msgid "selected_news"
 msgstr "Рекомендуемые новости"
 
-#: news/views.py:54 news/views.py:129 news/views.py:202 news/views.py:268
+#: news/views.py:54 news/views.py:129 news/views.py:205 news/views.py:271
 msgid "Forms_error"
 msgstr "Ошибка формы"
 
 #: news/views.py:83
 msgid "You_cannot_select_sources_together_with_country_or_category"
-msgstr "Нельзя выбирать источники одновременно с указанием страны или категории."
+msgstr ""
+"Нельзя выбирать источники одновременно с указанием страны или категории."
+
+#: news/views.py:157
+msgid "Used_default_query"
+msgstr ""
 
 #: templates/base.html:6 templates/home.html:5 templates/home.html:18
 #: templates/includes/footer.html:8 templates/includes/header.html:7
@@ -537,7 +554,7 @@ msgstr "Профиль"
 msgid "Favorite"
 msgstr "Избранное"
 
-#: templates/includes/footer.html:51 templates/users/profile.html:44
+#: templates/includes/footer.html:51 templates/users/profile.html:40
 msgid "Settings"
 msgstr "Настройки"
 
@@ -689,9 +706,12 @@ msgstr "Войти снова"
 
 #: templates/users/logout.html:31
 msgid "Your_session_has_ended_For_security_reasons_we_recommend_closing_your_browser"
-msgstr "Ваша сессия завершена. В целях безопасности рекомендуем закрыть браузер."
+msgstr ""
+"Ваша сессия завершена. В целях безопасности рекомендуем закрыть браузер."
 
 #: templates/users/password_change.html:4
+#: templates/users/password_change.html:13
+#: templates/users/password_change.html:86
 msgid "Change_password"
 msgstr "Сменить пароль"
 
@@ -726,7 +746,8 @@ msgstr "Пароль успешно изменён!"
 
 #: templates/users/password_change_done.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_use_the_new_password_to_log_in"
-msgstr "Ваш пароль успешно изменён. Теперь вы можете войти, используя новый пароль."
+msgstr ""
+"Ваш пароль успешно изменён. Теперь вы можете войти, используя новый пароль."
 
 #: templates/users/password_change_done.html:23
 msgid "Return_to_profile"
@@ -734,7 +755,9 @@ msgstr "Вернуться в профиль"
 
 #: templates/users/password_change_done.html:36
 msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regularly"
-msgstr "Рекомендуется использовать разные пароли для разных сервисов и менять их регулярно."
+msgstr ""
+"Рекомендуется использовать разные пароли для разных сервисов и менять их "
+"регулярно."
 
 #: templates/users/password_reset.html:4 templates/users/password_reset.html:13
 msgid "Password_reset"
@@ -761,7 +784,8 @@ msgid ""
 "If you haven't received the email, check your spam folder or make sure you "
 "entered the correct email address."
 msgstr ""
-"Если вы не получили письмо, проверьте папку «Спам» или убедитесь, что ввели правильный адрес."
+"Если вы не получили письмо, проверьте папку «Спам» или убедитесь, что ввели "
+"правильный адрес."
 
 #: templates/users/password_reset_complete.html:4
 #: templates/users/password_reset_complete.html:15
@@ -814,7 +838,7 @@ msgid "Password confirmation"
 msgstr "Подтверждение пароля"
 
 #: templates/users/password_reset_confirm.html:76
-#: templates/users/profile.html:50
+#: templates/users/profile.html:46
 msgid "Change password"
 msgstr "Сменить пароль"
 
@@ -848,7 +872,9 @@ msgstr "Проверьте почту"
 
 #: templates/users/password_reset_done.html:18
 msgid "We_have_sent_password_recovery_instructions_to_the_email_address_you_provided"
-msgstr "Мы отправили инструкции по восстановлению пароля на указанный адрес электронной почты."
+msgstr ""
+"Мы отправили инструкции по восстановлению пароля на указанный адрес "
+"электронной почты."
 
 #: templates/users/password_reset_done.html:19
 msgid "You_should_receive_them_soon"
@@ -866,69 +892,69 @@ msgstr "Иногда письма для восстановления парол
 msgid "User_profile"
 msgstr "Профиль пользователя"
 
-#: templates/users/profile.html:30 templates/users/profile_update.html:4
+#: templates/users/profile.html:26 templates/users/profile_update.html:4
 #: templates/users/profile_update.html:10
 msgid "Edit profile"
 msgstr "Редактировать профиль"
 
-#: templates/users/profile.html:34
+#: templates/users/profile.html:30
 msgid "My bookmarks"
 msgstr "Мои закладки"
 
-#: templates/users/profile.html:64
+#: templates/users/profile.html:60
 msgid "Personal information"
 msgstr "Персональная информация"
 
-#: templates/users/profile.html:69 users/forms.py:60
+#: templates/users/profile.html:65 users/forms.py:60
 msgid "Name"
 msgstr "Имя"
 
-#: templates/users/profile.html:70 templates/users/profile.html:74
-#: templates/users/profile.html:85 templates/users/profile.html:92
+#: templates/users/profile.html:66 templates/users/profile.html:70
+#: templates/users/profile.html:81 templates/users/profile.html:88
 msgid "Not_specified"
 msgstr "Не указано"
 
-#: templates/users/profile.html:73 users/forms.py:65
+#: templates/users/profile.html:69 users/forms.py:65
 msgid "Surname"
 msgstr "Фамилия"
 
-#: templates/users/profile.html:80
+#: templates/users/profile.html:76
 msgid "Date of birth"
 msgstr "Дата рождения"
 
-#: templates/users/profile.html:90 templates/users/profile_update.html:35
+#: templates/users/profile.html:86 templates/users/profile_update.html:35
 msgid "Location"
 msgstr "Местоположение"
 
-#: templates/users/profile.html:99
+#: templates/users/profile.html:95
 msgid "Registration date"
 msgstr "Дата регистрации"
 
-#: templates/users/profile.html:103
+#: templates/users/profile.html:99
 msgid "Last entry"
 msgstr "Последняя активность"
 
-#: templates/users/profile.html:105
+#: templates/users/profile.html:101
 msgid "Recently"
 msgstr "Недавно"
 
-#: templates/users/profile.html:115
+#: templates/users/profile.html:111
 msgid "Favorite categories"
 msgstr "Любимые категории"
 
-#: templates/users/profile.html:130
+#: templates/users/profile.html:126
 msgid "You haven't selected your favorite categories yet."
 msgstr "Вы ещё не выбрали любимые категории."
 
-#: templates/users/profile.html:132
+#: templates/users/profile.html:128
 msgid "Add categories"
 msgstr "Добавить категории"
 
-#: templates/users/profile.html:142
+#: templates/users/profile.html:138
 msgid "Click on a category to view related news"
 msgstr "Нажмите на категорию, чтобы просмотреть связанные новости."
 
-#: templates/users/profile.html:145
+#: templates/users/profile.html:141
 msgid "Edit"
 msgstr "Редактировать"
 
@@ -960,7 +986,7 @@ msgstr "Пользователи"
 msgid "account_activation_mail_text"
 msgstr "Активация аккаунта"
 
-#: users/backends.py:55
+#: users/backends.py:52
 msgid "Account_activation"
 msgstr "Активация аккаунта"
 
@@ -1008,15 +1034,15 @@ msgstr "Аватар"
 msgid "User_avatar"
 msgstr "Аватар пользователя."
 
-#: users/models.py:83
+#: users/models.py:84
 msgid "Date_of_birth"
 msgstr "Дата рождения"
 
-#: users/models.py:84
+#: users/models.py:85
 msgid "User_date_of_birth"
 msgstr "Дата рождения пользователя."
 
-#: users/models.py:89
+#: users/models.py:90
 msgid "location_help_text"
 msgstr "Укажите город или страну проживания."
 
@@ -1047,6 +1073,10 @@ msgstr "профили"
 #: users/validators.py:24
 msgid "birthday_date_error"
 msgstr "Ошибка даты рождения"
+
+#: users/validators.py:37
+msgid "Max_file_size_limit"
+msgstr "Ваш файл слишком тяжёлый. Максимальный размер: "
 
 #: users/views.py:33
 msgid "Already_activated"

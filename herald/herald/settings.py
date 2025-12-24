@@ -28,6 +28,8 @@ GUARDIAN_API_KEYS = os.getenv('GUARDIAN_API_KEYS', 'no_api_key').split()
 
 MAX_AUTH_ATTEMPTS = int(os.getenv('DJANGO_MAX_AUTH_ATTEMPTS', default='3'))
 
+DATA_UPLOAD_MAX_MEMORY_SIZE = 1024 * 1024 * 50 # 50 МБ
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -125,7 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'en'
 
 LANGUAGES = [
     ('en', _('English')),

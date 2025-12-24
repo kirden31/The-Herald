@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-23 18:23+0300\n"
+"POT-Creation-Date: 2025-12-24 20:59+0300\n"
 "PO-Revision-Date: 2025-12-24 00:00+0000\n"
 "Last-Translator: ChatGPT <translator@example.com>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -12,31 +12,51 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: herald/settings.py:131 news/forms_data.py:21
+#: herald/settings.py:133 news/forms_data.py:21
 msgid "English"
 msgstr "Αγγλικά"
 
-#: herald/settings.py:132 news/forms_data.py:29
+#: herald/settings.py:134 news/forms_data.py:29
 msgid "Russian"
 msgstr "Ρωσικά"
 
-#: herald/settings.py:133 news/forms_data.py:20
+#: herald/settings.py:135 news/forms_data.py:20
 msgid "German"
 msgstr "Γερμανικά"
 
-#: herald/settings.py:134
+#: herald/settings.py:136
 #, fuzzy
 #| msgid "Norwegian"
 msgid "Norwegian Bokmål"
 msgstr "Νορβηγικά (Bokmål)"
 
-#: herald/settings.py:135 news/forms_data.py:23
+#: herald/settings.py:137 news/forms_data.py:23
 msgid "French"
 msgstr "Γαλλικά"
 
-#: herald/settings.py:136 news/forms_data.py:22
+#: herald/settings.py:138 news/forms_data.py:22
 msgid "Spanish"
 msgstr "Ισπανικά"
+
+#: herald/settings.py:139
+msgid "Chinese (Simplified)"
+msgstr ""
+
+#: herald/settings.py:140
+#, fuzzy
+#| msgid "Japan"
+msgid "Japanese"
+msgstr "Ιαπωνία"
+
+#: herald/settings.py:141
+#, fuzzy
+#| msgid "Greece"
+msgid "Greek"
+msgstr "Ελλάδα"
+
+#: herald/settings.py:142 news/forms_data.py:19
+msgid "Arabic"
+msgstr "Αραβικά"
 
 #: news/admin.py:59
 msgid "User_and_source"
@@ -110,10 +130,6 @@ msgstr "Ενότητες"
 #: news/forms.py:222
 msgid "Rating"
 msgstr "Αξιολόγηση"
-
-#: news/forms_data.py:19
-msgid "Arabic"
-msgstr "Αραβικά"
 
 #: news/forms_data.py:24
 msgid "Hebrew"
@@ -537,7 +553,7 @@ msgstr "Προφίλ"
 msgid "Favorite"
 msgstr "Αγαπημένα"
 
-#: templates/includes/footer.html:51 templates/users/profile.html:44
+#: templates/includes/footer.html:51 templates/users/profile.html:40
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
@@ -681,7 +697,9 @@ msgstr "Έχετε αποσυνδεθεί."
 
 #: templates/users/logout.html:15
 msgid "Thank_you_for_visiting_our_website_We_hope_to_see_you_again"
-msgstr "Ευχαριστούμε που επισκεφθήκατε την ιστοσελίδα μας. Ελπίζουμε να σας ξαναδούμε!"
+msgstr ""
+"Ευχαριστούμε που επισκεφθήκατε την ιστοσελίδα μας. Ελπίζουμε να σας "
+"ξαναδούμε!"
 
 #: templates/users/logout.html:20
 msgid "Login_again"
@@ -689,7 +707,9 @@ msgstr "Σύνδεση ξανά"
 
 #: templates/users/logout.html:31
 msgid "Your_session_has_ended_For_security_reasons_we_recommend_closing_your_browser"
-msgstr "Η περίοδος σύνδεσής σας έληξε. Για λόγους ασφαλείας, συνιστούμε να κλείσετε τον περιηγητή σας."
+msgstr ""
+"Η περίοδος σύνδεσής σας έληξε. Για λόγους ασφαλείας, συνιστούμε να κλείσετε "
+"τον περιηγητή σας."
 
 #: templates/users/password_change.html:4
 #: templates/users/password_change.html:13
@@ -728,7 +748,8 @@ msgstr "Ο κωδικός άλλαξε επιτυχώς!"
 
 #: templates/users/password_change_done.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_use_the_new_password_to_log_in"
-msgstr "Ο κωδικός σας άλλαξε επιτυχώς. Μπορείτε τώρα να συνδεθείτε με το νέο κωδικό."
+msgstr ""
+"Ο κωδικός σας άλλαξε επιτυχώς. Μπορείτε τώρα να συνδεθείτε με το νέο κωδικό."
 
 #: templates/users/password_change_done.html:23
 msgid "Return_to_profile"
@@ -736,7 +757,9 @@ msgstr "Επιστροφή στο προφίλ"
 
 #: templates/users/password_change_done.html:36
 msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regularly"
-msgstr "Συνιστάται να χρησιμοποιείτε διαφορετικούς κωδικούς για διαφορετικές υπηρεσίες και να τους αλλάζετε τακτικά."
+msgstr ""
+"Συνιστάται να χρησιμοποιείτε διαφορετικούς κωδικούς για διαφορετικές "
+"υπηρεσίες και να τους αλλάζετε τακτικά."
 
 #: templates/users/password_reset.html:4 templates/users/password_reset.html:13
 msgid "Password_reset"
@@ -744,7 +767,8 @@ msgstr "Επαναφορά κωδικού"
 
 #: templates/users/password_reset.html:15
 msgid "Forgot_your_password_Enter_your_email_address_Well_send_you_instructions"
-msgstr "Ξεχάσατε τον κωδικό; Εισάγετε το e-mail σας — θα σας στείλουμε οδηγίες."
+msgstr ""
+"Ξεχάσατε τον κωδικό; Εισάγετε το e-mail σας — θα σας στείλουμε οδηγίες."
 
 #: templates/users/password_reset.html:32
 msgid "Email_address"
@@ -763,7 +787,8 @@ msgid ""
 "If you haven't received the email, check your spam folder or make sure you "
 "entered the correct email address."
 msgstr ""
-"Αν δεν λάβατε το email, ελέγξτε το φάκελο ανεπιθύμητης αλληλογραφίας ή βεβαιωθείτε ότι εισάγατε τη σωστή διεύθυνση."
+"Αν δεν λάβατε το email, ελέγξτε το φάκελο ανεπιθύμητης αλληλογραφίας ή "
+"βεβαιωθείτε ότι εισάγατε τη σωστή διεύθυνση."
 
 #: templates/users/password_reset_complete.html:4
 #: templates/users/password_reset_complete.html:15
@@ -772,7 +797,9 @@ msgstr "Ο κωδικός αποκαταστάθηκε"
 
 #: templates/users/password_reset_complete.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_log_in_with_your_new_password"
-msgstr "Ο κωδικός σας έχει αλλάξει με επιτυχία. Μπορείτε τώρα να συνδεθείτε με τον νέο κωδικό."
+msgstr ""
+"Ο κωδικός σας έχει αλλάξει με επιτυχία. Μπορείτε τώρα να συνδεθείτε με τον "
+"νέο κωδικό."
 
 #: templates/users/password_reset_complete.html:23
 msgid "Sign_in"
@@ -784,7 +811,8 @@ msgstr "Ο λογαριασμός σας προστατεύεται τώρα μ�
 
 #: templates/users/password_reset_complete.html:38
 msgid "It_is_recommended_to_use_unique_passwords_for_different_services"
-msgstr "Συνιστάται να χρησιμοποιείτε μοναδικούς κωδικούς για διάφορες υπηρεσίες."
+msgstr ""
+"Συνιστάται να χρησιμοποιείτε μοναδικούς κωδικούς για διάφορες υπηρεσίες."
 
 #: templates/users/password_reset_confirm.html:4
 msgid "Enter_new_password"
@@ -816,7 +844,7 @@ msgid "Password confirmation"
 msgstr "Επιβεβαίωση κωδικού"
 
 #: templates/users/password_reset_confirm.html:76
-#: templates/users/profile.html:50
+#: templates/users/profile.html:46
 msgid "Change password"
 msgstr "Αλλαγή κωδικού"
 
@@ -825,7 +853,8 @@ msgid ""
 "The password reset link is invalid, possibly because it has already been "
 "used."
 msgstr ""
-"Ο σύνδεσμος επαναφοράς κωδικού δεν είναι έγκυρος, πιθανώς επειδή έχει ήδη χρησιμοποιηθεί."
+"Ο σύνδεσμος επαναφοράς κωδικού δεν είναι έγκυρος, πιθανώς επειδή έχει ήδη "
+"χρησιμοποιηθεί."
 
 #: templates/users/password_reset_confirm.html:86
 msgid "Please request a new password reset."
@@ -868,69 +897,69 @@ msgstr "Μερικές φορές τα μηνύματα επαναφοράς κ�
 msgid "User_profile"
 msgstr "Προφίλ χρήστη"
 
-#: templates/users/profile.html:30 templates/users/profile_update.html:4
+#: templates/users/profile.html:26 templates/users/profile_update.html:4
 #: templates/users/profile_update.html:10
 msgid "Edit profile"
 msgstr "Επεξεργασία προφίλ"
 
-#: templates/users/profile.html:34
+#: templates/users/profile.html:30
 msgid "My bookmarks"
 msgstr "Τα σελιδοδείκτες μου"
 
-#: templates/users/profile.html:64
+#: templates/users/profile.html:60
 msgid "Personal information"
 msgstr "Προσωπικές πληροφορίες"
 
-#: templates/users/profile.html:69 users/forms.py:60
+#: templates/users/profile.html:65 users/forms.py:60
 msgid "Name"
 msgstr "Όνομα"
 
-#: templates/users/profile.html:70 templates/users/profile.html:74
-#: templates/users/profile.html:85 templates/users/profile.html:92
+#: templates/users/profile.html:66 templates/users/profile.html:70
+#: templates/users/profile.html:81 templates/users/profile.html:88
 msgid "Not_specified"
 msgstr "Δεν έχει καθοριστεί"
 
-#: templates/users/profile.html:73 users/forms.py:65
+#: templates/users/profile.html:69 users/forms.py:65
 msgid "Surname"
 msgstr "Επώνυμο"
 
-#: templates/users/profile.html:80
+#: templates/users/profile.html:76
 msgid "Date of birth"
 msgstr "Ημερομηνία γέννησης"
 
-#: templates/users/profile.html:90 templates/users/profile_update.html:35
+#: templates/users/profile.html:86 templates/users/profile_update.html:35
 msgid "Location"
 msgstr "Τοποθεσία"
 
-#: templates/users/profile.html:99
+#: templates/users/profile.html:95
 msgid "Registration date"
 msgstr "Ημερομηνία εγγραφής"
 
-#: templates/users/profile.html:103
+#: templates/users/profile.html:99
 msgid "Last entry"
 msgstr "Τελευταία είσοδος"
 
-#: templates/users/profile.html:105
+#: templates/users/profile.html:101
 msgid "Recently"
 msgstr "Πρόσφατα"
 
-#: templates/users/profile.html:115
+#: templates/users/profile.html:111
 msgid "Favorite categories"
 msgstr "Αγαπημένες κατηγορίες"
 
-#: templates/users/profile.html:130
+#: templates/users/profile.html:126
 msgid "You haven't selected your favorite categories yet."
 msgstr "Δεν έχετε ακόμη επιλέξει τις αγαπημένες σας κατηγορίες."
 
-#: templates/users/profile.html:132
+#: templates/users/profile.html:128
 msgid "Add categories"
 msgstr "Προσθήκη κατηγοριών"
 
-#: templates/users/profile.html:142
+#: templates/users/profile.html:138
 msgid "Click on a category to view related news"
 msgstr "Κάντε κλικ σε μια κατηγορία για να δείτε σχετικές ειδήσεις."
 
-#: templates/users/profile.html:145
+#: templates/users/profile.html:141
 msgid "Edit"
 msgstr "Επεξεργασία"
 
@@ -1010,15 +1039,15 @@ msgstr "Εικόνα προφίλ"
 msgid "User_avatar"
 msgstr "Εικόνα προφίλ χρήστη."
 
-#: users/models.py:83
+#: users/models.py:84
 msgid "Date_of_birth"
 msgstr "Ημερομηνία γέννησης"
 
-#: users/models.py:84
+#: users/models.py:85
 msgid "User_date_of_birth"
 msgstr "Ημερομηνία γέννησης του χρήστη."
 
-#: users/models.py:89
+#: users/models.py:90
 msgid "location_help_text"
 msgstr "Καταχωρίστε την πόλη ή τη χώρα διαμονής."
 
@@ -1049,6 +1078,10 @@ msgstr "προφίλ"
 #: users/validators.py:24
 msgid "birthday_date_error"
 msgstr "Σφάλμα ημερομηνίας γέννησης"
+
+#: users/validators.py:37
+msgid "Max_file_size_limit"
+msgstr "Το αρχείο σας είναι πολύ μεγάλο. Μέγιστο μέγεθος: "
 
 #: users/views.py:33
 msgid "Already_activated"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-23 18:23+0300\n"
+"POT-Creation-Date: 2025-12-24 20:59+0300\n"
 "PO-Revision-Date: 2025-12-24 00:00+0000\n"
 "Last-Translator: ChatGPT <translator@example.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -12,31 +12,51 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: herald/settings.py:131 news/forms_data.py:21
+#: herald/settings.py:133 news/forms_data.py:21
 msgid "English"
 msgstr "英語"
 
-#: herald/settings.py:132 news/forms_data.py:29
+#: herald/settings.py:134 news/forms_data.py:29
 msgid "Russian"
 msgstr "ロシア語"
 
-#: herald/settings.py:133 news/forms_data.py:20
+#: herald/settings.py:135 news/forms_data.py:20
 msgid "German"
 msgstr "ドイツ語"
 
-#: herald/settings.py:134
+#: herald/settings.py:136
 #, fuzzy
 #| msgid "Norwegian"
 msgid "Norwegian Bokmål"
 msgstr "ノルウェー語（ブークモール）"
 
-#: herald/settings.py:135 news/forms_data.py:23
+#: herald/settings.py:137 news/forms_data.py:23
 msgid "French"
 msgstr "フランス語"
 
-#: herald/settings.py:136 news/forms_data.py:22
+#: herald/settings.py:138 news/forms_data.py:22
 msgid "Spanish"
 msgstr "スペイン語"
+
+#: herald/settings.py:139
+msgid "Chinese (Simplified)"
+msgstr ""
+
+#: herald/settings.py:140
+#, fuzzy
+#| msgid "Japan"
+msgid "Japanese"
+msgstr "日本"
+
+#: herald/settings.py:141
+#, fuzzy
+#| msgid "Greece"
+msgid "Greek"
+msgstr "ギリシャ"
+
+#: herald/settings.py:142 news/forms_data.py:19
+msgid "Arabic"
+msgstr "アラビア語"
 
 #: news/admin.py:59
 msgid "User_and_source"
@@ -110,10 +130,6 @@ msgstr "セクション"
 #: news/forms.py:222
 msgid "Rating"
 msgstr "評価"
-
-#: news/forms_data.py:19
-msgid "Arabic"
-msgstr "アラビア語"
 
 #: news/forms_data.py:24
 msgid "Hebrew"
@@ -473,7 +489,8 @@ msgstr "フォームエラー"
 
 #: news/views.py:83
 msgid "You_cannot_select_sources_together_with_country_or_category"
-msgstr "国やカテゴリを指定しているときにソースを同時に選択することはできません。"
+msgstr ""
+"国やカテゴリを指定しているときにソースを同時に選択することはできません。"
 
 #: news/views.py:157
 msgid "Used_default_query"
@@ -537,7 +554,7 @@ msgstr "プロフィール"
 msgid "Favorite"
 msgstr "お気に入り"
 
-#: templates/includes/footer.html:51 templates/users/profile.html:44
+#: templates/includes/footer.html:51 templates/users/profile.html:40
 msgid "Settings"
 msgstr "設定"
 
@@ -689,7 +706,9 @@ msgstr "再度ログイン"
 
 #: templates/users/logout.html:31
 msgid "Your_session_has_ended_For_security_reasons_we_recommend_closing_your_browser"
-msgstr "セッションが終了しました。セキュリティのため、ブラウザを閉じることを推奨します。"
+msgstr ""
+"セッションが終了しました。セキュリティのため、ブラウザを閉じることを推奨しま"
+"す。"
 
 #: templates/users/password_change.html:4
 #: templates/users/password_change.html:13
@@ -736,7 +755,8 @@ msgstr "プロフィールに戻る"
 
 #: templates/users/password_change_done.html:36
 msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regularly"
-msgstr "サービスごとに異なるパスワードを使用し、定期的に変更することをお勧めします。"
+msgstr ""
+"サービスごとに異なるパスワードを使用し、定期的に変更することをお勧めします。"
 
 #: templates/users/password_reset.html:4 templates/users/password_reset.html:13
 msgid "Password_reset"
@@ -744,7 +764,9 @@ msgstr "パスワードのリセット"
 
 #: templates/users/password_reset.html:15
 msgid "Forgot_your_password_Enter_your_email_address_Well_send_you_instructions"
-msgstr "パスワードをお忘れですか？メールアドレスを入力してください — 手順をお送りします。"
+msgstr ""
+"パスワードをお忘れですか？メールアドレスを入力してください — 手順をお送りしま"
+"す。"
 
 #: templates/users/password_reset.html:32
 msgid "Email_address"
@@ -763,7 +785,8 @@ msgid ""
 "If you haven't received the email, check your spam folder or make sure you "
 "entered the correct email address."
 msgstr ""
-"メールが届かない場合は迷惑メールフォルダを確認するか、正しいメールアドレスを入力したか確認してください。"
+"メールが届かない場合は迷惑メールフォルダを確認するか、正しいメールアドレスを"
+"入力したか確認してください。"
 
 #: templates/users/password_reset_complete.html:4
 #: templates/users/password_reset_complete.html:15
@@ -816,7 +839,7 @@ msgid "Password confirmation"
 msgstr "パスワード確認"
 
 #: templates/users/password_reset_confirm.html:76
-#: templates/users/profile.html:50
+#: templates/users/profile.html:46
 msgid "Change password"
 msgstr "パスワードを変更"
 
@@ -824,8 +847,7 @@ msgstr "パスワードを変更"
 msgid ""
 "The password reset link is invalid, possibly because it has already been "
 "used."
-msgstr ""
-"パスワードリセットのリンクは無効です。既に使用された可能性があります。"
+msgstr "パスワードリセットのリンクは無効です。既に使用された可能性があります。"
 
 #: templates/users/password_reset_confirm.html:86
 msgid "Please request a new password reset."
@@ -868,69 +890,69 @@ msgstr "時々、パスワード回復メールがそこに入ることがあり
 msgid "User_profile"
 msgstr "ユーザープロフィール"
 
-#: templates/users/profile.html:30 templates/users/profile_update.html:4
+#: templates/users/profile.html:26 templates/users/profile_update.html:4
 #: templates/users/profile_update.html:10
 msgid "Edit profile"
 msgstr "プロフィールを編集"
 
-#: templates/users/profile.html:34
+#: templates/users/profile.html:30
 msgid "My bookmarks"
 msgstr "保存した記事"
 
-#: templates/users/profile.html:64
+#: templates/users/profile.html:60
 msgid "Personal information"
 msgstr "個人情報"
 
-#: templates/users/profile.html:69 users/forms.py:60
+#: templates/users/profile.html:65 users/forms.py:60
 msgid "Name"
 msgstr "名"
 
-#: templates/users/profile.html:70 templates/users/profile.html:74
-#: templates/users/profile.html:85 templates/users/profile.html:92
+#: templates/users/profile.html:66 templates/users/profile.html:70
+#: templates/users/profile.html:81 templates/users/profile.html:88
 msgid "Not_specified"
 msgstr "未指定"
 
-#: templates/users/profile.html:73 users/forms.py:65
+#: templates/users/profile.html:69 users/forms.py:65
 msgid "Surname"
 msgstr "姓"
 
-#: templates/users/profile.html:80
+#: templates/users/profile.html:76
 msgid "Date of birth"
 msgstr "生年月日"
 
-#: templates/users/profile.html:90 templates/users/profile_update.html:35
+#: templates/users/profile.html:86 templates/users/profile_update.html:35
 msgid "Location"
 msgstr "場所"
 
-#: templates/users/profile.html:99
+#: templates/users/profile.html:95
 msgid "Registration date"
 msgstr "登録日"
 
-#: templates/users/profile.html:103
+#: templates/users/profile.html:99
 msgid "Last entry"
 msgstr "最終アクセス"
 
-#: templates/users/profile.html:105
+#: templates/users/profile.html:101
 msgid "Recently"
 msgstr "最近"
 
-#: templates/users/profile.html:115
+#: templates/users/profile.html:111
 msgid "Favorite categories"
 msgstr "お気に入りカテゴリ"
 
-#: templates/users/profile.html:130
+#: templates/users/profile.html:126
 msgid "You haven't selected your favorite categories yet."
 msgstr "お気に入りのカテゴリがまだ選択されていません。"
 
-#: templates/users/profile.html:132
+#: templates/users/profile.html:128
 msgid "Add categories"
 msgstr "カテゴリを追加"
 
-#: templates/users/profile.html:142
+#: templates/users/profile.html:138
 msgid "Click on a category to view related news"
 msgstr "カテゴリをクリックして関連ニュースを表示します。"
 
-#: templates/users/profile.html:145
+#: templates/users/profile.html:141
 msgid "Edit"
 msgstr "編集"
 
@@ -1010,15 +1032,15 @@ msgstr "アバター"
 msgid "User_avatar"
 msgstr "ユーザーのアバター。"
 
-#: users/models.py:83
+#: users/models.py:84
 msgid "Date_of_birth"
 msgstr "生年月日"
 
-#: users/models.py:84
+#: users/models.py:85
 msgid "User_date_of_birth"
 msgstr "ユーザーの生年月日。"
 
-#: users/models.py:89
+#: users/models.py:90
 msgid "location_help_text"
 msgstr "居住している市または国を入力してください。"
 
@@ -1049,6 +1071,10 @@ msgstr "プロフィール一覧"
 #: users/validators.py:24
 msgid "birthday_date_error"
 msgstr "生年月日のエラー"
+
+#: users/validators.py:37
+msgid "Max_file_size_limit"
+msgstr "ファイルが大きすぎます。最大サイズ: "
 
 #: users/views.py:33
 msgid "Already_activated"

@@ -75,6 +75,7 @@ class Profile(django.db.models.Model):
         null=True,
         verbose_name=_('Avatar'),
         help_text=_('User_avatar'),
+        validators=[users.validators.ValidateMaxFileSize()]
     )
     birthday = django.db.models.DateField(
         blank=True,
@@ -87,7 +88,6 @@ class Profile(django.db.models.Model):
         blank=True,
         null=True,
         help_text=_('location_help_text'),
-        # The_user_city_(or_country)_of_residence
     )
     attempts_count = django.db.models.PositiveBigIntegerField(
         default=0,

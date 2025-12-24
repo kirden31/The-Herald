@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-23 18:23+0300\n"
+"POT-Creation-Date: 2025-12-24 20:59+0300\n"
 "PO-Revision-Date: 2025-12-24 00:00+0000\n"
 "Last-Translator: ChatGPT <translator@example.com>\n"
 "Language-Team: Arabic <ar@li.org>\n"
@@ -10,33 +10,54 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=(n==0?0:n==1?1:n==2?2:(n%100>=3 && n%100<=10)?3:(n%100>=11 && n%100<=99)?4:5);\n"
+"Plural-Forms: nplurals=6; plural=(n==0?0:n==1?1:n==2?2:(n%100>=3 && "
+"n%100<=10)?3:(n%100>=11 && n%100<=99)?4:5);\n"
 
-#: herald/settings.py:131 news/forms_data.py:21
+#: herald/settings.py:133 news/forms_data.py:21
 msgid "English"
 msgstr "الإنجليزية"
 
-#: herald/settings.py:132 news/forms_data.py:29
+#: herald/settings.py:134 news/forms_data.py:29
 msgid "Russian"
 msgstr "الروسية"
 
-#: herald/settings.py:133 news/forms_data.py:20
+#: herald/settings.py:135 news/forms_data.py:20
 msgid "German"
 msgstr "الألمانية"
 
-#: herald/settings.py:134
+#: herald/settings.py:136
 #, fuzzy
 #| msgid "Norwegian"
 msgid "Norwegian Bokmål"
 msgstr "النرويجية بوكمول"
 
-#: herald/settings.py:135 news/forms_data.py:23
+#: herald/settings.py:137 news/forms_data.py:23
 msgid "French"
 msgstr "الفرنسية"
 
-#: herald/settings.py:136 news/forms_data.py:22
+#: herald/settings.py:138 news/forms_data.py:22
 msgid "Spanish"
 msgstr "الإسبانية"
+
+#: herald/settings.py:139
+msgid "Chinese (Simplified)"
+msgstr ""
+
+#: herald/settings.py:140
+#, fuzzy
+#| msgid "Japan"
+msgid "Japanese"
+msgstr "اليابان"
+
+#: herald/settings.py:141
+#, fuzzy
+#| msgid "Greece"
+msgid "Greek"
+msgstr "اليونان"
+
+#: herald/settings.py:142 news/forms_data.py:19
+msgid "Arabic"
+msgstr "العربية"
 
 #: news/admin.py:59
 msgid "User_and_source"
@@ -110,10 +131,6 @@ msgstr "الأقسام"
 #: news/forms.py:222
 msgid "Rating"
 msgstr "التقييم"
-
-#: news/forms_data.py:19
-msgid "Arabic"
-msgstr "العربية"
 
 #: news/forms_data.py:24
 msgid "Hebrew"
@@ -537,7 +554,7 @@ msgstr "الملف الشخصي"
 msgid "Favorite"
 msgstr "المفضلة"
 
-#: templates/includes/footer.html:51 templates/users/profile.html:44
+#: templates/includes/footer.html:51 templates/users/profile.html:40
 msgid "Settings"
 msgstr "الإعدادات"
 
@@ -763,7 +780,8 @@ msgid ""
 "If you haven't received the email, check your spam folder or make sure you "
 "entered the correct email address."
 msgstr ""
-"إذا لم تتلق الرسالة، فتحقق من مجلد الرسائل المزعجة أو تأكد من إدخال عنوان البريد الإلكتروني الصحيح."
+"إذا لم تتلق الرسالة، فتحقق من مجلد الرسائل المزعجة أو تأكد من إدخال عنوان "
+"البريد الإلكتروني الصحيح."
 
 #: templates/users/password_reset_complete.html:4
 #: templates/users/password_reset_complete.html:15
@@ -772,7 +790,8 @@ msgstr "تم استعادة كلمة المرور"
 
 #: templates/users/password_reset_complete.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_log_in_with_your_new_password"
-msgstr "تم تغيير كلمة المرور بنجاح. يمكنك الآن تسجيل الدخول بكلمة المرور الجديدة."
+msgstr ""
+"تم تغيير كلمة المرور بنجاح. يمكنك الآن تسجيل الدخول بكلمة المرور الجديدة."
 
 #: templates/users/password_reset_complete.html:23
 msgid "Sign_in"
@@ -816,7 +835,7 @@ msgid "Password confirmation"
 msgstr "تأكيد كلمة المرور"
 
 #: templates/users/password_reset_confirm.html:76
-#: templates/users/profile.html:50
+#: templates/users/profile.html:46
 msgid "Change password"
 msgstr "تغيير كلمة المرور"
 
@@ -824,8 +843,7 @@ msgstr "تغيير كلمة المرور"
 msgid ""
 "The password reset link is invalid, possibly because it has already been "
 "used."
-msgstr ""
-"رابط إعادة التعيين غير صالح، ربما لأنه قد استُخدم بالفعل."
+msgstr "رابط إعادة التعيين غير صالح، ربما لأنه قد استُخدم بالفعل."
 
 #: templates/users/password_reset_confirm.html:86
 msgid "Please request a new password reset."
@@ -850,7 +868,9 @@ msgstr "تحقق من بريدك"
 
 #: templates/users/password_reset_done.html:18
 msgid "We_have_sent_password_recovery_instructions_to_the_email_address_you_provided"
-msgstr "لقد أرسلنا تعليمات استرداد كلمة المرور إلى عنوان البريد الإلكتروني الذي قدمته."
+msgstr ""
+"لقد أرسلنا تعليمات استرداد كلمة المرور إلى عنوان البريد الإلكتروني الذي "
+"قدمته."
 
 #: templates/users/password_reset_done.html:19
 msgid "You_should_receive_them_soon"
@@ -868,69 +888,69 @@ msgstr "أحيانًا تنتهي رسائل استرداد كلمة المرو�
 msgid "User_profile"
 msgstr "ملف المستخدم"
 
-#: templates/users/profile.html:30 templates/users/profile_update.html:4
+#: templates/users/profile.html:26 templates/users/profile_update.html:4
 #: templates/users/profile_update.html:10
 msgid "Edit profile"
 msgstr "تعديل الملف الشخصي"
 
-#: templates/users/profile.html:34
+#: templates/users/profile.html:30
 msgid "My bookmarks"
 msgstr "مفضلتي"
 
-#: templates/users/profile.html:64
+#: templates/users/profile.html:60
 msgid "Personal information"
 msgstr "معلومات شخصية"
 
-#: templates/users/profile.html:69 users/forms.py:60
+#: templates/users/profile.html:65 users/forms.py:60
 msgid "Name"
 msgstr "الاسم"
 
-#: templates/users/profile.html:70 templates/users/profile.html:74
-#: templates/users/profile.html:85 templates/users/profile.html:92
+#: templates/users/profile.html:66 templates/users/profile.html:70
+#: templates/users/profile.html:81 templates/users/profile.html:88
 msgid "Not_specified"
 msgstr "لم يتم التحديد"
 
-#: templates/users/profile.html:73 users/forms.py:65
+#: templates/users/profile.html:69 users/forms.py:65
 msgid "Surname"
 msgstr "اسم العائلة"
 
-#: templates/users/profile.html:80
+#: templates/users/profile.html:76
 msgid "Date of birth"
 msgstr "تاريخ الميلاد"
 
-#: templates/users/profile.html:90 templates/users/profile_update.html:35
+#: templates/users/profile.html:86 templates/users/profile_update.html:35
 msgid "Location"
 msgstr "الموقع"
 
-#: templates/users/profile.html:99
+#: templates/users/profile.html:95
 msgid "Registration date"
 msgstr "تاريخ التسجيل"
 
-#: templates/users/profile.html:103
+#: templates/users/profile.html:99
 msgid "Last entry"
 msgstr "آخر دخول"
 
-#: templates/users/profile.html:105
+#: templates/users/profile.html:101
 msgid "Recently"
 msgstr "مؤخرًا"
 
-#: templates/users/profile.html:115
+#: templates/users/profile.html:111
 msgid "Favorite categories"
 msgstr "الفئات المفضلة"
 
-#: templates/users/profile.html:130
+#: templates/users/profile.html:126
 msgid "You haven't selected your favorite categories yet."
 msgstr "لم تختر فئاتك المفضلة بعد."
 
-#: templates/users/profile.html:132
+#: templates/users/profile.html:128
 msgid "Add categories"
 msgstr "إضافة فئات"
 
-#: templates/users/profile.html:142
+#: templates/users/profile.html:138
 msgid "Click on a category to view related news"
 msgstr "انقر على فئة لعرض الأخبار ذات الصلة."
 
-#: templates/users/profile.html:145
+#: templates/users/profile.html:141
 msgid "Edit"
 msgstr "تعديل"
 
@@ -1010,15 +1030,15 @@ msgstr "الصورة الرمزية"
 msgid "User_avatar"
 msgstr "صورة المستخدم."
 
-#: users/models.py:83
+#: users/models.py:84
 msgid "Date_of_birth"
 msgstr "تاريخ الميلاد"
 
-#: users/models.py:84
+#: users/models.py:85
 msgid "User_date_of_birth"
 msgstr "تاريخ ميلاد المستخدم."
 
-#: users/models.py:89
+#: users/models.py:90
 msgid "location_help_text"
 msgstr "حدد المدينة أو الدولة التي تقيم بها."
 
@@ -1049,6 +1069,10 @@ msgstr "الملفات الشخصية"
 #: users/validators.py:24
 msgid "birthday_date_error"
 msgstr "خطأ في تاريخ الميلاد"
+
+#: users/validators.py:37
+msgid "Max_file_size_limit"
+msgstr "ملفك كبير جدًا. الحد الأقصى للحجم: "
 
 #: users/views.py:33
 msgid "Already_activated"
