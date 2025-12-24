@@ -36,7 +36,7 @@ class ValidateMaxFileSize:
     def __call__(self, value):
         if value.size > self.max_size_byte:
             raise django.core.exceptions.ValidationError(
-                _('Max_file_size_limit') + f'{self.max_size_mb}',
+                _('Max_file_size_limit') + f'{self.max_size_mb} Mb',
             )
 
         return value
