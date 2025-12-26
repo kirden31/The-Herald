@@ -10,13 +10,18 @@
     </form>
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-        {% for src in sources %}
+        {% for src in page_obj %}
+
         {% include "includes/source_card.html" %}
+
         {% empty %}
         <div class="col-12">
             <div class="alert alert-info">{% trans "No_sources_found" %}</div>
         </div>
         {% endfor %}
     </div>
+
+    {% include "includes/page_select_pagination.html" %}
+
 </div>
 {% endblock %}

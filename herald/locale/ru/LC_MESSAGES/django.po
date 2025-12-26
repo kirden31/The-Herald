@@ -501,7 +501,7 @@ msgstr ""
 
 #: news/views.py:157
 msgid "Used_default_query"
-msgstr "Используется стандартный перевод"
+msgstr "Используется стандартный запрос"
 
 #: templates/base.html:6 templates/home.html:5 templates/home.html:18
 #: templates/includes/footer.html:8 templates/includes/header.html:7

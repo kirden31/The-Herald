@@ -16,6 +16,7 @@ import api.guardianApi
 import api.newsApi
 
 LANGUAGE_CHOICES = [
+    (None, _('All')),
     ('ar', _('Arabic')),
     ('de', _('German')),
     ('en', _('English')),
@@ -62,6 +63,7 @@ SPORTS = 'sports'
 SCIENCE = 'science'
 TECHNOLOGY = 'technology'
 CATEGORIES_CHOICES = [
+    (None, _('All')),
     (BUSINESS, _('Business')),
     (ENTERTAINMENT, _('Entertainment')),
     (GENERAL, _('General')),
@@ -90,6 +92,7 @@ ORDER_BY_CHOICES = [
 ]
 
 COUNTRIES_CHOICES_SOURCES = [
+    (None, _('All')),
     ('ae', _('United Arab Emirates')),
     ('ar', _('Argentina')),
     ('at', _('Austria')),
@@ -154,7 +157,7 @@ FOUR = '4'
 FIVE = '5'
 
 RATING_CHOICES = (
-    (NONE_RATING, _('None')),
+    (NONE_RATING, _('All')),
     (ONE, '1'),
     (TWO, '2'),
     (THREE, '3'),
