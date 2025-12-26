@@ -93,11 +93,16 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
             users.models.Profile.favorite_categories.field.name,
         )
 
+        labels = {
+            users.models.Profile.image.field.name: 'a',
+        }
+
         widgets = {
             users.models.Profile.birthday.field.name: django.forms.DateInput(
                 attrs={'type': 'date', 'max': datetime.date.today()},
                 format='%Y-%m-%d',
             ),
+            users.models.Profile.image.field.name: django.forms.FileInput()
         }
 
         help_texts = {
@@ -126,7 +131,7 @@ class LoginForm(BootstrapFormMixin, django.contrib.auth.forms.AuthenticationForm
         ),
         'inactive': _('This_account_is_inactive'),
     }
-    username = django.forms.CharField(label=_('Login or email'))
+    username = django.forms.CharField(label=_('Login_or_email'))
     password = django.forms.CharField(
         label=_('Password'),
         widget=django.forms.PasswordInput,

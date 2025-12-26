@@ -15,9 +15,9 @@ class Migration(migrations.Migration):
             name='blocked_at',
             field=models.DateTimeField(
                 editable=False,
-                help_text='account was deactivated',
+                help_text='Account_was_deactivated',
                 null=True,
-                verbose_name='deactivate in',
+                verbose_name='Deactivate_in',
             ),
         ),
     ]
