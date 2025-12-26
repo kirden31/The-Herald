@@ -102,7 +102,7 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
                 attrs={'type': 'date', 'max': datetime.date.today()},
                 format='%Y-%m-%d',
             ),
-            users.models.Profile.image.field.name: django.forms.FileInput()
+            users.models.Profile.image.field.name: django.forms.FileInput(),
         }
 
         help_texts = {
