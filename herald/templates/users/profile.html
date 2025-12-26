@@ -23,11 +23,11 @@
 
                 <div class="d-grid gap-2 mb-3">
                     <a href="{% url 'users:profile_edit' %}" class="btn btn-primary">
-                        <i class="bi bi-pencil me-2"></i>{% trans "Edit profile" %}
+                        <i class="bi bi-pencil me-2"></i>{% trans "Edit_profile" %}
                     </a>
 
                     <a href="{% url 'news:favorite' %}" class="btn btn-outline-primary">
-                        <i class="bi bi-bookmark me-2"></i>{% trans "My bookmarks" %}
+                        <i class="bi bi-bookmark me-2"></i>{% trans "My_bookmarks" %}
                     </a>
 
                 </div>
@@ -43,7 +43,7 @@
                 {% url 'users:password_change' as password_change_url %}
                 {% if password_change_url %}
                 <a href="{{ password_change_url }}" class="btn btn-outline-secondary">
-                    <i class="bi bi-key me-1"></i>{% trans "Change password" %}
+                    <i class="bi bi-key me-1"></i>{% trans "Change_password" %}
                 </a>
                 {% endif %}
                 {% endif %}
@@ -57,7 +57,7 @@
         <div class="card shadow-sm mb-4">
             <div class="card-body">
                 <h5 class="card-title mb-4">
-                    <i class="bi bi-info-circle me-2"></i>{% trans "Personal information" %}
+                    <i class="bi bi-info-circle me-2"></i>{% trans "Personal_information" %}
                 </h5>
 
                 <div class="row mb-3">
@@ -73,7 +73,7 @@
 
                 <div class="row mb-3">
                     <div class="col-md-6">
-                        <label class="form-label text-muted">{% trans "Date of birth" %}</label>
+                        <label class="form-label text-muted">{% trans "Date_of_birth" %}</label>
                         <p class="form-control-plaintext">
                             {% if user.profile.birthday %}
                             {{ user.profile.birthday|date:"d.m.Y" }}
@@ -92,11 +92,11 @@
 
                 <div class="row">
                     <div class="col-md-6">
-                        <label class="form-label text-muted">{% trans "Registration date" %}</label>
+                        <label class="form-label text-muted">{% trans "Registration_date" %}</label>
                         <p class="form-control-plaintext">{{ user.date_joined|date:"d.m.Y" }}</p>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label text-muted">{% trans "Last entry" %}</label>
+                        <label class="form-label text-muted">{% trans "Last_entry" %}</label>
                         <p class="form-control-plaintext">
                             {{ user.last_login|date:"d.m.Y H:i"|default:_("Recently")}}
                         </p>
@@ -108,7 +108,7 @@
         <div class="card shadow-sm mb-4">
             <div class="card-body">
                 <h5 class="card-title mb-4">
-                    <i class="bi bi-tags-fill me-2" style="color: var(--accent);"></i>{% trans "Favorite categories" %}
+                    <i class="bi bi-tags-fill me-2" style="color: var(--accent);"></i>{% trans "Favorite_categories" %}
                 </h5>
 
                 <div class="d-flex flex-wrap gap-3 mb-4">
@@ -123,9 +123,9 @@
                     {% else %}
                     <div class="text-center w-100 py-4">
                         <i class="bi bi-inbox display-4 text-muted mb-3"></i>
-                        <p class="text-muted mb-3">{% trans "You haven't selected your favorite categories yet." %}</p>
+                        <p class="text-muted mb-3">{% trans "You_have_not_selected_your_favorite_categories_yet" %}</p>
                         <a href="{% url 'users:profile_edit' %}" class="btn btn-outline-primary">
-                            <i class="bi bi-plus-circle me-1"></i>{% trans "Add categories" %}
+                            <i class="bi bi-plus-circle me-1"></i>{% trans "Add_categories" %}
                         </a>
                     </div>
                     {% endif %}
@@ -135,7 +135,7 @@
                 <div class="d-flex justify-content-between align-items-center mt-3">
                     <small class="text-muted">
                         <i class="bi bi-info-circle me-1"></i>
-                        {% trans "Click on a category to view related news" %}
+                        {% trans "Click_on_a_category_to_view_related_news" %}
                     </small>
                     <a href="{% url 'users:profile_edit' %}" class="btn btn-sm btn-outline-secondary">
                         <i class="bi bi-pencil me-1"></i>{% trans "Edit" %}

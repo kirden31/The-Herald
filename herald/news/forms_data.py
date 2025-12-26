@@ -24,11 +24,11 @@ LANGUAGE_CHOICES = [
     ('he', _('Hebrew')),
     ('it', _('Italian')),
     ('nl', _('Dutch')),
-    ('no', f"{_('Norwegian_Bokmal')} / {_('Norwegian_Nynorsk')}"),
+    ('no', _('Norwegian Bokmål') + ' / ' + _('Norwegian Nynorsk')),
     ('pt', _('Portuguese')),
     ('ru', _('Russian')),
     ('sv', _('Swedish')),
-    ('zh', f"{_('Simplified Chinese')} / {_('Traditional Chinese')}"),
+    ('zh', _('Simplified Chinese') + ' / ' + _('Traditional Chinese')),
 ]
 
 COUNTRIES_CHOICES_NEWS = [('us', _('United States'))]

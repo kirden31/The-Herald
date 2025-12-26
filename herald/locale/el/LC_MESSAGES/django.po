@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-24 20:59+0300\n"
+"POT-Creation-Date: 2025-12-26 16:37+0300\n"
 "PO-Revision-Date: 2025-12-24 00:00+0000\n"
 "Last-Translator: ChatGPT <translator@example.com>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -12,49 +12,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: herald/settings.py:133 news/forms_data.py:21
+#: herald/settings.py:131 news/forms_data.py:21
 msgid "English"
 msgstr "Αγγλικά"
 
-#: herald/settings.py:134 news/forms_data.py:29
+#: herald/settings.py:132 news/forms_data.py:29
 msgid "Russian"
 msgstr "Ρωσικά"
 
-#: herald/settings.py:135 news/forms_data.py:20
+#: herald/settings.py:133 news/forms_data.py:20
 msgid "German"
 msgstr "Γερμανικά"
 
-#: herald/settings.py:136
-#, fuzzy
-#| msgid "Norwegian"
+#: herald/settings.py:134 news/forms_data.py:27
 msgid "Norwegian Bokmål"
 msgstr "Νορβηγικά (Bokmål)"
 
-#: herald/settings.py:137 news/forms_data.py:23
+#: herald/settings.py:135 news/forms_data.py:23
 msgid "French"
 msgstr "Γαλλικά"
 
-#: herald/settings.py:138 news/forms_data.py:22
+#: herald/settings.py:136 news/forms_data.py:22
 msgid "Spanish"
 msgstr "Ισπανικά"
 
-#: herald/settings.py:139
+#: herald/settings.py:137
 msgid "Chinese (Simplified)"
-msgstr ""
+msgstr "Κινέζικα (Απλοποιημένα)"
 
-#: herald/settings.py:140
-#, fuzzy
-#| msgid "Japan"
+#: herald/settings.py:138
 msgid "Japanese"
-msgstr "Ιαπωνία"
+msgstr "Ιαπωνικά"
 
-#: herald/settings.py:141
-#, fuzzy
-#| msgid "Greece"
+#: herald/settings.py:139
 msgid "Greek"
-msgstr "Ελλάδα"
+msgstr "Ελληνικά"
 
-#: herald/settings.py:142 news/forms_data.py:19
+#: herald/settings.py:140 news/forms_data.py:19
 msgid "Arabic"
 msgstr "Αραβικά"
 
@@ -143,6 +137,12 @@ msgstr "Ιταλικά"
 msgid "Dutch"
 msgstr "Ολλανδικά"
 
+#: news/forms_data.py:27
+#, fuzzy
+#| msgid "Norwegian Bokmål"
+msgid "Norwegian Nynorsk"
+msgstr "Νορβηγικά (Bokmål)"
+
 #: news/forms_data.py:28
 msgid "Portuguese"
 msgstr "Πορτογαλικά"
@@ -150,6 +150,14 @@ msgstr "Πορτογαλικά"
 #: news/forms_data.py:30
 msgid "Swedish"
 msgstr "Σουηδικά"
+
+#: news/forms_data.py:31
+msgid "Simplified Chinese"
+msgstr ""
+
+#: news/forms_data.py:31
+msgid "Traditional Chinese"
+msgstr ""
 
 #: news/forms_data.py:34 news/forms_data.py:144
 msgid "United States"
@@ -353,7 +361,7 @@ msgstr "Νιγηρία"
 
 #: news/forms_data.py:126
 msgid "Netherlands"
-msgstr "Κάτω Χώρες"
+msgstr "Ολλανδία"
 
 #: news/forms_data.py:127
 msgid "Norway"
@@ -437,7 +445,7 @@ msgstr "Καμία"
 
 #: news/models.py:15 users/admin.py:13
 msgid "user"
-msgstr "χρήστης"
+msgstr "Χρήστης"
 
 #: news/models.py:19
 msgid "title"
@@ -502,7 +510,7 @@ msgid "Herald"
 msgstr "Herald"
 
 #: templates/base.html:25
-msgid "The content was not delivered :("
+msgid "The_content_was_not_delivered"
 msgstr "Το περιεχόμενο δεν παραδόθηκε :("
 
 #: templates/home.html:5
@@ -518,8 +526,8 @@ msgid "Start_by_searching_or_go_to"
 msgstr "Ξεκινήστε με αναζήτηση ή μεταβείτε σε"
 
 #: templates/home.html:51
-msgid "main news"
-msgstr "κύριες ειδήσεις"
+msgid "Main_news"
+msgstr "Κύριες ειδήσεις"
 
 #: templates/includes/footer.html:11
 msgid "footer_site_descriptions"
@@ -541,7 +549,8 @@ msgstr "Αρχική"
 msgid "Sources"
 msgstr "Πηγές"
 
-#: templates/includes/footer.html:37 users/models.py:70
+#: templates/includes/footer.html:37 templates/users/account_activate.html:7
+#: users/models.py:70
 msgid "User"
 msgstr "Χρήστες"
 
@@ -565,7 +574,7 @@ msgstr "Επαφές"
 msgid "Select_language"
 msgstr "Επιλέξτε γλώσσα"
 
-#: templates/includes/header.html:19
+#: templates/includes/header.html:19 templates/news/top_headlines_news.html:5
 msgid "Top_headlines"
 msgstr "Κύρια θέματα"
 
@@ -603,7 +612,7 @@ msgid "Read"
 msgstr "Διαβάστε"
 
 #: templates/includes/news_card.html:57
-msgid "In favorites"
+msgid "In_favorites"
 msgstr "Στα αγαπημένα"
 
 #: templates/includes/search_area.html:15
@@ -612,7 +621,7 @@ msgid "Filters"
 msgstr "Φίλτρα"
 
 #: templates/includes/search_area.html:38
-#: templates/users/profile_update.html:81
+#: templates/users/profile_update.html:92
 msgid "Save"
 msgstr "Αποθήκευση"
 
@@ -626,24 +635,16 @@ msgstr "Επίσκεψη"
 
 #: templates/news/everything_news.html:17 templates/news/guardian_news.html:17
 #: templates/news/top_headlines_news.html:17
-msgid "No news found"
+msgid "No_news_found"
 msgstr "Δεν βρέθηκαν ειδήσεις"
 
 #: templates/news/sources_list.html:17
-msgid "No sources found"
+msgid "No_sources_found"
 msgstr "Δεν βρέθηκαν πηγές"
 
-#: templates/news/top_headlines_news.html:5
-msgid "Top headlines"
-msgstr "Κύρια θέματα"
-
 #: templates/users/account_activate.html:6
-msgid "Account verification"
+msgid "Account_verification"
 msgstr "Επαλήθευση λογαριασμού"
-
-#: templates/users/account_activate.html:7
-msgid "User:"
-msgstr "Χρήστης:"
 
 #: templates/users/account_activate.html:12 templates/users/login.html:12
 #: templates/users/login.html:58 templates/users/signup.html:114
@@ -669,7 +670,7 @@ msgstr "Αναζήτηση ειδήσεων"
 
 #: templates/users/login.html:4
 msgid "Entrance"
-msgstr "Είσοδος"
+msgstr "Σύνδεση"
 
 #: templates/users/login.html:13
 msgid "Enter_your_credentials"
@@ -714,6 +715,8 @@ msgstr ""
 #: templates/users/password_change.html:4
 #: templates/users/password_change.html:13
 #: templates/users/password_change.html:86
+#: templates/users/password_reset_confirm.html:76
+#: templates/users/profile.html:46
 msgid "Change_password"
 msgstr "Αλλαγή κωδικού"
 
@@ -726,6 +729,7 @@ msgid "Current_Password"
 msgstr "Τρέχων κωδικός"
 
 #: templates/users/password_change.html:47
+#: templates/users/password_reset_confirm.html:37
 msgid "New_Password"
 msgstr "Νέος κωδικός"
 
@@ -734,7 +738,7 @@ msgid "Confirming_a_new_password"
 msgstr "Επιβεβαίωση νέου κωδικού"
 
 #: templates/users/password_change.html:89
-#: templates/users/profile_update.html:82
+#: templates/users/profile_update.html:93
 msgid "Cancel"
 msgstr "Ακύρωση"
 
@@ -783,9 +787,7 @@ msgid "Back_to_the_entrance"
 msgstr "Επιστροφή στη σύνδεση"
 
 #: templates/users/password_reset.html:61
-msgid ""
-"If you haven't received the email, check your spam folder or make sure you "
-"entered the correct email address."
+msgid "If_you_have_not_received_the_email_check_your_spam_folder_or_make_sure_you_entered_the_correct_email_address"
 msgstr ""
 "Αν δεν λάβατε το email, ελέγξτε το φάκελο ανεπιθύμητης αλληλογραφίας ή "
 "βεβαιωθείτε ότι εισάγατε τη σωστή διεύθυνση."
@@ -815,58 +817,44 @@ msgstr ""
 "Συνιστάται να χρησιμοποιείτε μοναδικούς κωδικούς για διάφορες υπηρεσίες."
 
 #: templates/users/password_reset_confirm.html:4
+#: templates/users/password_reset_confirm.html:15
 msgid "Enter_new_password"
 msgstr "Εισάγετε νέο κωδικό"
 
-#: templates/users/password_reset_confirm.html:15
-msgid "Enter new password"
-msgstr "Εισάγετε νέο κωδικό"
-
 #: templates/users/password_reset_confirm.html:16
-msgid "Please enter the new password twice."
+msgid "Please_enter_the_new_password_twice"
 msgstr "Παρακαλούμε εισάγετε τον νέο κωδικό δύο φορές."
 
 #: templates/users/password_reset_confirm.html:18
-msgid "Restore Error"
+msgid "Restore_Error"
 msgstr "Σφάλμα επαναφοράς"
 
 #: templates/users/password_reset_confirm.html:19
-msgid "The password reset link is invalid."
+msgid "The_password_reset_link_is_invalid"
 msgstr "Ο σύνδεσμος επαναφοράς κωδικού δεν είναι έγκυρος."
-
-#: templates/users/password_reset_confirm.html:37
-msgid "New Password"
-msgstr "Νέος κωδικός"
 
 #: templates/users/password_reset_confirm.html:59
 #: templates/users/signup.html:82
-msgid "Password confirmation"
+msgid "Password_confirmation"
 msgstr "Επιβεβαίωση κωδικού"
 
-#: templates/users/password_reset_confirm.html:76
-#: templates/users/profile.html:46
-msgid "Change password"
-msgstr "Αλλαγή κωδικού"
-
 #: templates/users/password_reset_confirm.html:85
-msgid ""
-"The password reset link is invalid, possibly because it has already been "
-"used."
+msgid "The_password_reset_link_is_invalid_possibly_because_it_has_already_been_used"
 msgstr ""
 "Ο σύνδεσμος επαναφοράς κωδικού δεν είναι έγκυρος, πιθανώς επειδή έχει ήδη "
 "χρησιμοποιηθεί."
 
 #: templates/users/password_reset_confirm.html:86
-msgid "Please request a new password reset."
+msgid "Please_request_a_new_password_reset"
 msgstr "Παρακαλούμε ζητήστε νέα επαναφορά κωδικού."
 
 #: templates/users/password_reset_confirm.html:93
-msgid "Request a new password reset"
+msgid "Request_a_new_password_reset"
 msgstr "Ζητήστε νέα επαναφορά κωδικού"
 
 #: templates/users/password_reset_confirm.html:96
 #: templates/users/password_reset_done.html:36
-msgid "Return to the entrance"
+msgid "Return_to_the_entrance"
 msgstr "Επιστροφή στη σύνδεση"
 
 #: templates/users/password_reset_done.html:4
@@ -897,17 +885,17 @@ msgstr "Μερικές φορές τα μηνύματα επαναφοράς κ�
 msgid "User_profile"
 msgstr "Προφίλ χρήστη"
 
-#: templates/users/profile.html:26 templates/users/profile_update.html:4
-#: templates/users/profile_update.html:10
-msgid "Edit profile"
+#: templates/users/profile.html:26 templates/users/profile_update.html:6
+#: templates/users/profile_update.html:12
+msgid "Edit_profile"
 msgstr "Επεξεργασία προφίλ"
 
 #: templates/users/profile.html:30
-msgid "My bookmarks"
+msgid "My_bookmarks"
 msgstr "Τα σελιδοδείκτες μου"
 
 #: templates/users/profile.html:60
-msgid "Personal information"
+msgid "Personal_information"
 msgstr "Προσωπικές πληροφορίες"
 
 #: templates/users/profile.html:65 users/forms.py:60
@@ -923,48 +911,49 @@ msgstr "Δεν έχει καθοριστεί"
 msgid "Surname"
 msgstr "Επώνυμο"
 
-#: templates/users/profile.html:76
-msgid "Date of birth"
+#: templates/users/profile.html:76 users/models.py:83
+msgid "Date_of_birth"
 msgstr "Ημερομηνία γέννησης"
 
-#: templates/users/profile.html:86 templates/users/profile_update.html:35
+#: templates/users/profile.html:86 templates/users/profile_update.html:39
 msgid "Location"
 msgstr "Τοποθεσία"
 
 #: templates/users/profile.html:95
-msgid "Registration date"
+msgid "Registration_date"
 msgstr "Ημερομηνία εγγραφής"
 
 #: templates/users/profile.html:99
-msgid "Last entry"
+msgid "Last_entry"
 msgstr "Τελευταία είσοδος"
 
 #: templates/users/profile.html:101
 msgid "Recently"
 msgstr "Πρόσφατα"
 
-#: templates/users/profile.html:111
-msgid "Favorite categories"
+#: templates/users/profile.html:111 users/forms.py:74 users/models.py:100
+#: users/models.py:101
+msgid "Favorite_categories"
 msgstr "Αγαπημένες κατηγορίες"
 
 #: templates/users/profile.html:126
-msgid "You haven't selected your favorite categories yet."
+msgid "You_have_not_selected_your_favorite_categories_yet"
 msgstr "Δεν έχετε ακόμη επιλέξει τις αγαπημένες σας κατηγορίες."
 
 #: templates/users/profile.html:128
-msgid "Add categories"
+msgid "Add_categories"
 msgstr "Προσθήκη κατηγοριών"
 
 #: templates/users/profile.html:138
-msgid "Click on a category to view related news"
+msgid "Click_on_a_category_to_view_related_news"
 msgstr "Κάντε κλικ σε μια κατηγορία για να δείτε σχετικές ειδήσεις."
 
 #: templates/users/profile.html:141
 msgid "Edit"
 msgstr "Επεξεργασία"
 
-#: templates/users/profile_update.html:36
-msgid "City or country"
+#: templates/users/profile_update.html:41
+msgid "City_or_country"
 msgstr "Πόλη ή χώρα"
 
 #: templates/users/signup.html:4 templates/users/signup.html:12
@@ -972,15 +961,15 @@ msgid "Registration"
 msgstr "Εγγραφή"
 
 #: templates/users/signup.html:13
-msgid "Create a new account"
+msgid "Create_a_new_account"
 msgstr "Δημιουργήστε νέο λογαριασμό"
 
-#: templates/users/signup.html:58 users/forms.py:131
+#: templates/users/signup.html:58 users/forms.py:136
 msgid "Password"
 msgstr "Κωδικός"
 
 #: templates/users/signup.html:112
-msgid "Already have an account?"
+msgid "Already_have_an_account"
 msgstr "Έχετε ήδη λογαριασμό;"
 
 #: users/apps.py:10
@@ -997,7 +986,7 @@ msgstr "Ενεργοποίηση λογαριασμού"
 
 #: users/forms.py:34
 msgid "Mail"
-msgstr "Ταχυδρομείο"
+msgstr "Ηλεκτρονικό ταχυδρομείο"
 
 #: users/forms.py:47 users/forms.py:68
 msgid "Email"
@@ -1011,24 +1000,20 @@ msgstr "Εισάγετε το όνομα χρήστη"
 msgid "Enter_email"
 msgstr "Εισάγετε τη διεύθυνση email"
 
-#: users/forms.py:74 users/models.py:100 users/models.py:101
-msgid "Favorite_categories"
-msgstr "Αγαπημένες κατηγορίες"
-
-#: users/forms.py:104
+#: users/forms.py:109
 msgid "Upload_your_profile_picture"
 msgstr "Ανεβάστε τη φωτογραφία προφίλ σας."
 
-#: users/forms.py:125
+#: users/forms.py:130
 msgid "invalid_login_text"
 msgstr "Μη έγκυρο όνομα χρήστη ή κωδικός."
 
-#: users/forms.py:127
+#: users/forms.py:132
 msgid "This_account_is_inactive"
 msgstr "Αυτός ο λογαριασμός είναι ανενεργός."
 
-#: users/forms.py:129
-msgid "Login or email"
+#: users/forms.py:134
+msgid "Login_or_email"
 msgstr "Όνομα χρήστη ή email"
 
 #: users/models.py:76
@@ -1040,14 +1025,10 @@ msgid "User_avatar"
 msgstr "Εικόνα προφίλ χρήστη."
 
 #: users/models.py:84
-msgid "Date_of_birth"
-msgstr "Ημερομηνία γέννησης"
-
-#: users/models.py:85
 msgid "User_date_of_birth"
 msgstr "Ημερομηνία γέννησης του χρήστη."
 
-#: users/models.py:90
+#: users/models.py:89
 msgid "location_help_text"
 msgstr "Καταχωρίστε την πόλη ή τη χώρα διαμονής."
 
@@ -1060,12 +1041,12 @@ msgid "Number_of_login_attempts"
 msgstr "Αριθμός προσπαθειών σύνδεσης"
 
 #: users/models.py:104
-msgid "deactivate in"
-msgstr "απενεργοποίηση σε"
+msgid "Deactivate_in"
+msgstr "Απενεργοποίηση σε"
 
 #: users/models.py:105
-msgid "account was deactivated"
-msgstr "ο λογαριασμός απενεργοποιήθηκε"
+msgid "Account_was_deactivated"
+msgstr "Ο λογαριασμός απενεργοποιήθηκε"
 
 #: users/models.py:122
 msgid "profile"
@@ -1078,10 +1059,6 @@ msgstr "προφίλ"
 #: users/validators.py:24
 msgid "birthday_date_error"
 msgstr "Σφάλμα ημερομηνίας γέννησης"
-
-#: users/validators.py:37
-msgid "Max_file_size_limit"
-msgstr "Το αρχείο σας είναι πολύ μεγάλο. Μέγιστο μέγεθος: "
 
 #: users/views.py:33
 msgid "Already_activated"
@@ -1106,3 +1083,6 @@ msgstr "Εγγραφή επιτυχής! Καλώς ήρθατε!"
 #: users/views.py:123
 msgid "Profile_successfully_updated"
 msgstr "Το προφίλ ενημερώθηκε με επιτυχία"
+
+#~ msgid "Max_file_size_limit"
+#~ msgstr "Το αρχείο σας είναι πολύ μεγάλο. Μέγιστο μέγεθος: "

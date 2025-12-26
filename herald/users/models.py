@@ -101,8 +101,8 @@ class Profile(django.db.models.Model):
         help_text=_('Favorite_categories'),
     )
     blocked_at = django.db.models.DateTimeField(
-        verbose_name=_('deactivate in'),
-        help_text=_('account was deactivated'),
+        verbose_name=_('Deactivate_in'),
+        help_text=_('Account_was_deactivated'),
         null=True,
         editable=False,
     )
