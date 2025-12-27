@@ -8,6 +8,7 @@ import django.contrib.auth.mixins
 import django.contrib.messages
 import django.shortcuts
 import django.urls
+import django.utils.timezone
 from django.utils.translation import gettext as _
 import django.views.generic
 
@@ -23,7 +24,7 @@ class AccountActivateView(django.views.View):
     model = users.models.User
     time_delta = ACTIVATE_LINK_VALID_HOURS
 
-    def get(self, request, pk, *args, **kwargs):
+    def get(self, request, pk, *_args, **_kwargs):
         user = django.shortcuts.get_object_or_404(
             users.models.User,
             pk=pk,
@@ -96,6 +97,13 @@ class SignUpView(django.views.generic.CreateView):
 
 class ProfileView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.generic.TemplateView):
     template_name = 'users/profile.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['favorite_categories'] = [
+            _(cat.capitalize()) for cat in self.request.user.profile.favorite_categories
+        ]
+        return context
 
 
 class ProfileUpdateView(

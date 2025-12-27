@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 {% load i18n %}
+{% block title %}{% trans "Herald" %} - {% trans "Top_headlines" %}{% endblock %}
 {% block content %}
-<h2 class="mb-4">{% trans "Top headlines" %}</h2>
+<h2 class="ms-4">{% trans "Top_headlines" %}</h2>
 <div class="container py-4">
 
     <form action="{% url 'news:top_headlines_news' %}" method="get" class="d-flex mb-3" role="search">
@@ -14,7 +15,7 @@
         {% include "includes/news_card.html" %}
         {% empty %}
         <div class="col-12">
-            <div class="alert alert-info">{% trans "No news found" %}</div>
+            <div class="alert alert-info">{% trans "No_news_found" %}</div>
         </div>
         {% endfor %}
     </div>

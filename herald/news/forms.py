@@ -17,7 +17,7 @@ class SearchForm(django.forms.Form):
         widget=django.forms.TextInput(
             attrs={
                 'placeholder': _('search_area_placeholder'),
-                'class': 'form-control',
+                'class': 'form-control me-2',
             },
         ),
     )
@@ -30,7 +30,7 @@ class SortEverythingForm(django.forms.Form):
         initial=news.forms_data.PUBLISHED_AT,
         widget=django.forms.Select(
             attrs={
-                'class': 'js-sort js-example-basic-multiple ms-2',
+                'class': 'js-sort ms-2',
             },
         ),
         required=False,
@@ -45,7 +45,7 @@ class SortGuardianForm(django.forms.Form):
         required=False,
         widget=django.forms.Select(
             attrs={
-                'class': 'js-sort js-example-basic-multiple ms-2',
+                'class': 'js-sort ms-2',
             },
         ),
     )
@@ -167,10 +167,11 @@ class TopHeadlinesFilterForm(django.forms.Form):
 
 
 class SourcesFilterForm(django.forms.Form):
-    language = django.forms.MultipleChoiceField(
+    language = django.forms.ChoiceField(
         label=_('Select_language_default_all'),
-        choices=news.forms_data.LANGUAGE_CHOICES,
-        widget=django.forms.SelectMultiple(
+        initial=None,
+        choices=[(None, _('All'))] + news.forms_data.LANGUAGE_CHOICES,
+        widget=django.forms.Select(
             attrs={
                 'class': 'js-example-basic-multiple',
                 'style': 'width: 100%;',
@@ -179,10 +180,11 @@ class SourcesFilterForm(django.forms.Form):
         required=False,
     )
 
-    category = django.forms.MultipleChoiceField(
+    category = django.forms.ChoiceField(
         label=_('Select_categories_default_all'),
-        choices=news.forms_data.CATEGORIES_CHOICES,
-        widget=django.forms.SelectMultiple(
+        choices=[(None, _('All'))] + news.forms_data.CATEGORIES_CHOICES,
+        initial=None,
+        widget=django.forms.Select(
             attrs={
                 'class': 'js-example-basic-multiple',
                 'style': 'width: 100%;',
@@ -191,10 +193,11 @@ class SourcesFilterForm(django.forms.Form):
         required=False,
     )
 
-    country = django.forms.MultipleChoiceField(
+    country = django.forms.ChoiceField(
         label=_('Select_countries_default_all'),
         choices=news.forms_data.COUNTRIES_CHOICES_SOURCES,
-        widget=django.forms.SelectMultiple(
+        initial=None,
+        widget=django.forms.Select(
             attrs={
                 'class': 'js-example-basic-multiple',
                 'style': 'width: 100%;',

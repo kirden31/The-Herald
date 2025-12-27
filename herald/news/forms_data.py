@@ -24,11 +24,11 @@ LANGUAGE_CHOICES = [
     ('he', _('Hebrew')),
     ('it', _('Italian')),
     ('nl', _('Dutch')),
-    ('no', f"{_('Norwegian_Bokmal')} / {_('Norwegian_Nynorsk')}"),
+    ('no', _('Norwegian Bokmål')),
     ('pt', _('Portuguese')),
     ('ru', _('Russian')),
     ('sv', _('Swedish')),
-    ('zh', f"{_('Simplified Chinese')} / {_('Traditional Chinese')}"),
+    ('zh', _('Simplified Chinese')),
 ]
 
 COUNTRIES_CHOICES_NEWS = [('us', _('United States'))]
@@ -49,9 +49,93 @@ def get_sources_choices():
     return [(s['id'], s['name']) for s in response['sources']]
 
 
+SECTIONS_TRANSLATE = (
+    _('About'),
+    _('Animals farmed'),
+    _('Art and design'),
+    _('Australia news'),
+    _('Better Business'),
+    _('Books'),
+    _('Business'),
+    _('Business to business'),
+    _('Cardiff'),
+    _("Children's books"),
+    _('Cities'),
+    _('Opinion'),
+    _('Community'),
+    _('Crosswords'),
+    _('Culture'),
+    _('Culture Network'),
+    _('Culture professionals network'),
+    _('Edinburgh'),
+    _('Education'),
+    _('Guardian Enterprise Network'),
+    _('Environment'),
+    _('Extra'),
+    _('Fashion'),
+    _('Film'),
+    _('Food'),
+    _('Football'),
+    _('Games'),
+    _('Global development'),
+    _('Global Development Professionals Network'),
+    _('Guardian Government Computing'),
+    _('Guardian Foundation'),
+    _('Guardian Professional'),
+    _('Healthcare Professionals Network'),
+    _('Help'),
+    _('Higher Education Network'),
+    _('Housing Network'),
+    _('Inequality'),
+    _('Info'),
+    _('Jobs'),
+    _('Katine'),
+    _('Law'),
+    _('Leeds'),
+    _('Life and style'),
+    _('Local'),
+    _('Local Leaders Network'),
+    _('Media'),
+    _('Media Network'),
+    _('Membership'),
+    _('Money'),
+    _('Music'),
+    _('News'),
+    _('Politics'),
+    _('Public Leaders Network'),
+    _('Science'),
+    _('Search'),
+    _('Guardian Small Business Network'),
+    _('Social Care Network'),
+    _('Social Enterprise Network'),
+    _('Society'),
+    _('Society Professionals'),
+    _('Sport'),
+    _('Stage'),
+    _('Teacher Network'),
+    _('Technology'),
+    _('The Filter'),
+    _('The Filter US'),
+    _('From the Guardian'),
+    _('From the Observer'),
+    _('Travel'),
+    _('Guardian holiday offers'),
+    _('Television & radio'),
+    _('UK news'),
+    _('US news'),
+    _('Wellness (Do NOT use)'),
+    _('Voluntary Sector Network'),
+    _('Weather'),
+    _('Wellness'),
+    _('Women in Leadership'),
+    _('Working in development'),
+    _('World news'),
+)
+
+
 def get_sections_choices():
     sections = api.guardianApi.GuardianApi().get_sections_list()
-    return [(s['id'], s['webTitle']) for s in sections['sections']]
+    return [(s['id'], _(s['webTitle'])) for s in sections['sections']]
 
 
 BUSINESS = 'business'
@@ -90,6 +174,7 @@ ORDER_BY_CHOICES = [
 ]
 
 COUNTRIES_CHOICES_SOURCES = [
+    (None, _('All')),
     ('ae', _('United Arab Emirates')),
     ('ar', _('Argentina')),
     ('at', _('Austria')),
@@ -154,7 +239,7 @@ FOUR = '4'
 FIVE = '5'
 
 RATING_CHOICES = (
-    (NONE_RATING, _('None')),
+    (NONE_RATING, _('All')),
     (ONE, '1'),
     (TWO, '2'),
     (THREE, '3'),

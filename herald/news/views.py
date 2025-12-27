@@ -6,6 +6,7 @@ import random
 
 import django.contrib.auth.mixins
 import django.contrib.messages
+import django.core.paginator
 import django.http
 import django.shortcuts
 from django.utils.translation import gettext as _
@@ -153,7 +154,10 @@ class EverythingNews(NewsApiBaseView):
             params['q'] = self.default_query
             django.contrib.messages.warning(
                 request,
-                f'{_("Used_default_query")}: {self.default_query}',
+                '{message}: {default_query}'.format(
+                    message=_('Used_default_query'),
+                    default_query=self.default_query,
+                ),
             )
 
         try:
@@ -273,18 +277,24 @@ class NewsApiSources(NewsApiBaseView):
             return django.shortcuts.render(request, self.template_name, context)
 
         params = {
-            'country': ','.join(filters_form.cleaned_data.get('country')),
-            'category': ','.join(filters_form.cleaned_data.get('category')),
-            'language': ','.join(filters_form.cleaned_data.get('language')),
+            'country': filters_form.cleaned_data.get('country'),
+            'category': filters_form.cleaned_data.get('category'),
+            'language': filters_form.cleaned_data.get('language'),
         }
 
         response = api.newsApi.NewsApi().get_sources_list(params=params)
 
         sources_list = response.get('sources', [])
 
+        paginator = django.core.paginator.Paginator(sources_list, 12)
+        page_number = request.GET.get('page', 1)
+        page_obj = paginator.get_page(page_number)
+        pages_view_list = self.get_view_pages_numbers(page_obj.number, paginator.num_pages)
+
         context = {
             'filters_form': filters_form,
-            'sources': sources_list,
+            'page_obj': page_obj,
+            'pages_view_list': pages_view_list,
         }
 
         return django.shortcuts.render(

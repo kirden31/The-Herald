@@ -28,6 +28,8 @@ GUARDIAN_API_KEYS = os.getenv('GUARDIAN_API_KEYS', 'no_api_key').split()
 
 MAX_AUTH_ATTEMPTS = int(os.getenv('DJANGO_MAX_AUTH_ATTEMPTS', default='3'))
 
+DATA_UPLOAD_MAX_MEMORY_SIZE = 1024 * 1024 * 50  # 50 МБ
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -125,15 +127,19 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = 'ru-RU'
+LANGUAGE_CODE = 'en'
 
 LANGUAGES = [
-    ('en-US', _('English')),
-    ('ru-RU', _('Russian')),
-    ('de-DE', _('German')),
-    ('nb-NO', _('Norwegian Bokmål')),
-    ('fr-FR', _('French')),
-    ('es-ES', _('Spanish')),
+    ('en', _('English')),
+    ('ru', _('Russian')),
+    ('de', _('German')),
+    ('nb', _('Norwegian Bokmål')),
+    ('fr', _('French')),
+    ('es', _('Spanish')),
+    ('zh-hans', _('Chinese (Simplified)')),
+    ('ja', _('Japanese')),
+    ('el', _('Greek')),
+    ('ar', _('Arabic')),
 ]
 
 LOGIN_URL = django.urls.reverse_lazy('users:login')

@@ -5,63 +5,54 @@
 {% block title %}{% trans "User_profile" %}{% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-md-4 mb-4">
-        <div class="card shadow-sm">
-            <div class="card-body text-center">
-                <div class="mb-3">
-                    {% if request.user.profile.image %}
-                    <img src="{{ request.user.profile.image.url }}"
-                         alt="{{ request.user.username }}"
-                         class="rounded-circle img-thumbnail border-3 border-primary mb-3"
-                         style="width: 200px; height: 200px; object-fit: cover;">
-                    {% else %}
-                    <img src="{% static 'img/no_image.jpg' %}"
-                         alt="{{ request.user.username }}"
-                         class="rounded-circle img-thumbnail border-3 border-secondary mb-3"
-                         style="width: 200px; height: 200px; object-fit: cover;">
-                    {% endif %}
-                </div>
+<div class="row align-items-stretch">
+    <div class="col-md-4 mb-4 d-flex flex-column">
+        <div class="card shadow-sm mb-4 flex-fill">
+            <div class="card-body text-center d-flex flex-column align-items-center">
+                {% with thumb=user.profile.get_image_300x300 %}
+                <img src="{{ thumb.url }}"
+                     alt="{{ request.user.username }}"
+                     onerror="this.onerror=null; this.src='{% static 'img/no_image.jpg' %}';"
+                     class="rounded-circle img-thumbnail border-3 border-seconde mb-3"
+                     style="width: 200px; height: 200px; object-fit: cover;">
+                {% endwith %}
                 <h4 class="card-title">{{ user.username }}</h4>
                 <p class="text-muted">{{ user.email }}</p>
 
-                <div class="d-grid gap-2 mb-3">
+                <div class="d-grid gap-2 mt-auto">
                     <a href="{% url 'users:profile_edit' %}" class="btn btn-primary">
-                        <i class="bi bi-pencil me-2"></i>{% trans "Edit profile" %}
+                        {% trans "Edit_profile" %}
                     </a>
 
                     <a href="{% url 'news:favorite' %}" class="btn btn-outline-primary">
-                        <i class="bi bi-bookmark me-2"></i>{% trans "My bookmarks" %}
+                        {% trans "My_bookmarks" %}
                     </a>
-
                 </div>
             </div>
         </div>
 
-        <div class="card shadow-sm mt-3">
+        <div class="card shadow-sm mb-4 flex-fill">
             <div class="card-body">
-                <h6 class="card-title mb-3">
-                    <i class="bi bi-gear me-2"></i>{% trans "Settings" %}
-                </h6>
+                <h5 class="card-title mb-4">
+                    {% trans "Settings" %}
+                </h5>
                 {% if user == request.user %}
                 {% url 'users:password_change' as password_change_url %}
                 {% if password_change_url %}
-                <a href="{{ password_change_url }}" class="btn btn-outline-secondary">
-                    <i class="bi bi-key me-1"></i>{% trans "Change password" %}
+                <a href="{{ password_change_url }}" class="btn btn-outline-primary mt-auto">
+                    {% trans "Change_password" %}
                 </a>
                 {% endif %}
                 {% endif %}
-
-
             </div>
         </div>
     </div>
 
-    <div class="col-md-8">
-        <div class="card shadow-sm mb-4">
+    <div class="col-md-8 d-flex flex-column">
+        <div class="card shadow-sm mb-4 flex-fill">
             <div class="card-body">
                 <h5 class="card-title mb-4">
-                    <i class="bi bi-info-circle me-2"></i>{% trans "Personal information" %}
+                    {% trans "Personal_information" %}
                 </h5>
 
                 <div class="row mb-3">
@@ -77,7 +68,7 @@
 
                 <div class="row mb-3">
                     <div class="col-md-6">
-                        <label class="form-label text-muted">{% trans "Date of birth" %}</label>
+                        <label class="form-label text-muted">{% trans "Date_of_birth" %}</label>
                         <p class="form-control-plaintext">
                             {% if user.profile.birthday %}
                             {{ user.profile.birthday|date:"d.m.Y" }}
@@ -86,21 +77,15 @@
                             {% endif %}
                         </p>
                     </div>
-                    <div class="col-md-6">
-                        <label class="form-label text-muted">{% trans "Location" %}</label>
-                        <p class="form-control-plaintext">
-                            {{ user.profile.location|default:_("Not_specified") }}
-                        </p>
-                    </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-6">
-                        <label class="form-label text-muted">{% trans "Registration date" %}</label>
+                        <label class="form-label text-muted">{% trans "Registration_date" %}</label>
                         <p class="form-control-plaintext">{{ user.date_joined|date:"d.m.Y" }}</p>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label text-muted">{% trans "Last entry" %}</label>
+                        <label class="form-label text-muted">{% trans "Last_entry" %}</label>
                         <p class="form-control-plaintext">
                             {{ user.last_login|date:"d.m.Y H:i"|default:_("Recently")}}
                         </p>
@@ -109,40 +94,37 @@
             </div>
         </div>
 
-        <div class="card shadow-sm mb-4">
-            <div class="card-body">
+        <div class="card shadow-sm mb-5 flex-fill">
+            <div class="card-body d-flex flex-column">
                 <h5 class="card-title mb-4">
-                    <i class="bi bi-tags-fill me-2" style="color: var(--accent);"></i>{% trans "Favorite categories" %}
+                    {% trans "Favorite_categories" %}
                 </h5>
 
-                <div class="d-flex flex-wrap gap-3 mb-4">
-                    {% if user.profile.favorite_categories %}
-                        {% for cat in user.profile.favorite_categories %}
-                            <a href="{% url 'news:top_headlines_news' %}?category={{ cat }}">
-                                <span class="badge category-badge">
-                                    <i class="bi bi-tag me-1"></i>{{ cat }}
-                                </span>
-                            </a>
-                        {% endfor %}
-                    {% else %}
-                        <div class="text-center w-100 py-4">
-                            <i class="bi bi-inbox display-4 text-muted mb-3"></i>
-                            <p class="text-muted mb-3">{% trans "You haven't selected your favorite categories yet." %}</p>
-                            <a href="{% url 'users:profile_edit' %}" class="btn btn-outline-primary">
-                                <i class="bi bi-plus-circle me-1"></i>{% trans "Add categories" %}
-                            </a>
-                        </div>
-                    {% endif %}
+                {% if favorite_categories %}
+                <div class="d-flex flex-wrap gap-3 mb-2">
+                    {% for cat in favorite_categories %}
+                    <a href="{% url 'news:top_headlines_news' %}?category={{ cat }}">
+                            <span class="badge category-badge" style="cursor: pointer!important;">
+                                {{ cat }}
+                            </span>
+                    </a>
+                    {% endfor %}
                 </div>
-
-                {% if user.profile.favorite_categories %}
-                <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="d-flex justify-content-between align-items-center mt-auto">
                     <small class="text-muted">
-                        <i class="bi bi-info-circle me-1"></i>
-                        {% trans "Click on a category to view related news" %}
+                        {% trans "Click_on_a_category_to_view_related_news" %}
                     </small>
                     <a href="{% url 'users:profile_edit' %}" class="btn btn-sm btn-outline-secondary">
-                        <i class="bi bi-pencil me-1"></i>{% trans "Edit" %}
+                        {% trans "Edit" %}
+                    </a>
+                </div>
+                {% else %}
+                <div class="d-flex justify-content-center align-items-center w-100 py-4 gap-3">
+                    <p class="text-muted mb-0">
+                        {% trans "You_have_not_selected_your_favorite_categories_yet" %}
+                    </p>
+                    <a href="{% url 'users:profile_edit' %}" class="btn btn-outline-primary">
+                        {% trans "Add_categories" %}
                     </a>
                 </div>
                 {% endif %}

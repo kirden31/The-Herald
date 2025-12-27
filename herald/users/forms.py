@@ -88,16 +88,22 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
 
         fields = (
             users.models.Profile.birthday.field.name,
-            users.models.Profile.location.field.name,
             users.models.Profile.image.field.name,
             users.models.Profile.favorite_categories.field.name,
         )
 
+        labels = {
+            users.models.Profile.image.field.name: 'a',
+        }
+
+        td = datetime.date.today()
+
         widgets = {
             users.models.Profile.birthday.field.name: django.forms.DateInput(
-                attrs={'type': 'date', 'max': datetime.date.today()},
+                attrs={'type': 'date', 'max': td, 'min': td - datetime.timedelta(days=365 * 150)},
                 format='%Y-%m-%d',
             ),
+            users.models.Profile.image.field.name: django.forms.FileInput(),
         }
 
         help_texts = {
@@ -126,7 +132,7 @@ class LoginForm(BootstrapFormMixin, django.contrib.auth.forms.AuthenticationForm
         ),
         'inactive': _('This_account_is_inactive'),
     }
-    username = django.forms.CharField(label=_('Login or email'))
+    username = django.forms.CharField(label=_('Login_or_email'))
     password = django.forms.CharField(
         label=_('Password'),
         widget=django.forms.PasswordInput,

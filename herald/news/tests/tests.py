@@ -54,7 +54,7 @@ class NewsTest(django.test.TestCase):
         self.assertEqual(response.status_code, http.HTTPStatus.OK)
 
         context = response.context
-        source_keys = context.get('sources', {})[0].keys()
+        source_keys = context.get('page_obj', {})[0].keys()
 
         self.assertEqual(
             {

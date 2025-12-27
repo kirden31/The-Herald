@@ -1,24 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load i18n %}
 
-{% block title %}{% trans "Edit profile" %}{% endblock %}
+
+{% block title %}{% trans "Edit_profile" %}{% endblock %}
 
 {% block content %}
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <h2>{% trans "Edit profile" %}</h2>
+            <h2>{% trans "Edit_profile" %}</h2>
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% include "includes/form_errors.html" %}
                 <div class="mb-3">
                     {{ form.email.label_tag }}
                     {{ form.email }}
-                    {% if form.email.errors %}<div class="text-danger">{{ form.email.errors }}</div>{% endif %}
+                    <div class="text-danger">{{ form.email.errors }}</div>
                 </div>
                 <div class="mb-3">
                     {{ form.first_name.label_tag }}
                     {{ form.first_name }}
+                    <div class="text-danger">{{ form.first_name.errors }}</div>
                 </div>
                 <div class="mb-3">
                     {{ form.last_name.label_tag }}
@@ -27,59 +30,47 @@
                 <div class="mb-3">
                     {{ form.birthday.label_tag }}
                     {{ form.birthday }}
-                    {% if form.birthday.help_text %}
-                        <small class="form-text text-muted">{{ form.birthday.help_text }}</small>
-                    {% endif %}
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">{% trans "Location" %}</label>
-                    <input type="text" class="form-control" name="location" value="{{ user.profile.location|default:'' }}" placeholder="{% trans 'City or country' %}">
-                </div>
-                <div class="mb-3">
-                    {{ form.image.label_tag }}
+                    {% with thumb=user.profile.get_image_300x300 %}
+                    <img src="{{ thumb.url }}"
+                         alt="{{ request.user.username }}"
+                         onerror="this.onerror=null; this.src='{% static 'img/no_image.jpg' %}';"
+                         class="rounded-circle img-thumbnail border-3 border-seconde mb-3"
+                         style="width: 200px; height: 200px; object-fit: cover;">
+                    {% endwith %}
                     {{ form.image }}
-                    {% if form.image.help_text %}
-                        <small class="form-text text-muted">{{ form.image.help_text }}</small>
-                    {% endif %}
+                    <small class="form-text text-muted">{{ form.image.help_text }}</small>
+                    <div class="text-danger">{{ form.image.errors }}</div>
                 </div>
 
                 <div class="mb-5">
                     <h5 class="fw-bold mb-4">{{ form.favorite_categories.label }}</h5>
-                    
+
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
                         {% for choice_id, choice_label in form.favorite_categories.field.choices %}
                         <div class="col">
                             <div class="form-check">
                                 <input type="checkbox"
-                                    name="favorite_categories"
-                                    value="{{ choice_id }}"
-                                    id="id_favorite_categories_{{ forloop.counter0 }}"
-                                    class="form-check-input"
-                                    {% if choice_id in form.favorite_categories.value %}checked{% endif %}>
+                                       name="favorite_categories"
+                                       value="{{ choice_id }}"
+                                       id="id_favorite_categories_{{ forloop.counter0 }}"
+                                       class="form-check-input"
+                                       {% if choice_id in form.favorite_categories.value %}checked{% endif %}>
                                 <label class="form-check-label fs-5 fw-medium"
-                                    for="id_favorite_categories_{{ forloop.counter0 }}">
+                                       for="id_favorite_categories_{{ forloop.counter0 }}">
                                     {{ choice_label }}
                                 </label>
                             </div>
                         </div>
                         {% endfor %}
+                        <small class="form-text text-muted mt-3 d-block">{{ form.favorite_categories.help_text}}</small>
+                        <small class="text-danger mt-3">{{ form.favorite_categories.errors }}</small>
                     </div>
-
-                    {% if form.favorite_categories.help_text %}
-                        <small class="form-text text-muted mt-3 d-block">
-                            {{ form.favorite_categories.help_text }}
-                        </small>
-                    {% endif %}
-
-                    {% if form.favorite_categories.errors %}
-                        <div class="text-danger mt-3">
-                            {{ form.favorite_categories.errors }}
-                        </div>
-                    {% endif %}
                 </div>
 
                 <button type="submit" class="btn btn-primary">{% trans "Save" %}</button>
-                <a href="{% url 'users:profile' %}" class="btn btn-secondary">{% trans "Cancel" %}</a>
+                <a href="{% url 'users:profile' %}" class="btn btn-secondary text-white">{% trans "Cancel" %}</a>
             </form>
         </div>
     </div>

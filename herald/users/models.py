@@ -75,6 +75,7 @@ class Profile(django.db.models.Model):
         null=True,
         verbose_name=_('Avatar'),
         help_text=_('User_avatar'),
+        validators=[users.validators.ValidateMaxFileSize()],
     )
     birthday = django.db.models.DateField(
         blank=True,
@@ -82,12 +83,6 @@ class Profile(django.db.models.Model):
         validators=[users.validators.ValidateBirthdayDate()],
         verbose_name=_('Date_of_birth'),
         help_text=_('User_date_of_birth'),
-    )
-    location = django.db.models.CharField(
-        blank=True,
-        null=True,
-        help_text=_('location_help_text'),
-        # The_user_city_(or_country)_of_residence
     )
     attempts_count = django.db.models.PositiveBigIntegerField(
         default=0,
@@ -101,8 +96,8 @@ class Profile(django.db.models.Model):
         help_text=_('Favorite_categories'),
     )
     blocked_at = django.db.models.DateTimeField(
-        verbose_name=_('deactivate in'),
-        help_text=_('account was deactivated'),
+        verbose_name=_('Deactivate_in'),
+        help_text=_('Account_was_deactivated'),
         null=True,
         editable=False,
     )

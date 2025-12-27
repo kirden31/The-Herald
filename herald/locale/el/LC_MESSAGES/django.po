@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-27 15:54+0300\n"
-"PO-Revision-Date: 2025-12-26 16:10+0300\n"
+"PO-Revision-Date: 2025-12-24 00:00+0000\n"
 "Last-Translator: ChatGPT <translator@example.com>\n"
-"Language-Team: Norwegian Bokmål <nb@li.org>\n"
-"Language: nb\n"
+"Language-Team: Greek <el@li.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,317 +14,317 @@ msgstr ""
 
 #: herald/settings.py:133 news/forms_data.py:22
 msgid "English"
-msgstr "Engelsk"
+msgstr "Αγγλικά"
 
 #: herald/settings.py:134 news/forms_data.py:30
 msgid "Russian"
-msgstr "Russisk"
+msgstr "Ρωσικά"
 
 #: herald/settings.py:135 news/forms_data.py:21
 msgid "German"
-msgstr "Tysk"
+msgstr "Γερμανικά"
 
 #: herald/settings.py:136 news/forms_data.py:28
 msgid "Norwegian Bokmål"
-msgstr "Norsk (Bokmål)"
+msgstr "Νορβηγικά (Bokmål)"
 
 #: herald/settings.py:137 news/forms_data.py:24
 msgid "French"
-msgstr "Fransk"
+msgstr "Γαλλικά"
 
 #: herald/settings.py:138 news/forms_data.py:23
 msgid "Spanish"
-msgstr "Spansk"
+msgstr "Ισπανικά"
 
 #: herald/settings.py:139
 msgid "Chinese (Simplified)"
-msgstr "Kinesisk (forenklet)"
+msgstr "Κινέζικα (Απλοποιημένα)"
 
 #: herald/settings.py:140
 msgid "Japanese"
-msgstr "Japansk"
+msgstr "Ιαπωνικά"
 
 #: herald/settings.py:141
 msgid "Greek"
-msgstr "Gresk"
+msgstr "Ελληνικά"
 
 #: herald/settings.py:142 news/forms_data.py:20
 msgid "Arabic"
-msgstr "Arabisk"
+msgstr "Αραβικά"
 
 #: news/admin.py:59
 msgid "User_and_source"
-msgstr "Bruker og kilde"
+msgstr "Χρήστης και πηγή"
 
 #: news/admin.py:65
 msgid "News_content"
-msgstr "Nyhetsinnhold"
+msgstr "Περιεχόμενο ειδήσεων"
 
 #: news/admin.py:71
 msgid "Link_and_date"
-msgstr "Lenke og dato"
+msgstr "Σύνδεσμος και ημερομηνία"
 
 #: news/admin.py:78
 msgid "Source"
-msgstr "Kilde"
+msgstr "Πηγή"
 
 #: news/apps.py:10 news/forms_data.py:104
 msgid "News"
-msgstr "Nyheter"
+msgstr "Ειδήσεις"
 
 #: news/forms.py:14 news/forms_data.py:108 templates/home.html:40
 #: templates/includes/footer.html:25 templates/includes/search_area.html:10
 msgid "Search"
-msgstr "Søk"
+msgstr "Αναζήτηση"
 
 #: news/forms.py:19 templates/home.html:32
 msgid "search_area_placeholder"
-msgstr "Søk..."
+msgstr "Αναζήτηση…"
 
 #: news/forms.py:28 news/forms.py:42
 msgid "Sort_by"
-msgstr "Sorter etter"
+msgstr "Ταξινόμηση κατά"
 
 #: news/forms.py:56
 msgid "Search_in_default_all"
-msgstr "Velg språk (standard — alle)"
+msgstr "Επιλέξτε γλώσσα (προεπιλογή — όλες)"
 
 #: news/forms.py:69
 msgid "Select_sources_max_default_all"
-msgstr "Velg opptil 20 kilder (standard — alle)"
+msgstr "Επιλέξτε έως 20 πηγές (προεπιλογή — όλες)"
 
 #: news/forms.py:84 news/forms.py:233
 msgid "News_from"
-msgstr "Nyheter fra"
+msgstr "Ειδήσεις από"
 
 #: news/forms.py:97 news/forms.py:245
 msgid "News_to"
-msgstr "Nyheter til"
+msgstr "Ειδήσεις έως"
 
 #: news/forms.py:110 news/forms.py:171
 msgid "Select_language_default_all"
-msgstr "Velg språk (standard — alle)"
+msgstr "Επιλέξτε γλώσσα (προεπιλογή — όλες)"
 
 #: news/forms.py:128 news/forms.py:197
 msgid "Select_countries_default_all"
-msgstr "Velg land (standard — alle)"
+msgstr "Επιλέξτε χώρες (προεπιλογή — όλες)"
 
 #: news/forms.py:140 news/forms.py:184
 msgid "Select_categories_default_all"
-msgstr "Velg kategorier (standard — alle)"
+msgstr "Επιλέξτε κατηγορίες (προεπιλογή — όλες)"
 
 #: news/forms.py:152
 msgid "Select_sources_default_all"
-msgstr "Velg kilde (standard — alle)"
+msgstr "Επιλέξτε πηγή (προεπιλογή — όλες)"
 
 #: news/forms.py:213
 msgid "Sections"
-msgstr "Seksjoner"
+msgstr "Ενότητες"
 
 #: news/forms.py:225
 msgid "Rating"
-msgstr "Vurdering"
+msgstr "Βαθμολογία"
 
 #: news/forms_data.py:19 news/forms_data.py:150 news/forms_data.py:179
 #: news/forms_data.py:244
 msgid "All"
-msgstr "Alle"
+msgstr "Όλα"
 
 #: news/forms_data.py:25
 msgid "Hebrew"
-msgstr "Hebraisk"
+msgstr "Εβραϊκά"
 
 #: news/forms_data.py:26
 msgid "Italian"
-msgstr "Italiensk"
+msgstr "Ιταλικά"
 
 #: news/forms_data.py:27
 msgid "Dutch"
-msgstr "Nederlandsk"
+msgstr "Ολλανδικά"
 
 #: news/forms_data.py:29
 msgid "Portuguese"
-msgstr "Portugisisk"
+msgstr "Πορτογαλικά"
 
 #: news/forms_data.py:31
 msgid "Swedish"
-msgstr "Svensk"
+msgstr "Σουηδικά"
 
 #: news/forms_data.py:32
 msgid "Simplified Chinese"
-msgstr "Forenklet kinesisk"
+msgstr "Απλοποιημένα Κινέζικα"
 
 #: news/forms_data.py:35 news/forms_data.py:231
 msgid "United States"
-msgstr "USA"
+msgstr "Ηνωμένες Πολιτείες"
 
 #: news/forms_data.py:42
 msgid "Title"
-msgstr "Tittel"
+msgstr "Τίτλος"
 
 #: news/forms_data.py:43
 msgid "Description"
-msgstr "Beskrivelse"
+msgstr "Περιγραφή"
 
 #: news/forms_data.py:44
 msgid "Content"
-msgstr "Innhold"
+msgstr "Περιεχόμενο"
 
 #: news/forms_data.py:54
 msgid "About"
-msgstr "Om"
+msgstr "Σχετικά"
 
 #: news/forms_data.py:55
 msgid "Animals farmed"
-msgstr "Husdyr"
+msgstr "Κατοικίδια παραγωγής"
 
 #: news/forms_data.py:56
 msgid "Art and design"
-msgstr "Kunst og design"
+msgstr "Τέχνη και σχεδιασμός"
 
 #: news/forms_data.py:57
 msgid "Australia news"
-msgstr "Australias nyheter"
+msgstr "Ειδήσεις Αυστραλίας"
 
 #: news/forms_data.py:58
 msgid "Better Business"
-msgstr "Bedre forretning"
+msgstr "Βελτίωση Επιχειρήσεων"
 
 #: news/forms_data.py:59
 msgid "Books"
-msgstr "Bøker"
+msgstr "Βιβλία"
 
 #: news/forms_data.py:60 news/forms_data.py:151
 msgid "Business"
-msgstr "Næringsliv"
+msgstr "Επιχειρήσεις"
 
 #: news/forms_data.py:61
 msgid "Business to business"
-msgstr "Business-to-business"
+msgstr "Επιχείρηση προς επιχείρηση"
 
 #: news/forms_data.py:62
 msgid "Cardiff"
-msgstr "Cardiff"
+msgstr "Κάρντιφ"
 
 #: news/forms_data.py:63
 msgid "Children's books"
-msgstr "Barnebøker"
+msgstr "Παιδικά βιβλία"
 
 #: news/forms_data.py:64
 msgid "Cities"
-msgstr "Byer"
+msgstr "Πόλεις"
 
 #: news/forms_data.py:65
 msgid "Opinion"
-msgstr "Mening"
+msgstr "Άποψη"
 
 #: news/forms_data.py:66
 msgid "Community"
-msgstr "Fellesskap"
+msgstr "Κοινότητα"
 
 #: news/forms_data.py:67
 msgid "Crosswords"
-msgstr "Kryssord"
+msgstr "Σταυρόλεξα"
 
 #: news/forms_data.py:68
 msgid "Culture"
-msgstr "Kultur"
+msgstr "Πολιτισμός"
 
 #: news/forms_data.py:69
 msgid "Culture Network"
-msgstr "Kulturnettverk"
+msgstr "Δίκτυο Πολιτισμού"
 
 #: news/forms_data.py:70
 msgid "Culture professionals network"
-msgstr "Nettverk for kulturprofesjonelle"
+msgstr "Δίκτυο επαγγελματιών του πολιτισμού"
 
 #: news/forms_data.py:71
 msgid "Edinburgh"
-msgstr "Edinburgh"
+msgstr "Εδιμβούργο"
 
 #: news/forms_data.py:72
 msgid "Education"
-msgstr "Utdanning"
+msgstr "Εκπαίδευση"
 
 #: news/forms_data.py:73
 msgid "Guardian Enterprise Network"
-msgstr "Guardian Enterprise-nettverk"
+msgstr "Δίκτυο επιχειρήσεων Guardian"
 
 #: news/forms_data.py:74
 msgid "Environment"
-msgstr "Miljø"
+msgstr "Περιβάλλον"
 
 #: news/forms_data.py:75
 msgid "Extra"
-msgstr "Ekstra"
+msgstr "Επιπλέον"
 
 #: news/forms_data.py:76
 msgid "Fashion"
-msgstr "Mote"
+msgstr "Μόδα"
 
 #: news/forms_data.py:77
 msgid "Film"
-msgstr "Film"
+msgstr "Κινηματογράφος"
 
 #: news/forms_data.py:78
 msgid "Food"
-msgstr "Mat"
+msgstr "Φαγητό"
 
 #: news/forms_data.py:79
 msgid "Football"
-msgstr "Fotball"
+msgstr "Ποδόσφαιρο"
 
 #: news/forms_data.py:80
 msgid "Games"
-msgstr "Spill"
+msgstr "Παιχνίδια"
 
 #: news/forms_data.py:81
 msgid "Global development"
-msgstr "Global utvikling"
+msgstr "Παγκόσμια ανάπτυξη"
 
 #: news/forms_data.py:82
 msgid "Global Development Professionals Network"
-msgstr "Nettverk for fagfolk innen global utvikling"
+msgstr "Δίκτυο επαγγελματιών παγκόσμιας ανάπτυξης"
 
 #: news/forms_data.py:83
 msgid "Guardian Government Computing"
-msgstr "Guardian — offentlig IT"
+msgstr "Guardian — κυβερνητική πληροφορική"
 
 #: news/forms_data.py:84
 msgid "Guardian Foundation"
-msgstr "Guardian-stiftelsen"
+msgstr "Ίδρυμα Guardian"
 
 #: news/forms_data.py:85
 msgid "Guardian Professional"
-msgstr "Guardian for profesjonelle"
+msgstr "Guardian Professional"
 
 #: news/forms_data.py:86
 msgid "Healthcare Professionals Network"
-msgstr "Nettverk for helsepersonell"
+msgstr "Δίκτυο επαγγελματιών υγείας"
 
 #: news/forms_data.py:87
 msgid "Help"
-msgstr "Hjelp"
+msgstr "Βοήθεια"
 
 #: news/forms_data.py:88
 msgid "Higher Education Network"
-msgstr "Nettverk for høyere utdanning"
+msgstr "Δίκτυο ανώτατης εκπαίδευσης"
 
 #: news/forms_data.py:89
 msgid "Housing Network"
-msgstr "Bolignettverk"
+msgstr "Δίκτυο στέγασης"
 
 #: news/forms_data.py:90
 msgid "Inequality"
-msgstr "Ulikhet"
+msgstr "Ανισότητα"
 
 #: news/forms_data.py:91
 msgid "Info"
-msgstr "Info"
+msgstr "Πληροφορίες"
 
 #: news/forms_data.py:92
 msgid "Jobs"
-msgstr "Jobb"
+msgstr "Θέσεις εργασίας"
 
 #: news/forms_data.py:93
 msgid "Katine"
@@ -332,467 +332,467 @@ msgstr "Katine"
 
 #: news/forms_data.py:94
 msgid "Law"
-msgstr "Jus"
+msgstr "Νομικά"
 
 #: news/forms_data.py:95
 msgid "Leeds"
-msgstr "Leeds"
+msgstr "Λιντς"
 
 #: news/forms_data.py:96
 msgid "Life and style"
-msgstr "Livsstil"
+msgstr "Ζωή και στυλ"
 
 #: news/forms_data.py:97
 msgid "Local"
-msgstr "Lokal"
+msgstr "Τοπικά"
 
 #: news/forms_data.py:98
 msgid "Local Leaders Network"
-msgstr "Nettverk for lokale ledere"
+msgstr "Δίκτυο τοπικών ηγετών"
 
 #: news/forms_data.py:99
 msgid "Media"
-msgstr "Media"
+msgstr "Μέσα"
 
 #: news/forms_data.py:100
 msgid "Media Network"
-msgstr "Medianettverk"
+msgstr "Δίκτυο μέσων"
 
 #: news/forms_data.py:101
 msgid "Membership"
-msgstr "Medlemskap"
+msgstr "Συνδρομή"
 
 #: news/forms_data.py:102
 msgid "Money"
-msgstr "Penger"
+msgstr "Χρήματα"
 
 #: news/forms_data.py:103
 msgid "Music"
-msgstr "Musikk"
+msgstr "Μουσική"
 
 #: news/forms_data.py:105
 msgid "Politics"
-msgstr "Politikk"
+msgstr "Πολιτική"
 
 #: news/forms_data.py:106
 msgid "Public Leaders Network"
-msgstr "Nettverk for offentlige ledere"
+msgstr "Δίκτυο δημόσιων ηγετών"
 
 #: news/forms_data.py:107 news/forms_data.py:156
 msgid "Science"
-msgstr "Vitenskap"
+msgstr "Επιστήμη"
 
 #: news/forms_data.py:109
 msgid "Guardian Small Business Network"
-msgstr "Guardian småbedriftsnettverk"
+msgstr "Δίκτυο μικρών επιχειρήσεων Guardian"
 
 #: news/forms_data.py:110
 msgid "Social Care Network"
-msgstr "Nettverk for sosial omsorg"
+msgstr "Δίκτυο κοινωνικής φροντίδας"
 
 #: news/forms_data.py:111
 msgid "Social Enterprise Network"
-msgstr "Nettverk for sosiale entreprenører"
+msgstr "Δίκτυο κοινωνικών επιχειρήσεων"
 
 #: news/forms_data.py:112
 msgid "Society"
-msgstr "Samfunn"
+msgstr "Κοινωνία"
 
 #: news/forms_data.py:113
 msgid "Society Professionals"
-msgstr "Samfunnsprofesjonelle"
+msgstr "Επαγγελματίες κοινωνίας"
 
 #: news/forms_data.py:114
 msgid "Sport"
-msgstr "Sport"
+msgstr "Αθλητισμός"
 
 #: news/forms_data.py:115
 msgid "Stage"
-msgstr "Scene"
+msgstr "Σκηνή"
 
 #: news/forms_data.py:116
 msgid "Teacher Network"
-msgstr "Lærernettverk"
+msgstr "Δίκτυο εκπαιδευτικών"
 
 #: news/forms_data.py:117 news/forms_data.py:157
 msgid "Technology"
-msgstr "Teknologi"
+msgstr "Τεχνολογία"
 
 #: news/forms_data.py:118
 msgid "The Filter"
-msgstr "Filteret"
+msgstr "Το Φίλτρο"
 
 #: news/forms_data.py:119
 msgid "The Filter US"
-msgstr "Filteret (USA)"
+msgstr "Το Φίλτρο (ΗΠΑ)"
 
 #: news/forms_data.py:120
 msgid "From the Guardian"
-msgstr "Fra Guardian"
+msgstr "Από τον Guardian"
 
 #: news/forms_data.py:121
 msgid "From the Observer"
-msgstr "Fra Observer"
+msgstr "Από τον Observer"
 
 #: news/forms_data.py:122
 msgid "Travel"
-msgstr "Reise"
+msgstr "Ταξίδια"
 
 #: news/forms_data.py:123
 msgid "Guardian holiday offers"
-msgstr "Guardian ferietilbud"
+msgstr "Προσφορές διακοπών Guardian"
 
 #: news/forms_data.py:124
 msgid "Television & radio"
-msgstr "TV & radio"
+msgstr "Τηλεόραση & ραδιόφωνο"
 
 #: news/forms_data.py:125
 msgid "UK news"
-msgstr "Storbritannia nyheter"
+msgstr "Νέα ΗΒ"
 
 #: news/forms_data.py:126
 msgid "US news"
-msgstr "USA nyheter"
+msgstr "Νέα ΗΠΑ"
 
 #: news/forms_data.py:127
 msgid "Wellness (Do NOT use)"
-msgstr "Velvære (ikke bruk)"
+msgstr "Ευεξία (Μην χρησιμοποιείτε)"
 
 #: news/forms_data.py:128
 msgid "Voluntary Sector Network"
-msgstr "Frivillig sektor nettverk"
+msgstr "Δίκτυο εθελοντικού τομέα"
 
 #: news/forms_data.py:129
 msgid "Weather"
-msgstr "Vær"
+msgstr "Καιρός"
 
 #: news/forms_data.py:130
 msgid "Wellness"
-msgstr "Velvære"
+msgstr "Ευεξία"
 
 #: news/forms_data.py:131
 msgid "Women in Leadership"
-msgstr "Kvinner i ledelse"
+msgstr "Γυναίκες στην ηγεσία"
 
 #: news/forms_data.py:132
 msgid "Working in development"
-msgstr "Arbeide i utvikling"
+msgstr "Εργασία στην ανάπτυξη"
 
 #: news/forms_data.py:133
 msgid "World news"
-msgstr "Verdensnyheter"
+msgstr "Διεθνή νέα"
 
 #: news/forms_data.py:152
 msgid "Entertainment"
-msgstr "Underholdning"
+msgstr "Ψυχαγωγία"
 
 #: news/forms_data.py:153
 msgid "General"
-msgstr "Generelt"
+msgstr "Γενικά"
 
 #: news/forms_data.py:154
 msgid "Health"
-msgstr "Helse"
+msgstr "Υγεία"
 
 #: news/forms_data.py:155
 msgid "Sports"
-msgstr "Sport"
+msgstr "Αθλητικά"
 
 #: news/forms_data.py:164
 msgid "Relevancy"
-msgstr "Relevans"
+msgstr "Συνάφεια"
 
 #: news/forms_data.py:165
 msgid "Popularity"
-msgstr "Populæritet"
+msgstr "Δημοτικότητα"
 
 #: news/forms_data.py:166
 msgid "Published_at"
-msgstr "Publisert"
+msgstr "Δημοσιεύτηκε στις"
 
 #: news/forms_data.py:173
 msgid "Newest"
-msgstr "Nyeste først"
+msgstr "Πρώτα τα νεότερα"
 
 #: news/forms_data.py:174
 msgid "Oldest"
-msgstr "Eldste først"
+msgstr "Πρώτα τα παλαιότερα"
 
 #: news/forms_data.py:175
 msgid "Relevance"
-msgstr "Relevans"
+msgstr "Συνάφεια"
 
 #: news/forms_data.py:180
 msgid "United Arab Emirates"
-msgstr "De forente arabiske emirater"
+msgstr "Ηνωμένα Αραβικά Εμιράτα"
 
 #: news/forms_data.py:181
 msgid "Argentina"
-msgstr "Argentina"
+msgstr "Αργεντινή"
 
 #: news/forms_data.py:182
 msgid "Austria"
-msgstr "Østerrike"
+msgstr "Αυστρία"
 
 #: news/forms_data.py:183
 msgid "Australia"
-msgstr "Australia"
+msgstr "Αυστραλία"
 
 #: news/forms_data.py:184
 msgid "Belgium"
-msgstr "Belgia"
+msgstr "Βέλγιο"
 
 #: news/forms_data.py:185
 msgid "Bulgaria"
-msgstr "Bulgaria"
+msgstr "Βουλγαρία"
 
 #: news/forms_data.py:186
 msgid "Brazil"
-msgstr "Brasil"
+msgstr "Βραζιλία"
 
 #: news/forms_data.py:187
 msgid "Canada"
-msgstr "Canada"
+msgstr "Καναδάς"
 
 #: news/forms_data.py:188
 msgid "Switzerland"
-msgstr "Sveits"
+msgstr "Ελβετία"
 
 #: news/forms_data.py:189
 msgid "China"
-msgstr "Kina"
+msgstr "Κίνα"
 
 #: news/forms_data.py:190
 msgid "Colombia"
-msgstr "Colombia"
+msgstr "Κολομβία"
 
 #: news/forms_data.py:191
 msgid "Cuba"
-msgstr "Cuba"
+msgstr "Κούβα"
 
 #: news/forms_data.py:192
 msgid "Czech Republic"
-msgstr "Tsjekkia"
+msgstr "Τσεχία"
 
 #: news/forms_data.py:193
 msgid "Germany"
-msgstr "Tyskland"
+msgstr "Γερμανία"
 
 #: news/forms_data.py:194
 msgid "Egypt"
-msgstr "Egypt"
+msgstr "Αίγυπτος"
 
 #: news/forms_data.py:195
 msgid "France"
-msgstr "Frankrike"
+msgstr "Γαλλία"
 
 #: news/forms_data.py:196
 msgid "United Kingdom"
-msgstr "Storbritannia"
+msgstr "Ηνωμένο Βασίλειο"
 
 #: news/forms_data.py:197
 msgid "Greece"
-msgstr "Hellas"
+msgstr "Ελλάδα"
 
 #: news/forms_data.py:198
 msgid "Hong Kong"
-msgstr "Hongkong"
+msgstr "Χονγκ Κονγκ"
 
 #: news/forms_data.py:199
 msgid "Hungary"
-msgstr "Ungarn"
+msgstr "Ουγγαρία"
 
 #: news/forms_data.py:200
 msgid "Indonesia"
-msgstr "Indonesia"
+msgstr "Ινδονησία"
 
 #: news/forms_data.py:201
 msgid "Ireland"
-msgstr "Irland"
+msgstr "Ιρλανδία"
 
 #: news/forms_data.py:202
 msgid "Israel"
-msgstr "Israel"
+msgstr "Ισραήλ"
 
 #: news/forms_data.py:203
 msgid "India"
-msgstr "India"
+msgstr "Ινδία"
 
 #: news/forms_data.py:204
 msgid "Italy"
-msgstr "Italia"
+msgstr "Ιταλία"
 
 #: news/forms_data.py:205
 msgid "Japan"
-msgstr "Japan"
+msgstr "Ιαπωνία"
 
 #: news/forms_data.py:206
 msgid "South Korea"
-msgstr "Sør-Korea"
+msgstr "Νότια Κορέα"
 
 #: news/forms_data.py:207
 msgid "Lithuania"
-msgstr "Litauen"
+msgstr "Λιθουανία"
 
 #: news/forms_data.py:208
 msgid "Latvia"
-msgstr "Latvia"
+msgstr "Λετονία"
 
 #: news/forms_data.py:209
 msgid "Morocco"
-msgstr "Marokko"
+msgstr "Μαρόκο"
 
 #: news/forms_data.py:210
 msgid "Mexico"
-msgstr "Mexico"
+msgstr "Μεξικό"
 
 #: news/forms_data.py:211
 msgid "Malaysia"
-msgstr "Malaysia"
+msgstr "Μαλαισία"
 
 #: news/forms_data.py:212
 msgid "Nigeria"
-msgstr "Nigeria"
+msgstr "Νιγηρία"
 
 #: news/forms_data.py:213
 msgid "Netherlands"
-msgstr "Nederland"
+msgstr "Ολλανδία"
 
 #: news/forms_data.py:214
 msgid "Norway"
-msgstr "Norge"
+msgstr "Νορβηγία"
 
 #: news/forms_data.py:215
 msgid "New Zealand"
-msgstr "New Zealand"
+msgstr "Νέα Ζηλανδία"
 
 #: news/forms_data.py:216
 msgid "Philippines"
-msgstr "Filippinene"
+msgstr "Φιλιππίνες"
 
 #: news/forms_data.py:217
 msgid "Poland"
-msgstr "Polen"
+msgstr "Πολωνία"
 
 #: news/forms_data.py:218
 msgid "Portugal"
-msgstr "Portugal"
+msgstr "Πορτογαλία"
 
 #: news/forms_data.py:219
 msgid "Romania"
-msgstr "Romania"
+msgstr "Ρουμανία"
 
 #: news/forms_data.py:220
 msgid "Serbia"
-msgstr "Serbia"
+msgstr "Σερβία"
 
 #: news/forms_data.py:221
 msgid "Russia"
-msgstr "Russland"
+msgstr "Ρωσία"
 
 #: news/forms_data.py:222
 msgid "Saudi Arabia"
-msgstr "Saudi-Arabia"
+msgstr "Σαουδική Αραβία"
 
 #: news/forms_data.py:223
 msgid "Sweden"
-msgstr "Sverige"
+msgstr "Σουηδία"
 
 #: news/forms_data.py:224
 msgid "Singapore"
-msgstr "Singapore"
+msgstr "Σιγκαπούρη"
 
 #: news/forms_data.py:225
 msgid "Slovenia"
-msgstr "Slovenia"
+msgstr "Σλοβενία"
 
 #: news/forms_data.py:226
 msgid "Slovakia"
-msgstr "Slovakia"
+msgstr "Σλοβακία"
 
 #: news/forms_data.py:227
 msgid "Thailand"
-msgstr "Thailand"
+msgstr "Ταϊλάνδη"
 
 #: news/forms_data.py:228
 msgid "Turkey"
-msgstr "Tyrkia"
+msgstr "Τουρκία"
 
 #: news/forms_data.py:229
 msgid "Taiwan"
-msgstr "Taiwan"
+msgstr "Ταϊβάν"
 
 #: news/forms_data.py:230
 msgid "Ukraine"
-msgstr "Ukraina"
+msgstr "Ουκρανία"
 
 #: news/forms_data.py:232
 msgid "Venezuela"
-msgstr "Venezuela"
+msgstr "Βενεζουέλα"
 
 #: news/forms_data.py:233
 msgid "South Africa"
-msgstr "Sør-Afrika"
+msgstr "Νότια Αφρική"
 
 #: news/models.py:15 users/admin.py:13
 msgid "user"
-msgstr "bruker"
+msgstr "χρήστης"
 
 #: news/models.py:19
 msgid "title"
-msgstr "tittel"
+msgstr "τίτλος"
 
 #: news/models.py:22
 msgid "description"
-msgstr "beskrivelse"
+msgstr "περιγραφή"
 
 #: news/models.py:24
 msgid "content"
-msgstr "innhold"
+msgstr "περιεχόμενο"
 
 #: news/models.py:28
 msgid "link_to_news"
-msgstr "lenke til nyheten"
+msgstr "σύνδεσμος προς την είδηση"
 
 #: news/models.py:31
 msgid "image_link"
-msgstr "lenke til bilde"
+msgstr "σύνδεσμος εικόνας"
 
 #: news/models.py:35
 msgid "source_name"
-msgstr "kildenavn"
+msgstr "όνομα πηγής"
 
 #: news/models.py:39
 msgid "author"
-msgstr "forfatter"
+msgstr "συγγραφέας"
 
 #: news/models.py:43
 msgid "publication_date"
-msgstr "publiseringsdato"
+msgstr "ημερομηνία δημοσίευσης"
 
 #: news/models.py:47
 msgid "category"
-msgstr "kategori"
+msgstr "κατηγορία"
 
 #: news/models.py:52
 msgid "featured_news"
-msgstr "utvalgte nyheter"
+msgstr "προτεινόμενες ειδήσεις"
 
 #: news/models.py:53
 msgid "selected_news"
-msgstr "anbefalte nyheter"
+msgstr "επιλεγμένες ειδήσεις"
 
 #: news/views.py:55 news/views.py:130 news/views.py:206 news/views.py:272
 msgid "Forms_error"
-msgstr "Skjemafeil"
+msgstr "Σφάλμα φόρμας"
 
 #: news/views.py:84
 msgid "You_cannot_select_sources_together_with_country_or_category"
-msgstr "Du kan ikke velge kilder samtidig som du velger land eller kategori."
+msgstr "Δεν μπορείτε να επιλέξετε πηγές ταυτόχρονα με χώρα ή κατηγορία."
 
 #: news/views.py:158
 msgid "Used_default_query"
-msgstr "Standardspørring brukt"
+msgstr "Χρησιμοποιήθηκε η προεπιλεγμένη αναζήτηση"
 
 #: templates/base.html:6 templates/home.html:5 templates/home.html:18
 #: templates/includes/footer.html:8 templates/includes/header.html:7
@@ -802,77 +802,77 @@ msgstr "Herald"
 
 #: templates/base.html:25
 msgid "The_content_was_not_delivered"
-msgstr "Innholdet ble ikke levert :("
+msgstr "Το περιεχόμενο δεν παραδόθηκε :("
 
 #: templates/home.html:5
 msgid "All_news_in_one_place"
-msgstr "Alle nyheter på ett sted"
+msgstr "Όλες οι ειδήσεις σε ένα μέρος"
 
 #: templates/home.html:21
 msgid "Find_Read_Stay_informed"
-msgstr "Finn. Les. Hold deg informert."
+msgstr "Βρείτε. Διαβάστε. Μείνετε ενημερωμένοι."
 
 #: templates/home.html:51
 msgid "Start_by_searching_or_go_to"
-msgstr "Start med søk eller gå til"
+msgstr "Ξεκινήστε με αναζήτηση ή μεταβείτε"
 
 #: templates/home.html:53
 msgid "Main_news"
-msgstr "Hovednyheter"
+msgstr "Κύριες ειδήσεις"
 
 #: templates/includes/footer.html:11
 msgid "footer_site_descriptions"
-msgstr "Nyhetsaggregator fra forskjellige kilder. Rask, praktisk og sikker."
+msgstr "Συλλέκτης ειδήσεων από διάφορες πηγές. Γρήγορο, βολικό και ασφαλές."
 
 #: templates/includes/footer.html:16
 msgid "Navigation"
-msgstr "Navigasjon"
+msgstr "Πλοήγηση"
 
 #: templates/includes/footer.html:20 templates/users/logout.html:23
 #: templates/users/password_change_done.html:26
 #: templates/users/password_reset_complete.html:26
 #: templates/users/password_reset_done.html:39
 msgid "Home"
-msgstr "Hjem"
+msgstr "Αρχική"
 
 #: templates/includes/footer.html:30 templates/includes/header.html:23
 #: templates/news/sources_list.html:5
 msgid "Sources"
-msgstr "Kilder"
+msgstr "Πηγές"
 
 #: templates/includes/footer.html:37 templates/users/account_activate.html:7
 #: users/models.py:70
 msgid "User"
-msgstr "Bruker"
+msgstr "Χρήστης"
 
 #: templates/includes/footer.html:41 templates/includes/header.html:71
 msgid "Profile"
-msgstr "Profil"
+msgstr "Προφίλ"
 
 #: templates/includes/footer.html:46
 msgid "Favorite"
-msgstr "Favoritter"
+msgstr "Αγαπημένα"
 
 #: templates/includes/footer.html:51 templates/users/profile.html:40
 msgid "Settings"
-msgstr "Innstillinger"
+msgstr "Ρυθμίσεις"
 
 #: templates/includes/footer.html:58
 msgid "Contacts"
-msgstr "Kontakter"
+msgstr "Επαφές"
 
 #: templates/includes/header.html:11
 msgid "Select_language"
-msgstr "Velg språk"
+msgstr "Επιλέξτε γλώσσα"
 
 #: templates/includes/header.html:19 templates/news/top_headlines_news.html:5
 msgid "Top_headlines"
-msgstr "Toppnyheter"
+msgstr "Κύρια θέματα"
 
 #: templates/includes/header.html:27 templates/news/everything_news.html:5
 #: templates/news/guardian_news.html:5
 msgid "Everything"
-msgstr "Alt"
+msgstr "Όλα"
 
 #: templates/includes/header.html:31
 msgid "Guardian"
@@ -880,124 +880,124 @@ msgstr "Guardian"
 
 #: templates/includes/header.html:42
 msgid "Language"
-msgstr "Språk"
+msgstr "Γλώσσα"
 
 #: templates/includes/header.html:81
 msgid "Log_out"
-msgstr "Logg ut"
+msgstr "Αποσύνδεση"
 
 #: templates/includes/header.html:89
 msgid "Log_in"
-msgstr "Logg inn"
+msgstr "Σύνδεση"
 
 #: templates/includes/header.html:93
 msgid "Sign_up"
-msgstr "Registrer deg"
+msgstr "Εγγραφή"
 
 #: templates/includes/messages.html:17 templates/includes/search_area.html:35
 msgid "Close"
-msgstr "Lukk"
+msgstr "Κλείσιμο"
 
 #: templates/includes/news_card.html:38
 msgid "Read"
-msgstr "Les"
+msgstr "Διαβάστε"
 
 #: templates/includes/news_card.html:57
 msgid "In_favorites"
-msgstr "I favoritter"
+msgstr "Στα αγαπημένα"
 
 #: templates/includes/search_area.html:15
 #: templates/includes/search_area.html:24
 msgid "Filters"
-msgstr "Filtre"
+msgstr "Φίλτρα"
 
 #: templates/includes/search_area.html:38
 #: templates/users/profile_update.html:92
 msgid "Save"
-msgstr "Lagre"
+msgstr "Αποθήκευση"
 
 #: templates/includes/source_card.html:27
 msgid "No_description"
-msgstr "Ingen beskrivelse"
+msgstr "Δεν υπάρχει περιγραφή"
 
 #: templates/includes/source_card.html:46
 msgid "Visit"
-msgstr "Besøk"
+msgstr "Επίσκεψη"
 
 #: templates/news/everything_news.html:17 templates/news/guardian_news.html:17
 #: templates/news/top_headlines_news.html:17
 msgid "No_news_found"
-msgstr "Ingen nyheter funnet"
+msgstr "Δεν βρέθηκαν ειδήσεις"
 
 #: templates/news/sources_list.html:19
 msgid "No_sources_found"
-msgstr "Ingen kilder funnet"
+msgstr "Δεν βρέθηκαν πηγές"
 
 #: templates/users/account_activate.html:6
 msgid "Account_verification"
-msgstr "Bekreftelse av konto"
+msgstr "Επαλήθευση λογαριασμού"
 
 #: templates/users/account_activate.html:12 templates/users/login.html:12
 #: templates/users/login.html:58 templates/users/signup.html:114
 #: users/forms.py:46
 msgid "Login"
-msgstr "Logg inn"
+msgstr "Σύνδεση"
 
 #: templates/users/favorites.html:4
 msgid "Favorites"
-msgstr "Favoritter"
+msgstr "Αγαπημένα"
 
 #: templates/users/favorites.html:8
 msgid "All_your_saved_articles"
-msgstr "Alle dine lagrede artikler"
+msgstr "Όλα τα αποθηκευμένα άρθρα σας"
 
 #: templates/users/favorites.html:19
 msgid "Its_empty_here_yet"
-msgstr "Det er tomt her ennå."
+msgstr "Εδώ είναι ακόμα άδειο."
 
 #: templates/users/favorites.html:20
 msgid "Search_news"
-msgstr "Søk etter nyheter"
+msgstr "Αναζήτηση ειδήσεων"
 
 #: templates/users/login.html:4
 msgid "Entrance"
-msgstr "Innlogging"
+msgstr "Σύνδεση"
 
 #: templates/users/login.html:13
 msgid "Enter_your_credentials"
-msgstr "Skriv inn dine legitimasjoner"
+msgstr "Εισάγετε τα στοιχεία σας"
 
 #: templates/users/login.html:65
 msgid "Forgot_your_password"
-msgstr "Glemt passord?"
+msgstr "Ξεχάσατε τον κωδικό;"
 
 #: templates/users/login.html:69
 msgid "Dont_have_an_account"
-msgstr "Har du ikke en konto?"
+msgstr "Δεν έχετε λογαριασμό;"
 
 #: templates/users/login.html:71 templates/users/signup.html:106
 msgid "Register"
-msgstr "Registrer"
+msgstr "Εγγραφή"
 
 #: templates/users/logout.html:4
 msgid "Logout"
-msgstr "Logg ut"
+msgstr "Αποσύνδεση"
 
 #: templates/users/logout.html:12
 msgid "You_are_logged_out"
-msgstr "Du er logget ut."
+msgstr "Έχετε αποσυνδεθεί."
 
 #: templates/users/logout.html:15
 msgid "Thank_you_for_visiting_our_website_We_hope_to_see_you_again"
-msgstr "Takk for at du besøkte nettstedet vårt. Vi håper å se deg igjen!"
+msgstr "Ευχαριστούμε που επισκεφθήκατε την ιστοσελίδα μας. Ελπίζουμε να σας ξαναδούμε!"
 
 #: templates/users/logout.html:20
 msgid "Login_again"
-msgstr "Logg inn igjen"
+msgstr "Συνδεθείτε ξανά"
 
 #: templates/users/logout.html:31
 msgid "Your_session_has_ended_For_security_reasons_we_recommend_closing_your_browser"
-msgstr "Din økt er avsluttet. Av sikkerhetsgrunner anbefaler vi å lukke nettleseren."
+msgstr "Η συνεδρία σας έληξε. Για λόγους ασφαλείας συνιστούμε να κλείσετε τον περιηγητή."
 
 #: templates/users/password_change.html:4
 #: templates/users/password_change.html:13
@@ -1005,361 +1005,361 @@ msgstr "Din økt er avsluttet. Av sikkerhetsgrunner anbefaler vi å lukke nettle
 #: templates/users/password_reset_confirm.html:76
 #: templates/users/profile.html:46
 msgid "Change_password"
-msgstr "Endre passord"
+msgstr "Αλλαγή κωδικού"
 
 #: templates/users/password_change.html:14
 msgid "Enter_your_current_password_and_new_password"
-msgstr "Skriv inn ditt nåværende og nye passord."
+msgstr "Εισάγετε τον τρέχοντα και τον νέο κωδικό."
 
 #: templates/users/password_change.html:30
 msgid "Current_Password"
-msgstr "Nåværende passord"
+msgstr "Τρέχων κωδικός"
 
 #: templates/users/password_change.html:47
 #: templates/users/password_reset_confirm.html:37
 msgid "New_Password"
-msgstr "Nytt passord"
+msgstr "Νέος κωδικός"
 
 #: templates/users/password_change.html:69
 msgid "Confirming_a_new_password"
-msgstr "Bekrefte nytt passord"
+msgstr "Επιβεβαίωση νέου κωδικού"
 
 #: templates/users/password_change.html:89
 #: templates/users/profile_update.html:93
 msgid "Cancel"
-msgstr "Avbryt"
+msgstr "Ακύρωση"
 
 #: templates/users/password_change_done.html:4
 msgid "Password_changed"
-msgstr "Passord endret"
+msgstr "Ο κωδικός άλλαξε"
 
 #: templates/users/password_change_done.html:15
 msgid "Password_changed_successfully"
-msgstr "Passordet ble endret!"
+msgstr "Ο κωδικός άλλαξε επιτυχώς!"
 
 #: templates/users/password_change_done.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_use_the_new_password_to_log_in"
-msgstr "Ditt passord ble endret. Du kan nå bruke det nye passordet for å logge inn."
+msgstr "Ο κωδικός σας άλλαξε με επιτυχία. Μπορείτε τώρα να συνδεθείτε με τον νέο κωδικό."
 
 #: templates/users/password_change_done.html:23
 msgid "Return_to_profile"
-msgstr "Tilbake til profilen"
+msgstr "Επιστροφή στο προφίλ"
 
 #: templates/users/password_change_done.html:36
 msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regularly"
-msgstr "Det anbefales å bruke forskjellige passord for forskjellige tjenester og endre dem regelmessig."
+msgstr "Συνιστάται να χρησιμοποιείτε διαφορετικούς κωδικούς για διαφορετικές υπηρεσίες και να τους αλλάζετε τακτικά."
 
 #: templates/users/password_reset.html:4 templates/users/password_reset.html:13
 msgid "Password_reset"
-msgstr "Tilbakestill passord"
+msgstr "Επαναφορά κωδικού"
 
 #: templates/users/password_reset.html:15
 msgid "Forgot_your_password_Enter_your_email_address_Well_send_you_instructions"
-msgstr "Glemt passord? Skriv inn e-posten din — vi sender instruksjoner."
+msgstr "Ξεχάσατε τον κωδικό; Εισάγετε το email σας — θα σας στείλουμε οδηγίες."
 
 #: templates/users/password_reset.html:32
 msgid "Email_address"
-msgstr "E-postadresse"
+msgstr "Διεύθυνση email"
 
 #: templates/users/password_reset.html:49
 msgid "Send_instructions"
-msgstr "Send instruksjoner"
+msgstr "Αποστολή οδηγιών"
 
 #: templates/users/password_reset.html:52
 msgid "Back_to_the_entrance"
-msgstr "Tilbake til innlogging"
+msgstr "Επιστροφή στη σύνδεση"
 
 #: templates/users/password_reset.html:61
 msgid "If_you_have_not_received_the_email_check_your_spam_folder_or_make_sure_you_entered_the_correct_email_address"
-msgstr "Hvis du ikke har mottatt e-posten, sjekk spam-mappen eller sørg for at du skrev riktig e-postadresse."
+msgstr "Αν δεν έλαβες το email, έλεγξε το φάκελο ανεπιθύμητων ή βεβαιώσου ότι εισήγαγες τη σωστή διεύθυνση."
 
 #: templates/users/password_reset_complete.html:4
 #: templates/users/password_reset_complete.html:15
 msgid "Password_restored"
-msgstr "Passord gjenopprettet"
+msgstr "Επαναφορά κωδικού"
 
 #: templates/users/password_reset_complete.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_log_in_with_your_new_password"
-msgstr "Ditt passord ble endret. Du kan nå logge inn med ditt nye passord."
+msgstr "Ο κωδικός σας άλλαξε επιτυχώς. Μπορείτε τώρα να συνδεθείτε με τον νέο κωδικό."
 
 #: templates/users/password_reset_complete.html:23
 msgid "Sign_in"
-msgstr "Logg inn"
+msgstr "Σύνδεση"
 
 #: templates/users/password_reset_complete.html:37
 msgid "Your_account_is_now_protected_with_a_new_password"
-msgstr "Kontoen din er nå beskyttet med et nytt passord."
+msgstr "Ο λογαριασμός σου προστατεύεται τώρα με νέο κωδικό."
 
 #: templates/users/password_reset_complete.html:38
 msgid "It_is_recommended_to_use_unique_passwords_for_different_services"
-msgstr "Det anbefales å bruke unike passord for forskjellige tjenester."
+msgstr "Συνιστάται να χρησιμοποιείς μοναδικούς κωδικούς για διαφορετικές υπηρεσίες."
 
 #: templates/users/password_reset_confirm.html:4
 #: templates/users/password_reset_confirm.html:15
 msgid "Enter_new_password"
-msgstr "Skriv inn nytt passord"
+msgstr "Εισάγετε νέο κωδικό"
 
 #: templates/users/password_reset_confirm.html:16
 msgid "Please_enter_the_new_password_twice"
-msgstr "Vennligst skriv inn det nye passordet to ganger."
+msgstr "Παρακαλούμε εισάγετε τον νέο κωδικό δύο φορές."
 
 #: templates/users/password_reset_confirm.html:18
 msgid "Restore_Error"
-msgstr "Gjenopprettingsfeil"
+msgstr "Σφάλμα επαναφοράς"
 
 #: templates/users/password_reset_confirm.html:19
 msgid "The_password_reset_link_is_invalid"
-msgstr "Lenken for tilbakestilling av passord er ugyldig."
+msgstr "Ο σύνδεσμος επαναφοράς κωδικού δεν είναι έγκυρος."
 
 #: templates/users/password_reset_confirm.html:59
 #: templates/users/signup.html:82
 msgid "Password_confirmation"
-msgstr "Bekreft passord"
+msgstr "Επιβεβαίωση κωδικού"
 
 #: templates/users/password_reset_confirm.html:85
 msgid "The_password_reset_link_is_invalid_possibly_because_it_has_already_been_used"
-msgstr "Lenken for tilbakestilling av passord er ugyldig — den kan ha blitt brukt allerede."
+msgstr "Ο σύνδεσμος επαναφοράς κωδικού δεν είναι έγκυρος — πιθανώς επειδή έχει ήδη χρησιμοποιηθεί."
 
 #: templates/users/password_reset_confirm.html:86
 msgid "Please_request_a_new_password_reset"
-msgstr "Vennligst be om en ny tilbakestilling av passord."
+msgstr "Παρακαλώ ζητήστε νέα επαναφορά κωδικού."
 
 #: templates/users/password_reset_confirm.html:93
 msgid "Request_a_new_password_reset"
-msgstr "Be om ny tilbakestilling av passord"
+msgstr "Ζητήστε νέα επαναφορά κωδικού"
 
 #: templates/users/password_reset_confirm.html:96
 #: templates/users/password_reset_done.html:36
 msgid "Return_to_the_entrance"
-msgstr "Tilbake til innlogging"
+msgstr "Επιστροφή στη σύνδεση"
 
 #: templates/users/password_reset_done.html:4
 msgid "Instructions_have_been_sent"
-msgstr "Instruksjoner er sendt."
+msgstr "Οι οδηγίες στάλθηκαν."
 
 #: templates/users/password_reset_done.html:15
 msgid "Check_your_mail"
-msgstr "Sjekk e-posten din"
+msgstr "Έλεγξε το email σου"
 
 #: templates/users/password_reset_done.html:18
 msgid "We_have_sent_password_recovery_instructions_to_the_email_address_you_provided"
-msgstr "Vi har sendt instruksjoner for gjenoppretting av passord til e-postadressen du oppga."
+msgstr "Στείλαμε οδηγίες επαναφοράς κωδικού στη διεύθυνση που δώσατε."
 
 #: templates/users/password_reset_done.html:19
 msgid "You_should_receive_them_soon"
-msgstr "Du bør motta dem snart."
+msgstr "Θα τις λάβεις σύντομα."
 
 #: templates/users/password_reset_done.html:27
 msgid "If_you_dont_see_the_email_check_your_spam_folder"
-msgstr "Hvis du ikke ser e-posten, sjekk spam-mappen."
+msgstr "Αν δεν βλέπεις το email, έλεγξε το φάκελο ανεπιθύμητων."
 
 #: templates/users/password_reset_done.html:28
 msgid "Sometimes_password_recovery_emails_can_end_up_there"
-msgstr "Noen ganger havner e-poster for gjenoppretting av passord der."
+msgstr "Μερικές φορές τα email επαναφοράς καταλήγουν εκεί."
 
 #: templates/users/profile.html:5
 msgid "User_profile"
-msgstr "Brukerprofil"
+msgstr "Προφίλ χρήστη"
 
 #: templates/users/profile.html:26 templates/users/profile_update.html:6
 #: templates/users/profile_update.html:12
 msgid "Edit_profile"
-msgstr "Rediger profil"
+msgstr "Επεξεργασία προφίλ"
 
 #: templates/users/profile.html:30
 msgid "My_bookmarks"
-msgstr "Mine bokmerker"
+msgstr "Τα σελιδοδείκτες μου"
 
 #: templates/users/profile.html:60
 msgid "Personal_information"
-msgstr "Personlig informasjon"
+msgstr "Προσωπικές πληροφορίες"
 
 #: templates/users/profile.html:65 users/forms.py:60
 msgid "Name"
-msgstr "Fornavn"
+msgstr "Όνομα"
 
 #: templates/users/profile.html:66 templates/users/profile.html:70
 #: templates/users/profile.html:81 templates/users/profile.html:88
 msgid "Not_specified"
-msgstr "Ikke angitt"
+msgstr "Δεν έχει καθοριστεί"
 
 #: templates/users/profile.html:69 users/forms.py:65
 msgid "Surname"
-msgstr "Etternavn"
+msgstr "Επώνυμο"
 
 #: templates/users/profile.html:76 users/models.py:84
 msgid "Date_of_birth"
-msgstr "Fødselsdato"
+msgstr "Ημερομηνία γέννησης"
 
 #: templates/users/profile.html:86 templates/users/profile_update.html:39
 msgid "Location"
-msgstr "Sted"
+msgstr "Τοποθεσία"
 
 #: templates/users/profile.html:95
 msgid "Registration_date"
-msgstr "Registreringsdato"
+msgstr "Ημερομηνία εγγραφής"
 
 #: templates/users/profile.html:99
 msgid "Last_entry"
-msgstr "Siste pålogging"
+msgstr "Τελευταία είσοδος"
 
 #: templates/users/profile.html:101
 msgid "Recently"
-msgstr "Nylig"
+msgstr "Πρόσφατα"
 
 #: templates/users/profile.html:111 users/forms.py:74 users/models.py:100
 #: users/models.py:101
 msgid "Favorite_categories"
-msgstr "Favorittkategorier"
+msgstr "Αγαπημένες κατηγορίες"
 
 #: templates/users/profile.html:126
 msgid "You_have_not_selected_your_favorite_categories_yet"
-msgstr "Du har ikke valgt favorittkategorier ennå."
+msgstr "Δεν έχετε ακόμη επιλέξει τις αγαπημένες σας κατηγορίες."
 
 #: templates/users/profile.html:128
 msgid "Add_categories"
-msgstr "Legg til kategorier"
+msgstr "Προσθήκη κατηγοριών"
 
 #: templates/users/profile.html:138
 msgid "Click_on_a_category_to_view_related_news"
-msgstr "Klikk på en kategori for å se relaterte nyheter."
+msgstr "Κάντε κλικ σε μια κατηγορία για να δείτε σχετικές ειδήσεις."
 
 #: templates/users/profile.html:141
 msgid "Edit"
-msgstr "Rediger"
+msgstr "Επεξεργασία"
 
 #: templates/users/profile_update.html:41
 msgid "City_or_country"
-msgstr "By eller land"
+msgstr "Πόλη ή χώρα"
 
 #: templates/users/signup.html:4 templates/users/signup.html:12
 msgid "Registration"
-msgstr "Registrering"
+msgstr "Εγγραφή"
 
 #: templates/users/signup.html:13
 msgid "Create_a_new_account"
-msgstr "Opprett en ny konto"
+msgstr "Δημιουργήστε νέο λογαριασμό"
 
 #: templates/users/signup.html:58 users/forms.py:136
 msgid "Password"
-msgstr "Passord"
+msgstr "Κωδικός"
 
 #: templates/users/signup.html:112
 msgid "Already_have_an_account"
-msgstr "Har du allerede en konto?"
+msgstr "Έχετε ήδη λογαριασμό;"
 
 #: users/apps.py:10
 msgid "Users"
-msgstr "Brukere"
+msgstr "Χρήστες"
 
 #: users/backends.py:50
 msgid "account_activation_mail_text"
-msgstr "Vennligst bekreft kontoen din via lenken nedenfor."
+msgstr "Παρακαλούμε επιβεβαιώστε τον λογαριασμό σας μέσω του παρακάτω συνδέσμου."
 
 #: users/backends.py:52
 msgid "Account_activation"
-msgstr "Kontoaktivering"
+msgstr "Ενεργοποίηση λογαριασμού"
 
 #: users/forms.py:34
 msgid "Mail"
-msgstr "E-post"
+msgstr "Ηλεκτρονικό ταχυδρομείο"
 
 #: users/forms.py:47 users/forms.py:68
 msgid "Email"
-msgstr "E-post"
+msgstr "Email"
 
 #: users/forms.py:51
 msgid "Enter_login"
-msgstr "Skriv inn brukernavn"
+msgstr "Εισάγετε όνομα χρήστη"
 
 #: users/forms.py:52
 msgid "Enter_email"
-msgstr "Skriv inn e-postadresse"
+msgstr "Εισάγετε διεύθυνση email"
 
 #: users/forms.py:109
 msgid "Upload_your_profile_picture"
-msgstr "Last opp profilbildet ditt."
+msgstr "Ανεβάστε τη φωτογραφία προφίλ σας."
 
 #: users/forms.py:130
 msgid "invalid_login_text"
-msgstr "Ugyldig brukernavn eller passord."
+msgstr "Μη έγκυρο όνομα χρήστη ή κωδικός."
 
 #: users/forms.py:132
 msgid "This_account_is_inactive"
-msgstr "Denne kontoen er inaktiv."
+msgstr "Αυτός ο λογαριασμός είναι ανενεργός."
 
 #: users/forms.py:134
 msgid "Login_or_email"
-msgstr "Brukernavn eller e-post"
+msgstr "Όνομα χρήστη ή email"
 
 #: users/models.py:76
 msgid "Avatar"
-msgstr "Avatar"
+msgstr "Εικόνα προφίλ"
 
 #: users/models.py:77
 msgid "User_avatar"
-msgstr "Brukeravatar."
+msgstr "Εικόνα προφίλ χρήστη."
 
 #: users/models.py:85
 msgid "User_date_of_birth"
-msgstr "Brukerens fødselsdato."
+msgstr "Ημερομηνία γέννησης χρήστη."
 
 #: users/models.py:90
 msgid "location_help_text"
-msgstr "Oppgi byen eller landet du bor i."
+msgstr "Καταχωρίστε την πόλη ή τη χώρα διαμονής."
 
 #: users/models.py:94
 msgid "Attempts"
-msgstr "Forsøk"
+msgstr "Προσπάθειες"
 
 #: users/models.py:95
 msgid "Number_of_login_attempts"
-msgstr "Antall påloggingsforsøk"
+msgstr "Αριθμός προσπαθειών σύνδεσης"
 
 #: users/models.py:104
 msgid "Deactivate_in"
-msgstr "Deaktiver om"
+msgstr "Απενεργοποίηση σε"
 
 #: users/models.py:105
 msgid "Account_was_deactivated"
-msgstr "Kontoen ble deaktivert"
+msgstr "Ο λογαριασμός απενεργοποιήθηκε"
 
 #: users/models.py:122
 msgid "profile"
-msgstr "profil"
+msgstr "προφίλ"
 
 #: users/models.py:123
 msgid "profiles"
-msgstr "profiler"
+msgstr "προφίλ"
 
 #: users/validators.py:24
 msgid "birthday_date_error"
-msgstr "Feil i fødselsdato"
+msgstr "Σφάλμα ημερομηνίας γέννησης"
 
 #: users/validators.py:39
 msgid "Max_file_size_limit"
-msgstr "Filen din er for stor. Maks størrelse: "
+msgstr "Το αρχείο σας είναι πολύ μεγάλο. Μέγιστο μέγεθος: "
 
 #: users/views.py:33
 msgid "Already_activated"
-msgstr "Allerede aktivert"
+msgstr "Ήδη ενεργοποιημένο"
 
 #: users/views.py:52 users/views.py:66
 msgid "Activation_successful"
-msgstr "Aktivering vellykket"
+msgstr "Επιτυχής ενεργοποίηση"
 
 #: users/views.py:54 users/views.py:68
 msgid "Activation_time_expired"
-msgstr "Aktiveringstiden er utløpt"
+msgstr "Έληξε ο χρόνος ενεργοποίησης"
 
 #: users/views.py:70
 msgid "Account_is_not_deactivated"
-msgstr "Kontoen er ikke deaktivert"
+msgstr "Ο λογαριασμός δεν έχει απενεργοποιηθεί"
 
 #: users/views.py:85
 msgid "Registration_successful_Welcome"
-msgstr "Registrering vellykket! Velkommen!"
+msgstr "Εγγραφή επιτυχής! Καλώς ήρθατε!"
 
 #: users/views.py:123
 msgid "Profile_successfully_updated"
-msgstr "Profilen er oppdatert"
+msgstr "Το προφίλ ενημερώθηκε με επιτυχία"

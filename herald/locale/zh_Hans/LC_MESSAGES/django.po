@@ -5,326 +5,326 @@ msgstr ""
 "POT-Creation-Date: 2025-12-27 15:54+0300\n"
 "PO-Revision-Date: 2025-12-26 16:10+0300\n"
 "Last-Translator: ChatGPT <translator@example.com>\n"
-"Language-Team: Norwegian Bokmål <nb@li.org>\n"
-"Language: nb\n"
+"Language-Team: Chinese (Simplified) <zh@li.org>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: herald/settings.py:133 news/forms_data.py:22
 msgid "English"
-msgstr "Engelsk"
+msgstr "英语"
 
 #: herald/settings.py:134 news/forms_data.py:30
 msgid "Russian"
-msgstr "Russisk"
+msgstr "俄语"
 
 #: herald/settings.py:135 news/forms_data.py:21
 msgid "German"
-msgstr "Tysk"
+msgstr "德语"
 
 #: herald/settings.py:136 news/forms_data.py:28
 msgid "Norwegian Bokmål"
-msgstr "Norsk (Bokmål)"
+msgstr "挪威语（Bokmål）"
 
 #: herald/settings.py:137 news/forms_data.py:24
 msgid "French"
-msgstr "Fransk"
+msgstr "法语"
 
 #: herald/settings.py:138 news/forms_data.py:23
 msgid "Spanish"
-msgstr "Spansk"
+msgstr "西班牙语"
 
 #: herald/settings.py:139
 msgid "Chinese (Simplified)"
-msgstr "Kinesisk (forenklet)"
+msgstr "中文（简体）"
 
 #: herald/settings.py:140
 msgid "Japanese"
-msgstr "Japansk"
+msgstr "日语"
 
 #: herald/settings.py:141
 msgid "Greek"
-msgstr "Gresk"
+msgstr "希腊语"
 
 #: herald/settings.py:142 news/forms_data.py:20
 msgid "Arabic"
-msgstr "Arabisk"
+msgstr "阿拉伯语"
 
 #: news/admin.py:59
 msgid "User_and_source"
-msgstr "Bruker og kilde"
+msgstr "用户与来源"
 
 #: news/admin.py:65
 msgid "News_content"
-msgstr "Nyhetsinnhold"
+msgstr "新闻内容"
 
 #: news/admin.py:71
 msgid "Link_and_date"
-msgstr "Lenke og dato"
+msgstr "链接与日期"
 
 #: news/admin.py:78
 msgid "Source"
-msgstr "Kilde"
+msgstr "来源"
 
 #: news/apps.py:10 news/forms_data.py:104
 msgid "News"
-msgstr "Nyheter"
+msgstr "新闻"
 
 #: news/forms.py:14 news/forms_data.py:108 templates/home.html:40
 #: templates/includes/footer.html:25 templates/includes/search_area.html:10
 msgid "Search"
-msgstr "Søk"
+msgstr "搜索"
 
 #: news/forms.py:19 templates/home.html:32
 msgid "search_area_placeholder"
-msgstr "Søk..."
+msgstr "搜索…"
 
 #: news/forms.py:28 news/forms.py:42
 msgid "Sort_by"
-msgstr "Sorter etter"
+msgstr "排序方式"
 
 #: news/forms.py:56
 msgid "Search_in_default_all"
-msgstr "Velg språk (standard — alle)"
+msgstr "选择语言（默认 — 全部）"
 
 #: news/forms.py:69
 msgid "Select_sources_max_default_all"
-msgstr "Velg opptil 20 kilder (standard — alle)"
+msgstr "最多选择 20 个来源（默认 — 所有）"
 
 #: news/forms.py:84 news/forms.py:233
 msgid "News_from"
-msgstr "Nyheter fra"
+msgstr "新闻来源"
 
 #: news/forms.py:97 news/forms.py:245
 msgid "News_to"
-msgstr "Nyheter til"
+msgstr "新闻至"
 
 #: news/forms.py:110 news/forms.py:171
 msgid "Select_language_default_all"
-msgstr "Velg språk (standard — alle)"
+msgstr "选择语言（默认 — 全部）"
 
 #: news/forms.py:128 news/forms.py:197
 msgid "Select_countries_default_all"
-msgstr "Velg land (standard — alle)"
+msgstr "选择国家（默认 — 全部）"
 
 #: news/forms.py:140 news/forms.py:184
 msgid "Select_categories_default_all"
-msgstr "Velg kategorier (standard — alle)"
+msgstr "选择分类（默认 — 全部）"
 
 #: news/forms.py:152
 msgid "Select_sources_default_all"
-msgstr "Velg kilde (standard — alle)"
+msgstr "选择来源（默认 — 所有）"
 
 #: news/forms.py:213
 msgid "Sections"
-msgstr "Seksjoner"
+msgstr "版块"
 
 #: news/forms.py:225
 msgid "Rating"
-msgstr "Vurdering"
+msgstr "评分"
 
 #: news/forms_data.py:19 news/forms_data.py:150 news/forms_data.py:179
 #: news/forms_data.py:244
 msgid "All"
-msgstr "Alle"
+msgstr "全部"
 
 #: news/forms_data.py:25
 msgid "Hebrew"
-msgstr "Hebraisk"
+msgstr "希伯来语"
 
 #: news/forms_data.py:26
 msgid "Italian"
-msgstr "Italiensk"
+msgstr "意大利语"
 
 #: news/forms_data.py:27
 msgid "Dutch"
-msgstr "Nederlandsk"
+msgstr "荷兰语"
 
 #: news/forms_data.py:29
 msgid "Portuguese"
-msgstr "Portugisisk"
+msgstr "葡萄牙语"
 
 #: news/forms_data.py:31
 msgid "Swedish"
-msgstr "Svensk"
+msgstr "瑞典语"
 
 #: news/forms_data.py:32
 msgid "Simplified Chinese"
-msgstr "Forenklet kinesisk"
+msgstr "简体中文"
 
 #: news/forms_data.py:35 news/forms_data.py:231
 msgid "United States"
-msgstr "USA"
+msgstr "美国"
 
 #: news/forms_data.py:42
 msgid "Title"
-msgstr "Tittel"
+msgstr "标题"
 
 #: news/forms_data.py:43
 msgid "Description"
-msgstr "Beskrivelse"
+msgstr "描述"
 
 #: news/forms_data.py:44
 msgid "Content"
-msgstr "Innhold"
+msgstr "内容"
 
 #: news/forms_data.py:54
 msgid "About"
-msgstr "Om"
+msgstr "关于"
 
 #: news/forms_data.py:55
 msgid "Animals farmed"
-msgstr "Husdyr"
+msgstr "养殖动物"
 
 #: news/forms_data.py:56
 msgid "Art and design"
-msgstr "Kunst og design"
+msgstr "艺术与设计"
 
 #: news/forms_data.py:57
 msgid "Australia news"
-msgstr "Australias nyheter"
+msgstr "澳大利亚新闻"
 
 #: news/forms_data.py:58
 msgid "Better Business"
-msgstr "Bedre forretning"
+msgstr "商业洞见"
 
 #: news/forms_data.py:59
 msgid "Books"
-msgstr "Bøker"
+msgstr "图书"
 
 #: news/forms_data.py:60 news/forms_data.py:151
 msgid "Business"
-msgstr "Næringsliv"
+msgstr "商业"
 
 #: news/forms_data.py:61
 msgid "Business to business"
-msgstr "Business-to-business"
+msgstr "企业对企业"
 
 #: news/forms_data.py:62
 msgid "Cardiff"
-msgstr "Cardiff"
+msgstr "卡迪夫"
 
 #: news/forms_data.py:63
 msgid "Children's books"
-msgstr "Barnebøker"
+msgstr "儿童图书"
 
 #: news/forms_data.py:64
 msgid "Cities"
-msgstr "Byer"
+msgstr "城市"
 
 #: news/forms_data.py:65
 msgid "Opinion"
-msgstr "Mening"
+msgstr "观点"
 
 #: news/forms_data.py:66
 msgid "Community"
-msgstr "Fellesskap"
+msgstr "社区"
 
 #: news/forms_data.py:67
 msgid "Crosswords"
-msgstr "Kryssord"
+msgstr "填字游戏"
 
 #: news/forms_data.py:68
 msgid "Culture"
-msgstr "Kultur"
+msgstr "文化"
 
 #: news/forms_data.py:69
 msgid "Culture Network"
-msgstr "Kulturnettverk"
+msgstr "文化网络"
 
 #: news/forms_data.py:70
 msgid "Culture professionals network"
-msgstr "Nettverk for kulturprofesjonelle"
+msgstr "文化专业人士网络"
 
 #: news/forms_data.py:71
 msgid "Edinburgh"
-msgstr "Edinburgh"
+msgstr "爱丁堡"
 
 #: news/forms_data.py:72
 msgid "Education"
-msgstr "Utdanning"
+msgstr "教育"
 
 #: news/forms_data.py:73
 msgid "Guardian Enterprise Network"
-msgstr "Guardian Enterprise-nettverk"
+msgstr "Guardian 企业网络"
 
 #: news/forms_data.py:74
 msgid "Environment"
-msgstr "Miljø"
+msgstr "环境"
 
 #: news/forms_data.py:75
 msgid "Extra"
-msgstr "Ekstra"
+msgstr "附加"
 
 #: news/forms_data.py:76
 msgid "Fashion"
-msgstr "Mote"
+msgstr "时尚"
 
 #: news/forms_data.py:77
 msgid "Film"
-msgstr "Film"
+msgstr "电影"
 
 #: news/forms_data.py:78
 msgid "Food"
-msgstr "Mat"
+msgstr "美食"
 
 #: news/forms_data.py:79
 msgid "Football"
-msgstr "Fotball"
+msgstr "足球"
 
 #: news/forms_data.py:80
 msgid "Games"
-msgstr "Spill"
+msgstr "游戏"
 
 #: news/forms_data.py:81
 msgid "Global development"
-msgstr "Global utvikling"
+msgstr "全球发展"
 
 #: news/forms_data.py:82
 msgid "Global Development Professionals Network"
-msgstr "Nettverk for fagfolk innen global utvikling"
+msgstr "全球发展专业人士网络"
 
 #: news/forms_data.py:83
 msgid "Guardian Government Computing"
-msgstr "Guardian — offentlig IT"
+msgstr "Guardian 政府计算"
 
 #: news/forms_data.py:84
 msgid "Guardian Foundation"
-msgstr "Guardian-stiftelsen"
+msgstr "Guardian 基金会"
 
 #: news/forms_data.py:85
 msgid "Guardian Professional"
-msgstr "Guardian for profesjonelle"
+msgstr "Guardian 专业"
 
 #: news/forms_data.py:86
 msgid "Healthcare Professionals Network"
-msgstr "Nettverk for helsepersonell"
+msgstr "医疗专业人士网络"
 
 #: news/forms_data.py:87
 msgid "Help"
-msgstr "Hjelp"
+msgstr "帮助"
 
 #: news/forms_data.py:88
 msgid "Higher Education Network"
-msgstr "Nettverk for høyere utdanning"
+msgstr "高等教育网络"
 
 #: news/forms_data.py:89
 msgid "Housing Network"
-msgstr "Bolignettverk"
+msgstr "住房网络"
 
 #: news/forms_data.py:90
 msgid "Inequality"
-msgstr "Ulikhet"
+msgstr "不平等"
 
 #: news/forms_data.py:91
 msgid "Info"
-msgstr "Info"
+msgstr "信息"
 
 #: news/forms_data.py:92
 msgid "Jobs"
-msgstr "Jobb"
+msgstr "职位"
 
 #: news/forms_data.py:93
 msgid "Katine"
@@ -332,467 +332,467 @@ msgstr "Katine"
 
 #: news/forms_data.py:94
 msgid "Law"
-msgstr "Jus"
+msgstr "法律"
 
 #: news/forms_data.py:95
 msgid "Leeds"
-msgstr "Leeds"
+msgstr "利兹"
 
 #: news/forms_data.py:96
 msgid "Life and style"
-msgstr "Livsstil"
+msgstr "生活与风格"
 
 #: news/forms_data.py:97
 msgid "Local"
-msgstr "Lokal"
+msgstr "本地"
 
 #: news/forms_data.py:98
 msgid "Local Leaders Network"
-msgstr "Nettverk for lokale ledere"
+msgstr "本地领导者网络"
 
 #: news/forms_data.py:99
 msgid "Media"
-msgstr "Media"
+msgstr "媒体"
 
 #: news/forms_data.py:100
 msgid "Media Network"
-msgstr "Medianettverk"
+msgstr "媒体网络"
 
 #: news/forms_data.py:101
 msgid "Membership"
-msgstr "Medlemskap"
+msgstr "会员"
 
 #: news/forms_data.py:102
 msgid "Money"
-msgstr "Penger"
+msgstr "财经"
 
 #: news/forms_data.py:103
 msgid "Music"
-msgstr "Musikk"
+msgstr "音乐"
 
 #: news/forms_data.py:105
 msgid "Politics"
-msgstr "Politikk"
+msgstr "政治"
 
 #: news/forms_data.py:106
 msgid "Public Leaders Network"
-msgstr "Nettverk for offentlige ledere"
+msgstr "公共领导人网络"
 
 #: news/forms_data.py:107 news/forms_data.py:156
 msgid "Science"
-msgstr "Vitenskap"
+msgstr "科学"
 
 #: news/forms_data.py:109
 msgid "Guardian Small Business Network"
-msgstr "Guardian småbedriftsnettverk"
+msgstr "Guardian 小企业网络"
 
 #: news/forms_data.py:110
 msgid "Social Care Network"
-msgstr "Nettverk for sosial omsorg"
+msgstr "社会护理网络"
 
 #: news/forms_data.py:111
 msgid "Social Enterprise Network"
-msgstr "Nettverk for sosiale entreprenører"
+msgstr "社会企业网络"
 
 #: news/forms_data.py:112
 msgid "Society"
-msgstr "Samfunn"
+msgstr "社会"
 
 #: news/forms_data.py:113
 msgid "Society Professionals"
-msgstr "Samfunnsprofesjonelle"
+msgstr "社会专业人士"
 
 #: news/forms_data.py:114
 msgid "Sport"
-msgstr "Sport"
+msgstr "体育"
 
 #: news/forms_data.py:115
 msgid "Stage"
-msgstr "Scene"
+msgstr "舞台"
 
 #: news/forms_data.py:116
 msgid "Teacher Network"
-msgstr "Lærernettverk"
+msgstr "教师网络"
 
 #: news/forms_data.py:117 news/forms_data.py:157
 msgid "Technology"
-msgstr "Teknologi"
+msgstr "科技"
 
 #: news/forms_data.py:118
 msgid "The Filter"
-msgstr "Filteret"
+msgstr "筛选器"
 
 #: news/forms_data.py:119
 msgid "The Filter US"
-msgstr "Filteret (USA)"
+msgstr "筛选器（美国）"
 
 #: news/forms_data.py:120
 msgid "From the Guardian"
-msgstr "Fra Guardian"
+msgstr "来自 Guardian"
 
 #: news/forms_data.py:121
 msgid "From the Observer"
-msgstr "Fra Observer"
+msgstr "来自 Observer"
 
 #: news/forms_data.py:122
 msgid "Travel"
-msgstr "Reise"
+msgstr "旅行"
 
 #: news/forms_data.py:123
 msgid "Guardian holiday offers"
-msgstr "Guardian ferietilbud"
+msgstr "Guardian 假期优惠"
 
 #: news/forms_data.py:124
 msgid "Television & radio"
-msgstr "TV & radio"
+msgstr "电视与广播"
 
 #: news/forms_data.py:125
 msgid "UK news"
-msgstr "Storbritannia nyheter"
+msgstr "英国新闻"
 
 #: news/forms_data.py:126
 msgid "US news"
-msgstr "USA nyheter"
+msgstr "美国新闻"
 
 #: news/forms_data.py:127
 msgid "Wellness (Do NOT use)"
-msgstr "Velvære (ikke bruk)"
+msgstr "健康（请勿使用）"
 
 #: news/forms_data.py:128
 msgid "Voluntary Sector Network"
-msgstr "Frivillig sektor nettverk"
+msgstr "志愿部门网络"
 
 #: news/forms_data.py:129
 msgid "Weather"
-msgstr "Vær"
+msgstr "天气"
 
 #: news/forms_data.py:130
 msgid "Wellness"
-msgstr "Velvære"
+msgstr "健康"
 
 #: news/forms_data.py:131
 msgid "Women in Leadership"
-msgstr "Kvinner i ledelse"
+msgstr "女性领导力"
 
 #: news/forms_data.py:132
 msgid "Working in development"
-msgstr "Arbeide i utvikling"
+msgstr "发展领域工作"
 
 #: news/forms_data.py:133
 msgid "World news"
-msgstr "Verdensnyheter"
+msgstr "国际新闻"
 
 #: news/forms_data.py:152
 msgid "Entertainment"
-msgstr "Underholdning"
+msgstr "娱乐"
 
 #: news/forms_data.py:153
 msgid "General"
-msgstr "Generelt"
+msgstr "综合"
 
 #: news/forms_data.py:154
 msgid "Health"
-msgstr "Helse"
+msgstr "健康"
 
 #: news/forms_data.py:155
 msgid "Sports"
-msgstr "Sport"
+msgstr "体育"
 
 #: news/forms_data.py:164
 msgid "Relevancy"
-msgstr "Relevans"
+msgstr "相关性"
 
 #: news/forms_data.py:165
 msgid "Popularity"
-msgstr "Populæritet"
+msgstr "受欢迎度"
 
 #: news/forms_data.py:166
 msgid "Published_at"
-msgstr "Publisert"
+msgstr "发布时间"
 
 #: news/forms_data.py:173
 msgid "Newest"
-msgstr "Nyeste først"
+msgstr "最新优先"
 
 #: news/forms_data.py:174
 msgid "Oldest"
-msgstr "Eldste først"
+msgstr "最早优先"
 
 #: news/forms_data.py:175
 msgid "Relevance"
-msgstr "Relevans"
+msgstr "相关度"
 
 #: news/forms_data.py:180
 msgid "United Arab Emirates"
-msgstr "De forente arabiske emirater"
+msgstr "阿拉伯联合酋长国"
 
 #: news/forms_data.py:181
 msgid "Argentina"
-msgstr "Argentina"
+msgstr "阿根廷"
 
 #: news/forms_data.py:182
 msgid "Austria"
-msgstr "Østerrike"
+msgstr "奥地利"
 
 #: news/forms_data.py:183
 msgid "Australia"
-msgstr "Australia"
+msgstr "澳大利亚"
 
 #: news/forms_data.py:184
 msgid "Belgium"
-msgstr "Belgia"
+msgstr "比利时"
 
 #: news/forms_data.py:185
 msgid "Bulgaria"
-msgstr "Bulgaria"
+msgstr "保加利亚"
 
 #: news/forms_data.py:186
 msgid "Brazil"
-msgstr "Brasil"
+msgstr "巴西"
 
 #: news/forms_data.py:187
 msgid "Canada"
-msgstr "Canada"
+msgstr "加拿大"
 
 #: news/forms_data.py:188
 msgid "Switzerland"
-msgstr "Sveits"
+msgstr "瑞士"
 
 #: news/forms_data.py:189
 msgid "China"
-msgstr "Kina"
+msgstr "中国"
 
 #: news/forms_data.py:190
 msgid "Colombia"
-msgstr "Colombia"
+msgstr "哥伦比亚"
 
 #: news/forms_data.py:191
 msgid "Cuba"
-msgstr "Cuba"
+msgstr "古巴"
 
 #: news/forms_data.py:192
 msgid "Czech Republic"
-msgstr "Tsjekkia"
+msgstr "捷克"
 
 #: news/forms_data.py:193
 msgid "Germany"
-msgstr "Tyskland"
+msgstr "德国"
 
 #: news/forms_data.py:194
 msgid "Egypt"
-msgstr "Egypt"
+msgstr "埃及"
 
 #: news/forms_data.py:195
 msgid "France"
-msgstr "Frankrike"
+msgstr "法国"
 
 #: news/forms_data.py:196
 msgid "United Kingdom"
-msgstr "Storbritannia"
+msgstr "英国"
 
 #: news/forms_data.py:197
 msgid "Greece"
-msgstr "Hellas"
+msgstr "希腊"
 
 #: news/forms_data.py:198
 msgid "Hong Kong"
-msgstr "Hongkong"
+msgstr "香港"
 
 #: news/forms_data.py:199
 msgid "Hungary"
-msgstr "Ungarn"
+msgstr "匈牙利"
 
 #: news/forms_data.py:200
 msgid "Indonesia"
-msgstr "Indonesia"
+msgstr "印度尼西亚"
 
 #: news/forms_data.py:201
 msgid "Ireland"
-msgstr "Irland"
+msgstr "爱尔兰"
 
 #: news/forms_data.py:202
 msgid "Israel"
-msgstr "Israel"
+msgstr "以色列"
 
 #: news/forms_data.py:203
 msgid "India"
-msgstr "India"
+msgstr "印度"
 
 #: news/forms_data.py:204
 msgid "Italy"
-msgstr "Italia"
+msgstr "意大利"
 
 #: news/forms_data.py:205
 msgid "Japan"
-msgstr "Japan"
+msgstr "日本"
 
 #: news/forms_data.py:206
 msgid "South Korea"
-msgstr "Sør-Korea"
+msgstr "韩国"
 
 #: news/forms_data.py:207
 msgid "Lithuania"
-msgstr "Litauen"
+msgstr "立陶宛"
 
 #: news/forms_data.py:208
 msgid "Latvia"
-msgstr "Latvia"
+msgstr "拉脱维亚"
 
 #: news/forms_data.py:209
 msgid "Morocco"
-msgstr "Marokko"
+msgstr "摩洛哥"
 
 #: news/forms_data.py:210
 msgid "Mexico"
-msgstr "Mexico"
+msgstr "墨西哥"
 
 #: news/forms_data.py:211
 msgid "Malaysia"
-msgstr "Malaysia"
+msgstr "马来西亚"
 
 #: news/forms_data.py:212
 msgid "Nigeria"
-msgstr "Nigeria"
+msgstr "尼日利亚"
 
 #: news/forms_data.py:213
 msgid "Netherlands"
-msgstr "Nederland"
+msgstr "荷兰"
 
 #: news/forms_data.py:214
 msgid "Norway"
-msgstr "Norge"
+msgstr "挪威"
 
 #: news/forms_data.py:215
 msgid "New Zealand"
-msgstr "New Zealand"
+msgstr "新西兰"
 
 #: news/forms_data.py:216
 msgid "Philippines"
-msgstr "Filippinene"
+msgstr "菲律宾"
 
 #: news/forms_data.py:217
 msgid "Poland"
-msgstr "Polen"
+msgstr "波兰"
 
 #: news/forms_data.py:218
 msgid "Portugal"
-msgstr "Portugal"
+msgstr "葡萄牙"
 
 #: news/forms_data.py:219
 msgid "Romania"
-msgstr "Romania"
+msgstr "罗马尼亚"
 
 #: news/forms_data.py:220
 msgid "Serbia"
-msgstr "Serbia"
+msgstr "塞尔维亚"
 
 #: news/forms_data.py:221
 msgid "Russia"
-msgstr "Russland"
+msgstr "俄罗斯"
 
 #: news/forms_data.py:222
 msgid "Saudi Arabia"
-msgstr "Saudi-Arabia"
+msgstr "沙特阿拉伯"
 
 #: news/forms_data.py:223
 msgid "Sweden"
-msgstr "Sverige"
+msgstr "瑞典"
 
 #: news/forms_data.py:224
 msgid "Singapore"
-msgstr "Singapore"
+msgstr "新加坡"
 
 #: news/forms_data.py:225
 msgid "Slovenia"
-msgstr "Slovenia"
+msgstr "斯洛文尼亚"
 
 #: news/forms_data.py:226
 msgid "Slovakia"
-msgstr "Slovakia"
+msgstr "斯洛伐克"
 
 #: news/forms_data.py:227
 msgid "Thailand"
-msgstr "Thailand"
+msgstr "泰国"
 
 #: news/forms_data.py:228
 msgid "Turkey"
-msgstr "Tyrkia"
+msgstr "土耳其"
 
 #: news/forms_data.py:229
 msgid "Taiwan"
-msgstr "Taiwan"
+msgstr "台湾"
 
 #: news/forms_data.py:230
 msgid "Ukraine"
-msgstr "Ukraina"
+msgstr "乌克兰"
 
 #: news/forms_data.py:232
 msgid "Venezuela"
-msgstr "Venezuela"
+msgstr "委内瑞拉"
 
 #: news/forms_data.py:233
 msgid "South Africa"
-msgstr "Sør-Afrika"
+msgstr "南非"
 
 #: news/models.py:15 users/admin.py:13
 msgid "user"
-msgstr "bruker"
+msgstr "用户"
 
 #: news/models.py:19
 msgid "title"
-msgstr "tittel"
+msgstr "标题"
 
 #: news/models.py:22
 msgid "description"
-msgstr "beskrivelse"
+msgstr "描述"
 
 #: news/models.py:24
 msgid "content"
-msgstr "innhold"
+msgstr "内容"
 
 #: news/models.py:28
 msgid "link_to_news"
-msgstr "lenke til nyheten"
+msgstr "新闻链接"
 
 #: news/models.py:31
 msgid "image_link"
-msgstr "lenke til bilde"
+msgstr "图片链接"
 
 #: news/models.py:35
 msgid "source_name"
-msgstr "kildenavn"
+msgstr "来源名称"
 
 #: news/models.py:39
 msgid "author"
-msgstr "forfatter"
+msgstr "作者"
 
 #: news/models.py:43
 msgid "publication_date"
-msgstr "publiseringsdato"
+msgstr "发布日期"
 
 #: news/models.py:47
 msgid "category"
-msgstr "kategori"
+msgstr "类别"
 
 #: news/models.py:52
 msgid "featured_news"
-msgstr "utvalgte nyheter"
+msgstr "精选新闻"
 
 #: news/models.py:53
 msgid "selected_news"
-msgstr "anbefalte nyheter"
+msgstr "推荐新闻"
 
 #: news/views.py:55 news/views.py:130 news/views.py:206 news/views.py:272
 msgid "Forms_error"
-msgstr "Skjemafeil"
+msgstr "表单错误"
 
 #: news/views.py:84
 msgid "You_cannot_select_sources_together_with_country_or_category"
-msgstr "Du kan ikke velge kilder samtidig som du velger land eller kategori."
+msgstr "您不能同时选择具体来源与国家或类别。"
 
 #: news/views.py:158
 msgid "Used_default_query"
-msgstr "Standardspørring brukt"
+msgstr "使用了默认查询"
 
 #: templates/base.html:6 templates/home.html:5 templates/home.html:18
 #: templates/includes/footer.html:8 templates/includes/header.html:7
@@ -802,77 +802,77 @@ msgstr "Herald"
 
 #: templates/base.html:25
 msgid "The_content_was_not_delivered"
-msgstr "Innholdet ble ikke levert :("
+msgstr "内容未能送达 :("
 
 #: templates/home.html:5
 msgid "All_news_in_one_place"
-msgstr "Alle nyheter på ett sted"
+msgstr "所有新闻聚合于一处"
 
 #: templates/home.html:21
 msgid "Find_Read_Stay_informed"
-msgstr "Finn. Les. Hold deg informert."
+msgstr "查找。阅读。保持知情。"
 
 #: templates/home.html:51
 msgid "Start_by_searching_or_go_to"
-msgstr "Start med søk eller gå til"
+msgstr "从搜索开始或前往"
 
 #: templates/home.html:53
 msgid "Main_news"
-msgstr "Hovednyheter"
+msgstr "主要新闻"
 
 #: templates/includes/footer.html:11
 msgid "footer_site_descriptions"
-msgstr "Nyhetsaggregator fra forskjellige kilder. Rask, praktisk og sikker."
+msgstr "来自不同来源的新闻聚合。快速、便捷且安全。"
 
 #: templates/includes/footer.html:16
 msgid "Navigation"
-msgstr "Navigasjon"
+msgstr "导航"
 
 #: templates/includes/footer.html:20 templates/users/logout.html:23
 #: templates/users/password_change_done.html:26
 #: templates/users/password_reset_complete.html:26
 #: templates/users/password_reset_done.html:39
 msgid "Home"
-msgstr "Hjem"
+msgstr "首页"
 
 #: templates/includes/footer.html:30 templates/includes/header.html:23
 #: templates/news/sources_list.html:5
 msgid "Sources"
-msgstr "Kilder"
+msgstr "来源"
 
 #: templates/includes/footer.html:37 templates/users/account_activate.html:7
 #: users/models.py:70
 msgid "User"
-msgstr "Bruker"
+msgstr "用户"
 
 #: templates/includes/footer.html:41 templates/includes/header.html:71
 msgid "Profile"
-msgstr "Profil"
+msgstr "个人资料"
 
 #: templates/includes/footer.html:46
 msgid "Favorite"
-msgstr "Favoritter"
+msgstr "收藏"
 
 #: templates/includes/footer.html:51 templates/users/profile.html:40
 msgid "Settings"
-msgstr "Innstillinger"
+msgstr "设置"
 
 #: templates/includes/footer.html:58
 msgid "Contacts"
-msgstr "Kontakter"
+msgstr "联系人"
 
 #: templates/includes/header.html:11
 msgid "Select_language"
-msgstr "Velg språk"
+msgstr "选择语言"
 
 #: templates/includes/header.html:19 templates/news/top_headlines_news.html:5
 msgid "Top_headlines"
-msgstr "Toppnyheter"
+msgstr "头条新闻"
 
 #: templates/includes/header.html:27 templates/news/everything_news.html:5
 #: templates/news/guardian_news.html:5
 msgid "Everything"
-msgstr "Alt"
+msgstr "全部"
 
 #: templates/includes/header.html:31
 msgid "Guardian"
@@ -880,124 +880,124 @@ msgstr "Guardian"
 
 #: templates/includes/header.html:42
 msgid "Language"
-msgstr "Språk"
+msgstr "语言"
 
 #: templates/includes/header.html:81
 msgid "Log_out"
-msgstr "Logg ut"
+msgstr "登出"
 
 #: templates/includes/header.html:89
 msgid "Log_in"
-msgstr "Logg inn"
+msgstr "登录"
 
 #: templates/includes/header.html:93
 msgid "Sign_up"
-msgstr "Registrer deg"
+msgstr "注册"
 
 #: templates/includes/messages.html:17 templates/includes/search_area.html:35
 msgid "Close"
-msgstr "Lukk"
+msgstr "关闭"
 
 #: templates/includes/news_card.html:38
 msgid "Read"
-msgstr "Les"
+msgstr "阅读"
 
 #: templates/includes/news_card.html:57
 msgid "In_favorites"
-msgstr "I favoritter"
+msgstr "已加入收藏"
 
 #: templates/includes/search_area.html:15
 #: templates/includes/search_area.html:24
 msgid "Filters"
-msgstr "Filtre"
+msgstr "筛选"
 
 #: templates/includes/search_area.html:38
 #: templates/users/profile_update.html:92
 msgid "Save"
-msgstr "Lagre"
+msgstr "保存"
 
 #: templates/includes/source_card.html:27
 msgid "No_description"
-msgstr "Ingen beskrivelse"
+msgstr "暂无描述"
 
 #: templates/includes/source_card.html:46
 msgid "Visit"
-msgstr "Besøk"
+msgstr "访问"
 
 #: templates/news/everything_news.html:17 templates/news/guardian_news.html:17
 #: templates/news/top_headlines_news.html:17
 msgid "No_news_found"
-msgstr "Ingen nyheter funnet"
+msgstr "未找到相关新闻"
 
 #: templates/news/sources_list.html:19
 msgid "No_sources_found"
-msgstr "Ingen kilder funnet"
+msgstr "未找到来源"
 
 #: templates/users/account_activate.html:6
 msgid "Account_verification"
-msgstr "Bekreftelse av konto"
+msgstr "账户验证"
 
 #: templates/users/account_activate.html:12 templates/users/login.html:12
 #: templates/users/login.html:58 templates/users/signup.html:114
 #: users/forms.py:46
 msgid "Login"
-msgstr "Logg inn"
+msgstr "登录"
 
 #: templates/users/favorites.html:4
 msgid "Favorites"
-msgstr "Favoritter"
+msgstr "收藏"
 
 #: templates/users/favorites.html:8
 msgid "All_your_saved_articles"
-msgstr "Alle dine lagrede artikler"
+msgstr "您所有已保存的文章"
 
 #: templates/users/favorites.html:19
 msgid "Its_empty_here_yet"
-msgstr "Det er tomt her ennå."
+msgstr "这里还空着。"
 
 #: templates/users/favorites.html:20
 msgid "Search_news"
-msgstr "Søk etter nyheter"
+msgstr "搜索新闻"
 
 #: templates/users/login.html:4
 msgid "Entrance"
-msgstr "Innlogging"
+msgstr "登录"
 
 #: templates/users/login.html:13
 msgid "Enter_your_credentials"
-msgstr "Skriv inn dine legitimasjoner"
+msgstr "输入您的凭证"
 
 #: templates/users/login.html:65
 msgid "Forgot_your_password"
-msgstr "Glemt passord?"
+msgstr "忘记密码？"
 
 #: templates/users/login.html:69
 msgid "Dont_have_an_account"
-msgstr "Har du ikke en konto?"
+msgstr "还没有账户？"
 
 #: templates/users/login.html:71 templates/users/signup.html:106
 msgid "Register"
-msgstr "Registrer"
+msgstr "注册"
 
 #: templates/users/logout.html:4
 msgid "Logout"
-msgstr "Logg ut"
+msgstr "登出"
 
 #: templates/users/logout.html:12
 msgid "You_are_logged_out"
-msgstr "Du er logget ut."
+msgstr "您已登出。"
 
 #: templates/users/logout.html:15
 msgid "Thank_you_for_visiting_our_website_We_hope_to_see_you_again"
-msgstr "Takk for at du besøkte nettstedet vårt. Vi håper å se deg igjen!"
+msgstr "感谢您访问我们的网站。希望再次见到您！"
 
 #: templates/users/logout.html:20
 msgid "Login_again"
-msgstr "Logg inn igjen"
+msgstr "重新登录"
 
 #: templates/users/logout.html:31
 msgid "Your_session_has_ended_For_security_reasons_we_recommend_closing_your_browser"
-msgstr "Din økt er avsluttet. Av sikkerhetsgrunner anbefaler vi å lukke nettleseren."
+msgstr "您的会话已结束。出于安全原因，建议关闭浏览器。"
 
 #: templates/users/password_change.html:4
 #: templates/users/password_change.html:13
@@ -1005,361 +1005,361 @@ msgstr "Din økt er avsluttet. Av sikkerhetsgrunner anbefaler vi å lukke nettle
 #: templates/users/password_reset_confirm.html:76
 #: templates/users/profile.html:46
 msgid "Change_password"
-msgstr "Endre passord"
+msgstr "修改密码"
 
 #: templates/users/password_change.html:14
 msgid "Enter_your_current_password_and_new_password"
-msgstr "Skriv inn ditt nåværende og nye passord."
+msgstr "请输入当前密码和新密码。"
 
 #: templates/users/password_change.html:30
 msgid "Current_Password"
-msgstr "Nåværende passord"
+msgstr "当前密码"
 
 #: templates/users/password_change.html:47
 #: templates/users/password_reset_confirm.html:37
 msgid "New_Password"
-msgstr "Nytt passord"
+msgstr "新密码"
 
 #: templates/users/password_change.html:69
 msgid "Confirming_a_new_password"
-msgstr "Bekrefte nytt passord"
+msgstr "确认新密码"
 
 #: templates/users/password_change.html:89
 #: templates/users/profile_update.html:93
 msgid "Cancel"
-msgstr "Avbryt"
+msgstr "取消"
 
 #: templates/users/password_change_done.html:4
 msgid "Password_changed"
-msgstr "Passord endret"
+msgstr "密码已更改"
 
 #: templates/users/password_change_done.html:15
 msgid "Password_changed_successfully"
-msgstr "Passordet ble endret!"
+msgstr "密码修改成功！"
 
 #: templates/users/password_change_done.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_use_the_new_password_to_log_in"
-msgstr "Ditt passord ble endret. Du kan nå bruke det nye passordet for å logge inn."
+msgstr "您的密码已成功更改。您现在可以使用新密码登录。"
 
 #: templates/users/password_change_done.html:23
 msgid "Return_to_profile"
-msgstr "Tilbake til profilen"
+msgstr "返回个人资料"
 
 #: templates/users/password_change_done.html:36
 msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regularly"
-msgstr "Det anbefales å bruke forskjellige passord for forskjellige tjenester og endre dem regelmessig."
+msgstr "建议为不同服务使用不同密码并定期更换。"
 
 #: templates/users/password_reset.html:4 templates/users/password_reset.html:13
 msgid "Password_reset"
-msgstr "Tilbakestill passord"
+msgstr "重置密码"
 
 #: templates/users/password_reset.html:15
 msgid "Forgot_your_password_Enter_your_email_address_Well_send_you_instructions"
-msgstr "Glemt passord? Skriv inn e-posten din — vi sender instruksjoner."
+msgstr "忘记密码？输入您的邮箱——我们会发送说明。"
 
 #: templates/users/password_reset.html:32
 msgid "Email_address"
-msgstr "E-postadresse"
+msgstr "电子邮件地址"
 
 #: templates/users/password_reset.html:49
 msgid "Send_instructions"
-msgstr "Send instruksjoner"
+msgstr "发送说明"
 
 #: templates/users/password_reset.html:52
 msgid "Back_to_the_entrance"
-msgstr "Tilbake til innlogging"
+msgstr "返回登录"
 
 #: templates/users/password_reset.html:61
 msgid "If_you_have_not_received_the_email_check_your_spam_folder_or_make_sure_you_entered_the_correct_email_address"
-msgstr "Hvis du ikke har mottatt e-posten, sjekk spam-mappen eller sørg for at du skrev riktig e-postadresse."
+msgstr "如果您未收到邮件，请检查垃圾邮件文件夹或确保您输入了正确的邮箱地址。"
 
 #: templates/users/password_reset_complete.html:4
 #: templates/users/password_reset_complete.html:15
 msgid "Password_restored"
-msgstr "Passord gjenopprettet"
+msgstr "密码已恢复"
 
 #: templates/users/password_reset_complete.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_log_in_with_your_new_password"
-msgstr "Ditt passord ble endret. Du kan nå logge inn med ditt nye passord."
+msgstr "您的密码已成功更改。您现在可以使用新密码登录。"
 
 #: templates/users/password_reset_complete.html:23
 msgid "Sign_in"
-msgstr "Logg inn"
+msgstr "登录"
 
 #: templates/users/password_reset_complete.html:37
 msgid "Your_account_is_now_protected_with_a_new_password"
-msgstr "Kontoen din er nå beskyttet med et nytt passord."
+msgstr "您的账户现在由新密码保护。"
 
 #: templates/users/password_reset_complete.html:38
 msgid "It_is_recommended_to_use_unique_passwords_for_different_services"
-msgstr "Det anbefales å bruke unike passord for forskjellige tjenester."
+msgstr "建议为不同服务使用唯一密码。"
 
 #: templates/users/password_reset_confirm.html:4
 #: templates/users/password_reset_confirm.html:15
 msgid "Enter_new_password"
-msgstr "Skriv inn nytt passord"
+msgstr "输入新密码"
 
 #: templates/users/password_reset_confirm.html:16
 msgid "Please_enter_the_new_password_twice"
-msgstr "Vennligst skriv inn det nye passordet to ganger."
+msgstr "请再次输入新密码。"
 
 #: templates/users/password_reset_confirm.html:18
 msgid "Restore_Error"
-msgstr "Gjenopprettingsfeil"
+msgstr "恢复错误"
 
 #: templates/users/password_reset_confirm.html:19
 msgid "The_password_reset_link_is_invalid"
-msgstr "Lenken for tilbakestilling av passord er ugyldig."
+msgstr "密码重置链接无效。"
 
 #: templates/users/password_reset_confirm.html:59
 #: templates/users/signup.html:82
 msgid "Password_confirmation"
-msgstr "Bekreft passord"
+msgstr "密码确认"
 
 #: templates/users/password_reset_confirm.html:85
 msgid "The_password_reset_link_is_invalid_possibly_because_it_has_already_been_used"
-msgstr "Lenken for tilbakestilling av passord er ugyldig — den kan ha blitt brukt allerede."
+msgstr "密码重置链接无效，可能已被使用。"
 
 #: templates/users/password_reset_confirm.html:86
 msgid "Please_request_a_new_password_reset"
-msgstr "Vennligst be om en ny tilbakestilling av passord."
+msgstr "请申请新的密码重置。"
 
 #: templates/users/password_reset_confirm.html:93
 msgid "Request_a_new_password_reset"
-msgstr "Be om ny tilbakestilling av passord"
+msgstr "请求新的密码重置"
 
 #: templates/users/password_reset_confirm.html:96
 #: templates/users/password_reset_done.html:36
 msgid "Return_to_the_entrance"
-msgstr "Tilbake til innlogging"
+msgstr "返回登录"
 
 #: templates/users/password_reset_done.html:4
 msgid "Instructions_have_been_sent"
-msgstr "Instruksjoner er sendt."
+msgstr "说明已发送。"
 
 #: templates/users/password_reset_done.html:15
 msgid "Check_your_mail"
-msgstr "Sjekk e-posten din"
+msgstr "检查您的邮箱"
 
 #: templates/users/password_reset_done.html:18
 msgid "We_have_sent_password_recovery_instructions_to_the_email_address_you_provided"
-msgstr "Vi har sendt instruksjoner for gjenoppretting av passord til e-postadressen du oppga."
+msgstr "我们已将密码恢复说明发送到您提供的邮箱地址。"
 
 #: templates/users/password_reset_done.html:19
 msgid "You_should_receive_them_soon"
-msgstr "Du bør motta dem snart."
+msgstr "您应该很快收到它们。"
 
 #: templates/users/password_reset_done.html:27
 msgid "If_you_dont_see_the_email_check_your_spam_folder"
-msgstr "Hvis du ikke ser e-posten, sjekk spam-mappen."
+msgstr "如果您未看到邮件，请检查垃圾邮件文件夹。"
 
 #: templates/users/password_reset_done.html:28
 msgid "Sometimes_password_recovery_emails_can_end_up_there"
-msgstr "Noen ganger havner e-poster for gjenoppretting av passord der."
+msgstr "有时密码恢复邮件会出现在那里。"
 
 #: templates/users/profile.html:5
 msgid "User_profile"
-msgstr "Brukerprofil"
+msgstr "用户资料"
 
 #: templates/users/profile.html:26 templates/users/profile_update.html:6
 #: templates/users/profile_update.html:12
 msgid "Edit_profile"
-msgstr "Rediger profil"
+msgstr "编辑资料"
 
 #: templates/users/profile.html:30
 msgid "My_bookmarks"
-msgstr "Mine bokmerker"
+msgstr "我的收藏"
 
 #: templates/users/profile.html:60
 msgid "Personal_information"
-msgstr "Personlig informasjon"
+msgstr "个人信息"
 
 #: templates/users/profile.html:65 users/forms.py:60
 msgid "Name"
-msgstr "Fornavn"
+msgstr "名字"
 
 #: templates/users/profile.html:66 templates/users/profile.html:70
 #: templates/users/profile.html:81 templates/users/profile.html:88
 msgid "Not_specified"
-msgstr "Ikke angitt"
+msgstr "未指定"
 
 #: templates/users/profile.html:69 users/forms.py:65
 msgid "Surname"
-msgstr "Etternavn"
+msgstr "姓氏"
 
 #: templates/users/profile.html:76 users/models.py:84
 msgid "Date_of_birth"
-msgstr "Fødselsdato"
+msgstr "出生日期"
 
 #: templates/users/profile.html:86 templates/users/profile_update.html:39
 msgid "Location"
-msgstr "Sted"
+msgstr "位置"
 
 #: templates/users/profile.html:95
 msgid "Registration_date"
-msgstr "Registreringsdato"
+msgstr "注册日期"
 
 #: templates/users/profile.html:99
 msgid "Last_entry"
-msgstr "Siste pålogging"
+msgstr "最后一次登录"
 
 #: templates/users/profile.html:101
 msgid "Recently"
-msgstr "Nylig"
+msgstr "最近"
 
 #: templates/users/profile.html:111 users/forms.py:74 users/models.py:100
 #: users/models.py:101
 msgid "Favorite_categories"
-msgstr "Favorittkategorier"
+msgstr "收藏的分类"
 
 #: templates/users/profile.html:126
 msgid "You_have_not_selected_your_favorite_categories_yet"
-msgstr "Du har ikke valgt favorittkategorier ennå."
+msgstr "您尚未选择收藏的分类。"
 
 #: templates/users/profile.html:128
 msgid "Add_categories"
-msgstr "Legg til kategorier"
+msgstr "添加分类"
 
 #: templates/users/profile.html:138
 msgid "Click_on_a_category_to_view_related_news"
-msgstr "Klikk på en kategori for å se relaterte nyheter."
+msgstr "点击分类以查看相关新闻。"
 
 #: templates/users/profile.html:141
 msgid "Edit"
-msgstr "Rediger"
+msgstr "编辑"
 
 #: templates/users/profile_update.html:41
 msgid "City_or_country"
-msgstr "By eller land"
+msgstr "城市或国家"
 
 #: templates/users/signup.html:4 templates/users/signup.html:12
 msgid "Registration"
-msgstr "Registrering"
+msgstr "注册"
 
 #: templates/users/signup.html:13
 msgid "Create_a_new_account"
-msgstr "Opprett en ny konto"
+msgstr "创建新账号"
 
 #: templates/users/signup.html:58 users/forms.py:136
 msgid "Password"
-msgstr "Passord"
+msgstr "密码"
 
 #: templates/users/signup.html:112
 msgid "Already_have_an_account"
-msgstr "Har du allerede en konto?"
+msgstr "已经有账号？"
 
 #: users/apps.py:10
 msgid "Users"
-msgstr "Brukere"
+msgstr "用户"
 
 #: users/backends.py:50
 msgid "account_activation_mail_text"
-msgstr "Vennligst bekreft kontoen din via lenken nedenfor."
+msgstr "请通过以下链接确认您的账户。"
 
 #: users/backends.py:52
 msgid "Account_activation"
-msgstr "Kontoaktivering"
+msgstr "账户激活"
 
 #: users/forms.py:34
 msgid "Mail"
-msgstr "E-post"
+msgstr "邮件"
 
 #: users/forms.py:47 users/forms.py:68
 msgid "Email"
-msgstr "E-post"
+msgstr "电子邮件"
 
 #: users/forms.py:51
 msgid "Enter_login"
-msgstr "Skriv inn brukernavn"
+msgstr "输入登录名"
 
 #: users/forms.py:52
 msgid "Enter_email"
-msgstr "Skriv inn e-postadresse"
+msgstr "输入电子邮件地址"
 
 #: users/forms.py:109
 msgid "Upload_your_profile_picture"
-msgstr "Last opp profilbildet ditt."
+msgstr "上传您的头像。"
 
 #: users/forms.py:130
 msgid "invalid_login_text"
-msgstr "Ugyldig brukernavn eller passord."
+msgstr "无效的用户名或密码。"
 
 #: users/forms.py:132
 msgid "This_account_is_inactive"
-msgstr "Denne kontoen er inaktiv."
+msgstr "该账户已被停用。"
 
 #: users/forms.py:134
 msgid "Login_or_email"
-msgstr "Brukernavn eller e-post"
+msgstr "登录名或邮箱"
 
 #: users/models.py:76
 msgid "Avatar"
-msgstr "Avatar"
+msgstr "头像"
 
 #: users/models.py:77
 msgid "User_avatar"
-msgstr "Brukeravatar."
+msgstr "用户头像。"
 
 #: users/models.py:85
 msgid "User_date_of_birth"
-msgstr "Brukerens fødselsdato."
+msgstr "用户出生日期。"
 
 #: users/models.py:90
 msgid "location_help_text"
-msgstr "Oppgi byen eller landet du bor i."
+msgstr "请填写您居住的城市或国家。"
 
 #: users/models.py:94
 msgid "Attempts"
-msgstr "Forsøk"
+msgstr "尝试次数"
 
 #: users/models.py:95
 msgid "Number_of_login_attempts"
-msgstr "Antall påloggingsforsøk"
+msgstr "登录尝试次数"
 
 #: users/models.py:104
 msgid "Deactivate_in"
-msgstr "Deaktiver om"
+msgstr "将在...后停用"
 
 #: users/models.py:105
 msgid "Account_was_deactivated"
-msgstr "Kontoen ble deaktivert"
+msgstr "账户已被停用"
 
 #: users/models.py:122
 msgid "profile"
-msgstr "profil"
+msgstr "资料"
 
 #: users/models.py:123
 msgid "profiles"
-msgstr "profiler"
+msgstr "资料列表"
 
 #: users/validators.py:24
 msgid "birthday_date_error"
-msgstr "Feil i fødselsdato"
+msgstr "出生日期错误"
 
 #: users/validators.py:39
 msgid "Max_file_size_limit"
-msgstr "Filen din er for stor. Maks størrelse: "
+msgstr "您的文件太大。最大尺寸： "
 
 #: users/views.py:33
 msgid "Already_activated"
-msgstr "Allerede aktivert"
+msgstr "已激活"
 
 #: users/views.py:52 users/views.py:66
 msgid "Activation_successful"
-msgstr "Aktivering vellykket"
+msgstr "激活成功"
 
 #: users/views.py:54 users/views.py:68
 msgid "Activation_time_expired"
-msgstr "Aktiveringstiden er utløpt"
+msgstr "激活时间已过"
 
 #: users/views.py:70
 msgid "Account_is_not_deactivated"
-msgstr "Kontoen er ikke deaktivert"
+msgstr "账户未被停用"
 
 #: users/views.py:85
 msgid "Registration_successful_Welcome"
-msgstr "Registrering vellykket! Velkommen!"
+msgstr "注册成功！欢迎！"
 
 #: users/views.py:123
 msgid "Profile_successfully_updated"
-msgstr "Profilen er oppdatert"
+msgstr "个人资料更新成功"
