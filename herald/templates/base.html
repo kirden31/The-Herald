@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>{%trans "Herald" %}</title>
+    <title>{% block title %}{% trans "Herald" %}{% endblock %}</title>
 
     <link rel="icon" type="image/png" href="{% static 'img/fav/favicon-96x96.png' %}" sizes="96x96"/>
     <link rel="icon" type="image/svg+xml" href="{% static 'img/fav/favicon.svg' %}"/>
@@ -22,7 +22,7 @@
 </header>
 <main class="container flex-grow-1">
     {% include "includes/messages.html" %}
-        {% block content %}{% trans "The_content_was_not_delivered" %}{% endblock %}
+    {% block content %}{% trans "The_content_was_not_delivered" %}{% endblock %}
 </main>
 <footer class="mt-auto w-100 bg-light">
     {% include "includes/footer.html" %}
