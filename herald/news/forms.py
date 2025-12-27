@@ -17,7 +17,7 @@ class SearchForm(django.forms.Form):
         widget=django.forms.TextInput(
             attrs={
                 'placeholder': _('search_area_placeholder'),
-                'class': 'form-control',
+                'class': 'form-control me-2',
             },
         ),
     )
@@ -30,7 +30,7 @@ class SortEverythingForm(django.forms.Form):
         initial=news.forms_data.PUBLISHED_AT,
         widget=django.forms.Select(
             attrs={
-                'class': 'js-sort js-example-basic-multiple ms-2',
+                'class': 'js-sort ms-2',
             },
         ),
         required=False,
@@ -45,7 +45,7 @@ class SortGuardianForm(django.forms.Form):
         required=False,
         widget=django.forms.Select(
             attrs={
-                'class': 'js-sort js-example-basic-multiple ms-2',
+                'class': 'js-sort ms-2',
             },
         ),
     )
