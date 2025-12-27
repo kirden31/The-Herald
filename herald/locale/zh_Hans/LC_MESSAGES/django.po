@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-26 16:37+0300\n"
+"POT-Creation-Date: 2025-12-27 11:27+0300\n"
 "PO-Revision-Date: 2025-12-24 00:00+0000\n"
 "Last-Translator: ChatGPT <translator@example.com>\n"
 "Language-Team: Chinese (Simplified) <zh-Hans@li.org>\n"
@@ -12,43 +12,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: herald/settings.py:131 news/forms_data.py:21
+#: herald/settings.py:133 news/forms_data.py:22
 msgid "English"
 msgstr "英语"
 
-#: herald/settings.py:132 news/forms_data.py:29
+#: herald/settings.py:134 news/forms_data.py:30
 msgid "Russian"
 msgstr "俄语"
 
-#: herald/settings.py:133 news/forms_data.py:20
+#: herald/settings.py:135 news/forms_data.py:21
 msgid "German"
 msgstr "德语"
 
-#: herald/settings.py:134 news/forms_data.py:27
+#: herald/settings.py:136 news/forms_data.py:28
 msgid "Norwegian Bokmål"
-msgstr "挪威语（博克mål）"
+msgstr "挪威语（Bokmål）"
 
-#: herald/settings.py:135 news/forms_data.py:23
+#: herald/settings.py:137 news/forms_data.py:24
 msgid "French"
 msgstr "法语"
 
-#: herald/settings.py:136 news/forms_data.py:22
+#: herald/settings.py:138 news/forms_data.py:23
 msgid "Spanish"
 msgstr "西班牙语"
 
-#: herald/settings.py:137
-msgid "Chinese (Simplified)"
-msgstr ""
-
-#: herald/settings.py:138
-msgid "Japanese"
-msgstr "日本"
-
 #: herald/settings.py:139
-msgid "Greek"
-msgstr "希腊"
+msgid "Chinese (Simplified)"
+msgstr "简体中文"
 
-#: herald/settings.py:140 news/forms_data.py:19
+#: herald/settings.py:140
+msgid "Japanese"
+msgstr "日语"
+
+#: herald/settings.py:141
+msgid "Greek"
+msgstr "希腊语"
+
+#: herald/settings.py:142 news/forms_data.py:20
 msgid "Arabic"
 msgstr "阿拉伯语"
 
@@ -93,11 +93,11 @@ msgstr "选择语言（默认 — 全部）"
 msgid "Select_sources_max_default_all"
 msgstr "最多选择 20 个来源（默认 — 全部）"
 
-#: news/forms.py:84 news/forms.py:230
+#: news/forms.py:84 news/forms.py:233
 msgid "News_from"
 msgstr "新闻自"
 
-#: news/forms.py:97 news/forms.py:242
+#: news/forms.py:97 news/forms.py:245
 msgid "News_to"
 msgstr "新闻至"
 
@@ -105,11 +105,11 @@ msgstr "新闻至"
 msgid "Select_language_default_all"
 msgstr "选择语言（默认 — 全部）"
 
-#: news/forms.py:128 news/forms.py:195
+#: news/forms.py:128 news/forms.py:197
 msgid "Select_countries_default_all"
 msgstr "选择国家（默认 — 全部）"
 
-#: news/forms.py:140 news/forms.py:183
+#: news/forms.py:140 news/forms.py:184
 msgid "Select_categories_default_all"
 msgstr "选择分类（默认 — 全部）"
 
@@ -117,331 +117,330 @@ msgstr "选择分类（默认 — 全部）"
 msgid "Select_sources_default_all"
 msgstr "选择来源（默认 — 全部）"
 
-#: news/forms.py:210
+#: news/forms.py:213
 msgid "Sections"
 msgstr "版块"
 
-#: news/forms.py:222
+#: news/forms.py:225
 msgid "Rating"
 msgstr "评分"
 
-#: news/forms_data.py:24
+#: news/forms_data.py:19 news/forms_data.py:66 news/forms_data.py:95
+#: news/forms_data.py:160
+msgid "All"
+msgstr ""
+
+#: news/forms_data.py:25
 msgid "Hebrew"
 msgstr "希伯来语"
 
-#: news/forms_data.py:25
+#: news/forms_data.py:26
 msgid "Italian"
 msgstr "意大利语"
 
-#: news/forms_data.py:26
+#: news/forms_data.py:27
 msgid "Dutch"
 msgstr "荷兰语"
 
-#: news/forms_data.py:27
-#, fuzzy
-#| msgid "Norwegian Bokmål"
-msgid "Norwegian Nynorsk"
-msgstr "挪威语（博克mål）"
-
 #: news/forms_data.py:28
+msgid "Norwegian Nynorsk"
+msgstr "挪威语（Nynorsk）"
+
+#: news/forms_data.py:29
 msgid "Portuguese"
 msgstr "葡萄牙语"
 
-#: news/forms_data.py:30
+#: news/forms_data.py:31
 msgid "Swedish"
 msgstr "瑞典语"
 
-#: news/forms_data.py:31
+#: news/forms_data.py:32
 msgid "Simplified Chinese"
-msgstr ""
+msgstr "简体中文"
 
-#: news/forms_data.py:31
+#: news/forms_data.py:32
 msgid "Traditional Chinese"
-msgstr ""
+msgstr "繁体中文"
 
-#: news/forms_data.py:34 news/forms_data.py:144
+#: news/forms_data.py:35 news/forms_data.py:147
 msgid "United States"
 msgstr "美国"
 
-#: news/forms_data.py:41
+#: news/forms_data.py:42
 msgid "Title"
 msgstr "标题"
 
-#: news/forms_data.py:42
+#: news/forms_data.py:43
 msgid "Description"
 msgstr "描述"
 
-#: news/forms_data.py:43
+#: news/forms_data.py:44
 msgid "Content"
 msgstr "内容"
 
-#: news/forms_data.py:65
+#: news/forms_data.py:67
 msgid "Business"
 msgstr "商业"
 
-#: news/forms_data.py:66
+#: news/forms_data.py:68
 msgid "Entertainment"
 msgstr "娱乐"
 
-#: news/forms_data.py:67
+#: news/forms_data.py:69
 msgid "General"
 msgstr "综合"
 
-#: news/forms_data.py:68
+#: news/forms_data.py:70
 msgid "Health"
 msgstr "健康"
 
-#: news/forms_data.py:69
+#: news/forms_data.py:71
 msgid "Sports"
 msgstr "体育"
 
-#: news/forms_data.py:70
+#: news/forms_data.py:72
 msgid "Science"
 msgstr "科学"
 
-#: news/forms_data.py:71
+#: news/forms_data.py:73
 msgid "Technology"
 msgstr "科技"
 
-#: news/forms_data.py:78
+#: news/forms_data.py:80
 msgid "Relevancy"
 msgstr "相关性"
 
-#: news/forms_data.py:79
+#: news/forms_data.py:81
 msgid "Popularity"
 msgstr "流行度"
 
-#: news/forms_data.py:80
+#: news/forms_data.py:82
 msgid "Published_at"
 msgstr "发布日期"
 
-#: news/forms_data.py:87
+#: news/forms_data.py:89
 msgid "Newest"
 msgstr "最新优先"
 
-#: news/forms_data.py:88
+#: news/forms_data.py:90
 msgid "Oldest"
 msgstr "最旧优先"
 
-#: news/forms_data.py:89
+#: news/forms_data.py:91
 msgid "Relevance"
 msgstr "相关度"
 
-#: news/forms_data.py:93
+#: news/forms_data.py:96
 msgid "United Arab Emirates"
 msgstr "阿拉伯联合酋长国"
 
-#: news/forms_data.py:94
+#: news/forms_data.py:97
 msgid "Argentina"
 msgstr "阿根廷"
 
-#: news/forms_data.py:95
+#: news/forms_data.py:98
 msgid "Austria"
 msgstr "奥地利"
 
-#: news/forms_data.py:96
+#: news/forms_data.py:99
 msgid "Australia"
 msgstr "澳大利亚"
 
-#: news/forms_data.py:97
+#: news/forms_data.py:100
 msgid "Belgium"
 msgstr "比利时"
 
-#: news/forms_data.py:98
+#: news/forms_data.py:101
 msgid "Bulgaria"
 msgstr "保加利亚"
 
-#: news/forms_data.py:99
+#: news/forms_data.py:102
 msgid "Brazil"
 msgstr "巴西"
 
-#: news/forms_data.py:100
+#: news/forms_data.py:103
 msgid "Canada"
 msgstr "加拿大"
 
-#: news/forms_data.py:101
+#: news/forms_data.py:104
 msgid "Switzerland"
 msgstr "瑞士"
 
-#: news/forms_data.py:102
+#: news/forms_data.py:105
 msgid "China"
 msgstr "中国"
 
-#: news/forms_data.py:103
+#: news/forms_data.py:106
 msgid "Colombia"
 msgstr "哥伦比亚"
 
-#: news/forms_data.py:104
+#: news/forms_data.py:107
 msgid "Cuba"
 msgstr "古巴"
 
-#: news/forms_data.py:105
+#: news/forms_data.py:108
 msgid "Czech Republic"
 msgstr "捷克共和国"
 
-#: news/forms_data.py:106
+#: news/forms_data.py:109
 msgid "Germany"
 msgstr "德国"
 
-#: news/forms_data.py:107
+#: news/forms_data.py:110
 msgid "Egypt"
 msgstr "埃及"
 
-#: news/forms_data.py:108
+#: news/forms_data.py:111
 msgid "France"
 msgstr "法国"
 
-#: news/forms_data.py:109
+#: news/forms_data.py:112
 msgid "United Kingdom"
 msgstr "英国"
 
-#: news/forms_data.py:110
+#: news/forms_data.py:113
 msgid "Greece"
 msgstr "希腊"
 
-#: news/forms_data.py:111
+#: news/forms_data.py:114
 msgid "Hong Kong"
 msgstr "香港"
 
-#: news/forms_data.py:112
+#: news/forms_data.py:115
 msgid "Hungary"
 msgstr "匈牙利"
 
-#: news/forms_data.py:113
+#: news/forms_data.py:116
 msgid "Indonesia"
 msgstr "印度尼西亚"
 
-#: news/forms_data.py:114
+#: news/forms_data.py:117
 msgid "Ireland"
 msgstr "爱尔兰"
 
-#: news/forms_data.py:115
+#: news/forms_data.py:118
 msgid "Israel"
 msgstr "以色列"
 
-#: news/forms_data.py:116
+#: news/forms_data.py:119
 msgid "India"
 msgstr "印度"
 
-#: news/forms_data.py:117
+#: news/forms_data.py:120
 msgid "Italy"
 msgstr "意大利"
 
-#: news/forms_data.py:118
+#: news/forms_data.py:121
 msgid "Japan"
 msgstr "日本"
 
-#: news/forms_data.py:119
+#: news/forms_data.py:122
 msgid "South Korea"
 msgstr "韩国"
 
-#: news/forms_data.py:120
+#: news/forms_data.py:123
 msgid "Lithuania"
 msgstr "立陶宛"
 
-#: news/forms_data.py:121
+#: news/forms_data.py:124
 msgid "Latvia"
 msgstr "拉脱维亚"
 
-#: news/forms_data.py:122
+#: news/forms_data.py:125
 msgid "Morocco"
 msgstr "摩洛哥"
 
-#: news/forms_data.py:123
+#: news/forms_data.py:126
 msgid "Mexico"
 msgstr "墨西哥"
 
-#: news/forms_data.py:124
+#: news/forms_data.py:127
 msgid "Malaysia"
 msgstr "马来西亚"
 
-#: news/forms_data.py:125
+#: news/forms_data.py:128
 msgid "Nigeria"
 msgstr "尼日利亚"
 
-#: news/forms_data.py:126
+#: news/forms_data.py:129
 msgid "Netherlands"
 msgstr "荷兰"
 
-#: news/forms_data.py:127
+#: news/forms_data.py:130
 msgid "Norway"
 msgstr "挪威"
 
-#: news/forms_data.py:128
+#: news/forms_data.py:131
 msgid "New Zealand"
 msgstr "新西兰"
 
-#: news/forms_data.py:129
+#: news/forms_data.py:132
 msgid "Philippines"
 msgstr "菲律宾"
 
-#: news/forms_data.py:130
+#: news/forms_data.py:133
 msgid "Poland"
 msgstr "波兰"
 
-#: news/forms_data.py:131
+#: news/forms_data.py:134
 msgid "Portugal"
 msgstr "葡萄牙"
 
-#: news/forms_data.py:132
+#: news/forms_data.py:135
 msgid "Romania"
 msgstr "罗马尼亚"
 
-#: news/forms_data.py:133
+#: news/forms_data.py:136
 msgid "Serbia"
 msgstr "塞尔维亚"
 
-#: news/forms_data.py:134
+#: news/forms_data.py:137
 msgid "Russia"
 msgstr "俄罗斯"
 
-#: news/forms_data.py:135
+#: news/forms_data.py:138
 msgid "Saudi Arabia"
 msgstr "沙特阿拉伯"
 
-#: news/forms_data.py:136
+#: news/forms_data.py:139
 msgid "Sweden"
 msgstr "瑞典"
 
-#: news/forms_data.py:137
+#: news/forms_data.py:140
 msgid "Singapore"
 msgstr "新加坡"
 
-#: news/forms_data.py:138
+#: news/forms_data.py:141
 msgid "Slovenia"
 msgstr "斯洛文尼亚"
 
-#: news/forms_data.py:139
+#: news/forms_data.py:142
 msgid "Slovakia"
 msgstr "斯洛伐克"
 
-#: news/forms_data.py:140
+#: news/forms_data.py:143
 msgid "Thailand"
 msgstr "泰国"
 
-#: news/forms_data.py:141
+#: news/forms_data.py:144
 msgid "Turkey"
 msgstr "土耳其"
 
-#: news/forms_data.py:142
+#: news/forms_data.py:145
 msgid "Taiwan"
 msgstr "台湾"
 
-#: news/forms_data.py:143
+#: news/forms_data.py:146
 msgid "Ukraine"
 msgstr "乌克兰"
 
-#: news/forms_data.py:145
+#: news/forms_data.py:148
 msgid "Venezuela"
 msgstr "委内瑞拉"
 
-#: news/forms_data.py:146
+#: news/forms_data.py:149
 msgid "South Africa"
 msgstr "南非"
-
-#: news/forms_data.py:157
-msgid "None"
-msgstr "无"
 
 #: news/models.py:15 users/admin.py:13
 msgid "user"
@@ -491,15 +490,15 @@ msgstr "精选新闻"
 msgid "selected_news"
 msgstr "推荐新闻"
 
-#: news/views.py:54 news/views.py:129 news/views.py:205 news/views.py:271
+#: news/views.py:55 news/views.py:130 news/views.py:206 news/views.py:272
 msgid "Forms_error"
 msgstr "表单错误"
 
-#: news/views.py:83
+#: news/views.py:84
 msgid "You_cannot_select_sources_together_with_country_or_category"
 msgstr "不能在选择国家或分类的同时选择具体来源。"
 
-#: news/views.py:157
+#: news/views.py:158
 msgid "Used_default_query"
 msgstr "使用默认查询"
 
@@ -638,7 +637,7 @@ msgstr "访问"
 msgid "No_news_found"
 msgstr "未找到新闻"
 
-#: templates/news/sources_list.html:17
+#: templates/news/sources_list.html:19
 msgid "No_sources_found"
 msgstr "未找到来源"
 
@@ -755,6 +754,8 @@ msgid "Return_to_profile"
 msgstr "返回个人资料"
 
 #: templates/users/password_change_done.html:36
+#, fuzzy
+#| msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regulary"
 msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regularly"
 msgstr "建议为不同服务使用不同密码，并定期更换。"
 
@@ -897,7 +898,7 @@ msgstr "未指定"
 msgid "Surname"
 msgstr "姓氏"
 
-#: templates/users/profile.html:76 users/models.py:83
+#: templates/users/profile.html:76 users/models.py:84
 msgid "Date_of_birth"
 msgstr "出生日期"
 
@@ -1010,11 +1011,11 @@ msgstr "头像"
 msgid "User_avatar"
 msgstr "用户头像。"
 
-#: users/models.py:84
+#: users/models.py:85
 msgid "User_date_of_birth"
 msgstr "用户出生日期。"
 
-#: users/models.py:89
+#: users/models.py:90
 msgid "location_help_text"
 msgstr "请填写居住城市或国家。"
 
@@ -1046,6 +1047,10 @@ msgstr "资料列表"
 msgid "birthday_date_error"
 msgstr "出生日期错误"
 
+#: users/validators.py:39
+msgid "Max_file_size_limit"
+msgstr "您的文件太大。最大大小： "
+
 #: users/views.py:33
 msgid "Already_activated"
 msgstr "已激活"
@@ -1069,6 +1074,3 @@ msgstr "注册成功！欢迎！"
 #: users/views.py:123
 msgid "Profile_successfully_updated"
 msgstr "资料更新成功"
-
-#~ msgid "Max_file_size_limit"
-#~ msgstr "您的文件太大。最大大小： "

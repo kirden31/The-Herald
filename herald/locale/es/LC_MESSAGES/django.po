@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-26 16:37+0300\n"
+"POT-Creation-Date: 2025-12-27 11:27+0300\n"
 "PO-Revision-Date: 2025-12-21 00:00+0000\n"
 "Last-Translator: Translator Name <translator@example.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -12,43 +12,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: herald/settings.py:131 news/forms_data.py:21
+#: herald/settings.py:133 news/forms_data.py:22
 msgid "English"
 msgstr "Inglés"
 
-#: herald/settings.py:132 news/forms_data.py:29
+#: herald/settings.py:134 news/forms_data.py:30
 msgid "Russian"
 msgstr "Ruso"
 
-#: herald/settings.py:133 news/forms_data.py:20
+#: herald/settings.py:135 news/forms_data.py:21
 msgid "German"
 msgstr "Alemán"
 
-#: herald/settings.py:134 news/forms_data.py:27
+#: herald/settings.py:136 news/forms_data.py:28
 msgid "Norwegian Bokmål"
 msgstr "Noruego Bokmål"
 
-#: herald/settings.py:135 news/forms_data.py:23
+#: herald/settings.py:137 news/forms_data.py:24
 msgid "French"
 msgstr "Francés"
 
-#: herald/settings.py:136 news/forms_data.py:22
+#: herald/settings.py:138 news/forms_data.py:23
 msgid "Spanish"
 msgstr "Español"
 
-#: herald/settings.py:137
+#: herald/settings.py:139
 msgid "Chinese (Simplified)"
 msgstr "Chino (simplificado)"
 
-#: herald/settings.py:138
+#: herald/settings.py:140
 msgid "Japanese"
 msgstr "Japonés"
 
-#: herald/settings.py:139
+#: herald/settings.py:141
 msgid "Greek"
 msgstr "Griego"
 
-#: herald/settings.py:140 news/forms_data.py:19
+#: herald/settings.py:142 news/forms_data.py:20
 msgid "Arabic"
 msgstr "Árabe"
 
@@ -93,11 +93,11 @@ msgstr "Seleccione idioma (por defecto — todos)"
 msgid "Select_sources_max_default_all"
 msgstr "Seleccione hasta 20 fuentes (por defecto — todas)"
 
-#: news/forms.py:84 news/forms.py:230
+#: news/forms.py:84 news/forms.py:233
 msgid "News_from"
 msgstr "Noticias desde"
 
-#: news/forms.py:97 news/forms.py:242
+#: news/forms.py:97 news/forms.py:245
 msgid "News_to"
 msgstr "Noticias hasta"
 
@@ -105,11 +105,11 @@ msgstr "Noticias hasta"
 msgid "Select_language_default_all"
 msgstr "Seleccione idioma (por defecto — todos)"
 
-#: news/forms.py:128 news/forms.py:195
+#: news/forms.py:128 news/forms.py:197
 msgid "Select_countries_default_all"
 msgstr "Seleccione países (por defecto — todos)"
 
-#: news/forms.py:140 news/forms.py:183
+#: news/forms.py:140 news/forms.py:184
 msgid "Select_categories_default_all"
 msgstr "Seleccione categorías (por defecto — todas)"
 
@@ -117,331 +117,332 @@ msgstr "Seleccione categorías (por defecto — todas)"
 msgid "Select_sources_default_all"
 msgstr "Seleccione fuente (por defecto — todas)"
 
-#: news/forms.py:210
+#: news/forms.py:213
 msgid "Sections"
 msgstr "Secciones"
 
-#: news/forms.py:222
+#: news/forms.py:225
 msgid "Rating"
 msgstr "Calificación"
 
-#: news/forms_data.py:24
+#: news/forms_data.py:19 news/forms_data.py:66 news/forms_data.py:95
+#: news/forms_data.py:160
+msgid "All"
+msgstr ""
+
+#: news/forms_data.py:25
 msgid "Hebrew"
 msgstr "Hebreo"
 
-#: news/forms_data.py:25
+#: news/forms_data.py:26
 msgid "Italian"
 msgstr "Italiano"
 
-#: news/forms_data.py:26
+#: news/forms_data.py:27
 msgid "Dutch"
 msgstr "Neerlandés"
 
-#: news/forms_data.py:27
+#: news/forms_data.py:28
 #, fuzzy
 #| msgid "Norwegian Bokmål"
 msgid "Norwegian Nynorsk"
 msgstr "Noruego Bokmål"
 
-#: news/forms_data.py:28
+#: news/forms_data.py:29
 msgid "Portuguese"
 msgstr "Portugués"
 
-#: news/forms_data.py:30
+#: news/forms_data.py:31
 msgid "Swedish"
 msgstr "Sueco"
 
-#: news/forms_data.py:31
+#: news/forms_data.py:32
 msgid "Simplified Chinese"
 msgstr ""
 
-#: news/forms_data.py:31
+#: news/forms_data.py:32
 msgid "Traditional Chinese"
 msgstr ""
 
-#: news/forms_data.py:34 news/forms_data.py:144
+#: news/forms_data.py:35 news/forms_data.py:147
 msgid "United States"
 msgstr "Estados Unidos"
 
-#: news/forms_data.py:41
+#: news/forms_data.py:42
 msgid "Title"
 msgstr "Título"
 
-#: news/forms_data.py:42
+#: news/forms_data.py:43
 msgid "Description"
 msgstr "Descripción"
 
-#: news/forms_data.py:43
+#: news/forms_data.py:44
 msgid "Content"
 msgstr "Contenido"
 
-#: news/forms_data.py:65
+#: news/forms_data.py:67
 msgid "Business"
 msgstr "Negocios"
 
-#: news/forms_data.py:66
+#: news/forms_data.py:68
 msgid "Entertainment"
 msgstr "Entretenimiento"
 
-#: news/forms_data.py:67
+#: news/forms_data.py:69
 msgid "General"
 msgstr "General"
 
-#: news/forms_data.py:68
+#: news/forms_data.py:70
 msgid "Health"
 msgstr "Salud"
 
-#: news/forms_data.py:69
+#: news/forms_data.py:71
 msgid "Sports"
 msgstr "Deportes"
 
-#: news/forms_data.py:70
+#: news/forms_data.py:72
 msgid "Science"
 msgstr "Ciencia"
 
-#: news/forms_data.py:71
+#: news/forms_data.py:73
 msgid "Technology"
 msgstr "Tecnología"
 
-#: news/forms_data.py:78
+#: news/forms_data.py:80
 msgid "Relevancy"
 msgstr "Relevancia"
 
-#: news/forms_data.py:79
+#: news/forms_data.py:81
 msgid "Popularity"
 msgstr "Popularidad"
 
-#: news/forms_data.py:80
+#: news/forms_data.py:82
 msgid "Published_at"
 msgstr "Publicado en"
 
-#: news/forms_data.py:87
+#: news/forms_data.py:89
 msgid "Newest"
 msgstr "Más nuevos primero"
 
-#: news/forms_data.py:88
+#: news/forms_data.py:90
 msgid "Oldest"
 msgstr "Más antiguos primero"
 
-#: news/forms_data.py:89
+#: news/forms_data.py:91
 msgid "Relevance"
 msgstr "Relevancia"
 
-#: news/forms_data.py:93
+#: news/forms_data.py:96
 msgid "United Arab Emirates"
 msgstr "Emiratos Árabes Unidos"
 
-#: news/forms_data.py:94
+#: news/forms_data.py:97
 msgid "Argentina"
 msgstr "Argentina"
 
-#: news/forms_data.py:95
+#: news/forms_data.py:98
 msgid "Austria"
 msgstr "Austria"
 
-#: news/forms_data.py:96
+#: news/forms_data.py:99
 msgid "Australia"
 msgstr "Australia"
 
-#: news/forms_data.py:97
+#: news/forms_data.py:100
 msgid "Belgium"
 msgstr "Bélgica"
 
-#: news/forms_data.py:98
+#: news/forms_data.py:101
 msgid "Bulgaria"
 msgstr "Bulgaria"
 
-#: news/forms_data.py:99
+#: news/forms_data.py:102
 msgid "Brazil"
 msgstr "Brasil"
 
-#: news/forms_data.py:100
+#: news/forms_data.py:103
 msgid "Canada"
 msgstr "Canadá"
 
-#: news/forms_data.py:101
+#: news/forms_data.py:104
 msgid "Switzerland"
 msgstr "Suiza"
 
-#: news/forms_data.py:102
+#: news/forms_data.py:105
 msgid "China"
 msgstr "China"
 
-#: news/forms_data.py:103
+#: news/forms_data.py:106
 msgid "Colombia"
 msgstr "Colombia"
 
-#: news/forms_data.py:104
+#: news/forms_data.py:107
 msgid "Cuba"
 msgstr "Cuba"
 
-#: news/forms_data.py:105
+#: news/forms_data.py:108
 msgid "Czech Republic"
 msgstr "República Checa"
 
-#: news/forms_data.py:106
+#: news/forms_data.py:109
 msgid "Germany"
 msgstr "Alemania"
 
-#: news/forms_data.py:107
+#: news/forms_data.py:110
 msgid "Egypt"
 msgstr "Egipto"
 
-#: news/forms_data.py:108
+#: news/forms_data.py:111
 msgid "France"
 msgstr "Francia"
 
-#: news/forms_data.py:109
+#: news/forms_data.py:112
 msgid "United Kingdom"
 msgstr "Reino Unido"
 
-#: news/forms_data.py:110
+#: news/forms_data.py:113
 msgid "Greece"
 msgstr "Grecia"
 
-#: news/forms_data.py:111
+#: news/forms_data.py:114
 msgid "Hong Kong"
 msgstr "Hong Kong"
 
-#: news/forms_data.py:112
+#: news/forms_data.py:115
 msgid "Hungary"
 msgstr "Hungría"
 
-#: news/forms_data.py:113
+#: news/forms_data.py:116
 msgid "Indonesia"
 msgstr "Indonesia"
 
-#: news/forms_data.py:114
+#: news/forms_data.py:117
 msgid "Ireland"
 msgstr "Irlanda"
 
-#: news/forms_data.py:115
+#: news/forms_data.py:118
 msgid "Israel"
 msgstr "Israel"
 
-#: news/forms_data.py:116
+#: news/forms_data.py:119
 msgid "India"
 msgstr "India"
 
-#: news/forms_data.py:117
+#: news/forms_data.py:120
 msgid "Italy"
 msgstr "Italia"
 
-#: news/forms_data.py:118
+#: news/forms_data.py:121
 msgid "Japan"
 msgstr "Japón"
 
-#: news/forms_data.py:119
+#: news/forms_data.py:122
 msgid "South Korea"
 msgstr "Corea del Sur"
 
-#: news/forms_data.py:120
+#: news/forms_data.py:123
 msgid "Lithuania"
 msgstr "Lituania"
 
-#: news/forms_data.py:121
+#: news/forms_data.py:124
 msgid "Latvia"
 msgstr "Letonia"
 
-#: news/forms_data.py:122
+#: news/forms_data.py:125
 msgid "Morocco"
 msgstr "Marruecos"
 
-#: news/forms_data.py:123
+#: news/forms_data.py:126
 msgid "Mexico"
 msgstr "México"
 
-#: news/forms_data.py:124
+#: news/forms_data.py:127
 msgid "Malaysia"
 msgstr "Malasia"
 
-#: news/forms_data.py:125
+#: news/forms_data.py:128
 msgid "Nigeria"
 msgstr "Nigeria"
 
-#: news/forms_data.py:126
+#: news/forms_data.py:129
 msgid "Netherlands"
 msgstr "Países Bajos"
 
-#: news/forms_data.py:127
+#: news/forms_data.py:130
 msgid "Norway"
 msgstr "Noruega"
 
-#: news/forms_data.py:128
+#: news/forms_data.py:131
 msgid "New Zealand"
 msgstr "Nueva Zelanda"
 
-#: news/forms_data.py:129
+#: news/forms_data.py:132
 msgid "Philippines"
 msgstr "Filipinas"
 
-#: news/forms_data.py:130
+#: news/forms_data.py:133
 msgid "Poland"
 msgstr "Polonia"
 
-#: news/forms_data.py:131
+#: news/forms_data.py:134
 msgid "Portugal"
 msgstr "Portugal"
 
-#: news/forms_data.py:132
+#: news/forms_data.py:135
 msgid "Romania"
 msgstr "Rumanía"
 
-#: news/forms_data.py:133
+#: news/forms_data.py:136
 msgid "Serbia"
 msgstr "Serbia"
 
-#: news/forms_data.py:134
+#: news/forms_data.py:137
 msgid "Russia"
 msgstr "Rusia"
 
-#: news/forms_data.py:135
+#: news/forms_data.py:138
 msgid "Saudi Arabia"
 msgstr "Arabia Saudita"
 
-#: news/forms_data.py:136
+#: news/forms_data.py:139
 msgid "Sweden"
 msgstr "Suecia"
 
-#: news/forms_data.py:137
+#: news/forms_data.py:140
 msgid "Singapore"
 msgstr "Singapur"
 
-#: news/forms_data.py:138
+#: news/forms_data.py:141
 msgid "Slovenia"
 msgstr "Eslovenia"
 
-#: news/forms_data.py:139
+#: news/forms_data.py:142
 msgid "Slovakia"
 msgstr "Eslovaquia"
 
-#: news/forms_data.py:140
+#: news/forms_data.py:143
 msgid "Thailand"
 msgstr "Tailandia"
 
-#: news/forms_data.py:141
+#: news/forms_data.py:144
 msgid "Turkey"
 msgstr "Turquía"
 
-#: news/forms_data.py:142
+#: news/forms_data.py:145
 msgid "Taiwan"
 msgstr "Taiwán"
 
-#: news/forms_data.py:143
+#: news/forms_data.py:146
 msgid "Ukraine"
 msgstr "Ucrania"
 
-#: news/forms_data.py:145
+#: news/forms_data.py:148
 msgid "Venezuela"
 msgstr "Venezuela"
 
-#: news/forms_data.py:146
+#: news/forms_data.py:149
 msgid "South Africa"
 msgstr "Sudáfrica"
-
-#: news/forms_data.py:157
-msgid "None"
-msgstr "Ninguno"
 
 #: news/models.py:15 users/admin.py:13
 msgid "user"
@@ -491,15 +492,15 @@ msgstr "Noticias destacadas"
 msgid "selected_news"
 msgstr "Noticias recomendadas"
 
-#: news/views.py:54 news/views.py:129 news/views.py:205 news/views.py:271
+#: news/views.py:55 news/views.py:130 news/views.py:206 news/views.py:272
 msgid "Forms_error"
 msgstr "Error de formulario"
 
-#: news/views.py:83
+#: news/views.py:84
 msgid "You_cannot_select_sources_together_with_country_or_category"
 msgstr "No puede seleccionar fuentes junto con país o categoría."
 
-#: news/views.py:157
+#: news/views.py:158
 msgid "Used_default_query"
 msgstr "Se utiliza la consulta predeterminada"
 
@@ -638,7 +639,7 @@ msgstr "Visitar"
 msgid "No_news_found"
 msgstr "No se encontraron noticias"
 
-#: templates/news/sources_list.html:17
+#: templates/news/sources_list.html:19
 msgid "No_sources_found"
 msgstr "No se encontraron fuentes"
 
@@ -913,7 +914,7 @@ msgstr "No especificado"
 msgid "Surname"
 msgstr "Apellido"
 
-#: templates/users/profile.html:76 users/models.py:83
+#: templates/users/profile.html:76 users/models.py:84
 msgid "Date_of_birth"
 msgstr "Fecha de nacimiento"
 
@@ -1026,11 +1027,11 @@ msgstr "Avatar"
 msgid "User_avatar"
 msgstr "Avatar del usuario."
 
-#: users/models.py:84
+#: users/models.py:85
 msgid "User_date_of_birth"
 msgstr "Fecha de nacimiento del usuario."
 
-#: users/models.py:89
+#: users/models.py:90
 msgid "location_help_text"
 msgstr "Indique la ciudad o el país de residencia."
 
@@ -1062,6 +1063,10 @@ msgstr "perfiles"
 msgid "birthday_date_error"
 msgstr "Error en la fecha de nacimiento"
 
+#: users/validators.py:39
+msgid "Max_file_size_limit"
+msgstr "Su archivo es demasiado grande. Tamaño máximo: "
+
 #: users/views.py:33
 msgid "Already_activated"
 msgstr "Ya activado"
@@ -1085,6 +1090,3 @@ msgstr "¡Registro exitoso! ¡Bienvenido!"
 #: users/views.py:123
 msgid "Profile_successfully_updated"
 msgstr "Perfil actualizado con éxito"
-
-#~ msgid "Max_file_size_limit"
-#~ msgstr "Su archivo es demasiado grande. Tamaño máximo: "
