@@ -84,11 +84,6 @@ class Profile(django.db.models.Model):
         verbose_name=_('Date_of_birth'),
         help_text=_('User_date_of_birth'),
     )
-    location = django.db.models.CharField(
-        blank=True,
-        null=True,
-        help_text=_('location_help_text'),
-    )
     attempts_count = django.db.models.PositiveBigIntegerField(
         default=0,
         verbose_name=_('Attempts'),

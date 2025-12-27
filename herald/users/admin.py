@@ -16,7 +16,6 @@ class ProfileInline(django.contrib.admin.StackedInline):
     fields = (
         users.models.Profile.image.field.name,
         users.models.Profile.birthday.field.name,
-        users.models.Profile.location.field.name,
         users.models.Profile.favorite_categories.field.name,
         users.models.Profile.attempts_count.field.name,
     )

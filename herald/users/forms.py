@@ -88,7 +88,6 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
 
         fields = (
             users.models.Profile.birthday.field.name,
-            users.models.Profile.location.field.name,
             users.models.Profile.image.field.name,
             users.models.Profile.favorite_categories.field.name,
         )

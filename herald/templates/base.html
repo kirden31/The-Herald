@@ -28,15 +28,4 @@
     {% include "includes/footer.html" %}
 </footer>
 </body>
-<script type="text/javascript">
-async function setLanguage(langCode) {
-    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-    await fetch("{% url 'set_language' %}", {
-        method: 'POST',
-        headers: { 'X-CSRFToken': csrfToken },
-        body: new URLSearchParams({ language: langCode })
-    });
-    location.reload(); // перезагрузить страницу, чтобы применить новый язык
-}
-</script>
 </html>

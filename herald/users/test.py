@@ -1,5 +1,6 @@
 __all__ = ()
 
+import datetime
 import http
 
 import django.core.exceptions
@@ -86,8 +87,7 @@ class ProfileViewsTest(django.test.TestCase):
             'first_name': 'New',
             'last_name': 'Name',
             'email': self.user.email,
-            'birthday': '1990-01-01',
-            'location': 'Moscow',
+            'birthday': datetime.date.today() - datetime.timedelta(days=365*30),
             'favorite_categories': ['technology', 'science'],
         }
         response = self.client.post(django.urls.reverse('users:profile_edit'), data, follow=True)
@@ -96,7 +96,6 @@ class ProfileViewsTest(django.test.TestCase):
         self.user.refresh_from_db()
         profile = self.user.profile
         self.assertEqual(self.user.first_name, 'New')
-        self.assertEqual(profile.location, 'Moscow')
         self.assertIn('technology', profile.favorite_categories)
 
 

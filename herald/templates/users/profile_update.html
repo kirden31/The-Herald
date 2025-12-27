@@ -16,13 +16,12 @@
                 <div class="mb-3">
                     {{ form.email.label_tag }}
                     {{ form.email }}
-                    {% if form.email.errors %}
                     <div class="text-danger">{{ form.email.errors }}</div>
-                    {% endif %}
                 </div>
                 <div class="mb-3">
                     {{ form.first_name.label_tag }}
                     {{ form.first_name }}
+                    <div class="text-danger">{{ form.first_name.errors }}</div>
                 </div>
                 <div class="mb-3">
                     {{ form.last_name.label_tag }}
@@ -31,14 +30,6 @@
                 <div class="mb-3">
                     {{ form.birthday.label_tag }}
                     {{ form.birthday }}
-                    {% if form.birthday.help_text %}
-                    <small class="form-text text-muted">{{ form.birthday.help_text }}</small>
-                    {% endif %}
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">{% trans "Location" %}</label>
-                    <input type="text" class="form-control" name="location"
-                           value="{{ user.profile.location|default:'' }}" placeholder="{% trans 'City_or_country' %}">
                 </div>
                 <div class="mb-3">
                     {% with thumb=user.profile.get_image_300x300 %}
@@ -49,9 +40,8 @@
                          style="width: 200px; height: 200px; object-fit: cover;">
                     {% endwith %}
                     {{ form.image }}
-                    {% if form.image.help_text %}
                     <small class="form-text text-muted">{{ form.image.help_text }}</small>
-                    {% endif %}
+                    <div class="text-danger">{{ form.image.errors }}</div>
                 </div>
 
                 <div class="mb-5">
@@ -74,23 +64,13 @@
                             </div>
                         </div>
                         {% endfor %}
+                        <small class="form-text text-muted mt-3 d-block">{{ form.favorite_categories.help_text}}</small>
+                        <small class="text-danger mt-3">{{ form.favorite_categories.errors }}</small>
                     </div>
-
-                    {% if form.favorite_categories.help_text %}
-                    <small class="form-text text-muted mt-3 d-block">
-                        {{ form.favorite_categories.help_text }}
-                    </small>
-                    {% endif %}
-
-                    {% if form.favorite_categories.errors %}
-                    <div class="text-danger mt-3">
-                        {{ form.favorite_categories.errors }}
-                    </div>
-                    {% endif %}
                 </div>
 
                 <button type="submit" class="btn btn-primary">{% trans "Save" %}</button>
-                <a href="{% url 'users:profile' %}" class="btn btn-secondary">{% trans "Cancel" %}</a>
+                <a href="{% url 'users:profile' %}" class="btn btn-secondary text-white">{% trans "Cancel" %}</a>
             </form>
         </div>
     </div>
