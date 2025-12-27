@@ -97,9 +97,11 @@ class ProfileForm(BootstrapFormMixin, django.forms.ModelForm):
             users.models.Profile.image.field.name: 'a',
         }
 
+        td = datetime.date.today()
+
         widgets = {
             users.models.Profile.birthday.field.name: django.forms.DateInput(
-                attrs={'type': 'date', 'max': datetime.date.today()},
+                attrs={'type': 'date', 'max': td, 'min': td - datetime.timedelta(days=365 * 150)},
                 format='%Y-%m-%d',
             ),
             users.models.Profile.image.field.name: django.forms.FileInput(),

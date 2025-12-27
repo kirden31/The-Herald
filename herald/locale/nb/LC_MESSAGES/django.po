@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-27 11:27+0300\n"
-"PO-Revision-Date: 2025-12-24 00:00+0000\n"
+"POT-Creation-Date: 2025-12-27 15:54+0300\n"
+"PO-Revision-Date: 2025-12-26 16:10+0300\n"
 "Last-Translator: ChatGPT <translator@example.com>\n"
-"Language-Team: Norwegian Bokmål\n"
+"Language-Team: Norwegian Bokmål <nb@li.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +26,7 @@ msgstr "Tysk"
 
 #: herald/settings.py:136 news/forms_data.py:28
 msgid "Norwegian Bokmål"
-msgstr "Norsk bokmål"
+msgstr "Norsk (Bokmål)"
 
 #: herald/settings.py:137 news/forms_data.py:24
 msgid "French"
@@ -68,18 +68,18 @@ msgstr "Lenke og dato"
 msgid "Source"
 msgstr "Kilde"
 
-#: news/apps.py:10
+#: news/apps.py:10 news/forms_data.py:104
 msgid "News"
 msgstr "Nyheter"
 
-#: news/forms.py:14 templates/home.html:39 templates/includes/footer.html:25
-#: templates/includes/search_area.html:10
+#: news/forms.py:14 news/forms_data.py:108 templates/home.html:40
+#: templates/includes/footer.html:25 templates/includes/search_area.html:10
 msgid "Search"
 msgstr "Søk"
 
-#: news/forms.py:19
+#: news/forms.py:19 templates/home.html:32
 msgid "search_area_placeholder"
-msgstr "Søk…"
+msgstr "Søk..."
 
 #: news/forms.py:28 news/forms.py:42
 msgid "Sort_by"
@@ -125,10 +125,10 @@ msgstr "Seksjoner"
 msgid "Rating"
 msgstr "Vurdering"
 
-#: news/forms_data.py:19 news/forms_data.py:66 news/forms_data.py:95
-#: news/forms_data.py:160
+#: news/forms_data.py:19 news/forms_data.py:150 news/forms_data.py:179
+#: news/forms_data.py:244
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 #: news/forms_data.py:25
 msgid "Hebrew"
@@ -142,10 +142,6 @@ msgstr "Italiensk"
 msgid "Dutch"
 msgstr "Nederlandsk"
 
-#: news/forms_data.py:28
-msgid "Norwegian Nynorsk"
-msgstr "Norsk bokmål"
-
 #: news/forms_data.py:29
 msgid "Portuguese"
 msgstr "Portugisisk"
@@ -156,13 +152,9 @@ msgstr "Svensk"
 
 #: news/forms_data.py:32
 msgid "Simplified Chinese"
-msgstr ""
+msgstr "Forenklet kinesisk"
 
-#: news/forms_data.py:32
-msgid "Traditional Chinese"
-msgstr ""
-
-#: news/forms_data.py:35 news/forms_data.py:147
+#: news/forms_data.py:35 news/forms_data.py:231
 msgid "United States"
 msgstr "USA"
 
@@ -178,267 +170,567 @@ msgstr "Beskrivelse"
 msgid "Content"
 msgstr "Innhold"
 
-#: news/forms_data.py:67
+#: news/forms_data.py:54
+msgid "About"
+msgstr "Om"
+
+#: news/forms_data.py:55
+msgid "Animals farmed"
+msgstr "Husdyr"
+
+#: news/forms_data.py:56
+msgid "Art and design"
+msgstr "Kunst og design"
+
+#: news/forms_data.py:57
+msgid "Australia news"
+msgstr "Australias nyheter"
+
+#: news/forms_data.py:58
+msgid "Better Business"
+msgstr "Bedre forretning"
+
+#: news/forms_data.py:59
+msgid "Books"
+msgstr "Bøker"
+
+#: news/forms_data.py:60 news/forms_data.py:151
 msgid "Business"
-msgstr "Økonomi"
+msgstr "Næringsliv"
+
+#: news/forms_data.py:61
+msgid "Business to business"
+msgstr "Business-to-business"
+
+#: news/forms_data.py:62
+msgid "Cardiff"
+msgstr "Cardiff"
+
+#: news/forms_data.py:63
+msgid "Children's books"
+msgstr "Barnebøker"
+
+#: news/forms_data.py:64
+msgid "Cities"
+msgstr "Byer"
+
+#: news/forms_data.py:65
+msgid "Opinion"
+msgstr "Mening"
+
+#: news/forms_data.py:66
+msgid "Community"
+msgstr "Fellesskap"
+
+#: news/forms_data.py:67
+msgid "Crosswords"
+msgstr "Kryssord"
 
 #: news/forms_data.py:68
-msgid "Entertainment"
-msgstr "Underholdning"
+msgid "Culture"
+msgstr "Kultur"
 
 #: news/forms_data.py:69
-msgid "General"
-msgstr "Generelt"
+msgid "Culture Network"
+msgstr "Kulturnettverk"
 
 #: news/forms_data.py:70
-msgid "Health"
-msgstr "Helse"
+msgid "Culture professionals network"
+msgstr "Nettverk for kulturprofesjonelle"
 
 #: news/forms_data.py:71
-msgid "Sports"
-msgstr "Sport"
+msgid "Edinburgh"
+msgstr "Edinburgh"
 
 #: news/forms_data.py:72
+msgid "Education"
+msgstr "Utdanning"
+
+#: news/forms_data.py:73
+msgid "Guardian Enterprise Network"
+msgstr "Guardian Enterprise-nettverk"
+
+#: news/forms_data.py:74
+msgid "Environment"
+msgstr "Miljø"
+
+#: news/forms_data.py:75
+msgid "Extra"
+msgstr "Ekstra"
+
+#: news/forms_data.py:76
+msgid "Fashion"
+msgstr "Mote"
+
+#: news/forms_data.py:77
+msgid "Film"
+msgstr "Film"
+
+#: news/forms_data.py:78
+msgid "Food"
+msgstr "Mat"
+
+#: news/forms_data.py:79
+msgid "Football"
+msgstr "Fotball"
+
+#: news/forms_data.py:80
+msgid "Games"
+msgstr "Spill"
+
+#: news/forms_data.py:81
+msgid "Global development"
+msgstr "Global utvikling"
+
+#: news/forms_data.py:82
+msgid "Global Development Professionals Network"
+msgstr "Nettverk for fagfolk innen global utvikling"
+
+#: news/forms_data.py:83
+msgid "Guardian Government Computing"
+msgstr "Guardian — offentlig IT"
+
+#: news/forms_data.py:84
+msgid "Guardian Foundation"
+msgstr "Guardian-stiftelsen"
+
+#: news/forms_data.py:85
+msgid "Guardian Professional"
+msgstr "Guardian for profesjonelle"
+
+#: news/forms_data.py:86
+msgid "Healthcare Professionals Network"
+msgstr "Nettverk for helsepersonell"
+
+#: news/forms_data.py:87
+msgid "Help"
+msgstr "Hjelp"
+
+#: news/forms_data.py:88
+msgid "Higher Education Network"
+msgstr "Nettverk for høyere utdanning"
+
+#: news/forms_data.py:89
+msgid "Housing Network"
+msgstr "Bolignettverk"
+
+#: news/forms_data.py:90
+msgid "Inequality"
+msgstr "Ulikhet"
+
+#: news/forms_data.py:91
+msgid "Info"
+msgstr "Info"
+
+#: news/forms_data.py:92
+msgid "Jobs"
+msgstr "Jobb"
+
+#: news/forms_data.py:93
+msgid "Katine"
+msgstr "Katine"
+
+#: news/forms_data.py:94
+msgid "Law"
+msgstr "Jus"
+
+#: news/forms_data.py:95
+msgid "Leeds"
+msgstr "Leeds"
+
+#: news/forms_data.py:96
+msgid "Life and style"
+msgstr "Livsstil"
+
+#: news/forms_data.py:97
+msgid "Local"
+msgstr "Lokal"
+
+#: news/forms_data.py:98
+msgid "Local Leaders Network"
+msgstr "Nettverk for lokale ledere"
+
+#: news/forms_data.py:99
+msgid "Media"
+msgstr "Media"
+
+#: news/forms_data.py:100
+msgid "Media Network"
+msgstr "Medianettverk"
+
+#: news/forms_data.py:101
+msgid "Membership"
+msgstr "Medlemskap"
+
+#: news/forms_data.py:102
+msgid "Money"
+msgstr "Penger"
+
+#: news/forms_data.py:103
+msgid "Music"
+msgstr "Musikk"
+
+#: news/forms_data.py:105
+msgid "Politics"
+msgstr "Politikk"
+
+#: news/forms_data.py:106
+msgid "Public Leaders Network"
+msgstr "Nettverk for offentlige ledere"
+
+#: news/forms_data.py:107 news/forms_data.py:156
 msgid "Science"
 msgstr "Vitenskap"
 
-#: news/forms_data.py:73
+#: news/forms_data.py:109
+msgid "Guardian Small Business Network"
+msgstr "Guardian småbedriftsnettverk"
+
+#: news/forms_data.py:110
+msgid "Social Care Network"
+msgstr "Nettverk for sosial omsorg"
+
+#: news/forms_data.py:111
+msgid "Social Enterprise Network"
+msgstr "Nettverk for sosiale entreprenører"
+
+#: news/forms_data.py:112
+msgid "Society"
+msgstr "Samfunn"
+
+#: news/forms_data.py:113
+msgid "Society Professionals"
+msgstr "Samfunnsprofesjonelle"
+
+#: news/forms_data.py:114
+msgid "Sport"
+msgstr "Sport"
+
+#: news/forms_data.py:115
+msgid "Stage"
+msgstr "Scene"
+
+#: news/forms_data.py:116
+msgid "Teacher Network"
+msgstr "Lærernettverk"
+
+#: news/forms_data.py:117 news/forms_data.py:157
 msgid "Technology"
 msgstr "Teknologi"
 
-#: news/forms_data.py:80
+#: news/forms_data.py:118
+msgid "The Filter"
+msgstr "Filteret"
+
+#: news/forms_data.py:119
+msgid "The Filter US"
+msgstr "Filteret (USA)"
+
+#: news/forms_data.py:120
+msgid "From the Guardian"
+msgstr "Fra Guardian"
+
+#: news/forms_data.py:121
+msgid "From the Observer"
+msgstr "Fra Observer"
+
+#: news/forms_data.py:122
+msgid "Travel"
+msgstr "Reise"
+
+#: news/forms_data.py:123
+msgid "Guardian holiday offers"
+msgstr "Guardian ferietilbud"
+
+#: news/forms_data.py:124
+msgid "Television & radio"
+msgstr "TV & radio"
+
+#: news/forms_data.py:125
+msgid "UK news"
+msgstr "Storbritannia nyheter"
+
+#: news/forms_data.py:126
+msgid "US news"
+msgstr "USA nyheter"
+
+#: news/forms_data.py:127
+msgid "Wellness (Do NOT use)"
+msgstr "Velvære (ikke bruk)"
+
+#: news/forms_data.py:128
+msgid "Voluntary Sector Network"
+msgstr "Frivillig sektor nettverk"
+
+#: news/forms_data.py:129
+msgid "Weather"
+msgstr "Vær"
+
+#: news/forms_data.py:130
+msgid "Wellness"
+msgstr "Velvære"
+
+#: news/forms_data.py:131
+msgid "Women in Leadership"
+msgstr "Kvinner i ledelse"
+
+#: news/forms_data.py:132
+msgid "Working in development"
+msgstr "Arbeide i utvikling"
+
+#: news/forms_data.py:133
+msgid "World news"
+msgstr "Verdensnyheter"
+
+#: news/forms_data.py:152
+msgid "Entertainment"
+msgstr "Underholdning"
+
+#: news/forms_data.py:153
+msgid "General"
+msgstr "Generelt"
+
+#: news/forms_data.py:154
+msgid "Health"
+msgstr "Helse"
+
+#: news/forms_data.py:155
+msgid "Sports"
+msgstr "Sport"
+
+#: news/forms_data.py:164
 msgid "Relevancy"
 msgstr "Relevans"
 
-#: news/forms_data.py:81
+#: news/forms_data.py:165
 msgid "Popularity"
-msgstr "Popularitet"
+msgstr "Populæritet"
 
-#: news/forms_data.py:82
+#: news/forms_data.py:166
 msgid "Published_at"
 msgstr "Publisert"
 
-#: news/forms_data.py:89
+#: news/forms_data.py:173
 msgid "Newest"
 msgstr "Nyeste først"
 
-#: news/forms_data.py:90
+#: news/forms_data.py:174
 msgid "Oldest"
 msgstr "Eldste først"
 
-#: news/forms_data.py:91
+#: news/forms_data.py:175
 msgid "Relevance"
 msgstr "Relevans"
 
-#: news/forms_data.py:96
+#: news/forms_data.py:180
 msgid "United Arab Emirates"
 msgstr "De forente arabiske emirater"
 
-#: news/forms_data.py:97
+#: news/forms_data.py:181
 msgid "Argentina"
 msgstr "Argentina"
 
-#: news/forms_data.py:98
+#: news/forms_data.py:182
 msgid "Austria"
 msgstr "Østerrike"
 
-#: news/forms_data.py:99
+#: news/forms_data.py:183
 msgid "Australia"
 msgstr "Australia"
 
-#: news/forms_data.py:100
+#: news/forms_data.py:184
 msgid "Belgium"
 msgstr "Belgia"
 
-#: news/forms_data.py:101
+#: news/forms_data.py:185
 msgid "Bulgaria"
 msgstr "Bulgaria"
 
-#: news/forms_data.py:102
+#: news/forms_data.py:186
 msgid "Brazil"
 msgstr "Brasil"
 
-#: news/forms_data.py:103
+#: news/forms_data.py:187
 msgid "Canada"
 msgstr "Canada"
 
-#: news/forms_data.py:104
+#: news/forms_data.py:188
 msgid "Switzerland"
 msgstr "Sveits"
 
-#: news/forms_data.py:105
+#: news/forms_data.py:189
 msgid "China"
 msgstr "Kina"
 
-#: news/forms_data.py:106
+#: news/forms_data.py:190
 msgid "Colombia"
 msgstr "Colombia"
 
-#: news/forms_data.py:107
+#: news/forms_data.py:191
 msgid "Cuba"
 msgstr "Cuba"
 
-#: news/forms_data.py:108
+#: news/forms_data.py:192
 msgid "Czech Republic"
 msgstr "Tsjekkia"
 
-#: news/forms_data.py:109
+#: news/forms_data.py:193
 msgid "Germany"
 msgstr "Tyskland"
 
-#: news/forms_data.py:110
+#: news/forms_data.py:194
 msgid "Egypt"
 msgstr "Egypt"
 
-#: news/forms_data.py:111
+#: news/forms_data.py:195
 msgid "France"
 msgstr "Frankrike"
 
-#: news/forms_data.py:112
+#: news/forms_data.py:196
 msgid "United Kingdom"
 msgstr "Storbritannia"
 
-#: news/forms_data.py:113
+#: news/forms_data.py:197
 msgid "Greece"
 msgstr "Hellas"
 
-#: news/forms_data.py:114
+#: news/forms_data.py:198
 msgid "Hong Kong"
 msgstr "Hongkong"
 
-#: news/forms_data.py:115
+#: news/forms_data.py:199
 msgid "Hungary"
 msgstr "Ungarn"
 
-#: news/forms_data.py:116
+#: news/forms_data.py:200
 msgid "Indonesia"
 msgstr "Indonesia"
 
-#: news/forms_data.py:117
+#: news/forms_data.py:201
 msgid "Ireland"
 msgstr "Irland"
 
-#: news/forms_data.py:118
+#: news/forms_data.py:202
 msgid "Israel"
 msgstr "Israel"
 
-#: news/forms_data.py:119
+#: news/forms_data.py:203
 msgid "India"
 msgstr "India"
 
-#: news/forms_data.py:120
+#: news/forms_data.py:204
 msgid "Italy"
 msgstr "Italia"
 
-#: news/forms_data.py:121
+#: news/forms_data.py:205
 msgid "Japan"
 msgstr "Japan"
 
-#: news/forms_data.py:122
+#: news/forms_data.py:206
 msgid "South Korea"
 msgstr "Sør-Korea"
 
-#: news/forms_data.py:123
+#: news/forms_data.py:207
 msgid "Lithuania"
 msgstr "Litauen"
 
-#: news/forms_data.py:124
+#: news/forms_data.py:208
 msgid "Latvia"
 msgstr "Latvia"
 
-#: news/forms_data.py:125
+#: news/forms_data.py:209
 msgid "Morocco"
 msgstr "Marokko"
 
-#: news/forms_data.py:126
+#: news/forms_data.py:210
 msgid "Mexico"
 msgstr "Mexico"
 
-#: news/forms_data.py:127
+#: news/forms_data.py:211
 msgid "Malaysia"
 msgstr "Malaysia"
 
-#: news/forms_data.py:128
+#: news/forms_data.py:212
 msgid "Nigeria"
 msgstr "Nigeria"
 
-#: news/forms_data.py:129
+#: news/forms_data.py:213
 msgid "Netherlands"
 msgstr "Nederland"
 
-#: news/forms_data.py:130
+#: news/forms_data.py:214
 msgid "Norway"
 msgstr "Norge"
 
-#: news/forms_data.py:131
+#: news/forms_data.py:215
 msgid "New Zealand"
 msgstr "New Zealand"
 
-#: news/forms_data.py:132
+#: news/forms_data.py:216
 msgid "Philippines"
 msgstr "Filippinene"
 
-#: news/forms_data.py:133
+#: news/forms_data.py:217
 msgid "Poland"
 msgstr "Polen"
 
-#: news/forms_data.py:134
+#: news/forms_data.py:218
 msgid "Portugal"
 msgstr "Portugal"
 
-#: news/forms_data.py:135
+#: news/forms_data.py:219
 msgid "Romania"
 msgstr "Romania"
 
-#: news/forms_data.py:136
+#: news/forms_data.py:220
 msgid "Serbia"
 msgstr "Serbia"
 
-#: news/forms_data.py:137
+#: news/forms_data.py:221
 msgid "Russia"
 msgstr "Russland"
 
-#: news/forms_data.py:138
+#: news/forms_data.py:222
 msgid "Saudi Arabia"
 msgstr "Saudi-Arabia"
 
-#: news/forms_data.py:139
+#: news/forms_data.py:223
 msgid "Sweden"
 msgstr "Sverige"
 
-#: news/forms_data.py:140
+#: news/forms_data.py:224
 msgid "Singapore"
 msgstr "Singapore"
 
-#: news/forms_data.py:141
+#: news/forms_data.py:225
 msgid "Slovenia"
 msgstr "Slovenia"
 
-#: news/forms_data.py:142
+#: news/forms_data.py:226
 msgid "Slovakia"
 msgstr "Slovakia"
 
-#: news/forms_data.py:143
+#: news/forms_data.py:227
 msgid "Thailand"
 msgstr "Thailand"
 
-#: news/forms_data.py:144
+#: news/forms_data.py:228
 msgid "Turkey"
 msgstr "Tyrkia"
 
-#: news/forms_data.py:145
+#: news/forms_data.py:229
 msgid "Taiwan"
 msgstr "Taiwan"
 
-#: news/forms_data.py:146
+#: news/forms_data.py:230
 msgid "Ukraine"
 msgstr "Ukraina"
 
-#: news/forms_data.py:148
+#: news/forms_data.py:232
 msgid "Venezuela"
 msgstr "Venezuela"
 
-#: news/forms_data.py:149
+#: news/forms_data.py:233
 msgid "South Africa"
 msgstr "Sør-Afrika"
 
@@ -464,7 +756,7 @@ msgstr "lenke til nyheten"
 
 #: news/models.py:31
 msgid "image_link"
-msgstr "bildelenke"
+msgstr "lenke til bilde"
 
 #: news/models.py:35
 msgid "source_name"
@@ -484,7 +776,7 @@ msgstr "kategori"
 
 #: news/models.py:52
 msgid "featured_news"
-msgstr "fremhevede nyheter"
+msgstr "utvalgte nyheter"
 
 #: news/models.py:53
 msgid "selected_news"
@@ -496,11 +788,11 @@ msgstr "Skjemafeil"
 
 #: news/views.py:84
 msgid "You_cannot_select_sources_together_with_country_or_category"
-msgstr "Du kan ikke velge kilder samtidig som du angir land eller kategori."
+msgstr "Du kan ikke velge kilder samtidig som du velger land eller kategori."
 
 #: news/views.py:158
 msgid "Used_default_query"
-msgstr "Standardspørring brukes"
+msgstr "Standardspørring brukt"
 
 #: templates/base.html:6 templates/home.html:5 templates/home.html:18
 #: templates/includes/footer.html:8 templates/includes/header.html:7
@@ -518,19 +810,19 @@ msgstr "Alle nyheter på ett sted"
 
 #: templates/home.html:21
 msgid "Find_Read_Stay_informed"
-msgstr "Finn. Les. Hold deg oppdatert."
+msgstr "Finn. Les. Hold deg informert."
 
-#: templates/home.html:49
+#: templates/home.html:51
 msgid "Start_by_searching_or_go_to"
 msgstr "Start med søk eller gå til"
 
-#: templates/home.html:51
+#: templates/home.html:53
 msgid "Main_news"
 msgstr "Hovednyheter"
 
 #: templates/includes/footer.html:11
 msgid "footer_site_descriptions"
-msgstr "Nyhetsaggregator fra ulike kilder. Raskt, praktisk og sikkert."
+msgstr "Nyhetsaggregator fra forskjellige kilder. Rask, praktisk og sikker."
 
 #: templates/includes/footer.html:16
 msgid "Navigation"
@@ -551,7 +843,7 @@ msgstr "Kilder"
 #: templates/includes/footer.html:37 templates/users/account_activate.html:7
 #: users/models.py:70
 msgid "User"
-msgstr "Brukere"
+msgstr "Bruker"
 
 #: templates/includes/footer.html:41 templates/includes/header.html:71
 msgid "Profile"
@@ -559,7 +851,7 @@ msgstr "Profil"
 
 #: templates/includes/footer.html:46
 msgid "Favorite"
-msgstr "Favoritt"
+msgstr "Favoritter"
 
 #: templates/includes/footer.html:51 templates/users/profile.html:40
 msgid "Settings"
@@ -575,7 +867,7 @@ msgstr "Velg språk"
 
 #: templates/includes/header.html:19 templates/news/top_headlines_news.html:5
 msgid "Top_headlines"
-msgstr "Toppoverskrifter"
+msgstr "Toppnyheter"
 
 #: templates/includes/header.html:27 templates/news/everything_news.html:5
 #: templates/news/guardian_news.html:5
@@ -643,7 +935,7 @@ msgstr "Ingen kilder funnet"
 
 #: templates/users/account_activate.html:6
 msgid "Account_verification"
-msgstr "Kontoverifisering"
+msgstr "Bekreftelse av konto"
 
 #: templates/users/account_activate.html:12 templates/users/login.html:12
 #: templates/users/login.html:58 templates/users/signup.html:114
@@ -657,7 +949,7 @@ msgstr "Favoritter"
 
 #: templates/users/favorites.html:8
 msgid "All_your_saved_articles"
-msgstr "Alle lagrede artiklene dine"
+msgstr "Alle dine lagrede artikler"
 
 #: templates/users/favorites.html:19
 msgid "Its_empty_here_yet"
@@ -665,19 +957,19 @@ msgstr "Det er tomt her ennå."
 
 #: templates/users/favorites.html:20
 msgid "Search_news"
-msgstr "Søk i nyheter"
+msgstr "Søk etter nyheter"
 
 #: templates/users/login.html:4
 msgid "Entrance"
-msgstr "Inngang"
+msgstr "Innlogging"
 
 #: templates/users/login.html:13
 msgid "Enter_your_credentials"
-msgstr "Skriv inn dine påloggingsopplysninger"
+msgstr "Skriv inn dine legitimasjoner"
 
 #: templates/users/login.html:65
 msgid "Forgot_your_password"
-msgstr "Glemt passordet?"
+msgstr "Glemt passord?"
 
 #: templates/users/login.html:69
 msgid "Dont_have_an_account"
@@ -705,9 +997,7 @@ msgstr "Logg inn igjen"
 
 #: templates/users/logout.html:31
 msgid "Your_session_has_ended_For_security_reasons_we_recommend_closing_your_browser"
-msgstr ""
-"Økten din er avsluttet. Av sikkerhetsårsaker anbefaler vi å lukke "
-"nettleseren."
+msgstr "Din økt er avsluttet. Av sikkerhetsgrunner anbefaler vi å lukke nettleseren."
 
 #: templates/users/password_change.html:4
 #: templates/users/password_change.html:13
@@ -719,7 +1009,7 @@ msgstr "Endre passord"
 
 #: templates/users/password_change.html:14
 msgid "Enter_your_current_password_and_new_password"
-msgstr "Skriv inn gjeldende passord og nytt passord."
+msgstr "Skriv inn ditt nåværende og nye passord."
 
 #: templates/users/password_change.html:30
 msgid "Current_Password"
@@ -732,7 +1022,7 @@ msgstr "Nytt passord"
 
 #: templates/users/password_change.html:69
 msgid "Confirming_a_new_password"
-msgstr "Bekreft nytt passord"
+msgstr "Bekrefte nytt passord"
 
 #: templates/users/password_change.html:89
 #: templates/users/profile_update.html:93
@@ -749,17 +1039,15 @@ msgstr "Passordet ble endret!"
 
 #: templates/users/password_change_done.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_use_the_new_password_to_log_in"
-msgstr "Passordet ditt er endret. Du kan nå logge inn med det nye passordet."
+msgstr "Ditt passord ble endret. Du kan nå bruke det nye passordet for å logge inn."
 
 #: templates/users/password_change_done.html:23
 msgid "Return_to_profile"
-msgstr "Gå tilbake til profilen"
+msgstr "Tilbake til profilen"
 
 #: templates/users/password_change_done.html:36
 msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regularly"
-msgstr ""
-"Det anbefales å bruke forskjellige passord for ulike tjenester og endre dem "
-"jevnlig."
+msgstr "Det anbefales å bruke forskjellige passord for forskjellige tjenester og endre dem regelmessig."
 
 #: templates/users/password_reset.html:4 templates/users/password_reset.html:13
 msgid "Password_reset"
@@ -779,13 +1067,11 @@ msgstr "Send instruksjoner"
 
 #: templates/users/password_reset.html:52
 msgid "Back_to_the_entrance"
-msgstr "Tilbake til pålogging"
+msgstr "Tilbake til innlogging"
 
 #: templates/users/password_reset.html:61
 msgid "If_you_have_not_received_the_email_check_your_spam_folder_or_make_sure_you_entered_the_correct_email_address"
-msgstr ""
-"Hvis du ikke har mottatt e-posten, sjekk søppelpostmappen eller forsikre deg "
-"om at du skrev inn riktig e-postadresse."
+msgstr "Hvis du ikke har mottatt e-posten, sjekk spam-mappen eller sørg for at du skrev riktig e-postadresse."
 
 #: templates/users/password_reset_complete.html:4
 #: templates/users/password_reset_complete.html:15
@@ -794,7 +1080,7 @@ msgstr "Passord gjenopprettet"
 
 #: templates/users/password_reset_complete.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_log_in_with_your_new_password"
-msgstr "Passordet ditt ble endret. Du kan nå logge inn med det nye passordet."
+msgstr "Ditt passord ble endret. Du kan nå logge inn med ditt nye passord."
 
 #: templates/users/password_reset_complete.html:23
 msgid "Sign_in"
@@ -832,9 +1118,7 @@ msgstr "Bekreft passord"
 
 #: templates/users/password_reset_confirm.html:85
 msgid "The_password_reset_link_is_invalid_possibly_because_it_has_already_been_used"
-msgstr ""
-"Lenken for tilbakestilling av passord er ugyldig — den kan ha blitt brukt "
-"allerede."
+msgstr "Lenken for tilbakestilling av passord er ugyldig — den kan ha blitt brukt allerede."
 
 #: templates/users/password_reset_confirm.html:86
 msgid "Please_request_a_new_password_reset"
@@ -847,11 +1131,11 @@ msgstr "Be om ny tilbakestilling av passord"
 #: templates/users/password_reset_confirm.html:96
 #: templates/users/password_reset_done.html:36
 msgid "Return_to_the_entrance"
-msgstr "Gå tilbake til pålogging"
+msgstr "Tilbake til innlogging"
 
 #: templates/users/password_reset_done.html:4
 msgid "Instructions_have_been_sent"
-msgstr "Instruksjonene er sendt."
+msgstr "Instruksjoner er sendt."
 
 #: templates/users/password_reset_done.html:15
 msgid "Check_your_mail"
@@ -859,9 +1143,7 @@ msgstr "Sjekk e-posten din"
 
 #: templates/users/password_reset_done.html:18
 msgid "We_have_sent_password_recovery_instructions_to_the_email_address_you_provided"
-msgstr ""
-"Vi har sendt instruksjoner for passordgjenoppretting til e-postadressen du "
-"oppga."
+msgstr "Vi har sendt instruksjoner for gjenoppretting av passord til e-postadressen du oppga."
 
 #: templates/users/password_reset_done.html:19
 msgid "You_should_receive_them_soon"
@@ -869,11 +1151,11 @@ msgstr "Du bør motta dem snart."
 
 #: templates/users/password_reset_done.html:27
 msgid "If_you_dont_see_the_email_check_your_spam_folder"
-msgstr "Hvis du ikke ser e-posten, sjekk søppelpostmappen"
+msgstr "Hvis du ikke ser e-posten, sjekk spam-mappen."
 
 #: templates/users/password_reset_done.html:28
 msgid "Sometimes_password_recovery_emails_can_end_up_there"
-msgstr "Noen ganger kan e-poster for passordgjenoppretting havne der."
+msgstr "Noen ganger havner e-poster for gjenoppretting av passord der."
 
 #: templates/users/profile.html:5
 msgid "User_profile"
@@ -894,12 +1176,12 @@ msgstr "Personlig informasjon"
 
 #: templates/users/profile.html:65 users/forms.py:60
 msgid "Name"
-msgstr "Navn"
+msgstr "Fornavn"
 
 #: templates/users/profile.html:66 templates/users/profile.html:70
 #: templates/users/profile.html:81 templates/users/profile.html:88
 msgid "Not_specified"
-msgstr "Ikke spesifisert"
+msgstr "Ikke angitt"
 
 #: templates/users/profile.html:69 users/forms.py:65
 msgid "Surname"
@@ -911,7 +1193,7 @@ msgstr "Fødselsdato"
 
 #: templates/users/profile.html:86 templates/users/profile_update.html:39
 msgid "Location"
-msgstr "Beliggenhet"
+msgstr "Sted"
 
 #: templates/users/profile.html:95
 msgid "Registration_date"
@@ -919,7 +1201,7 @@ msgstr "Registreringsdato"
 
 #: templates/users/profile.html:99
 msgid "Last_entry"
-msgstr "Siste aktivitet"
+msgstr "Siste pålogging"
 
 #: templates/users/profile.html:101
 msgid "Recently"
@@ -972,7 +1254,7 @@ msgstr "Brukere"
 
 #: users/backends.py:50
 msgid "account_activation_mail_text"
-msgstr "E-post for kontoaktivering"
+msgstr "Vennligst bekreft kontoen din via lenken nedenfor."
 
 #: users/backends.py:52
 msgid "Account_activation"
@@ -992,11 +1274,11 @@ msgstr "Skriv inn brukernavn"
 
 #: users/forms.py:52
 msgid "Enter_email"
-msgstr "Skriv inn e-post"
+msgstr "Skriv inn e-postadresse"
 
 #: users/forms.py:109
 msgid "Upload_your_profile_picture"
-msgstr "Last opp profilbilde."
+msgstr "Last opp profilbildet ditt."
 
 #: users/forms.py:130
 msgid "invalid_login_text"
@@ -1016,7 +1298,7 @@ msgstr "Avatar"
 
 #: users/models.py:77
 msgid "User_avatar"
-msgstr "Brukerens avatar."
+msgstr "Brukeravatar."
 
 #: users/models.py:85
 msgid "User_date_of_birth"
@@ -1036,11 +1318,11 @@ msgstr "Antall påloggingsforsøk"
 
 #: users/models.py:104
 msgid "Deactivate_in"
-msgstr "Deaktiveres om"
+msgstr "Deaktiver om"
 
 #: users/models.py:105
 msgid "Account_was_deactivated"
-msgstr "kontoen ble deaktivert"
+msgstr "Kontoen ble deaktivert"
 
 #: users/models.py:122
 msgid "profile"
@@ -1056,7 +1338,7 @@ msgstr "Feil i fødselsdato"
 
 #: users/validators.py:39
 msgid "Max_file_size_limit"
-msgstr "Filen din er for stor. Maksimal størrelse: "
+msgstr "Filen din er for stor. Maks størrelse: "
 
 #: users/views.py:33
 msgid "Already_activated"
@@ -1068,7 +1350,7 @@ msgstr "Aktivering vellykket"
 
 #: users/views.py:54 users/views.py:68
 msgid "Activation_time_expired"
-msgstr "Tiden for aktivering er utløpt"
+msgstr "Aktiveringstiden er utløpt"
 
 #: users/views.py:70
 msgid "Account_is_not_deactivated"

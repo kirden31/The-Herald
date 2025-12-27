@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-27 11:27+0300\n"
-"PO-Revision-Date: 2025-12-21 00:00+0000\n"
+"POT-Creation-Date: 2025-12-27 15:54+0300\n"
+"PO-Revision-Date: 2025-12-26 16:10+0300\n"
 "Last-Translator: ChatGPT <translator@example.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "Language: fr\n"
@@ -68,16 +68,16 @@ msgstr "Lien et date"
 msgid "Source"
 msgstr "Source"
 
-#: news/apps.py:10
+#: news/apps.py:10 news/forms_data.py:104
 msgid "News"
 msgstr "Actualités"
 
-#: news/forms.py:14 templates/home.html:39 templates/includes/footer.html:25
-#: templates/includes/search_area.html:10
+#: news/forms.py:14 news/forms_data.py:108 templates/home.html:40
+#: templates/includes/footer.html:25 templates/includes/search_area.html:10
 msgid "Search"
-msgstr "Recherche"
+msgstr "Rechercher"
 
-#: news/forms.py:19
+#: news/forms.py:19 templates/home.html:32
 msgid "search_area_placeholder"
 msgstr "Recherche..."
 
@@ -87,7 +87,7 @@ msgstr "Trier par"
 
 #: news/forms.py:56
 msgid "Search_in_default_all"
-msgstr "Sélectionnez la langue (par défaut — toutes)"
+msgstr "Sélectionner la langue (par défaut — toutes)"
 
 #: news/forms.py:69
 msgid "Select_sources_max_default_all"
@@ -103,19 +103,19 @@ msgstr "Actualités jusqu'à"
 
 #: news/forms.py:110 news/forms.py:171
 msgid "Select_language_default_all"
-msgstr "Sélectionnez la langue (par défaut — toutes)"
+msgstr "Sélectionner la langue (par défaut — toutes)"
 
 #: news/forms.py:128 news/forms.py:197
 msgid "Select_countries_default_all"
-msgstr "Sélectionnez les pays (par défaut — tous)"
+msgstr "Sélectionner les pays (par défaut — tous)"
 
 #: news/forms.py:140 news/forms.py:184
 msgid "Select_categories_default_all"
-msgstr "Sélectionnez les catégories (par défaut — toutes)"
+msgstr "Sélectionner les catégories (par défaut — toutes)"
 
 #: news/forms.py:152
 msgid "Select_sources_default_all"
-msgstr "Sélectionnez la source (par défaut — toutes)"
+msgstr "Sélectionner les sources (par défaut — toutes)"
 
 #: news/forms.py:213
 msgid "Sections"
@@ -123,12 +123,12 @@ msgstr "Sections"
 
 #: news/forms.py:225
 msgid "Rating"
-msgstr "Note"
+msgstr "Évaluation"
 
-#: news/forms_data.py:19 news/forms_data.py:66 news/forms_data.py:95
-#: news/forms_data.py:160
+#: news/forms_data.py:19 news/forms_data.py:150 news/forms_data.py:179
+#: news/forms_data.py:244
 msgid "All"
-msgstr ""
+msgstr "Tous"
 
 #: news/forms_data.py:25
 msgid "Hebrew"
@@ -142,12 +142,6 @@ msgstr "Italien"
 msgid "Dutch"
 msgstr "Néerlandais"
 
-#: news/forms_data.py:28
-#, fuzzy
-#| msgid "Norwegian Bokmål"
-msgid "Norwegian Nynorsk"
-msgstr "Norvégien (Bokmål)"
-
 #: news/forms_data.py:29
 msgid "Portuguese"
 msgstr "Portugais"
@@ -158,13 +152,9 @@ msgstr "Suédois"
 
 #: news/forms_data.py:32
 msgid "Simplified Chinese"
-msgstr ""
+msgstr "Chinois simplifié"
 
-#: news/forms_data.py:32
-msgid "Traditional Chinese"
-msgstr ""
-
-#: news/forms_data.py:35 news/forms_data.py:147
+#: news/forms_data.py:35 news/forms_data.py:231
 msgid "United States"
 msgstr "États-Unis"
 
@@ -180,267 +170,567 @@ msgstr "Description"
 msgid "Content"
 msgstr "Contenu"
 
-#: news/forms_data.py:67
+#: news/forms_data.py:54
+msgid "About"
+msgstr "À propos"
+
+#: news/forms_data.py:55
+msgid "Animals farmed"
+msgstr "Animaux d'élevage"
+
+#: news/forms_data.py:56
+msgid "Art and design"
+msgstr "Art et design"
+
+#: news/forms_data.py:57
+msgid "Australia news"
+msgstr "Actualités Australie"
+
+#: news/forms_data.py:58
+msgid "Better Business"
+msgstr "Amélioration des entreprises"
+
+#: news/forms_data.py:59
+msgid "Books"
+msgstr "Livres"
+
+#: news/forms_data.py:60 news/forms_data.py:151
 msgid "Business"
 msgstr "Affaires"
 
+#: news/forms_data.py:61
+msgid "Business to business"
+msgstr "Business to business (B2B)"
+
+#: news/forms_data.py:62
+msgid "Cardiff"
+msgstr "Cardiff"
+
+#: news/forms_data.py:63
+msgid "Children's books"
+msgstr "Livres pour enfants"
+
+#: news/forms_data.py:64
+msgid "Cities"
+msgstr "Villes"
+
+#: news/forms_data.py:65
+msgid "Opinion"
+msgstr "Opinion"
+
+#: news/forms_data.py:66
+msgid "Community"
+msgstr "Communauté"
+
+#: news/forms_data.py:67
+msgid "Crosswords"
+msgstr "Mots croisés"
+
 #: news/forms_data.py:68
-msgid "Entertainment"
-msgstr "Divertissement"
+msgid "Culture"
+msgstr "Culture"
 
 #: news/forms_data.py:69
-msgid "General"
-msgstr "Général"
+msgid "Culture Network"
+msgstr "Réseau culturel"
 
 #: news/forms_data.py:70
-msgid "Health"
-msgstr "Santé"
+msgid "Culture professionals network"
+msgstr "Réseau des professionnels de la culture"
 
 #: news/forms_data.py:71
-msgid "Sports"
-msgstr "Sports"
+msgid "Edinburgh"
+msgstr "Édimbourg"
 
 #: news/forms_data.py:72
+msgid "Education"
+msgstr "Éducation"
+
+#: news/forms_data.py:73
+msgid "Guardian Enterprise Network"
+msgstr "Réseau d'entreprise du Guardian"
+
+#: news/forms_data.py:74
+msgid "Environment"
+msgstr "Environnement"
+
+#: news/forms_data.py:75
+msgid "Extra"
+msgstr "Extra"
+
+#: news/forms_data.py:76
+msgid "Fashion"
+msgstr "Mode"
+
+#: news/forms_data.py:77
+msgid "Film"
+msgstr "Cinéma"
+
+#: news/forms_data.py:78
+msgid "Food"
+msgstr "Alimentation"
+
+#: news/forms_data.py:79
+msgid "Football"
+msgstr "Football"
+
+#: news/forms_data.py:80
+msgid "Games"
+msgstr "Jeux"
+
+#: news/forms_data.py:81
+msgid "Global development"
+msgstr "Développement mondial"
+
+#: news/forms_data.py:82
+msgid "Global Development Professionals Network"
+msgstr "Réseau des professionnels du développement mondial"
+
+#: news/forms_data.py:83
+msgid "Guardian Government Computing"
+msgstr "Guardian — informatique gouvernementale"
+
+#: news/forms_data.py:84
+msgid "Guardian Foundation"
+msgstr "Fondation Guardian"
+
+#: news/forms_data.py:85
+msgid "Guardian Professional"
+msgstr "Guardian Professionnel"
+
+#: news/forms_data.py:86
+msgid "Healthcare Professionals Network"
+msgstr "Réseau des professionnels de santé"
+
+#: news/forms_data.py:87
+msgid "Help"
+msgstr "Aide"
+
+#: news/forms_data.py:88
+msgid "Higher Education Network"
+msgstr "Réseau de l'enseignement supérieur"
+
+#: news/forms_data.py:89
+msgid "Housing Network"
+msgstr "Réseau logement"
+
+#: news/forms_data.py:90
+msgid "Inequality"
+msgstr "Inégalité"
+
+#: news/forms_data.py:91
+msgid "Info"
+msgstr "Info"
+
+#: news/forms_data.py:92
+msgid "Jobs"
+msgstr "Emplois"
+
+#: news/forms_data.py:93
+msgid "Katine"
+msgstr "Katine"
+
+#: news/forms_data.py:94
+msgid "Law"
+msgstr "Droit"
+
+#: news/forms_data.py:95
+msgid "Leeds"
+msgstr "Leeds"
+
+#: news/forms_data.py:96
+msgid "Life and style"
+msgstr "Vie et style"
+
+#: news/forms_data.py:97
+msgid "Local"
+msgstr "Local"
+
+#: news/forms_data.py:98
+msgid "Local Leaders Network"
+msgstr "Réseau des leaders locaux"
+
+#: news/forms_data.py:99
+msgid "Media"
+msgstr "Médias"
+
+#: news/forms_data.py:100
+msgid "Media Network"
+msgstr "Réseau média"
+
+#: news/forms_data.py:101
+msgid "Membership"
+msgstr "Adhésion"
+
+#: news/forms_data.py:102
+msgid "Money"
+msgstr "Argent"
+
+#: news/forms_data.py:103
+msgid "Music"
+msgstr "Musique"
+
+#: news/forms_data.py:105
+msgid "Politics"
+msgstr "Politique"
+
+#: news/forms_data.py:106
+msgid "Public Leaders Network"
+msgstr "Réseau des leaders publics"
+
+#: news/forms_data.py:107 news/forms_data.py:156
 msgid "Science"
 msgstr "Science"
 
-#: news/forms_data.py:73
+#: news/forms_data.py:109
+msgid "Guardian Small Business Network"
+msgstr "Réseau des petites entreprises Guardian"
+
+#: news/forms_data.py:110
+msgid "Social Care Network"
+msgstr "Réseau de l'aide sociale"
+
+#: news/forms_data.py:111
+msgid "Social Enterprise Network"
+msgstr "Réseau des entreprises sociales"
+
+#: news/forms_data.py:112
+msgid "Society"
+msgstr "Société"
+
+#: news/forms_data.py:113
+msgid "Society Professionals"
+msgstr "Professionnels de la société"
+
+#: news/forms_data.py:114
+msgid "Sport"
+msgstr "Sport"
+
+#: news/forms_data.py:115
+msgid "Stage"
+msgstr "Scène"
+
+#: news/forms_data.py:116
+msgid "Teacher Network"
+msgstr "Réseau des enseignants"
+
+#: news/forms_data.py:117 news/forms_data.py:157
 msgid "Technology"
 msgstr "Technologie"
 
-#: news/forms_data.py:80
+#: news/forms_data.py:118
+msgid "The Filter"
+msgstr "Le filtre"
+
+#: news/forms_data.py:119
+msgid "The Filter US"
+msgstr "Le filtre (États-Unis)"
+
+#: news/forms_data.py:120
+msgid "From the Guardian"
+msgstr "Du Guardian"
+
+#: news/forms_data.py:121
+msgid "From the Observer"
+msgstr "De l'Observer"
+
+#: news/forms_data.py:122
+msgid "Travel"
+msgstr "Voyage"
+
+#: news/forms_data.py:123
+msgid "Guardian holiday offers"
+msgstr "Offres de vacances Guardian"
+
+#: news/forms_data.py:124
+msgid "Television & radio"
+msgstr "Télévision & radio"
+
+#: news/forms_data.py:125
+msgid "UK news"
+msgstr "Actualités Royaume-Uni"
+
+#: news/forms_data.py:126
+msgid "US news"
+msgstr "Actualités États-Unis"
+
+#: news/forms_data.py:127
+msgid "Wellness (Do NOT use)"
+msgstr "Bien-être (NE PAS utiliser)"
+
+#: news/forms_data.py:128
+msgid "Voluntary Sector Network"
+msgstr "Réseau du secteur bénévole"
+
+#: news/forms_data.py:129
+msgid "Weather"
+msgstr "Météo"
+
+#: news/forms_data.py:130
+msgid "Wellness"
+msgstr "Bien-être"
+
+#: news/forms_data.py:131
+msgid "Women in Leadership"
+msgstr "Femmes en leadership"
+
+#: news/forms_data.py:132
+msgid "Working in development"
+msgstr "Travailler dans le développement"
+
+#: news/forms_data.py:133
+msgid "World news"
+msgstr "Actualités mondiales"
+
+#: news/forms_data.py:152
+msgid "Entertainment"
+msgstr "Divertissement"
+
+#: news/forms_data.py:153
+msgid "General"
+msgstr "Général"
+
+#: news/forms_data.py:154
+msgid "Health"
+msgstr "Santé"
+
+#: news/forms_data.py:155
+msgid "Sports"
+msgstr "Sports"
+
+#: news/forms_data.py:164
 msgid "Relevancy"
 msgstr "Pertinence"
 
-#: news/forms_data.py:81
+#: news/forms_data.py:165
 msgid "Popularity"
 msgstr "Popularité"
 
-#: news/forms_data.py:82
+#: news/forms_data.py:166
 msgid "Published_at"
 msgstr "Publié le"
 
-#: news/forms_data.py:89
+#: news/forms_data.py:173
 msgid "Newest"
 msgstr "Les plus récents d'abord"
 
-#: news/forms_data.py:90
+#: news/forms_data.py:174
 msgid "Oldest"
 msgstr "Les plus anciens d'abord"
 
-#: news/forms_data.py:91
+#: news/forms_data.py:175
 msgid "Relevance"
 msgstr "Pertinence"
 
-#: news/forms_data.py:96
+#: news/forms_data.py:180
 msgid "United Arab Emirates"
-msgstr "Émirats arabes unis"
+msgstr "Émirats Arabes Unis"
 
-#: news/forms_data.py:97
+#: news/forms_data.py:181
 msgid "Argentina"
 msgstr "Argentine"
 
-#: news/forms_data.py:98
+#: news/forms_data.py:182
 msgid "Austria"
 msgstr "Autriche"
 
-#: news/forms_data.py:99
+#: news/forms_data.py:183
 msgid "Australia"
 msgstr "Australie"
 
-#: news/forms_data.py:100
+#: news/forms_data.py:184
 msgid "Belgium"
 msgstr "Belgique"
 
-#: news/forms_data.py:101
+#: news/forms_data.py:185
 msgid "Bulgaria"
 msgstr "Bulgarie"
 
-#: news/forms_data.py:102
+#: news/forms_data.py:186
 msgid "Brazil"
 msgstr "Brésil"
 
-#: news/forms_data.py:103
+#: news/forms_data.py:187
 msgid "Canada"
 msgstr "Canada"
 
-#: news/forms_data.py:104
+#: news/forms_data.py:188
 msgid "Switzerland"
 msgstr "Suisse"
 
-#: news/forms_data.py:105
+#: news/forms_data.py:189
 msgid "China"
 msgstr "Chine"
 
-#: news/forms_data.py:106
+#: news/forms_data.py:190
 msgid "Colombia"
 msgstr "Colombie"
 
-#: news/forms_data.py:107
+#: news/forms_data.py:191
 msgid "Cuba"
 msgstr "Cuba"
 
-#: news/forms_data.py:108
+#: news/forms_data.py:192
 msgid "Czech Republic"
 msgstr "République tchèque"
 
-#: news/forms_data.py:109
+#: news/forms_data.py:193
 msgid "Germany"
 msgstr "Allemagne"
 
-#: news/forms_data.py:110
+#: news/forms_data.py:194
 msgid "Egypt"
 msgstr "Égypte"
 
-#: news/forms_data.py:111
+#: news/forms_data.py:195
 msgid "France"
 msgstr "France"
 
-#: news/forms_data.py:112
+#: news/forms_data.py:196
 msgid "United Kingdom"
 msgstr "Royaume-Uni"
 
-#: news/forms_data.py:113
+#: news/forms_data.py:197
 msgid "Greece"
 msgstr "Grèce"
 
-#: news/forms_data.py:114
+#: news/forms_data.py:198
 msgid "Hong Kong"
 msgstr "Hong Kong"
 
-#: news/forms_data.py:115
+#: news/forms_data.py:199
 msgid "Hungary"
 msgstr "Hongrie"
 
-#: news/forms_data.py:116
+#: news/forms_data.py:200
 msgid "Indonesia"
 msgstr "Indonésie"
 
-#: news/forms_data.py:117
+#: news/forms_data.py:201
 msgid "Ireland"
 msgstr "Irlande"
 
-#: news/forms_data.py:118
+#: news/forms_data.py:202
 msgid "Israel"
 msgstr "Israël"
 
-#: news/forms_data.py:119
+#: news/forms_data.py:203
 msgid "India"
 msgstr "Inde"
 
-#: news/forms_data.py:120
+#: news/forms_data.py:204
 msgid "Italy"
 msgstr "Italie"
 
-#: news/forms_data.py:121
+#: news/forms_data.py:205
 msgid "Japan"
 msgstr "Japon"
 
-#: news/forms_data.py:122
+#: news/forms_data.py:206
 msgid "South Korea"
 msgstr "Corée du Sud"
 
-#: news/forms_data.py:123
+#: news/forms_data.py:207
 msgid "Lithuania"
 msgstr "Lituanie"
 
-#: news/forms_data.py:124
+#: news/forms_data.py:208
 msgid "Latvia"
 msgstr "Lettonie"
 
-#: news/forms_data.py:125
+#: news/forms_data.py:209
 msgid "Morocco"
 msgstr "Maroc"
 
-#: news/forms_data.py:126
+#: news/forms_data.py:210
 msgid "Mexico"
 msgstr "Mexique"
 
-#: news/forms_data.py:127
+#: news/forms_data.py:211
 msgid "Malaysia"
 msgstr "Malaisie"
 
-#: news/forms_data.py:128
+#: news/forms_data.py:212
 msgid "Nigeria"
 msgstr "Nigéria"
 
-#: news/forms_data.py:129
+#: news/forms_data.py:213
 msgid "Netherlands"
 msgstr "Pays-Bas"
 
-#: news/forms_data.py:130
+#: news/forms_data.py:214
 msgid "Norway"
 msgstr "Norvège"
 
-#: news/forms_data.py:131
+#: news/forms_data.py:215
 msgid "New Zealand"
 msgstr "Nouvelle-Zélande"
 
-#: news/forms_data.py:132
+#: news/forms_data.py:216
 msgid "Philippines"
 msgstr "Philippines"
 
-#: news/forms_data.py:133
+#: news/forms_data.py:217
 msgid "Poland"
 msgstr "Pologne"
 
-#: news/forms_data.py:134
+#: news/forms_data.py:218
 msgid "Portugal"
 msgstr "Portugal"
 
-#: news/forms_data.py:135
+#: news/forms_data.py:219
 msgid "Romania"
 msgstr "Roumanie"
 
-#: news/forms_data.py:136
+#: news/forms_data.py:220
 msgid "Serbia"
 msgstr "Serbie"
 
-#: news/forms_data.py:137
+#: news/forms_data.py:221
 msgid "Russia"
 msgstr "Russie"
 
-#: news/forms_data.py:138
+#: news/forms_data.py:222
 msgid "Saudi Arabia"
 msgstr "Arabie Saoudite"
 
-#: news/forms_data.py:139
+#: news/forms_data.py:223
 msgid "Sweden"
 msgstr "Suède"
 
-#: news/forms_data.py:140
+#: news/forms_data.py:224
 msgid "Singapore"
 msgstr "Singapour"
 
-#: news/forms_data.py:141
+#: news/forms_data.py:225
 msgid "Slovenia"
 msgstr "Slovénie"
 
-#: news/forms_data.py:142
+#: news/forms_data.py:226
 msgid "Slovakia"
 msgstr "Slovaquie"
 
-#: news/forms_data.py:143
+#: news/forms_data.py:227
 msgid "Thailand"
 msgstr "Thaïlande"
 
-#: news/forms_data.py:144
+#: news/forms_data.py:228
 msgid "Turkey"
 msgstr "Turquie"
 
-#: news/forms_data.py:145
+#: news/forms_data.py:229
 msgid "Taiwan"
 msgstr "Taïwan"
 
-#: news/forms_data.py:146
+#: news/forms_data.py:230
 msgid "Ukraine"
 msgstr "Ukraine"
 
-#: news/forms_data.py:148
+#: news/forms_data.py:232
 msgid "Venezuela"
 msgstr "Venezuela"
 
-#: news/forms_data.py:149
+#: news/forms_data.py:233
 msgid "South Africa"
 msgstr "Afrique du Sud"
 
@@ -462,7 +752,7 @@ msgstr "contenu"
 
 #: news/models.py:28
 msgid "link_to_news"
-msgstr "lien vers la nouvelle"
+msgstr "lien vers l'article"
 
 #: news/models.py:31
 msgid "image_link"
@@ -490,7 +780,7 @@ msgstr "actualités en vedette"
 
 #: news/models.py:53
 msgid "selected_news"
-msgstr "actualités recommandées"
+msgstr "actualités sélectionnées"
 
 #: news/views.py:55 news/views.py:130 news/views.py:206 news/views.py:272
 msgid "Forms_error"
@@ -498,9 +788,7 @@ msgstr "Erreur de formulaire"
 
 #: news/views.py:84
 msgid "You_cannot_select_sources_together_with_country_or_category"
-msgstr ""
-"Vous ne pouvez pas sélectionner des sources en même temps que le pays ou la "
-"catégorie."
+msgstr "Vous ne pouvez pas sélectionner des sources en même temps qu'un pays ou une catégorie."
 
 #: news/views.py:158
 msgid "Used_default_query"
@@ -518,25 +806,23 @@ msgstr "Le contenu n'a pas été livré :("
 
 #: templates/home.html:5
 msgid "All_news_in_one_place"
-msgstr "Toutes les nouvelles au même endroit"
+msgstr "Toutes les actualités au même endroit"
 
 #: templates/home.html:21
 msgid "Find_Read_Stay_informed"
-msgstr "Trouvez. Lisez. Restez informé."
+msgstr "Cherchez. Lisez. Restez informé."
 
-#: templates/home.html:49
+#: templates/home.html:51
 msgid "Start_by_searching_or_go_to"
 msgstr "Commencez par rechercher ou allez à"
 
-#: templates/home.html:51
+#: templates/home.html:53
 msgid "Main_news"
 msgstr "Actualités principales"
 
 #: templates/includes/footer.html:11
 msgid "footer_site_descriptions"
-msgstr ""
-"Agrégateur de nouvelles provenant de différentes sources. Rapide, pratique "
-"et sûr."
+msgstr "Agrégateur d'actualités provenant de différentes sources. Rapide, pratique et sûr."
 
 #: templates/includes/footer.html:16
 msgid "Navigation"
@@ -565,7 +851,7 @@ msgstr "Profil"
 
 #: templates/includes/footer.html:46
 msgid "Favorite"
-msgstr "Favori"
+msgstr "Favoris"
 
 #: templates/includes/footer.html:51 templates/users/profile.html:40
 msgid "Settings"
@@ -577,7 +863,7 @@ msgstr "Contacts"
 
 #: templates/includes/header.html:11
 msgid "Select_language"
-msgstr "Sélectionnez la langue"
+msgstr "Sélectionner la langue"
 
 #: templates/includes/header.html:19 templates/news/top_headlines_news.html:5
 msgid "Top_headlines"
@@ -632,7 +918,7 @@ msgstr "Enregistrer"
 
 #: templates/includes/source_card.html:27
 msgid "No_description"
-msgstr "Description manquante"
+msgstr "Pas de description"
 
 #: templates/includes/source_card.html:46
 msgid "Visit"
@@ -641,7 +927,7 @@ msgstr "Visiter"
 #: templates/news/everything_news.html:17 templates/news/guardian_news.html:17
 #: templates/news/top_headlines_news.html:17
 msgid "No_news_found"
-msgstr "Aucune nouvelle trouvée"
+msgstr "Aucune actualité trouvée"
 
 #: templates/news/sources_list.html:19
 msgid "No_sources_found"
@@ -655,7 +941,7 @@ msgstr "Vérification du compte"
 #: templates/users/login.html:58 templates/users/signup.html:114
 #: users/forms.py:46
 msgid "Login"
-msgstr "Se connecter"
+msgstr "Connexion"
 
 #: templates/users/favorites.html:4
 msgid "Favorites"
@@ -671,7 +957,7 @@ msgstr "C'est encore vide ici."
 
 #: templates/users/favorites.html:20
 msgid "Search_news"
-msgstr "Rechercher des nouvelles"
+msgstr "Rechercher des actualités"
 
 #: templates/users/login.html:4
 msgid "Entrance"
@@ -695,7 +981,7 @@ msgstr "S'inscrire"
 
 #: templates/users/logout.html:4
 msgid "Logout"
-msgstr "Se déconnecter"
+msgstr "Déconnexion"
 
 #: templates/users/logout.html:12
 msgid "You_are_logged_out"
@@ -703,7 +989,7 @@ msgstr "Vous êtes déconnecté."
 
 #: templates/users/logout.html:15
 msgid "Thank_you_for_visiting_our_website_We_hope_to_see_you_again"
-msgstr "Merci de visiter notre site. Nous espérons vous revoir !"
+msgstr "Merci d'avoir visité notre site. Nous espérons vous revoir !"
 
 #: templates/users/logout.html:20
 msgid "Login_again"
@@ -711,9 +997,7 @@ msgstr "Se reconnecter"
 
 #: templates/users/logout.html:31
 msgid "Your_session_has_ended_For_security_reasons_we_recommend_closing_your_browser"
-msgstr ""
-"Votre session est terminée. Pour des raisons de sécurité, nous vous "
-"recommandons de fermer votre navigateur."
+msgstr "Votre session est terminée. Pour des raisons de sécurité, nous recommandons de fermer votre navigateur."
 
 #: templates/users/password_change.html:4
 #: templates/users/password_change.html:13
@@ -747,17 +1031,15 @@ msgstr "Annuler"
 
 #: templates/users/password_change_done.html:4
 msgid "Password_changed"
-msgstr "Mot de passe changé"
+msgstr "Mot de passe modifié"
 
 #: templates/users/password_change_done.html:15
 msgid "Password_changed_successfully"
-msgstr "Mot de passe changé avec succès !"
+msgstr "Mot de passe modifié avec succès !"
 
 #: templates/users/password_change_done.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_use_the_new_password_to_log_in"
-msgstr ""
-"Votre mot de passe a été modifié avec succès. Vous pouvez maintenant vous "
-"connecter avec le nouveau mot de passe."
+msgstr "Votre mot de passe a été modifié avec succès. Vous pouvez maintenant vous connecter avec le nouveau mot de passe."
 
 #: templates/users/password_change_done.html:23
 msgid "Return_to_profile"
@@ -765,9 +1047,7 @@ msgstr "Retour au profil"
 
 #: templates/users/password_change_done.html:36
 msgid "It_is_recommended_to_use_different_passwords_for_different_services_and_change_them_regularly"
-msgstr ""
-"Il est recommandé d'utiliser des mots de passe différents pour chaque "
-"service et de les changer régulièrement."
+msgstr "Il est recommandé d'utiliser des mots de passe différents pour chaque service et de les changer régulièrement."
 
 #: templates/users/password_reset.html:4 templates/users/password_reset.html:13
 msgid "Password_reset"
@@ -775,9 +1055,7 @@ msgstr "Réinitialisation du mot de passe"
 
 #: templates/users/password_reset.html:15
 msgid "Forgot_your_password_Enter_your_email_address_Well_send_you_instructions"
-msgstr ""
-"Mot de passe oublié ? Entrez votre adresse e-mail — nous enverrons les "
-"instructions."
+msgstr "Mot de passe oublié ? Entrez votre e-mail — nous vous enverrons les instructions."
 
 #: templates/users/password_reset.html:32
 msgid "Email_address"
@@ -793,20 +1071,16 @@ msgstr "Retour à la connexion"
 
 #: templates/users/password_reset.html:61
 msgid "If_you_have_not_received_the_email_check_your_spam_folder_or_make_sure_you_entered_the_correct_email_address"
-msgstr ""
-"Si vous n'avez pas reçu l'e-mail, vérifiez votre dossier spam ou assurez-"
-"vous d'avoir saisi la bonne adresse e-mail."
+msgstr "Si vous n'avez pas reçu l'e-mail, vérifiez votre dossier spam ou assurez-vous d'avoir saisi la bonne adresse."
 
 #: templates/users/password_reset_complete.html:4
 #: templates/users/password_reset_complete.html:15
 msgid "Password_restored"
-msgstr "Mot de passe restauré"
+msgstr "Mot de passe réinitialisé"
 
 #: templates/users/password_reset_complete.html:18
 msgid "Your_password_has_been_successfully_changed_You_can_now_log_in_with_your_new_password"
-msgstr ""
-"Votre mot de passe a été changé avec succès. Vous pouvez maintenant vous "
-"connecter avec votre nouveau mot de passe."
+msgstr "Votre mot de passe a été changé avec succès. Vous pouvez maintenant vous connecter avec le nouveau mot de passe."
 
 #: templates/users/password_reset_complete.html:23
 msgid "Sign_in"
@@ -814,22 +1088,20 @@ msgstr "Se connecter"
 
 #: templates/users/password_reset_complete.html:37
 msgid "Your_account_is_now_protected_with_a_new_password"
-msgstr "Votre compte est maintenant protégé par un nouveau mot de passe."
+msgstr "Votre compte est désormais protégé par un nouveau mot de passe."
 
 #: templates/users/password_reset_complete.html:38
 msgid "It_is_recommended_to_use_unique_passwords_for_different_services"
-msgstr ""
-"Il est recommandé d'utiliser des mots de passe uniques pour différents "
-"services."
+msgstr "Il est recommandé d'utiliser des mots de passe uniques pour différents services."
 
 #: templates/users/password_reset_confirm.html:4
 #: templates/users/password_reset_confirm.html:15
 msgid "Enter_new_password"
-msgstr "Entrez le nouveau mot de passe"
+msgstr "Saisir le nouveau mot de passe"
 
 #: templates/users/password_reset_confirm.html:16
 msgid "Please_enter_the_new_password_twice"
-msgstr "Veuillez entrer le nouveau mot de passe deux fois."
+msgstr "Veuillez saisir le nouveau mot de passe deux fois."
 
 #: templates/users/password_reset_confirm.html:18
 msgid "Restore_Error"
@@ -837,7 +1109,7 @@ msgstr "Erreur de restauration"
 
 #: templates/users/password_reset_confirm.html:19
 msgid "The_password_reset_link_is_invalid"
-msgstr "Le lien de réinitialisation du mot de passe est invalide."
+msgstr "Le lien de réinitialisation du mot de passe n'est pas valide."
 
 #: templates/users/password_reset_confirm.html:59
 #: templates/users/signup.html:82
@@ -846,9 +1118,7 @@ msgstr "Confirmation du mot de passe"
 
 #: templates/users/password_reset_confirm.html:85
 msgid "The_password_reset_link_is_invalid_possibly_because_it_has_already_been_used"
-msgstr ""
-"Le lien de réinitialisation du mot de passe est invalide, peut-être parce "
-"qu'il a déjà été utilisé."
+msgstr "Le lien de réinitialisation n'est pas valide — il a peut-être déjà été utilisé."
 
 #: templates/users/password_reset_confirm.html:86
 msgid "Please_request_a_new_password_reset"
@@ -869,13 +1139,11 @@ msgstr "Les instructions ont été envoyées."
 
 #: templates/users/password_reset_done.html:15
 msgid "Check_your_mail"
-msgstr "Vérifiez votre courrier"
+msgstr "Vérifiez votre e-mail"
 
 #: templates/users/password_reset_done.html:18
 msgid "We_have_sent_password_recovery_instructions_to_the_email_address_you_provided"
-msgstr ""
-"Nous avons envoyé des instructions de récupération de mot de passe à "
-"l'adresse e-mail que vous avez fournie."
+msgstr "Nous avons envoyé des instructions de récupération de mot de passe à l'adresse e-mail que vous avez fournie."
 
 #: templates/users/password_reset_done.html:19
 msgid "You_should_receive_them_soon"
@@ -883,12 +1151,11 @@ msgstr "Vous devriez les recevoir bientôt."
 
 #: templates/users/password_reset_done.html:27
 msgid "If_you_dont_see_the_email_check_your_spam_folder"
-msgstr "Si vous ne voyez pas l'e-mail, vérifiez votre dossier spam"
+msgstr "Si vous ne voyez pas l'e-mail, vérifiez votre dossier spam."
 
 #: templates/users/password_reset_done.html:28
 msgid "Sometimes_password_recovery_emails_can_end_up_there"
-msgstr ""
-"Parfois, les e-mails de récupération de mot de passe peuvent s'y retrouver."
+msgstr "Parfois les e-mails de récupération se retrouvent là."
 
 #: templates/users/profile.html:5
 msgid "User_profile"
@@ -926,7 +1193,7 @@ msgstr "Date de naissance"
 
 #: templates/users/profile.html:86 templates/users/profile_update.html:39
 msgid "Location"
-msgstr "Emplacement"
+msgstr "Localisation"
 
 #: templates/users/profile.html:95
 msgid "Registration_date"
@@ -934,7 +1201,7 @@ msgstr "Date d'inscription"
 
 #: templates/users/profile.html:99
 msgid "Last_entry"
-msgstr "Dernière activité"
+msgstr "Dernière connexion"
 
 #: templates/users/profile.html:101
 msgid "Recently"
@@ -943,11 +1210,11 @@ msgstr "Récemment"
 #: templates/users/profile.html:111 users/forms.py:74 users/models.py:100
 #: users/models.py:101
 msgid "Favorite_categories"
-msgstr "Catégories favorites"
+msgstr "Catégories préférées"
 
 #: templates/users/profile.html:126
 msgid "You_have_not_selected_your_favorite_categories_yet"
-msgstr "Vous n'avez pas encore sélectionné vos catégories favorites."
+msgstr "Vous n'avez pas encore sélectionné vos catégories préférées."
 
 #: templates/users/profile.html:128
 msgid "Add_categories"
@@ -955,7 +1222,7 @@ msgstr "Ajouter des catégories"
 
 #: templates/users/profile.html:138
 msgid "Click_on_a_category_to_view_related_news"
-msgstr "Cliquez sur une catégorie pour afficher les actualités liées."
+msgstr "Cliquez sur une catégorie pour voir les actualités associées."
 
 #: templates/users/profile.html:141
 msgid "Edit"
@@ -987,7 +1254,7 @@ msgstr "Utilisateurs"
 
 #: users/backends.py:50
 msgid "account_activation_mail_text"
-msgstr "Activation du compte"
+msgstr "Veuillez confirmer votre compte via le lien ci-dessous."
 
 #: users/backends.py:52
 msgid "Account_activation"
@@ -1003,19 +1270,19 @@ msgstr "E-mail"
 
 #: users/forms.py:51
 msgid "Enter_login"
-msgstr "Saisir le login"
+msgstr "Entrez le login"
 
 #: users/forms.py:52
 msgid "Enter_email"
-msgstr "Saisir l'adresse e-mail"
+msgstr "Entrez l'adresse e-mail"
 
 #: users/forms.py:109
 msgid "Upload_your_profile_picture"
-msgstr "Téléchargez votre photo de profil."
+msgstr "Téléversez votre photo de profil."
 
 #: users/forms.py:130
 msgid "invalid_login_text"
-msgstr "Nom d'utilisateur ou mot de passe invalide."
+msgstr "Identifiant ou mot de passe invalide."
 
 #: users/forms.py:132
 msgid "This_account_is_inactive"
@@ -1023,7 +1290,7 @@ msgstr "Ce compte est inactif."
 
 #: users/forms.py:134
 msgid "Login_or_email"
-msgstr "Identifiant ou e-mail"
+msgstr "Login ou e-mail"
 
 #: users/models.py:76
 msgid "Avatar"
@@ -1083,7 +1350,7 @@ msgstr "Activation réussie"
 
 #: users/views.py:54 users/views.py:68
 msgid "Activation_time_expired"
-msgstr "Temps d'activation expiré"
+msgstr "Le délai d'activation est expiré"
 
 #: users/views.py:70
 msgid "Account_is_not_deactivated"
