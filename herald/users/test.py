@@ -87,7 +87,7 @@ class ProfileViewsTest(django.test.TestCase):
             'first_name': 'New',
             'last_name': 'Name',
             'email': self.user.email,
-            'birthday': datetime.date.today() - datetime.timedelta(days=365*30),
+            'birthday': datetime.date.today() - datetime.timedelta(days=365 * 30),
             'favorite_categories': ['technology', 'science'],
         }
         response = self.client.post(django.urls.reverse('users:profile_edit'), data, follow=True)
