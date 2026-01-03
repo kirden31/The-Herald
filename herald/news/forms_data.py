@@ -31,7 +31,7 @@ LANGUAGE_CHOICES = [
     ('zh', _('Simplified Chinese')),
 ]
 
-COUNTRIES_CHOICES_NEWS = [('us', _('United States'))]
+COUNTRIES_CHOICES_NEWS = [(None, _('All')), ('us', _('United States'))]
 
 TITLE = 'title'
 DESCRIPTION = 'description'

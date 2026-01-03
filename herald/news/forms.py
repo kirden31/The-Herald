@@ -7,6 +7,7 @@ import django.utils.timezone
 from django.utils.translation import gettext_lazy as _
 
 import news.forms_data
+import news.views
 
 
 class SearchForm(django.forms.Form):
@@ -124,10 +125,10 @@ class EverythingFiltersForm(django.forms.Form):
 
 
 class TopHeadlinesFilterForm(django.forms.Form):
-    country = django.forms.MultipleChoiceField(
+    country = django.forms.ChoiceField(
         label=_('Select_countries_default_all'),
         choices=news.forms_data.COUNTRIES_CHOICES_NEWS,
-        widget=django.forms.SelectMultiple(
+        widget=django.forms.Select(
             attrs={
                 'class': 'js-example-basic-multiple',
                 'style': 'width: 100%;',
@@ -136,10 +137,10 @@ class TopHeadlinesFilterForm(django.forms.Form):
         required=False,
     )
 
-    category = django.forms.MultipleChoiceField(
+    category = django.forms.ChoiceField(
         label=_('Select_categories_default_all'),
-        choices=news.forms_data.CATEGORIES_CHOICES,
-        widget=django.forms.SelectMultiple(
+        choices=[(None, _('Favorites'))] + news.forms_data.CATEGORIES_CHOICES,
+        widget=django.forms.Select(
             attrs={
                 'class': 'js-example-basic-multiple',
                 'style': 'width: 100%;',
@@ -150,7 +151,7 @@ class TopHeadlinesFilterForm(django.forms.Form):
 
     sources = django.forms.MultipleChoiceField(
         label=_('Select_sources_default_all'),
-        choices=[],
+        choices=(),
         widget=django.forms.SelectMultiple(
             attrs={
                 'class': 'js-example-basic-multiple',
@@ -163,6 +164,7 @@ class TopHeadlinesFilterForm(django.forms.Form):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
         self.fields['sources'].choices = news.forms_data.get_sources_choices()
 
 

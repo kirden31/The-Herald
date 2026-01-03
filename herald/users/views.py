@@ -101,7 +101,8 @@ class ProfileView(django.contrib.auth.mixins.LoginRequiredMixin, django.views.ge
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['favorite_categories'] = [
-            _(cat.capitalize()) for cat in self.request.user.profile.favorite_categories
+            {'id': cat, 'locale': _(cat.capitalize())}
+            for cat in self.request.user.profile.favorite_categories
         ]
         return context
 
