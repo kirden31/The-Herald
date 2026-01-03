@@ -103,9 +103,9 @@
                 {% if favorite_categories %}
                 <div class="d-flex flex-wrap gap-3 mb-2">
                     {% for cat in favorite_categories %}
-                    <a href="{% url 'news:top_headlines_news' %}?category={{ cat }}">
+                    <a href="{% url 'news:top_headlines_news' %}?category={{ cat.id }}">
                             <span class="badge category-badge" style="cursor: pointer!important;">
-                                {{ cat }}
+                                {{ cat.locale }}
                             </span>
                     </a>
                     {% endfor %}

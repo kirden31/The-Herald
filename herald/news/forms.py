@@ -139,7 +139,7 @@ class TopHeadlinesFilterForm(django.forms.Form):
 
     category = django.forms.ChoiceField(
         label=_('Select_categories_default_all'),
-        choices=news.forms_data.CATEGORIES_CHOICES,
+        choices=[(None, _('Favorites'))] + news.forms_data.CATEGORIES_CHOICES,
         widget=django.forms.Select(
             attrs={
                 'class': 'js-example-basic-multiple',
@@ -184,7 +184,7 @@ class SourcesFilterForm(django.forms.Form):
 
     category = django.forms.ChoiceField(
         label=_('Select_categories_default_all'),
-        choices=news.forms_data.CATEGORIES_CHOICES,
+        choices=[(None, _('All'))] + news.forms_data.CATEGORIES_CHOICES,
         initial=None,
         widget=django.forms.Select(
             attrs={

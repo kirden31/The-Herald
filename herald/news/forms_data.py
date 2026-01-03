@@ -146,7 +146,6 @@ SPORTS = 'sports'
 SCIENCE = 'science'
 TECHNOLOGY = 'technology'
 CATEGORIES_CHOICES = [
-    (None, _('All')),
     (BUSINESS, _('Business')),
     (ENTERTAINMENT, _('Entertainment')),
     (GENERAL, _('General')),
