@@ -23,7 +23,7 @@ class NewsTest(django.test.TestCase):
         side_effect=news.tests.test_tools.mocked_requests_get,
     )
     def test_news_context(self, url, mock_get):
-        response = django.test.Client().get(django.urls.reverse(url))
+        response = django.test.Client().get(django.urls.reverse(url), follow=True)
 
         self.assertEqual(response.status_code, http.HTTPStatus.OK)
 

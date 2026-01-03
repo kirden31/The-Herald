@@ -31,13 +31,9 @@ class NewsApiBaseView(django.views.View):
         return range(left_page, right_page + 1)
 
     @staticmethod
-    def get_random_favorite_category(request, form, query, country):
-        cat = form.cleaned_data.get('category')
-        if cat or query or country[-1]:
-            return cat
-
-        if request.user:
-            cat = request.user.profile.favorite_categories
+    def get_random_favorite_category(user):
+        if user:
+            cat = user.profile.favorite_categories
             if cat:
                 return random.choice(cat)
 
@@ -48,6 +44,20 @@ class TopHeadlinesNews(NewsApiBaseView):
     template_name = 'news/top_headlines_news.html'
 
     def get(self, request, *_args, **_kwargs):
+        if not (
+            request.GET.get('category')
+            or request.GET.get('query')
+            or request.GET.get('country')
+            or request.GET.get('sources')
+        ):
+            category = self.get_random_favorite_category(request.user)
+
+            params = request.GET.copy()
+            params['category'] = category
+            params.setdefault('page', 1)
+
+            return django.shortcuts.redirect(f'{request.path}?{params.urlencode()}')
+
         search_form = news.forms.SearchForm(request.GET)
         filters_form = news.forms.TopHeadlinesFilterForm(request.GET)
 
@@ -63,33 +73,21 @@ class TopHeadlinesNews(NewsApiBaseView):
             }
             return django.shortcuts.render(request, self.template_name, context)
 
-        params = {
-            'q': search_form.cleaned_data.get('query'),
-            'sources': filters_form.cleaned_data.get('sources'),
-            'pageSize': self.page_size,
-        }
-
-        if not params['sources']:
-            params['country'] = (','.join(filters_form.cleaned_data.get('country')),)
-            params['category'] = self.get_random_favorite_category(
-                request,
-                filters_form,
-                params['q'],
-                params['country'],
-            )
-
-        if params.get('sources') and (params.get('category') or params.get('country')):
-            django.contrib.messages.error(
-                self.request,
-                _('You_cannot_select_sources_together_with_country_or_category'),
-            )
-
         try:
             cur_page = max(int(request.GET.get('page', '1')), 1)
         except ValueError:
             cur_page = 1
 
-        params['page'] = cur_page
+        params = {
+            'q': search_form.cleaned_data.get('query'),
+            'sources': ','.join((filters_form.cleaned_data.get('sources'))),
+            'pageSize': self.page_size,
+            'page': cur_page,
+        }
+
+        if not params['sources']:
+            params['country'] = filters_form.cleaned_data.get('country')
+            params['category'] = filters_form.cleaned_data.get('category')
 
         endpoint = 'top-headlines'
         response = api.newsApi.NewsApi().get_news_list(endpoint, params)
