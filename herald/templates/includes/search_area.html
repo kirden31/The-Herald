@@ -6,12 +6,12 @@
 {{ sort_form.sort_by }}
 
 {% if search_form %}
-<button class="btn btn-primary ms-2" type="submit">
+<button class="btn btn-outline-primary ms-2" type="submit">
     {% trans "Search" %}
 </button>
 {% endif %}
 
-<button type="button" class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-outline-primary ms-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
     {% trans "Filters" %}
 </button>
 
@@ -31,10 +31,10 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                     {% trans "Close" %}
                 </button>
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-outline-primary">
                     {% trans "Save" %}
                 </button>
             </div>

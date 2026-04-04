@@ -123,7 +123,6 @@ SECTIONS_TRANSLATE = (
     _('Television & radio'),
     _('UK news'),
     _('US news'),
-    _('Wellness (Do NOT use)'),
     _('Voluntary Sector Network'),
     _('Weather'),
     _('Wellness'),

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-03 23:01+0300\n"
+"POT-Creation-Date: 2026-03-27 18:48+0000\n"
 "PO-Revision-Date: 2025-12-26 16:10+0300\n"
 "Last-Translator: ChatGPT <translator@example.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -87,44 +87,40 @@ msgstr "並び替え"
 
 #: news/forms.py:57
 msgid "Search_in_default_all"
-msgstr "言語を選択（デフォルト — すべて）"
+msgstr "言語（空=全て）"
 
 #: news/forms.py:70
 msgid "Select_sources_max_default_all"
-msgstr "最大20件のソースを選択（デフォルト — すべて）"
+msgstr "ソース：最大20件（空=全て）"
 
 #: news/forms.py:85 news/forms.py:235
 msgid "News_from"
-msgstr "ニュース（開始）"
+msgstr "開始日"
 
 #: news/forms.py:98 news/forms.py:247
 msgid "News_to"
-msgstr "ニュース（終了）"
+msgstr "終了日"
 
 #: news/forms.py:111 news/forms.py:173
 msgid "Select_language_default_all"
-msgstr "言語を選択（デフォルト — すべて）"
+msgstr "言語（空=全て）"
 
 #: news/forms.py:129 news/forms.py:199
 msgid "Select_countries_default_all"
-msgstr "国を選択（デフォルト — すべて）"
+msgstr "国（空=全て）"
 
 #: news/forms.py:141 news/forms.py:186
 msgid "Select_categories_default_all"
-msgstr "カテゴリを選択（デフォルト — すべて）"
+msgstr "カテゴリ（空=全て）"
 
-#: news/forms.py:142 templates/users/favorites.html:4
-msgid "Favorites"
-msgstr "お気に入り"
+#: news/forms.py:142 news/forms.py:175 news/forms.py:187 news/forms_data.py:34
+#: news/forms_data.py:176 news/forms_data.py:241
+msgid "All"
+msgstr "すべて"
 
 #: news/forms.py:153
 msgid "Select_sources_default_all"
 msgstr "ソースを選択（デフォルト — すべて）"
-
-#: news/forms.py:175 news/forms.py:187 news/forms_data.py:34
-#: news/forms_data.py:177 news/forms_data.py:242
-msgid "All"
-msgstr "すべて"
 
 #: news/forms.py:215
 msgid "Sections"
@@ -158,7 +154,7 @@ msgstr "スウェーデン語"
 msgid "Simplified Chinese"
 msgstr "簡体字中国語"
 
-#: news/forms_data.py:34 news/forms_data.py:229
+#: news/forms_data.py:34 news/forms_data.py:228
 msgid "United States"
 msgstr "アメリカ合衆国"
 
@@ -198,7 +194,7 @@ msgstr "ビジネス改善"
 msgid "Books"
 msgstr "書籍"
 
-#: news/forms_data.py:59 news/forms_data.py:149
+#: news/forms_data.py:59 news/forms_data.py:148
 msgid "Business"
 msgstr "ビジネス"
 
@@ -382,7 +378,7 @@ msgstr "政治"
 msgid "Public Leaders Network"
 msgstr "公共リーダーネットワーク"
 
-#: news/forms_data.py:106 news/forms_data.py:154
+#: news/forms_data.py:106 news/forms_data.py:153
 msgid "Science"
 msgstr "科学"
 
@@ -418,7 +414,7 @@ msgstr "ステージ"
 msgid "Teacher Network"
 msgstr "教師ネットワーク"
 
-#: news/forms_data.py:116 news/forms_data.py:155
+#: news/forms_data.py:116 news/forms_data.py:154
 msgid "Technology"
 msgstr "テクノロジー"
 
@@ -444,7 +440,7 @@ msgstr "旅行"
 
 #: news/forms_data.py:122
 msgid "Guardian holiday offers"
-msgstr "Guardianのホリデーオファー"
+msgstr "ガーディアン・ホリデー・オファー"
 
 #: news/forms_data.py:123
 msgid "Television & radio"
@@ -456,285 +452,281 @@ msgstr "英国のニュース"
 
 #: news/forms_data.py:125
 msgid "US news"
-msgstr "米国のニュース"
+msgstr "アメリカのニュース"
 
 #: news/forms_data.py:126
-msgid "Wellness (Do NOT use)"
-msgstr "ウェルネス（使用しないでください）"
+msgid "Voluntary Sector Network"
+msgstr "ボランティアセクターネットワーク"
 
 #: news/forms_data.py:127
-msgid "Voluntary Sector Network"
-msgstr "ボランタリーセクターネットワーク"
-
-#: news/forms_data.py:128
 msgid "Weather"
 msgstr "天気"
 
-#: news/forms_data.py:129
+#: news/forms_data.py:128
 msgid "Wellness"
 msgstr "ウェルネス"
 
-#: news/forms_data.py:130
+#: news/forms_data.py:129
 msgid "Women in Leadership"
 msgstr "リーダーシップにおける女性"
 
-#: news/forms_data.py:131
+#: news/forms_data.py:130
 msgid "Working in development"
-msgstr "開発分野で働く"
+msgstr "開発分野に従事する"
 
-#: news/forms_data.py:132
+#: news/forms_data.py:131
 msgid "World news"
 msgstr "世界のニュース"
 
-#: news/forms_data.py:150
+#: news/forms_data.py:149
 msgid "Entertainment"
-msgstr "エンターテインメント"
+msgstr "エンタメ"
+
+#: news/forms_data.py:150
+msgid "General"
+msgstr "総合"
 
 #: news/forms_data.py:151
-msgid "General"
-msgstr "一般"
-
-#: news/forms_data.py:152
 msgid "Health"
 msgstr "健康"
 
-#: news/forms_data.py:153
+#: news/forms_data.py:152
 msgid "Sports"
 msgstr "スポーツ"
 
-#: news/forms_data.py:162
+#: news/forms_data.py:161
 msgid "Relevancy"
-msgstr "関連性"
+msgstr "関連度"
 
-#: news/forms_data.py:163
+#: news/forms_data.py:162
 msgid "Popularity"
 msgstr "人気度"
 
-#: news/forms_data.py:164
+#: news/forms_data.py:163
 msgid "Published_at"
 msgstr "公開日時"
 
-#: news/forms_data.py:171
+#: news/forms_data.py:170
 msgid "Newest"
 msgstr "新しい順"
 
-#: news/forms_data.py:172
+#: news/forms_data.py:171
 msgid "Oldest"
-msgstr "古い順"
+msgstr "旧さ順"
 
-#: news/forms_data.py:173
+#: news/forms_data.py:172
 msgid "Relevance"
-msgstr "関連性"
+msgstr "関連度"
 
-#: news/forms_data.py:178
+#: news/forms_data.py:177
 msgid "United Arab Emirates"
 msgstr "アラブ首長国連邦"
 
-#: news/forms_data.py:179
+#: news/forms_data.py:178
 msgid "Argentina"
 msgstr "アルゼンチン"
 
-#: news/forms_data.py:180
+#: news/forms_data.py:179
 msgid "Austria"
 msgstr "オーストリア"
 
-#: news/forms_data.py:181
+#: news/forms_data.py:180
 msgid "Australia"
 msgstr "オーストラリア"
 
-#: news/forms_data.py:182
+#: news/forms_data.py:181
 msgid "Belgium"
 msgstr "ベルギー"
 
-#: news/forms_data.py:183
+#: news/forms_data.py:182
 msgid "Bulgaria"
 msgstr "ブルガリア"
 
-#: news/forms_data.py:184
+#: news/forms_data.py:183
 msgid "Brazil"
 msgstr "ブラジル"
 
-#: news/forms_data.py:185
+#: news/forms_data.py:184
 msgid "Canada"
 msgstr "カナダ"
 
-#: news/forms_data.py:186
+#: news/forms_data.py:185
 msgid "Switzerland"
 msgstr "スイス"
 
-#: news/forms_data.py:187
+#: news/forms_data.py:186
 msgid "China"
 msgstr "中国"
 
-#: news/forms_data.py:188
+#: news/forms_data.py:187
 msgid "Colombia"
 msgstr "コロンビア"
 
-#: news/forms_data.py:189
+#: news/forms_data.py:188
 msgid "Cuba"
 msgstr "キューバ"
 
-#: news/forms_data.py:190
+#: news/forms_data.py:189
 msgid "Czech Republic"
 msgstr "チェコ共和国"
 
-#: news/forms_data.py:191
+#: news/forms_data.py:190
 msgid "Germany"
 msgstr "ドイツ"
 
-#: news/forms_data.py:192
+#: news/forms_data.py:191
 msgid "Egypt"
 msgstr "エジプト"
 
-#: news/forms_data.py:193
+#: news/forms_data.py:192
 msgid "France"
 msgstr "フランス"
 
-#: news/forms_data.py:194
+#: news/forms_data.py:193
 msgid "United Kingdom"
 msgstr "イギリス"
 
-#: news/forms_data.py:195
+#: news/forms_data.py:194
 msgid "Greece"
 msgstr "ギリシャ"
 
-#: news/forms_data.py:196
+#: news/forms_data.py:195
 msgid "Hong Kong"
 msgstr "香港"
 
-#: news/forms_data.py:197
+#: news/forms_data.py:196
 msgid "Hungary"
 msgstr "ハンガリー"
 
-#: news/forms_data.py:198
+#: news/forms_data.py:197
 msgid "Indonesia"
 msgstr "インドネシア"
 
-#: news/forms_data.py:199
+#: news/forms_data.py:198
 msgid "Ireland"
 msgstr "アイルランド"
 
-#: news/forms_data.py:200
+#: news/forms_data.py:199
 msgid "Israel"
 msgstr "イスラエル"
 
-#: news/forms_data.py:201
+#: news/forms_data.py:200
 msgid "India"
 msgstr "インド"
 
-#: news/forms_data.py:202
+#: news/forms_data.py:201
 msgid "Italy"
 msgstr "イタリア"
 
-#: news/forms_data.py:203
+#: news/forms_data.py:202
 msgid "Japan"
 msgstr "日本"
 
-#: news/forms_data.py:204
+#: news/forms_data.py:203
 msgid "South Korea"
 msgstr "韓国"
 
-#: news/forms_data.py:205
+#: news/forms_data.py:204
 msgid "Lithuania"
 msgstr "リトアニア"
 
-#: news/forms_data.py:206
+#: news/forms_data.py:205
 msgid "Latvia"
 msgstr "ラトビア"
 
-#: news/forms_data.py:207
+#: news/forms_data.py:206
 msgid "Morocco"
 msgstr "モロッコ"
 
-#: news/forms_data.py:208
+#: news/forms_data.py:207
 msgid "Mexico"
 msgstr "メキシコ"
 
-#: news/forms_data.py:209
+#: news/forms_data.py:208
 msgid "Malaysia"
 msgstr "マレーシア"
 
-#: news/forms_data.py:210
+#: news/forms_data.py:209
 msgid "Nigeria"
 msgstr "ナイジェリア"
 
-#: news/forms_data.py:211
+#: news/forms_data.py:210
 msgid "Netherlands"
 msgstr "オランダ"
 
-#: news/forms_data.py:212
+#: news/forms_data.py:211
 msgid "Norway"
 msgstr "ノルウェー"
 
-#: news/forms_data.py:213
+#: news/forms_data.py:212
 msgid "New Zealand"
 msgstr "ニュージーランド"
 
-#: news/forms_data.py:214
+#: news/forms_data.py:213
 msgid "Philippines"
 msgstr "フィリピン"
 
-#: news/forms_data.py:215
+#: news/forms_data.py:214
 msgid "Poland"
 msgstr "ポーランド"
 
-#: news/forms_data.py:216
+#: news/forms_data.py:215
 msgid "Portugal"
 msgstr "ポルトガル"
 
-#: news/forms_data.py:217
+#: news/forms_data.py:216
 msgid "Romania"
 msgstr "ルーマニア"
 
-#: news/forms_data.py:218
+#: news/forms_data.py:217
 msgid "Serbia"
 msgstr "セルビア"
 
-#: news/forms_data.py:219
+#: news/forms_data.py:218
 msgid "Russia"
 msgstr "ロシア"
 
-#: news/forms_data.py:220
+#: news/forms_data.py:219
 msgid "Saudi Arabia"
 msgstr "サウジアラビア"
 
-#: news/forms_data.py:221
+#: news/forms_data.py:220
 msgid "Sweden"
 msgstr "スウェーデン"
 
-#: news/forms_data.py:222
+#: news/forms_data.py:221
 msgid "Singapore"
 msgstr "シンガポール"
 
-#: news/forms_data.py:223
+#: news/forms_data.py:222
 msgid "Slovenia"
 msgstr "スロベニア"
 
-#: news/forms_data.py:224
+#: news/forms_data.py:223
 msgid "Slovakia"
 msgstr "スロバキア"
 
-#: news/forms_data.py:225
+#: news/forms_data.py:224
 msgid "Thailand"
 msgstr "タイ"
 
-#: news/forms_data.py:226
+#: news/forms_data.py:225
 msgid "Turkey"
 msgstr "トルコ"
 
-#: news/forms_data.py:227
+#: news/forms_data.py:226
 msgid "Taiwan"
 msgstr "台湾"
 
-#: news/forms_data.py:228
+#: news/forms_data.py:227
 msgid "Ukraine"
 msgstr "ウクライナ"
 
-#: news/forms_data.py:230
+#: news/forms_data.py:229
 msgid "Venezuela"
 msgstr "ベネズエラ"
 
-#: news/forms_data.py:231
+#: news/forms_data.py:230
 msgid "South Africa"
 msgstr "南アフリカ"
 
@@ -943,9 +935,12 @@ msgstr "アカウントの確認"
 
 #: templates/users/account_activate.html:12 templates/users/login.html:12
 #: templates/users/login.html:58 templates/users/signup.html:114
-#: users/forms.py:46
 msgid "Login"
 msgstr "ログイン"
+
+#: templates/users/favorites.html:4
+msgid "Favorites"
+msgstr "お気に入り"
 
 #: templates/users/favorites.html:8
 msgid "All_your_saved_articles"
@@ -1265,6 +1260,12 @@ msgstr "アカウントの有効化"
 msgid "Mail"
 msgstr "メール"
 
+#: users/forms.py:46
+#, fuzzy
+#| msgid "Surname"
+msgid "Username"
+msgstr "姓"
+
 #: users/forms.py:47 users/forms.py:68
 msgid "Email"
 msgstr "メールアドレス"
@@ -1360,3 +1361,6 @@ msgstr "登録が完了しました！ようこそ！"
 #: users/views.py:132
 msgid "Profile_successfully_updated"
 msgstr "プロフィールが正常に更新されました"
+
+#~ msgid "Wellness (Do NOT use)"
+#~ msgstr "ウェルネス（使用しないでください）"

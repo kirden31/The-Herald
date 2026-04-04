@@ -1,9 +1,3 @@
-
-/* =========================================================
-   news-gray-green.css
-   Новостной сайт — серо-зелёная тема + полная тёмная версия
-   ========================================================= */
-
 /* ---------------------------------------------------------
    Базовые переменные
    --------------------------------------------------------- */
@@ -17,9 +11,6 @@
   --container-width: 1200px;
 }
 
-/* =========================================================
-   Светлая тема
-   ========================================================= */
 .palette-gray-green {
   --bg: #f4f6f5;
   --surface: #ffffff;
@@ -59,9 +50,13 @@
 
 .news-site a {
   color: var(--link);
+  text-decoration: none;
+  transition: color .15s ease, text-shadow .15s ease;
 }
+
 .news-site a:hover {
   color: var(--accent-2);
+  text-shadow: 0 0 6px rgba(95, 133, 115, 0.28);
 }
 
 .news-site .container,
@@ -102,18 +97,126 @@
   font-weight: 600;
   border: none;
   transition: background .15s ease, box-shadow .15s ease;
+  box-shadow: none;
 }
-.news-site .btn-primary {
-  background: linear-gradient(180deg, #6b9481, var(--accent));
-  color: var(--accent-text);
+
+/* Залитые кнопки */
+.news-site :is(.btn-primary, .btn-secondary, .btn-success, .btn-info, .btn-warning, .btn-danger, .btn-dark) {
+  color: #fff;
+  background-color: var(--btn-bg);
+  background-image: linear-gradient(180deg, var(--btn-bg-top), var(--btn-bg));
+  border-color: var(--btn-bg);
 }
-.news-site .btn-primary:hover { background: var(--accent-2); box-shadow: var(--shadow-sm); }
-.news-site .btn-outline-primary {
+
+.news-site :is(.btn-primary, .btn-secondary, .btn-success, .btn-info, .btn-warning, .btn-danger, .btn-dark):hover,
+.news-site :is(.btn-primary, .btn-secondary, .btn-success, .btn-info, .btn-warning, .btn-danger, .btn-dark):focus,
+.news-site :is(.btn-primary, .btn-secondary, .btn-success, .btn-info, .btn-warning, .btn-danger, .btn-dark):active,
+.news-site :is(.btn-primary, .btn-secondary, .btn-success, .btn-info, .btn-warning, .btn-danger, .btn-dark):focus-visible {
+  background-image: none;
+  background-color: var(--btn-bg-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Outline-кнопки */
+.news-site :is(.btn-outline-primary, .btn-outline-secondary, .btn-outline-success, .btn-outline-info, .btn-outline-warning, .btn-outline-danger, .btn-outline-dark) {
   background: transparent;
-  border: 1px solid var(--gray-500);
-  color: var(--accent);
+  box-shadow: none;
+
+  color: rgb(var(--btn-focus-rgb));
+  border: 1px solid currentColor;
 }
-.news-site .btn-outline-primary:hover { background: rgba(95, 133, 115, 0.08); }
+
+.news-site :is(.btn-outline-primary, .btn-outline-secondary, .btn-outline-success, .btn-outline-info, .btn-outline-warning, .btn-outline-danger, .btn-outline-dark):hover {
+  color: rgb(var(--btn-focus-rgb));
+  background-color: rgba(var(--btn-focus-rgb), 0.08);
+  border: 1px solid currentColor;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Цвета */
+.news-site .btn-primary {
+  --btn-bg: #5f8573;
+  --btn-bg-hover: #4f7262;
+  --btn-bg-top: #6b9481;
+  --btn-outline: #5f8573;
+  --btn-outline-hover: rgba(95, 133, 115, 0.08);
+}
+
+.news-site .btn-secondary {
+  --btn-bg: #6c757d;
+  --btn-bg-hover: #5c636a;
+  --btn-bg-top: #7a838a;
+  --btn-outline: #6c757d;
+  --btn-outline-hover: rgba(108, 117, 125, 0.08);
+}
+
+.news-site .btn-success {
+  --btn-bg: #4f8a5b;
+  --btn-bg-hover: #41734a;
+  --btn-bg-top: #5a9966;
+  --btn-outline: #4f8a5b;
+  --btn-outline-hover: rgba(79, 138, 91, 0.08);
+}
+
+.news-site .btn-info {
+  --btn-bg: #2f7d8a;
+  --btn-bg-hover: #25636d;
+  --btn-bg-top: #3b8d9a;
+  --btn-outline: #2f7d8a;
+  --btn-outline-hover: rgba(47, 125, 138, 0.08);
+}
+
+.news-site .btn-warning {
+  --btn-bg: #c58a2b;
+  --btn-bg-hover: #a87221;
+  --btn-bg-top: #d4993a;
+  --btn-outline: #c58a2b;
+  --btn-outline-hover: rgba(197, 138, 43, 0.08);
+}
+
+.news-site .btn-danger {
+  --btn-bg: #b45353;
+  --btn-bg-hover: #964343;
+  --btn-bg-top: #c46363;
+  --btn-outline: #b45353;
+  --btn-outline-hover: rgba(180, 83, 83, 0.08);
+}
+
+.news-site .btn-dark {
+  --btn-bg: #2f3437;
+  --btn-bg-hover: #212529;
+  --btn-bg-top: #3b4044;
+  --btn-outline: #2f3437;
+  --btn-outline-hover: rgba(47, 52, 55, 0.08);
+}
+
+.news-site .btn-outline-primary {
+  --btn-focus-rgb: 95, 133, 115;
+}
+
+.news-site .btn-outline-secondary {
+  --btn-focus-rgb: 108, 117, 125;
+}
+
+.news-site .btn-outline-success {
+  --btn-focus-rgb: 79, 138, 91;
+}
+
+.news-site .btn-outline-info {
+  --btn-focus-rgb: 47, 125, 138;
+}
+
+.news-site .btn-outline-warning {
+  --btn-focus-rgb: 197, 138, 43;
+}
+
+.news-site .btn-outline-danger {
+  --btn-focus-rgb: 180, 83, 83;
+}
+
+.news-site .btn-outline-dark {
+  --btn-focus-rgb: 47, 52, 55;
+}
 
 .news-site .card, .news-site .article-card {
   background: var(--surface);
@@ -144,48 +247,11 @@
   font-weight: 600;
   line-height: 1.4;
 }
-.news-site span.meta, .news-site .meta span {
-  color: var(--muted);
-  font-weight: 500;
-}
-.news-site span.highlight {
-  color: var(--accent-2);
-  font-weight: 700;
-}
-.news-site span.tag {
-  display: inline-block;
-  padding: 0.2rem 0.45rem;
-  margin-right: 0.25rem;
-  border-radius: 999px;
-  background: var(--span-bg-tag);
-  color: var(--accent-text);
-  font-size: 0.8em;
-  font-weight: 600;
-  line-height: 1.2;
-}
-.news-site span:hover { color: var(--accent); cursor: pointer; }
+
 
 .badge-light-gray {
     background-color: #e7efeb; /* светло-серо-зелёный */
     color: #39675b;           /* контрастный текст */
-}
-
-/* общий вариант — переопределяет курсор для большинства help-текстов */
-.helptext,
-.form-help,
-.form-text,
-.news-site span:hover,
-.no-pointer-help {
-  cursor: default !important;
-  color: inherit !important;        /* сохраняем цвет текста без изменений */
-  text-decoration: none !important; /* убираем подчеркивание ссылок */
-}
-
-/* для help_text с span */
-span.no-pointer-help {
-  cursor: default !important;
-  color: inherit !important;
-  text-decoration: none !important;
 }
 
 /* Анимация */
