@@ -43,7 +43,7 @@ class SignupForm(BootstrapFormMixin, django.contrib.auth.forms.UserCreationForm)
         )
 
         labels = {
-            users.models.User.username.field.name: _('Login'),
+            users.models.User.username.field.name: _('Username'),
             users.models.User.email.field.name: _('Email'),
         }
 

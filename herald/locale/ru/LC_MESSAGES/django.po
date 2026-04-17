@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-03 23:01+0300\n"
+"POT-Creation-Date: 2026-03-27 17:56+0000\n"
 "PO-Revision-Date: 2025-12-26 16:10+0300\n"
 "Last-Translator: ChatGPT <translator@example.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -58,7 +58,7 @@ msgstr "Пользователь и источник"
 
 #: news/admin.py:65
 msgid "News_content"
-msgstr "Содержимое новости"
+msgstr "Текст новости"
 
 #: news/admin.py:71
 msgid "Link_and_date"
@@ -87,11 +87,11 @@ msgstr "Сортировать по"
 
 #: news/forms.py:57
 msgid "Search_in_default_all"
-msgstr "Выберите язык (по умолчанию — все)"
+msgstr "Искать в"
 
 #: news/forms.py:70
 msgid "Select_sources_max_default_all"
-msgstr "Выберите до 20 источников (по умолчанию — все)"
+msgstr "Выберите источник (пусто = все)"
 
 #: news/forms.py:85 news/forms.py:235
 msgid "News_from"
@@ -99,7 +99,7 @@ msgstr "Новости с"
 
 #: news/forms.py:98 news/forms.py:247
 msgid "News_to"
-msgstr "Новости по"
+msgstr "Новости до"
 
 #: news/forms.py:111 news/forms.py:173
 msgid "Select_language_default_all"
@@ -113,18 +113,14 @@ msgstr "Выберите страны (по умолчанию — все)"
 msgid "Select_categories_default_all"
 msgstr "Выберите категории (по умолчанию — все)"
 
-#: news/forms.py:142 templates/users/favorites.html:4
-msgid "Favorites"
-msgstr "Избранное"
-
-#: news/forms.py:153
-msgid "Select_sources_default_all"
-msgstr "Выберите источник (по умолчанию — все)"
-
-#: news/forms.py:175 news/forms.py:187 news/forms_data.py:34
+#: news/forms.py:142 news/forms.py:175 news/forms.py:187 news/forms_data.py:34
 #: news/forms_data.py:177 news/forms_data.py:242
 msgid "All"
 msgstr "Все"
+
+#: news/forms.py:153
+msgid "Select_sources_default_all"
+msgstr "Источники (пусто = все)"
 
 #: news/forms.py:215
 msgid "Sections"
@@ -180,7 +176,7 @@ msgstr "О проекте"
 
 #: news/forms_data.py:54
 msgid "Animals farmed"
-msgstr "Домашние животные (фермы)"
+msgstr "Животноводство"
 
 #: news/forms_data.py:55
 msgid "Art and design"
@@ -204,7 +200,7 @@ msgstr "Бизнес"
 
 #: news/forms_data.py:60
 msgid "Business to business"
-msgstr "B2B (бизнес для бизнеса)"
+msgstr "Бизнес для бизнеса"
 
 #: news/forms_data.py:61
 msgid "Cardiff"
@@ -256,7 +252,7 @@ msgstr "Корпоративная сеть Guardian"
 
 #: news/forms_data.py:73
 msgid "Environment"
-msgstr "Окружающая среда"
+msgstr "Экология"
 
 #: news/forms_data.py:74
 msgid "Extra"
@@ -292,7 +288,7 @@ msgstr "Сеть специалистов по глобальному разви
 
 #: news/forms_data.py:82
 msgid "Guardian Government Computing"
-msgstr "Guardian — государственные ИТ"
+msgstr "Guardian — гос. ИТ"
 
 #: news/forms_data.py:83
 msgid "Guardian Foundation"
@@ -300,7 +296,7 @@ msgstr "Фонд Guardian"
 
 #: news/forms_data.py:84
 msgid "Guardian Professional"
-msgstr "Guardian для профессионалов"
+msgstr "Guardian профессионалы"
 
 #: news/forms_data.py:85
 msgid "Healthcare Professionals Network"
@@ -457,10 +453,6 @@ msgstr "Новости Великобритании"
 #: news/forms_data.py:125
 msgid "US news"
 msgstr "Новости США"
-
-#: news/forms_data.py:126
-msgid "Wellness (Do NOT use)"
-msgstr "Здоровье (не использовать)"
 
 #: news/forms_data.py:127
 msgid "Voluntary Sector Network"
@@ -943,9 +935,12 @@ msgstr "Подтверждение аккаунта"
 
 #: templates/users/account_activate.html:12 templates/users/login.html:12
 #: templates/users/login.html:58 templates/users/signup.html:114
-#: users/forms.py:46
 msgid "Login"
 msgstr "Вход"
+
+#: templates/users/favorites.html:4
+msgid "Favorites"
+msgstr "Избранное"
 
 #: templates/users/favorites.html:8
 msgid "All_your_saved_articles"
@@ -1267,6 +1262,10 @@ msgstr "Активация аккаунта"
 #: users/forms.py:34
 msgid "Mail"
 msgstr "Почта"
+
+#: users/forms.py:46
+msgid "Username"
+msgstr "Имя"
 
 #: users/forms.py:47 users/forms.py:68
 msgid "Email"

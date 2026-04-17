@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-03 23:01+0300\n"
+"POT-Creation-Date: 2026-03-27 18:48+0000\n"
 "PO-Revision-Date: 2025-12-26 16:10+0300\n"
 "Last-Translator: ChatGPT <translator@example.com>\n"
 "Language-Team: Arabic <ar@li.org>\n"
@@ -114,18 +114,14 @@ msgstr "اختر الدول (الافتراضي — الكل)"
 msgid "Select_categories_default_all"
 msgstr "اختر الفئات (الافتراضي — الكل)"
 
-#: news/forms.py:142 templates/users/favorites.html:4
-msgid "Favorites"
-msgstr "المفضلة"
+#: news/forms.py:142 news/forms.py:175 news/forms.py:187 news/forms_data.py:34
+#: news/forms_data.py:176 news/forms_data.py:241
+msgid "All"
+msgstr "الكل"
 
 #: news/forms.py:153
 msgid "Select_sources_default_all"
 msgstr "اختر المصدر (الافتراضي — الكل)"
-
-#: news/forms.py:175 news/forms.py:187 news/forms_data.py:34
-#: news/forms_data.py:177 news/forms_data.py:242
-msgid "All"
-msgstr "الكل"
 
 #: news/forms.py:215
 msgid "Sections"
@@ -159,7 +155,7 @@ msgstr "السويدية"
 msgid "Simplified Chinese"
 msgstr "الصينية المبسطة"
 
-#: news/forms_data.py:34 news/forms_data.py:229
+#: news/forms_data.py:34 news/forms_data.py:228
 msgid "United States"
 msgstr "الولايات المتحدة"
 
@@ -199,7 +195,7 @@ msgstr "أفضل الأعمال"
 msgid "Books"
 msgstr "كتب"
 
-#: news/forms_data.py:59 news/forms_data.py:149
+#: news/forms_data.py:59 news/forms_data.py:148
 msgid "Business"
 msgstr "أعمال"
 
@@ -383,7 +379,7 @@ msgstr "سياسة"
 msgid "Public Leaders Network"
 msgstr "شبكة القادة العامين"
 
-#: news/forms_data.py:106 news/forms_data.py:154
+#: news/forms_data.py:106 news/forms_data.py:153
 msgid "Science"
 msgstr "علوم"
 
@@ -419,7 +415,7 @@ msgstr "المسرح"
 msgid "Teacher Network"
 msgstr "شبكة المعلمين"
 
-#: news/forms_data.py:116 news/forms_data.py:155
+#: news/forms_data.py:116 news/forms_data.py:154
 msgid "Technology"
 msgstr "تكنولوجيا"
 
@@ -460,282 +456,278 @@ msgid "US news"
 msgstr "أخبار الولايات المتحدة"
 
 #: news/forms_data.py:126
-msgid "Wellness (Do NOT use)"
-msgstr "العافية (لا تستخدم)"
-
-#: news/forms_data.py:127
 msgid "Voluntary Sector Network"
 msgstr "شبكة القطاع التطوعي"
 
-#: news/forms_data.py:128
+#: news/forms_data.py:127
 msgid "Weather"
 msgstr "الطقس"
 
-#: news/forms_data.py:129
+#: news/forms_data.py:128
 msgid "Wellness"
 msgstr "العافية"
 
-#: news/forms_data.py:130
+#: news/forms_data.py:129
 msgid "Women in Leadership"
 msgstr "النساء في القيادة"
 
-#: news/forms_data.py:131
+#: news/forms_data.py:130
 msgid "Working in development"
 msgstr "العمل في التنمية"
 
-#: news/forms_data.py:132
+#: news/forms_data.py:131
 msgid "World news"
 msgstr "أخبار العالم"
 
-#: news/forms_data.py:150
+#: news/forms_data.py:149
 msgid "Entertainment"
 msgstr "ترفيه"
 
-#: news/forms_data.py:151
+#: news/forms_data.py:150
 msgid "General"
 msgstr "عام"
 
-#: news/forms_data.py:152
+#: news/forms_data.py:151
 msgid "Health"
 msgstr "الصحة"
 
-#: news/forms_data.py:153
+#: news/forms_data.py:152
 msgid "Sports"
 msgstr "رياضة"
 
-#: news/forms_data.py:162
+#: news/forms_data.py:161
 msgid "Relevancy"
 msgstr "الملاءمة"
 
-#: news/forms_data.py:163
+#: news/forms_data.py:162
 msgid "Popularity"
 msgstr "الشعبية"
 
-#: news/forms_data.py:164
+#: news/forms_data.py:163
 msgid "Published_at"
 msgstr "تاريخ النشر"
 
-#: news/forms_data.py:171
+#: news/forms_data.py:170
 msgid "Newest"
 msgstr "الأحدث أولاً"
 
-#: news/forms_data.py:172
+#: news/forms_data.py:171
 msgid "Oldest"
 msgstr "الأقدم أولاً"
 
-#: news/forms_data.py:173
+#: news/forms_data.py:172
 msgid "Relevance"
 msgstr "الملاءمة"
 
-#: news/forms_data.py:178
+#: news/forms_data.py:177
 msgid "United Arab Emirates"
 msgstr "الإمارات العربية المتحدة"
 
-#: news/forms_data.py:179
+#: news/forms_data.py:178
 msgid "Argentina"
 msgstr "الأرجنتين"
 
-#: news/forms_data.py:180
+#: news/forms_data.py:179
 msgid "Austria"
 msgstr "النمسا"
 
-#: news/forms_data.py:181
+#: news/forms_data.py:180
 msgid "Australia"
 msgstr "أستراليا"
 
-#: news/forms_data.py:182
+#: news/forms_data.py:181
 msgid "Belgium"
 msgstr "بلجيكا"
 
-#: news/forms_data.py:183
+#: news/forms_data.py:182
 msgid "Bulgaria"
 msgstr "بلغاريا"
 
-#: news/forms_data.py:184
+#: news/forms_data.py:183
 msgid "Brazil"
 msgstr "البرازيل"
 
-#: news/forms_data.py:185
+#: news/forms_data.py:184
 msgid "Canada"
 msgstr "كندا"
 
-#: news/forms_data.py:186
+#: news/forms_data.py:185
 msgid "Switzerland"
 msgstr "سويسرا"
 
-#: news/forms_data.py:187
+#: news/forms_data.py:186
 msgid "China"
 msgstr "الصين"
 
-#: news/forms_data.py:188
+#: news/forms_data.py:187
 msgid "Colombia"
 msgstr "كولومبيا"
 
-#: news/forms_data.py:189
+#: news/forms_data.py:188
 msgid "Cuba"
 msgstr "كوبا"
 
-#: news/forms_data.py:190
+#: news/forms_data.py:189
 msgid "Czech Republic"
 msgstr "جمهورية التشيك"
 
-#: news/forms_data.py:191
+#: news/forms_data.py:190
 msgid "Germany"
 msgstr "ألمانيا"
 
-#: news/forms_data.py:192
+#: news/forms_data.py:191
 msgid "Egypt"
 msgstr "مصر"
 
-#: news/forms_data.py:193
+#: news/forms_data.py:192
 msgid "France"
 msgstr "فرنسا"
 
-#: news/forms_data.py:194
+#: news/forms_data.py:193
 msgid "United Kingdom"
 msgstr "المملكة المتحدة"
 
-#: news/forms_data.py:195
+#: news/forms_data.py:194
 msgid "Greece"
 msgstr "اليونان"
 
-#: news/forms_data.py:196
+#: news/forms_data.py:195
 msgid "Hong Kong"
 msgstr "هونغ كونغ"
 
-#: news/forms_data.py:197
+#: news/forms_data.py:196
 msgid "Hungary"
 msgstr "المجر"
 
-#: news/forms_data.py:198
+#: news/forms_data.py:197
 msgid "Indonesia"
 msgstr "إندونيسيا"
 
-#: news/forms_data.py:199
+#: news/forms_data.py:198
 msgid "Ireland"
 msgstr "أيرلندا"
 
-#: news/forms_data.py:200
+#: news/forms_data.py:199
 msgid "Israel"
 msgstr "إسرائيل"
 
-#: news/forms_data.py:201
+#: news/forms_data.py:200
 msgid "India"
 msgstr "الهند"
 
-#: news/forms_data.py:202
+#: news/forms_data.py:201
 msgid "Italy"
 msgstr "إيطاليا"
 
-#: news/forms_data.py:203
+#: news/forms_data.py:202
 msgid "Japan"
 msgstr "اليابان"
 
-#: news/forms_data.py:204
+#: news/forms_data.py:203
 msgid "South Korea"
 msgstr "كوريا الجنوبية"
 
-#: news/forms_data.py:205
+#: news/forms_data.py:204
 msgid "Lithuania"
 msgstr "ليتوانيا"
 
-#: news/forms_data.py:206
+#: news/forms_data.py:205
 msgid "Latvia"
 msgstr "لاتفيا"
 
-#: news/forms_data.py:207
+#: news/forms_data.py:206
 msgid "Morocco"
 msgstr "المغرب"
 
-#: news/forms_data.py:208
+#: news/forms_data.py:207
 msgid "Mexico"
 msgstr "المكسيك"
 
-#: news/forms_data.py:209
+#: news/forms_data.py:208
 msgid "Malaysia"
 msgstr "ماليزيا"
 
-#: news/forms_data.py:210
+#: news/forms_data.py:209
 msgid "Nigeria"
 msgstr "نيجيريا"
 
-#: news/forms_data.py:211
+#: news/forms_data.py:210
 msgid "Netherlands"
 msgstr "هولندا"
 
-#: news/forms_data.py:212
+#: news/forms_data.py:211
 msgid "Norway"
 msgstr "النرويج"
 
-#: news/forms_data.py:213
+#: news/forms_data.py:212
 msgid "New Zealand"
 msgstr "نيوزيلندا"
 
-#: news/forms_data.py:214
+#: news/forms_data.py:213
 msgid "Philippines"
 msgstr "الفلبين"
 
-#: news/forms_data.py:215
+#: news/forms_data.py:214
 msgid "Poland"
 msgstr "بولندا"
 
-#: news/forms_data.py:216
+#: news/forms_data.py:215
 msgid "Portugal"
 msgstr "البرتغال"
 
-#: news/forms_data.py:217
+#: news/forms_data.py:216
 msgid "Romania"
 msgstr "رومانيا"
 
-#: news/forms_data.py:218
+#: news/forms_data.py:217
 msgid "Serbia"
 msgstr "صربيا"
 
-#: news/forms_data.py:219
+#: news/forms_data.py:218
 msgid "Russia"
 msgstr "روسيا"
 
-#: news/forms_data.py:220
+#: news/forms_data.py:219
 msgid "Saudi Arabia"
 msgstr "المملكة العربية السعودية"
 
-#: news/forms_data.py:221
+#: news/forms_data.py:220
 msgid "Sweden"
 msgstr "السويد"
 
-#: news/forms_data.py:222
+#: news/forms_data.py:221
 msgid "Singapore"
 msgstr "سنغافورة"
 
-#: news/forms_data.py:223
+#: news/forms_data.py:222
 msgid "Slovenia"
 msgstr "سلوفينيا"
 
-#: news/forms_data.py:224
+#: news/forms_data.py:223
 msgid "Slovakia"
 msgstr "سلوفاكيا"
 
-#: news/forms_data.py:225
+#: news/forms_data.py:224
 msgid "Thailand"
 msgstr "تايلاند"
 
-#: news/forms_data.py:226
+#: news/forms_data.py:225
 msgid "Turkey"
 msgstr "تركيا"
 
-#: news/forms_data.py:227
+#: news/forms_data.py:226
 msgid "Taiwan"
 msgstr "تايوان"
 
-#: news/forms_data.py:228
+#: news/forms_data.py:227
 msgid "Ukraine"
 msgstr "أوكرانيا"
 
-#: news/forms_data.py:230
+#: news/forms_data.py:229
 msgid "Venezuela"
 msgstr "فنزويلا"
 
-#: news/forms_data.py:231
+#: news/forms_data.py:230
 msgid "South Africa"
 msgstr "جنوب أفريقيا"
 
@@ -944,9 +936,12 @@ msgstr "التحقق من الحساب"
 
 #: templates/users/account_activate.html:12 templates/users/login.html:12
 #: templates/users/login.html:58 templates/users/signup.html:114
-#: users/forms.py:46
 msgid "Login"
 msgstr "تسجيل الدخول"
+
+#: templates/users/favorites.html:4
+msgid "Favorites"
+msgstr "المفضلة"
 
 #: templates/users/favorites.html:8
 msgid "All_your_saved_articles"
@@ -1262,6 +1257,12 @@ msgstr "تفعيل الحساب"
 msgid "Mail"
 msgstr "البريد الإلكتروني"
 
+#: users/forms.py:46
+#, fuzzy
+#| msgid "Surname"
+msgid "Username"
+msgstr "اسم العائلة"
+
 #: users/forms.py:47 users/forms.py:68
 msgid "Email"
 msgstr "البريد الإلكتروني"
@@ -1357,3 +1358,6 @@ msgstr "تم التسجيل بنجاح! مرحبًا بك!"
 #: users/views.py:132
 msgid "Profile_successfully_updated"
 msgstr "تم تحديث الملف الشخصي بنجاح"
+
+#~ msgid "Wellness (Do NOT use)"
+#~ msgstr "العافية (لا تستخدم)"

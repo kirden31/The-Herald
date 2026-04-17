@@ -12,7 +12,7 @@
                 {% with thumb=user.profile.get_image_300x300 %}
                 <img src="{{ thumb.url }}"
                      alt="{{ request.user.username }}"
-                     onerror="this.onerror=null; this.src='{% static 'img/no_image.jpg' %}';"
+                     onerror="this.onerror=null; this.src='{% static 'img/no_avatar_image.jpg' %}';"
                      class="rounded-circle img-thumbnail border-3 border-seconde mb-3"
                      style="width: 200px; height: 200px; object-fit: cover;">
                 {% endwith %}
@@ -20,7 +20,7 @@
                 <p class="text-muted">{{ user.email }}</p>
 
                 <div class="d-grid gap-2 mt-auto">
-                    <a href="{% url 'users:profile_edit' %}" class="btn btn-primary">
+                    <a href="{% url 'users:profile_edit' %}" class="btn btn-outline-primary">
                         {% trans "Edit_profile" %}
                     </a>
 
@@ -114,7 +114,7 @@
                     <small class="text-muted">
                         {% trans "Click_on_a_category_to_view_related_news" %}
                     </small>
-                    <a href="{% url 'users:profile_edit' %}" class="btn btn-sm btn-outline-secondary">
+                    <a href="{% url 'users:profile_edit' %}" class="btn btn-sm btn-outline-primary">
                         {% trans "Edit" %}
                     </a>
                 </div>

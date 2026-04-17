@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-03 23:01+0300\n"
+"POT-Creation-Date: 2026-03-27 18:48+0000\n"
 "PO-Revision-Date: 2025-12-24 00:00+0000\n"
 "Last-Translator: ChatGPT <translator@example.com>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -87,7 +87,7 @@ msgstr "Ταξινόμηση κατά"
 
 #: news/forms.py:57
 msgid "Search_in_default_all"
-msgstr "Επιλέξτε γλώσσα (προεπιλογή — όλες)"
+msgstr "Γλώσσα (κενό = όλα)"
 
 #: news/forms.py:70
 msgid "Select_sources_max_default_all"
@@ -103,7 +103,7 @@ msgstr "Ειδήσεις έως"
 
 #: news/forms.py:111 news/forms.py:173
 msgid "Select_language_default_all"
-msgstr "Επιλέξτε γλώσσα (προεπιλογή — όλες)"
+msgstr "Γλώσσα (κενό = όλα)"
 
 #: news/forms.py:129 news/forms.py:199
 msgid "Select_countries_default_all"
@@ -113,18 +113,14 @@ msgstr "Επιλέξτε χώρες (προεπιλογή — όλες)"
 msgid "Select_categories_default_all"
 msgstr "Επιλέξτε κατηγορίες (προεπιλογή — όλες)"
 
-#: news/forms.py:142 templates/users/favorites.html:4
-msgid "Favorites"
-msgstr "Αγαπημένα"
+#: news/forms.py:142 news/forms.py:175 news/forms.py:187 news/forms_data.py:34
+#: news/forms_data.py:176 news/forms_data.py:241
+msgid "All"
+msgstr "Όλα"
 
 #: news/forms.py:153
 msgid "Select_sources_default_all"
 msgstr "Επιλέξτε πηγή (προεπιλογή — όλες)"
-
-#: news/forms.py:175 news/forms.py:187 news/forms_data.py:34
-#: news/forms_data.py:177 news/forms_data.py:242
-msgid "All"
-msgstr "Όλα"
 
 #: news/forms.py:215
 msgid "Sections"
@@ -158,7 +154,7 @@ msgstr "Σουηδικά"
 msgid "Simplified Chinese"
 msgstr "Απλοποιημένα Κινέζικα"
 
-#: news/forms_data.py:34 news/forms_data.py:229
+#: news/forms_data.py:34 news/forms_data.py:228
 msgid "United States"
 msgstr "Ηνωμένες Πολιτείες"
 
@@ -180,7 +176,7 @@ msgstr "Σχετικά"
 
 #: news/forms_data.py:54
 msgid "Animals farmed"
-msgstr "Κατοικίδια παραγωγής"
+msgstr "Ζώα κτηνοτροφίας"
 
 #: news/forms_data.py:55
 msgid "Art and design"
@@ -198,13 +194,13 @@ msgstr "Βελτίωση Επιχειρήσεων"
 msgid "Books"
 msgstr "Βιβλία"
 
-#: news/forms_data.py:59 news/forms_data.py:149
+#: news/forms_data.py:59 news/forms_data.py:148
 msgid "Business"
 msgstr "Επιχειρήσεις"
 
 #: news/forms_data.py:60
 msgid "Business to business"
-msgstr "Επιχείρηση προς επιχείρηση"
+msgstr "B2B (επιχειρήσεις προς επιχειρήσεις)"
 
 #: news/forms_data.py:61
 msgid "Cardiff"
@@ -382,7 +378,7 @@ msgstr "Πολιτική"
 msgid "Public Leaders Network"
 msgstr "Δίκτυο δημόσιων ηγετών"
 
-#: news/forms_data.py:106 news/forms_data.py:154
+#: news/forms_data.py:106 news/forms_data.py:153
 msgid "Science"
 msgstr "Επιστήμη"
 
@@ -418,7 +414,7 @@ msgstr "Σκηνή"
 msgid "Teacher Network"
 msgstr "Δίκτυο εκπαιδευτικών"
 
-#: news/forms_data.py:116 news/forms_data.py:155
+#: news/forms_data.py:116 news/forms_data.py:154
 msgid "Technology"
 msgstr "Τεχνολογία"
 
@@ -459,282 +455,278 @@ msgid "US news"
 msgstr "Νέα ΗΠΑ"
 
 #: news/forms_data.py:126
-msgid "Wellness (Do NOT use)"
-msgstr "Ευεξία (Μην χρησιμοποιείτε)"
-
-#: news/forms_data.py:127
 msgid "Voluntary Sector Network"
 msgstr "Δίκτυο εθελοντικού τομέα"
 
-#: news/forms_data.py:128
+#: news/forms_data.py:127
 msgid "Weather"
 msgstr "Καιρός"
 
-#: news/forms_data.py:129
+#: news/forms_data.py:128
 msgid "Wellness"
 msgstr "Ευεξία"
 
-#: news/forms_data.py:130
+#: news/forms_data.py:129
 msgid "Women in Leadership"
 msgstr "Γυναίκες στην ηγεσία"
 
-#: news/forms_data.py:131
+#: news/forms_data.py:130
 msgid "Working in development"
 msgstr "Εργασία στην ανάπτυξη"
 
-#: news/forms_data.py:132
+#: news/forms_data.py:131
 msgid "World news"
 msgstr "Διεθνή νέα"
 
-#: news/forms_data.py:150
+#: news/forms_data.py:149
 msgid "Entertainment"
 msgstr "Ψυχαγωγία"
 
-#: news/forms_data.py:151
+#: news/forms_data.py:150
 msgid "General"
 msgstr "Γενικά"
 
-#: news/forms_data.py:152
+#: news/forms_data.py:151
 msgid "Health"
-msgstr "Υγεία"
+msgstr "Υγεία / Healthcare"
 
-#: news/forms_data.py:153
+#: news/forms_data.py:152
 msgid "Sports"
 msgstr "Αθλητικά"
 
-#: news/forms_data.py:162
+#: news/forms_data.py:161
 msgid "Relevancy"
 msgstr "Συνάφεια"
 
-#: news/forms_data.py:163
+#: news/forms_data.py:162
 msgid "Popularity"
 msgstr "Δημοτικότητα"
 
-#: news/forms_data.py:164
+#: news/forms_data.py:163
 msgid "Published_at"
 msgstr "Δημοσιεύτηκε στις"
 
-#: news/forms_data.py:171
+#: news/forms_data.py:170
 msgid "Newest"
 msgstr "Πρώτα τα νεότερα"
 
-#: news/forms_data.py:172
+#: news/forms_data.py:171
 msgid "Oldest"
-msgstr "Πρώτα τα παλαιότερα"
+msgstr "Παλαιότερα πρώτα"
 
-#: news/forms_data.py:173
+#: news/forms_data.py:172
 msgid "Relevance"
 msgstr "Συνάφεια"
 
-#: news/forms_data.py:178
+#: news/forms_data.py:177
 msgid "United Arab Emirates"
 msgstr "Ηνωμένα Αραβικά Εμιράτα"
 
-#: news/forms_data.py:179
+#: news/forms_data.py:178
 msgid "Argentina"
 msgstr "Αργεντινή"
 
-#: news/forms_data.py:180
+#: news/forms_data.py:179
 msgid "Austria"
 msgstr "Αυστρία"
 
-#: news/forms_data.py:181
+#: news/forms_data.py:180
 msgid "Australia"
 msgstr "Αυστραλία"
 
-#: news/forms_data.py:182
+#: news/forms_data.py:181
 msgid "Belgium"
 msgstr "Βέλγιο"
 
-#: news/forms_data.py:183
+#: news/forms_data.py:182
 msgid "Bulgaria"
 msgstr "Βουλγαρία"
 
-#: news/forms_data.py:184
+#: news/forms_data.py:183
 msgid "Brazil"
 msgstr "Βραζιλία"
 
-#: news/forms_data.py:185
+#: news/forms_data.py:184
 msgid "Canada"
 msgstr "Καναδάς"
 
-#: news/forms_data.py:186
+#: news/forms_data.py:185
 msgid "Switzerland"
 msgstr "Ελβετία"
 
-#: news/forms_data.py:187
+#: news/forms_data.py:186
 msgid "China"
 msgstr "Κίνα"
 
-#: news/forms_data.py:188
+#: news/forms_data.py:187
 msgid "Colombia"
 msgstr "Κολομβία"
 
-#: news/forms_data.py:189
+#: news/forms_data.py:188
 msgid "Cuba"
 msgstr "Κούβα"
 
-#: news/forms_data.py:190
+#: news/forms_data.py:189
 msgid "Czech Republic"
 msgstr "Τσεχία"
 
-#: news/forms_data.py:191
+#: news/forms_data.py:190
 msgid "Germany"
 msgstr "Γερμανία"
 
-#: news/forms_data.py:192
+#: news/forms_data.py:191
 msgid "Egypt"
 msgstr "Αίγυπτος"
 
-#: news/forms_data.py:193
+#: news/forms_data.py:192
 msgid "France"
 msgstr "Γαλλία"
 
-#: news/forms_data.py:194
+#: news/forms_data.py:193
 msgid "United Kingdom"
 msgstr "Ηνωμένο Βασίλειο"
 
-#: news/forms_data.py:195
+#: news/forms_data.py:194
 msgid "Greece"
 msgstr "Ελλάδα"
 
-#: news/forms_data.py:196
+#: news/forms_data.py:195
 msgid "Hong Kong"
 msgstr "Χονγκ Κονγκ"
 
-#: news/forms_data.py:197
+#: news/forms_data.py:196
 msgid "Hungary"
 msgstr "Ουγγαρία"
 
-#: news/forms_data.py:198
+#: news/forms_data.py:197
 msgid "Indonesia"
 msgstr "Ινδονησία"
 
-#: news/forms_data.py:199
+#: news/forms_data.py:198
 msgid "Ireland"
 msgstr "Ιρλανδία"
 
-#: news/forms_data.py:200
+#: news/forms_data.py:199
 msgid "Israel"
 msgstr "Ισραήλ"
 
-#: news/forms_data.py:201
+#: news/forms_data.py:200
 msgid "India"
 msgstr "Ινδία"
 
-#: news/forms_data.py:202
+#: news/forms_data.py:201
 msgid "Italy"
 msgstr "Ιταλία"
 
-#: news/forms_data.py:203
+#: news/forms_data.py:202
 msgid "Japan"
 msgstr "Ιαπωνία"
 
-#: news/forms_data.py:204
+#: news/forms_data.py:203
 msgid "South Korea"
 msgstr "Νότια Κορέα"
 
-#: news/forms_data.py:205
+#: news/forms_data.py:204
 msgid "Lithuania"
 msgstr "Λιθουανία"
 
-#: news/forms_data.py:206
+#: news/forms_data.py:205
 msgid "Latvia"
 msgstr "Λετονία"
 
-#: news/forms_data.py:207
+#: news/forms_data.py:206
 msgid "Morocco"
 msgstr "Μαρόκο"
 
-#: news/forms_data.py:208
+#: news/forms_data.py:207
 msgid "Mexico"
 msgstr "Μεξικό"
 
-#: news/forms_data.py:209
+#: news/forms_data.py:208
 msgid "Malaysia"
 msgstr "Μαλαισία"
 
-#: news/forms_data.py:210
+#: news/forms_data.py:209
 msgid "Nigeria"
 msgstr "Νιγηρία"
 
-#: news/forms_data.py:211
+#: news/forms_data.py:210
 msgid "Netherlands"
 msgstr "Ολλανδία"
 
-#: news/forms_data.py:212
+#: news/forms_data.py:211
 msgid "Norway"
 msgstr "Νορβηγία"
 
-#: news/forms_data.py:213
+#: news/forms_data.py:212
 msgid "New Zealand"
 msgstr "Νέα Ζηλανδία"
 
-#: news/forms_data.py:214
+#: news/forms_data.py:213
 msgid "Philippines"
 msgstr "Φιλιππίνες"
 
-#: news/forms_data.py:215
+#: news/forms_data.py:214
 msgid "Poland"
 msgstr "Πολωνία"
 
-#: news/forms_data.py:216
+#: news/forms_data.py:215
 msgid "Portugal"
 msgstr "Πορτογαλία"
 
-#: news/forms_data.py:217
+#: news/forms_data.py:216
 msgid "Romania"
 msgstr "Ρουμανία"
 
-#: news/forms_data.py:218
+#: news/forms_data.py:217
 msgid "Serbia"
 msgstr "Σερβία"
 
-#: news/forms_data.py:219
+#: news/forms_data.py:218
 msgid "Russia"
 msgstr "Ρωσία"
 
-#: news/forms_data.py:220
+#: news/forms_data.py:219
 msgid "Saudi Arabia"
 msgstr "Σαουδική Αραβία"
 
-#: news/forms_data.py:221
+#: news/forms_data.py:220
 msgid "Sweden"
 msgstr "Σουηδία"
 
-#: news/forms_data.py:222
+#: news/forms_data.py:221
 msgid "Singapore"
 msgstr "Σιγκαπούρη"
 
-#: news/forms_data.py:223
+#: news/forms_data.py:222
 msgid "Slovenia"
 msgstr "Σλοβενία"
 
-#: news/forms_data.py:224
+#: news/forms_data.py:223
 msgid "Slovakia"
 msgstr "Σλοβακία"
 
-#: news/forms_data.py:225
+#: news/forms_data.py:224
 msgid "Thailand"
 msgstr "Ταϊλάνδη"
 
-#: news/forms_data.py:226
+#: news/forms_data.py:225
 msgid "Turkey"
 msgstr "Τουρκία"
 
-#: news/forms_data.py:227
+#: news/forms_data.py:226
 msgid "Taiwan"
 msgstr "Ταϊβάν"
 
-#: news/forms_data.py:228
+#: news/forms_data.py:227
 msgid "Ukraine"
 msgstr "Ουκρανία"
 
-#: news/forms_data.py:230
+#: news/forms_data.py:229
 msgid "Venezuela"
 msgstr "Βενεζουέλα"
 
-#: news/forms_data.py:231
+#: news/forms_data.py:230
 msgid "South Africa"
 msgstr "Νότια Αφρική"
 
@@ -943,9 +935,12 @@ msgstr "Επαλήθευση λογαριασμού"
 
 #: templates/users/account_activate.html:12 templates/users/login.html:12
 #: templates/users/login.html:58 templates/users/signup.html:114
-#: users/forms.py:46
 msgid "Login"
 msgstr "Σύνδεση"
+
+#: templates/users/favorites.html:4
+msgid "Favorites"
+msgstr "Αγαπημένα"
 
 #: templates/users/favorites.html:8
 msgid "All_your_saved_articles"
@@ -1271,6 +1266,12 @@ msgstr "Ενεργοποίηση λογαριασμού"
 msgid "Mail"
 msgstr "Ηλεκτρονικό ταχυδρομείο"
 
+#: users/forms.py:46
+#, fuzzy
+#| msgid "Surname"
+msgid "Username"
+msgstr "Επώνυμο"
+
 #: users/forms.py:47 users/forms.py:68
 msgid "Email"
 msgstr "Email"
@@ -1366,3 +1367,6 @@ msgstr "Εγγραφή επιτυχής! Καλώς ήρθατε!"
 #: users/views.py:132
 msgid "Profile_successfully_updated"
 msgstr "Το προφίλ ενημερώθηκε με επιτυχία"
+
+#~ msgid "Wellness (Do NOT use)"
+#~ msgstr "Ευεξία (Μην χρησιμοποιείτε)"

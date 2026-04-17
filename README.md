@@ -35,11 +35,14 @@
 
 ```bash
 # 1. Клонирование репозитория
-git clone https://gitlab.crja72.ru/django/2025/autumn/course/projects/team-11.git
-cd team-11
+git clone https://github.com/kirden31/The-Herald.git
+cd The-Herald
+
+# 2. Устанавливаем пакеты python
+sudo apt install -y python3 python3-venv python3-pip build-essential
 
 # 2. Создание виртуального окружения
-python -m venv venv
+python -m venv .venv
 
 # 3. Активация окружения
 # Linux/Mac:
