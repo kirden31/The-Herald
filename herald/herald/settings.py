@@ -22,7 +22,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', default='not_so_secret')
 if not DEBUG and SECRET_KEY == 'not_so_secret':
     raise ValueError('SET DJANGO_SECRET_KEY in PROD mode')
 
-SESSION_COOKIE_SECURE=os.getenv('DJANGO_SESSION_COOKIE_SECURE', default=True)
+SESSION_COOKIE_SECURE = os.getenv('DJANGO_SESSION_COOKIE_SECURE', default=True)
 
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', default='*').split()
 
@@ -158,7 +158,7 @@ USE_TZ = True
 LOCALE_PATHS = [BASE_DIR / 'locale']
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / "static"
+STATIC_ROOT = BASE_DIR / 'static'
 
 STATICFILES_DIRS = [BASE_DIR / 'static_dev']
 

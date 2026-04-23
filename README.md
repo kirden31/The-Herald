@@ -50,7 +50,7 @@ source .venv/bin/activate
 # Запуск в PROD режиме
 
 # 5. Установка зависимостей
-pip install -r requirements/prod.txt 
+pip install -r requirements/prod.txt
 
 # 6. Настройка переменных окружения
 # !!! ОБЯЗАТЕЛЬНО ЗАПОЛНИТЕ ПУСТЫЕ ПОЛЯ
@@ -67,7 +67,7 @@ django-admin compilemessages
 # 8. Создание суперпользователя
 python manage.py createsuperuser
 
-# 9. Запуск сервера
+# 9. Тестовый запуск
 python manage.py runserver 127.0.0.1:8000
 ```
 
