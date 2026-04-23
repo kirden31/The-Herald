@@ -39,36 +39,36 @@ git clone https://github.com/kirden31/The-Herald.git
 cd The-Herald
 
 # 2. Устанавливаем пакеты python
-sudo apt install -y python3 python3-venv python3-pip build-essential
+sudo apt install -y python3 python3-venv python3-pip build-essential gettext
 
-# 2. Создание виртуального окружения
-python -m venv .venv
+# 3. Создание виртуального окружения
+python3 -m venv .venv
 
-# 3. Активация окружения
-# Linux/Mac:
-source venv/bin/activate
-# Windows:
-venv\Scripts\activate
+# 4. Активация окружения
+source .venv/bin/activate
 
-# 4. Установка зависимостей
-pip install -r requirements/prod.txt
+# Запуск в PROD режиме
 
-# 5. Настройка переменных окружения
+# 5. Установка зависимостей
+pip install -r requirements/prod.txt 
+
+# 6. Настройка переменных окружения
+# !!! ОБЯЗАТЕЛЬНО ЗАПОЛНИТЕ ПУСТЫЕ ПОЛЯ
 cp template.env .env
-# Отредактируйте .env файл по необходимости
 
-# 6. Применение миграций
 cd herald
+# 7. Применение миграций
 python manage.py migrate
-
-# 7. Применение локализации
+# 7.1. Компиляция статики
+python manage.py collectstatic
+# 7.2. Применение локализации
 django-admin compilemessages
 
 # 8. Создание суперпользователя
 python manage.py createsuperuser
 
 # 9. Запуск сервера
-python manage.py runserver
+python manage.py runserver 127.0.0.1:8000
 ```
 
 Откройте браузер и перейдите по адресу: **http://127.0.0.1:8000/**
@@ -80,21 +80,20 @@ python manage.py runserver
 Создайте файл `.env` на основе `template.env`:
 
 ```env
-# Базовые настройки Django
+# Базовые настройки Django для DEV режима
 DJANGO_SECRET_KEY=not_so_secret
-DJANGO_DEBUG=False
+DJANGO_DEBUG=True
 DJANGO_ALLOWED_HOSTS=*
 
-# Настройки безопасности
+# Кол-во попыток входа перед блокировкой
 DJANGO_MAX_AUTH_ATTEMPTS=5
 
-# Email (опционально)
+# Email отправителя
 DEFAULT_FROM_EMAIL=<noreply@newshub.ru>
 
 NEWS_API_KEYS=<ВАШИ API КЛЮЧИ С NewsAPI>
 GUARDIAN_API_KEYS=<ВАШИ API КЛЮЧИ С The Guardian>
 ```
-
 **Важно:** 
 В `DJANGO_ALLOWED_HOSTS`, `NEWS_API_KEYS` и `GUARDIAN_API_KEYS` указывайте значения через _пробел_, **без запятых**!
 
@@ -180,23 +179,10 @@ django-admin compilemessages
 
 Проект поддерживает следующие API:
 
-| API              | Назначение                                      | Лимиты            |
-|------------------|-------------------------------------------------|-------------------|
-| **NewsAPI**      | Основной поиск новостей, топ новости, источники | 100 запросов/день |
-| **The Guardian** | Поиск новостей с The Guardian                   | 500 запросов/день |
-## 🛠 Разработка
-
-## 🚀 Деплой
-
-### Подготовка к продакшену
-
-```bash
-# 1. Установка продакшен зависимостей
-pip install -r requirements/prod.txt
-
-# 2. Настройка статических файлов
-python manage.py collectstatic 
-```
+| API              | Назначение                                      |
+|------------------|-------------------------------------------------|
+| **NewsAPI**      | Основной поиск новостей, топ новости, источники |
+| **The Guardian** | Поиск новостей с The Guardian                   |
 
 ---
 

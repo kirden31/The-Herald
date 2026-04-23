@@ -14,15 +14,18 @@ dotenv.load_dotenv()
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', default='not_so_secret')
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = herald.tools.to_bool('DJANGO_DEBUG', False)
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', default='not_so_secret')
+if not DEBUG and SECRET_KEY == 'not_so_secret':
+    raise ValueError('SET DJANGO_SECRET_KEY in PROD mode')
+
+SESSION_COOKIE_SECURE=os.getenv('DJANGO_SESSION_COOKIE_SECURE', default=True)
+
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', default='*').split()
 
-# Your API keys
 NEWS_API_KEYS = os.getenv('NEWS_API_KEYS', 'no_api_key').split()
 GUARDIAN_API_KEYS = os.getenv('GUARDIAN_API_KEYS', 'no_api_key').split()
 
@@ -73,7 +76,7 @@ AUTHENTICATION_BACKENDS = [
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = BASE_DIR / 'send_mail'
-DEFAULT_FROM_EMAIL = os.getenv('DJANGO_MAIL', default='support@newshub.com')
+DEFAULT_FROM_EMAIL = os.getenv('DJANGO_MAIL', default='support@herald.com')
 
 
 ROOT_URLCONF = 'herald.urls'
@@ -155,6 +158,7 @@ USE_TZ = True
 LOCALE_PATHS = [BASE_DIR / 'locale']
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / "static"
 
 STATICFILES_DIRS = [BASE_DIR / 'static_dev']
 
